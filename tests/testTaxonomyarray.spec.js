@@ -16,7 +16,7 @@ test.describe.serial('Taxonomy comparison', () => {
         await page.getByRole('textbox', { name: 'Password' }).fill('Welcome@123');
         await page.getByRole('button', { name: 'Log in' }).click();
         // Navigate to taxonomy page
-        await page.goto('http://drupal-geneseo-backup.ddev.site/admin/structure/taxonomy/manage/academic_program_keywords/overview', { timeout: 60000, waitUntil: 'domcontentloaded' });
+        await page.goto('http://drupal-geneseo-backup.ddev.site/admin/structure/taxonomy/manage/media_contacts/overview', { timeout: 60000, waitUntil: 'domcontentloaded' });
 
         while (true) {
             // Get taxonomies texts from current page
@@ -46,7 +46,7 @@ test.describe.serial('Taxonomy comparison', () => {
         await page.getByRole('textbox', { name: 'Password' }).click();
         await page.getByRole('textbox', { name: 'Password' }).fill('Login@123');
         await page.getByRole('button', { name: 'Log In' }).click();
-        await page.goto('https://dev-infostride-geneseo.pantheonsite.io/wp-admin/edit-tags.php?taxonomy=academic_program_keywords&post_type=program_page');
+        await page.goto('https://dev-infostride-geneseo.pantheonsite.io/wp-admin/edit-tags.php?taxonomy=media_contacts');
         await page.getByRole('button', { name: 'Screen Options' }).click();
         await page.getByRole('spinbutton', { name: 'Number of items per page:' }).click();
         await page.getByRole('spinbutton', { name: 'Number of items per page:' }).fill('700');

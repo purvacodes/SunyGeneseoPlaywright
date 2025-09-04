@@ -1,6 +1,6 @@
 import { credentials } from "../data/credentials.js";
 
-export class wordPressLogin {
+export class WordPressLogin {
   constructor(page) {
     this.page = page;
   }
