@@ -16,5 +16,3 @@ test('Verify Academic Program Keywords Taxonomy Terms', async ({ page }) => {
 
     objectFactory.taxonomy.ValidateTaxonomyComparisonResults();
 });
-
-

@@ -107,7 +107,7 @@ export class Taxonomy {
   }
 
   saveToFile(fileName, data) {
-    const folder = path.resolve('test-artifacts');
+   const folder = path.resolve("test-artifacts", "taxonomies-json");
     if (!fs.existsSync(folder)) {
       fs.mkdirSync(folder, { recursive: true });
     }

@@ -8,5 +8,10 @@ export  const credentials = {
     url: 'https://dev-infostride-geneseo.pantheonsite.io/wp-admin/',
     username: 'amit.kaushal@infostride.com',
     password: 'Login@123'
-  }
+  },
+ env: {
+    drupal: 'http://drupal-geneseo-backup.ddev.site',
+    wordPress: 'https://dev-infostride-geneseo.pantheonsite.io',
+    live: 'https://www.geneseo.edu'
+ }
 };
