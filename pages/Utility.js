@@ -1,3 +1,4 @@
+import { Console } from 'console';
 import { contentPostTypesUrls } from '../data/contentPostTypesUrls.js';
 import { credentials } from '../data/credentials.js';
 import fs from 'fs';
@@ -94,7 +95,7 @@ export class Utility {
     }
 
     async saveUrlsToExcel(allUrls, cpt) {
-        const folderPath = path.join('.', 'test-artifacts', 'broken-media');
+        const folderPath = path.join('.', 'test-artifacts', 'BrokenMedia');
         const filePath = path.join(folderPath, `${cpt}.xlsx`);
 
         const sheetName = cpt;
@@ -147,9 +148,9 @@ export class Utility {
         console.log(`✅ Excel file saved at: ${outputPath}`);
     }
 
-    loadUrlsFromExcel(cpt, baseUrl) {
+    loadCptUrlsFromExcel(cpt, baseUrl) {
 
-        const filePath = path.resolve(process.cwd(), 'test-artifacts', 'broken-media', `${cpt}.xlsx`);
+        const filePath = path.resolve(process.cwd(), 'test-artifacts', 'BrokenMedia', `${cpt}.xlsx`);
         const sheetName = cpt;
         console.log(`🔍 Attempting to read Excel from: ${filePath}`);
         if (!fs.existsSync(filePath)) {
@@ -172,6 +173,38 @@ export class Utility {
                 }
                 return path;  // Return as-is if it already starts with http(s)
             })
+    }
+
+    loadExcel(filePath) {
+        console.log(`🔍 Attempting to read Excel from: ${filePath}`);
+
+        if (!fs.existsSync(filePath)) {
+            throw new Error(`❌ File not found: ${filePath}`);
+        }
+
+        console.log(`Loading data from: ${filePath}`);
+
+        const workbook = XLSX.readFile(filePath);
+        const firstSheetName = workbook.SheetNames[0];
+        if (!firstSheetName) {
+            throw new Error(`❌ No sheets found in ${filePath}`);
+        }
+
+        const sheet = workbook.Sheets[firstSheetName];
+
+        // Read raw rows
+        const data = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+        if (data.length < 2) {
+            throw new Error("❌ Sheet contains no data rows.");
+        }
+
+        // Skip the first row (headers), then map the first column
+        const firstColumn = data.slice(1)  // skip header
+            .map(row => row[0])
+            .filter(Boolean);
+
+        return firstColumn;
     }
 }
 

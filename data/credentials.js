@@ -6,7 +6,7 @@ export  const credentials = {
   },
   wordPress: {
     url: 'https://dev-infostride-geneseo.pantheonsite.io/wp-admin/',
-    username: 'amit.kaushal@infostride.com',
+    username: 'amit.kaushal',
     password: 'Login@123'
   },
  env: {

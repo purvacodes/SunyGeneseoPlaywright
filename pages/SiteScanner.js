@@ -35,7 +35,7 @@ export class SiteScanner {
 
         const urls = await page.locator("tbody tr td a").allTextContents();
         allUrls = allUrls.concat(urls);
-        console.log(`📥 Collected ${urls.length} URLs from: ${sitemapUrl}`);
+        console.log(`Collected ${urls.length} URLs from: ${sitemapUrl}`);
       } catch (error) {
         console.error(`❌ Error while processing ${sitemapUrl}:`, error);
       }
@@ -207,7 +207,6 @@ export class SiteScanner {
     const allMedia = [];
     const brokenMedia = [];
     const validatedUrls = [];
-
     for (const url of urls) {
       try {
         const { allMedia: pageMedia, brokenMedia: pageBroken } =
