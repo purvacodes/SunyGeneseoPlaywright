@@ -40,12 +40,10 @@ test("Validate URLs and Broken Links", async () => {
     })
   );
 
-  // --- Save results ---
   const finalBrowser = await chromium.launch();
   const finalFactory = createObjects(null, finalBrowser);
 
   finalFactory.utility.saveToExcel("validated-urls.xlsx", "ValidatedUrls", results.allValidated, "ValidatedUrls");
-
   finalFactory.utility.saveToExcel("broken-links.xlsx", "BrokenLinks", results.broken, "BrokenLinks" );
 
   await finalBrowser.close();
