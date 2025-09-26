@@ -1,23 +1,23 @@
 import { test } from "@playwright/test";
 import { chromium } from "playwright";
 import { createObjects } from "../../pages/ObjectFactory.js";
-import { credentials } from "../../data/credentials.js";
 
 test.setTimeout(60 * 60 * 1000);
-test("Verify Media Assets across pages", async () => {
 
+test("Validate URLs and Broken Links", async () => {
   const tempBrowser = await chromium.launch();
   const tempPage = await tempBrowser.newPage();
   const objectFactory = createObjects(tempPage, tempBrowser);
 
-  const extractedUrlsFromExcel = objectFactory.utility.loadExcel("basic_page.xlsx");
+  const extractedUrlsFromExcel = await objectFactory.utility.loadExcel("basic_page.xlsx");
   await tempBrowser.close();
 
   console.log(`Total URLs loaded: ${extractedUrlsFromExcel.length}`);
-const urlQueue = [...extractedUrlsFromExcel];
-  const results = { allGlobalMedia: [], allBrokenMedia: [], allValidatedUrls: [] };
+  const urlQueue = [...extractedUrlsFromExcel];
 
-  // 3. Use 3 browsers × 5 contexts = 15 workers
+  const results = { allValidated: [], broken: [] };
+
+  // Config
   const totalBrowsers = 5;
   const contextsPerBrowser = 5;
   const batchSize = 3;
@@ -30,7 +30,8 @@ const urlQueue = [...extractedUrlsFromExcel];
         Array.from({ length: contextsPerBrowser }, async (_, cIndex) => {
           const workerId = `${bIndex + 1}-${cIndex + 1}`;
           const factory = createObjects(null, browser);
-          await factory.siteScanner.runWorker(browser, batchSize, workerId, urlQueue, results);
+
+          await factory.siteScanner.runLinkCheckerWorker(browser, batchSize, workerId, urlQueue, results);
         })
       );
 
@@ -39,14 +40,13 @@ const urlQueue = [...extractedUrlsFromExcel];
     })
   );
 
-  // 4. Save results
+  // --- Save results ---
   const finalBrowser = await chromium.launch();
-  const finalObjectFactory = createObjects(null, finalBrowser);
+  const finalFactory = createObjects(null, finalBrowser);
 
-  finalObjectFactory.utility.saveToExcel("all-media.xlsx", "AllMedia", results.allGlobalMedia,"AllMedia");
-  finalObjectFactory.utility.saveToExcel("broken-media.xlsx", "BrokenMedia", results.allBrokenMedia, "BrokenMedia");
-  finalObjectFactory.utility.saveToExcel("validated-urls.xlsx", "ValidatedURLs", results.allValidatedUrls,"ValidatedURLs");
-  
+  finalFactory.utility.saveToExcel("validated-urls.xlsx", "ValidatedUrls", results.allValidated, "ValidatedUrls");
+
+  finalFactory.utility.saveToExcel("broken-links.xlsx", "BrokenLinks", results.broken, "BrokenLinks" );
+
   await finalBrowser.close();
-  console.log("✅ Done. Excel files written.");
 });

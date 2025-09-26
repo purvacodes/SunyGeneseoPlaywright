@@ -7,79 +7,12 @@ export class SiteScanner {
     this.postTypeBasePath = contentPostTypesUrls.wordPress.postTypeBasePath;
     this.utility = utility;
 
-    // ✅ Cache to avoid duplicate HEAD checks
     if (!SiteScanner.mediaCache) {
       SiteScanner.mediaCache = new Map();
     }
-  }
-
-  // --- Collect URLs from sitemap and save to Excel ---
-  async collectUrlsToScan(browser, baseUrl, baseName, count) {
-    const sitemapUrls = await this.utility.getUrlsfromSitemap(baseUrl, baseName, count);
-    let allUrls = [];
-
-    const page = await browser.newPage();
-
-    for (const sitemapUrl of sitemapUrls) {
-      try {
-        await page.goto(sitemapUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
-
-        const continueBtn = page.getByRole("button", { name: "Continue" });
-        if (await continueBtn.isVisible().catch(() => false)) {
-          await Promise.all([
-            page.waitForNavigation({ waitUntil: "domcontentloaded", timeout: 30000 }),
-            continueBtn.click(),
-          ]);
-        }
-        await page.waitForTimeout(500);
-
-        const urls = await page.locator("tbody tr td a").allTextContents();
-        allUrls = allUrls.concat(urls);
-        console.log(`Collected ${urls.length} URLs from: ${sitemapUrl}`);
-      } catch (error) {
-        console.error(`❌ Error while processing ${sitemapUrl}:`, error);
-      }
+    if (!SiteScanner.linkCache) {
+      SiteScanner.linkCache = new Set();
     }
-
-    await page.close();
-    await this.utility.saveUrlsToExcel(allUrls, baseName);
-  }
-
-  // --- Worker loop ---
-  async runWorker(browser, batchSize, browserId, urlQueue, results) {
-    const context = await browser.newContext();
-    const page = await context.newPage();
-
-    while (urlQueue.length > 0) {
-      const batch = urlQueue.splice(0, batchSize);
-
-      for (const url of batch) {
-        try {
-          const { allMedia, brokenMedia } = await this.findBrokenMediaOnPage(page, url, browserId);
-
-          results.allGlobalMedia.push(...allMedia);
-          results.allBrokenMedia.push(...brokenMedia);
-          results.allValidatedUrls.push({
-            browserId,
-            url,
-            status: "ok",
-            mediaCount: allMedia.length,
-            brokenCount: brokenMedia.length,
-          });
-        } catch (err) {
-          console.warn(`⚠️ Error scanning ${url}: ${err.message}`);
-          results.allBrokenMedia.push({ browserId, url, error: err.message });
-          results.allValidatedUrls.push({
-            browserId,
-            url,
-            status: "failed",
-            error: err.message,
-          });
-        }
-      }
-    }
-
-    await context.close();
   }
 
   // --- Resolve relative URLs ---
@@ -91,150 +24,142 @@ export class SiteScanner {
     }
   }
 
-  // --- Cached HEAD request ---
-  async checkMediaStatus(mediaUrl) {
-    if (SiteScanner.mediaCache.has(mediaUrl)) {
-      return SiteScanner.mediaCache.get(mediaUrl);
+  // --- Cached HEAD/GET request ---
+  async checkLink(url) {
+    if (SiteScanner.mediaCache.has(url)) {
+      return SiteScanner.mediaCache.get(url);
     }
 
     try {
-      const res = await fetch(mediaUrl, { method: "HEAD" });
-      const result = { url: mediaUrl, status: res.status, ok: res.ok };
-      SiteScanner.mediaCache.set(mediaUrl, result);
+      let res = await fetch(url, { method: "HEAD" });
+      if (res.status === 405 || res.status === 501) {
+        res = await fetch(url, { method: "GET" });
+      }
+      const result = { url, status: res.status, ok: res.ok };
+      SiteScanner.mediaCache.set(url, result);
       return result;
-    } catch {
-      const result = { url: mediaUrl, status: "FETCH_ERROR", ok: false };
-      SiteScanner.mediaCache.set(mediaUrl, result);
+    } catch (err) {
+      const result = { url, status: "FETCH_ERROR", ok: false, error: err.message };
+      SiteScanner.mediaCache.set(url, result);
       return result;
     }
   }
 
-  // --- Scan one page ---
-  async findBrokenMediaOnPage(page, url, browserId) {
-    try {
-      await page.goto(url, { timeout: 60000, waitUntil: "domcontentloaded" });
+  // --- Check page + links ---
+  async checkPageAndLinks(page, pageUrl, browserId) {
+    const records = [];
 
+    try {
+      // 1️⃣ Check initial URL
+      const initialStatus = await this.checkLink(pageUrl);
+
+      // 2️⃣ Navigate and capture final URL
+      await page.goto(pageUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
+      const finalUrl = page.url();
+
+      // 3️⃣ Handle Continue button
       const continueButton = page.getByRole("button", { name: "Continue" });
       if (await continueButton.isVisible().catch(() => false)) {
         await continueButton.click();
         await page.waitForLoadState("domcontentloaded");
       }
-
       await page.waitForLoadState("networkidle", { timeout: 60000 });
 
-      // ✅ Optimized scroll
-      await page.evaluate(async () => {
-        await new Promise(resolve => {
-          let totalHeight = 0;
-          const distance = 400;
-          let lastScrollHeight = 0;
-          let idleCycles = 0;
+      // 4️⃣ Re-check final URL
+      const finalStatus = await this.checkLink(finalUrl);
 
-          const timer = setInterval(() => {
-            const scrollHeight = document.body.scrollHeight;
-            window.scrollBy(0, distance);
-            totalHeight += distance;
-
-            if (scrollHeight === lastScrollHeight) {
-              idleCycles++;
-            } else {
-              idleCycles = 0;
-            }
-            lastScrollHeight = scrollHeight;
-
-            if (totalHeight >= 10000 || idleCycles > 2) {
-              clearInterval(timer);
-              resolve();
-            }
-          }, 150);
-        });
+      // Parent page record
+      records.push({
+        browserId,
+        originalUrl: pageUrl,
+        finalUrl,
+        isRedirected: finalUrl !== pageUrl,
+        childUrl: finalUrl,
+        isParent: true,
+        status: finalStatus.ok ? "ok" : "failed",
+        httpStatus: finalStatus.status,
+        error: finalStatus.error || null,
       });
 
-      // Extract media
-      const mediaSources = await page.evaluate(() => {
-        const results = [];
-        document.querySelectorAll("img[src]").forEach(el =>
-          results.push({ type: "image", src: el.getAttribute("src") })
-        );
-        document.querySelectorAll("video[src], video source[src]").forEach(el =>
-          results.push({ type: "video", src: el.getAttribute("src") })
-        );
+      // 5️⃣ Collect child links
+      const links = await page.evaluate(() => { 
+        return Array.from(document.querySelectorAll("a[href]"))
+        .filter(el => { 
+          const href = el.getAttribute("href") || ""; 
+          return (!el.classList.contains("menu-link") 
+          && !href.startsWith("mailto:")
+          && !href.startsWith("#") 
+          && !href.startsWith("tel:")); })
+          .map(el => el.href.trim()).filter(href => !!href); });
 
-        const fileRegex = /\.(pdf|docx?|xlsx?|pptx?|csv|txt|rtf|odt|ods|odp)(\?.*)?$/i;
-        document.querySelectorAll("a[href], embed[src], iframe[src], object[data]").forEach(el => {
-          let src = el.href || el.src || el.getAttribute("data");
-          if (src && fileRegex.test(src)) {
-            const match = src.match(fileRegex);
-            const ext = match ? match[1].toLowerCase() : "file";
-            results.push({ type: ext, src });
-          }
-        });
-        return results;
-      });
+      const uniqueLinks = [...new Set(links)];
 
-      const uniqueMedia = [...new Map(mediaSources.map(item => [item.src, item])).values()];
-      const allMedia = [];
-      const brokenMedia = [];
+      for (const link of uniqueLinks) {
+        if (SiteScanner.linkCache.has(link)) continue;
+        SiteScanner.linkCache.add(link);
 
-      for (const media of uniqueMedia) {
-        const fullUrl = this.resolveUrl(url, media.src);
-        if (!fullUrl) continue;
+        const status = await this.checkLink(link);
 
-        const status = await this.checkMediaStatus(fullUrl);
-
-        const mediaItem = {
+        records.push({
           browserId,
-          parentPage: url,
-          fullUrl,
-          type: media.type,
-          src: media.src,
-          status: status.status,
-        };
-
-        allMedia.push(mediaItem);
-        if (!status.ok) brokenMedia.push(mediaItem);
+          originalUrl: pageUrl,
+          finalUrl,
+          isRedirected: finalUrl !== pageUrl,
+          childUrl: link,
+          isParent: false,
+          status: status.ok ? "ok" : "failed",
+          httpStatus: status.status,
+          error: status.error || null,
+        });
       }
-
-      return { allMedia, brokenMedia };
     } catch (err) {
-      console.warn(`⚠️ Error scanning ${url}: ${err.message}`);
-      return { allMedia: [], brokenMedia: [] };
+      records.push({
+        browserId,
+        originalUrl: pageUrl,
+        finalUrl: null,
+        isRedirected: null,
+        childUrl: pageUrl,
+        isParent: true,
+        status: "failed",
+        httpStatus: null,
+        error: err.message,
+      });
     }
+
+    return records;
   }
 
-  // --- Helper: scan multiple URLs with one page (sequential) ---
-  async checkBrokenMedia(page, urls, browserId = 1) {
-    const allMedia = [];
-    const brokenMedia = [];
-    const validatedUrls = [];
-    for (const url of urls) {
-      try {
-        const { allMedia: pageMedia, brokenMedia: pageBroken } =
-          await this.findBrokenMediaOnPage(page, url, browserId);
+  // --- Worker ---
+  async runLinkCheckerWorker(browser, batchSize, browserId, urlQueue, results) {
+    const context = await browser.newContext();
+    const page = await context.newPage();
 
-        allMedia.push(...pageMedia);
-        brokenMedia.push(...pageBroken);
+    while (urlQueue.length > 0) {
+      const batch = urlQueue.splice(0, batchSize);
 
-        validatedUrls.push({
-          browserId,
-          url,
-          status: "success",
-          totalMedia: pageMedia.length,
-          brokenMedia: pageBroken.length,
-        });
-      } catch (err) {
-        console.error(`❌ Failed scanning ${url}: ${err.message}`);
-        validatedUrls.push({
-          browserId,
-          url,
-          status: "failed",
-          totalMedia: 0,
-          brokenMedia: 0,
-          error: err.message || "Unknown error",
-        });
+      for (const url of batch) {
+        try {
+          const records = await this.checkPageAndLinks(page, url, browserId);
+          results.allValidated.push(...records);
+
+          const brokenSubset = records.filter(r => r.status === "failed");
+          results.broken.push(...brokenSubset);
+        } catch (err) {
+          results.allValidated.push({
+            browserId,
+            originalUrl: url,
+            finalUrl: null,
+            isRedirected: null,
+            childUrl: url,
+            isParent: true,
+            status: "failed",
+            httpStatus: null,
+            error: err.message,
+          });
+        }
       }
     }
 
-    return { allMedia, brokenMedia, validatedUrls };
+    await context.close();
   }
 }

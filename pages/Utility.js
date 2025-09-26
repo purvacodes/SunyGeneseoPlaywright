@@ -27,7 +27,7 @@ export class Utility {
         return urls;
     }
 
-    async setItemsPerPage() {
+    async setItemsPerPageByScreenOptions() {
         await this.page.getByRole('button', { name: 'Screen Options' }).click();
         const spinButton = this.page.getByRole('spinbutton', { name: 'Number of items per page:' });
         await spinButton.click();
@@ -70,14 +70,11 @@ export class Utility {
 
             console.log(`📄 Scraped page ${currentPage}, got ${links.length} rows, total so far: ${allUrls.size}`);
 
-            // ✅ Check if "next" is disabled
             const nextButton = page.locator('.next-page.button').first();
             if (await nextButton.isDisabled()) {
                 console.log("✅ Reached last page, scraping complete.");
-                break; // exit loop cleanly
+                break; 
             }
-
-            // Move to next page
             const previousCount = lastCount;
             await Promise.all([
                 nextButton.click(),
@@ -94,7 +91,7 @@ export class Utility {
         return Array.from(allUrls.values());
     }
 
-    async saveUrlsToExcel(allUrls, cpt) {
+    async saveCptUrlsToExcel(allUrls, cpt) {
         const folderPath = path.join('.', 'test-artifacts', 'BrokenMedia');
         const filePath = path.join(folderPath, `${cpt}.xlsx`);
 
@@ -194,7 +191,6 @@ export class Utility {
 
         // Read raw rows
         const data = XLSX.utils.sheet_to_json(sheet, { header: 1 });
-
         if (data.length < 2) {
             throw new Error("❌ Sheet contains no data rows.");
         }
@@ -203,7 +199,6 @@ export class Utility {
         const firstColumn = data.slice(1)  // skip header
             .map(row => row[0])
             .filter(Boolean);
-
         return firstColumn;
     }
 }

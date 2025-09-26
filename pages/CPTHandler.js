@@ -19,7 +19,7 @@ export class CPTHandler {
 
   async getCPTUrls(cpt) {
     await this.navigateToCPTPagesListing(cpt);
-    await this.utility.setItemsPerPage();
+    await this.utility.setItemsPerPageByScreenOptions();
     const allUrls = await this.utility.scrapePaginatedUrls(this.page);
 
     const fileName = `${cpt}TotalUrlsListing.xlsx`;
