@@ -29,7 +29,7 @@ test("Verify URLs across  CPT", async () => {
   console.log(`✅ Total URLs loaded: ${extractedUrlsFromExcel.length}`);
 
   const urlQueue = [...extractedUrlsFromExcel];
-  const results = { allGlobalMedia: [], allBrokenMedia: [], allValidatedUrls: [] };
+  const results = { allGlobalMedia: [], allBrokenMedia: [], validatedPages: [] };
 
   // 3. Use 3 browsers × 5 contexts = 15 workers
   const totalBrowsers = 5;
@@ -59,7 +59,7 @@ test("Verify URLs across  CPT", async () => {
 
   finalObjectFactory.utility.saveToExcel("all-media.xlsx", "AllMedia", results.allGlobalMedia,"AllMedia");
   finalObjectFactory.utility.saveToExcel("broken-media.xlsx", "BrokenMedia", results.allBrokenMedia, "BrokenMedia");
-  finalObjectFactory.utility.saveToExcel("validated-urls.xlsx", "ValidatedURLs", results.allValidatedUrls,"ValidatedURLs");
+  finalObjectFactory.utility.saveToExcel("validated-urls.xlsx", "ValidatedURLs", results.validatedPages,"ValidatedURLs");
 
   await finalBrowser.close();
   console.log("✅ Done. Excel files written.");
