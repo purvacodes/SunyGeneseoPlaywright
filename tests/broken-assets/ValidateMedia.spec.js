@@ -1,7 +1,6 @@
 import { test } from "@playwright/test";
 import { chromium } from "playwright";
 import { createObjects } from "../../pages/ObjectFactory.js";
-import { credentials } from "../../data/credentials.js";
 
 test.setTimeout(60 * 60 * 1000);
 test("Verify Media Assets across pages", async () => {
@@ -14,8 +13,8 @@ test("Verify Media Assets across pages", async () => {
   await tempBrowser.close();
 
   console.log(`Total URLs loaded: ${extractedUrlsFromExcel.length}`);
-const urlQueue = [...extractedUrlsFromExcel];
-  const results = { allGlobalMedia: [], allBrokenMedia: [], allValidatedUrls: [] };
+  const urlQueue = [...extractedUrlsFromExcel];
+  const results = { allGlobalMedia: [], allBrokenMedia: [], validatedPages: [] };
 
   // 3. Use 3 browsers × 5 contexts = 15 workers
   const totalBrowsers = 5;
@@ -43,10 +42,10 @@ const urlQueue = [...extractedUrlsFromExcel];
   const finalBrowser = await chromium.launch();
   const finalObjectFactory = createObjects(null, finalBrowser);
 
-  finalObjectFactory.utility.saveToExcel("all-media.xlsx", "AllMedia", results.allGlobalMedia,"AllMedia");
-  finalObjectFactory.utility.saveToExcel("broken-media.xlsx", "BrokenMedia", results.allBrokenMedia, "BrokenMedia");
-  finalObjectFactory.utility.saveToExcel("validated-urls.xlsx", "ValidatedURLs", results.allValidatedUrls,"ValidatedURLs");
-  
+  finalObjectFactory.utility.saveToExcel("all-media.xlsx", "AllMedia", results.allGlobalMedia, "media-reports");
+  finalObjectFactory.utility.saveToExcel("broken-media.xlsx", "BrokenMedia", results.allBrokenMedia, "media-reports");
+  finalObjectFactory.utility.saveToExcel("validated-media.xlsx", "ValidatedMedia", results.validatedPages, "media-reports");
+
   await finalBrowser.close();
   console.log("✅ Done. Excel files written.");
 });

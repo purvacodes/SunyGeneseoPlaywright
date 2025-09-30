@@ -194,12 +194,12 @@ export class Utility {
         if (data.length < 2) {
             throw new Error("❌ Sheet contains no data rows.");
         }
-
         // Skip the first row (headers), then map the first column
         const firstColumn = data.slice(1)  // skip header
             .map(row => row[0])
             .filter(Boolean);
         return firstColumn;
+  
     }
 }
 

@@ -14,7 +14,7 @@ test("Validate URLs and Broken Links", async () => {
 
   console.log(`Total URLs loaded: ${extractedUrlsFromExcel.length}`);
   const urlQueue = [...extractedUrlsFromExcel];
-
+  
   const results = { allValidated: [], broken: [] };
 
   // Config
@@ -43,8 +43,8 @@ test("Validate URLs and Broken Links", async () => {
   const finalBrowser = await chromium.launch();
   const finalFactory = createObjects(null, finalBrowser);
 
-  finalFactory.utility.saveToExcel("validated-urls.xlsx", "ValidatedUrls", results.allValidated, "ValidatedUrls");
-  finalFactory.utility.saveToExcel("broken-links.xlsx", "BrokenLinks", results.broken, "BrokenLinks" );
+  finalFactory.utility.saveToExcel("validated-urls.xlsx", "ValidatedUrls", results.allValidated, "url-reports");
+  finalFactory.utility.saveToExcel("broken-links.xlsx", "BrokenLinks", results.broken, "url-reports" );
 
   await finalBrowser.close();
 });
