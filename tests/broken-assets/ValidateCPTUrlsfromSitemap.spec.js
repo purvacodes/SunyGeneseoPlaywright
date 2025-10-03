@@ -11,7 +11,7 @@ test("Verify URLs across  CPT", async () => {
   const tempPage = await tempBrowser.newPage();
   const objectFactory = createObjects(tempPage, tempBrowser);
 
-  await objectFactory.siteScanner.collectUrlsToScan(
+  await objectFactory.siteScannerOld.collectUrlsToScan(
     tempBrowser,
     credentials.env.wordPress,
     contentPostTypesUrls.CPT.basicPage,
@@ -44,7 +44,7 @@ test("Verify URLs across  CPT", async () => {
         Array.from({ length: contextsPerBrowser }, async (_, cIndex) => {
           const workerId = `${bIndex + 1}-${cIndex + 1}`;
           const factory = createObjects(null, browser);
-          await factory.siteScanner.runWorker(browser, batchSize, workerId, urlQueue, results);
+          await factory.siteScannerOld.runWorker(browser, batchSize, workerId, urlQueue, results);
         })
       );
 

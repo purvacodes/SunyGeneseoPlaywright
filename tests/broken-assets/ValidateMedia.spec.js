@@ -29,7 +29,7 @@ test("Verify Media Assets across pages", async () => {
         Array.from({ length: contextsPerBrowser }, async (_, cIndex) => {
           const workerId = `${bIndex + 1}-${cIndex + 1}`;
           const factory = createObjects(null, browser);
-          await factory.siteScanner.runWorker(browser, batchSize, workerId, urlQueue, results);
+          await factory.siteScannerOld.runWorker(browser, batchSize, workerId, urlQueue, results);
         })
       );
 

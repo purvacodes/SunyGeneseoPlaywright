@@ -16,4 +16,15 @@ export class WordPressLogin {
     await this.page.waitForSelector('#wpadminbar', { state: 'visible', timeout: 30000 });
     
   }
+
+  async loginToHostinger() {
+    await this.page.goto(credentials.hostinger.url, { timeout: 60000, waitUntil: 'domcontentloaded' });
+    await this.page.getByRole('textbox', { name: 'Username' }).click();
+    await this.page.getByRole('textbox', { name: 'Username' }).fill(credentials.hostinger.username);
+    await this.page.getByRole('textbox', { name: 'Password' }).click();
+    await this.page.getByRole('textbox', { name: 'Password' }).fill(credentials.hostinger.password);
+    await this.page.getByRole('button', { name: 'Log in' }).click();
+    await this.page.waitForSelector('#wpadminbar', { state: 'visible', timeout: 30000 });
+    
+  }
 }

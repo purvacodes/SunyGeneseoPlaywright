@@ -73,7 +73,7 @@ export class Utility {
             const nextButton = page.locator('.next-page.button').first();
             if (await nextButton.isDisabled()) {
                 console.log("✅ Reached last page, scraping complete.");
-                break; 
+                break;
             }
             const previousCount = lastCount;
             await Promise.all([
@@ -199,7 +199,16 @@ export class Utility {
             .map(row => row[0])
             .filter(Boolean);
         return firstColumn;
-  
+
     }
+
+    chunkArray(arr, numChunks) {
+        const chunks = Array.from({ length: numChunks }, () => []);
+        arr.forEach((item, index) => {
+            chunks[index % numChunks].push(item);
+        });
+        return chunks;
+    }
+
 }
 
