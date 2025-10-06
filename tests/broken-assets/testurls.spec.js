@@ -1,57 +1,46 @@
-import { test } from "@playwright/test";
-import { chromium } from "playwright";
-import fs from "fs";
-import { credentials } from "../../data/credentials.js";
-import { createObjects } from "../../pages/ObjectFactory.js";
+// tests/broken-assets/testUrls.spec.js
+import { test } from '@playwright/test';
+import { chromium } from 'playwright';
+import fs from 'fs';
+import { createObjects } from '../../pages/ObjectFactory.js';
 
-const BASE_URL = "https://palegoldenrod-ant-677872.hostingersite.com/";
+const BASE_URL = 'https://palegoldenrod-ant-677872.hostingersite.com/';
+const STORAGE_FILE = './test-artifacts/session.json'; // previously saved session
 
-test.setTimeout(2 * 60 * 60 * 1000); // 2 hours
+test('🔥 All-in-one link checker with saved session', async () => {
+  test.setTimeout(2 * 60 * 60 * 1000); // 2 hours
 
-test("🔥 All-in-one link checker with login & parallelization (single browser, multiple tabs)", async () => {
   const objectFactory = createObjects();
-  const results = {
-    allValidated: [],
-    broken: []
-  };
+  const results = { allValidated: [], broken: [] };
 
-  // --- Step 1: Login once and save session ---
+  // --- Launch browser and load saved session ---
   const browser = await chromium.launch({ headless: false });
-  const context = await browser.newContext();
-  const page = await context.newPage();
+  const context = await browser.newContext({ storageState: STORAGE_FILE });
 
-  await page.goto(credentials.hostinger.url, { timeout: 100000, waitUntil: 'domcontentloaded' });
-  await page.getByRole('textbox', { name: 'Username' }).fill(credentials.hostinger.username);
-  await page.getByRole('textbox', { name: 'Password' }).fill(credentials.hostinger.password);
-  await page.getByRole('button', { name: 'Log in' }).click();
-  await page.waitForSelector('#wpadminbar', { state: 'visible', timeout: 30000 });
+  console.log('✅ Session loaded, skipping login.');
 
-  console.log("✅ Logged in and saved session.");
-
-  // --- Step 2: Load URLs to scan and prepend BASE_URL ---
-  const rawUrls = await objectFactory.utility.loadExcel("basic_page.xlsx");
+  // --- Load URLs to scan ---
+  const rawUrls = await objectFactory.utility.loadExcel('basic_page.xlsx');
   const extractedUrlsFromExcel = rawUrls.map(url => {
-    if (url.startsWith("http://") || url.startsWith("https://")) return url;
-    const cleanedPath = url.replace(/^\/+/, "");
-    return BASE_URL + cleanedPath;
+    if (url.startsWith('http://') || url.startsWith('https://')) return url;
+    return BASE_URL + url.replace(/^\/+/, '');
   });
 
-  // --- Step 3: Divide URLs into chunks for parallel tab processing ---
-  const tabsCount = 5; // Change this to control parallel tabs
+  // --- Divide URLs into chunks for parallel tab processing ---
+  const tabsCount = 5; // number of parallel tabs
   const chunkArray = (arr, parts) => {
     const result = Array.from({ length: parts }, () => []);
-    arr.forEach((item, index) => {
-      result[index % parts].push(item);
-    });
+    arr.forEach((item, index) => result[index % parts].push(item));
     return result;
   };
   const urlChunks = chunkArray(extractedUrlsFromExcel, tabsCount);
 
-  // --- Step 4: Create multiple tabs (pages) and process chunks in parallel ---
+  // --- Create multiple tabs (pages) ---
   const pages = await Promise.all(
     Array.from({ length: tabsCount }, () => context.newPage())
   );
 
+  // --- Process chunks in parallel ---
   await Promise.all(
     pages.map(async (tab, tabIndex) => {
       const urls = urlChunks[tabIndex];
@@ -61,47 +50,44 @@ test("🔥 All-in-one link checker with login & parallelization (single browser,
         try {
           const result = await checkPageAndLinks(tab, url, workerId, context);
           results.allValidated.push(...result);
-          results.broken.push(...result.filter(r => r.status === "failed"));
+          results.broken.push(...result.filter(r => r.status === 'failed'));
         } catch (err) {
-          console.log("erro: ",err);
           results.allValidated.push({
             browserId: workerId,
             originalUrl: url,
             finalUrl: null,
             childUrl: url,
             isParent: true,
-            status: "failed",
+            status: 'failed',
             httpStatus: null,
-            error: err.message
+            error: err.message,
           });
         }
       }
 
-      await tab.close(); // Close each tab after processing
+      await tab.close();
     })
   );
 
-  // --- Step 5: Save results ---
-  objectFactory.utility.saveToExcel("validated-urls.xlsx", "ValidatedUrls", results.allValidated, "url-reports");
-  objectFactory.utility.saveToExcel("broken-links.xlsx", "BrokenLinks", results.broken, "url-reports");
+  // --- Save results ---
+  objectFactory.utility.saveToExcel('validated-urls.xlsx', 'ValidatedUrls', results.allValidated, 'url-reports');
+  objectFactory.utility.saveToExcel('broken-links.xlsx', 'BrokenLinks', results.broken, 'url-reports');
 
-  console.log("✅ Scanning complete. Results saved.");
-
+  console.log('✅ Scanning complete.');
   await context.close();
   await browser.close();
 });
 
 
-// --- Function: Check page and its links ---
+// --- Helper: check page and its links ---
 async function checkPageAndLinks(page, pageUrl, browserId, context) {
   const records = [];
 
   try {
-    await page.goto(pageUrl, { waitUntil: "domcontentloaded", timeout: 150000 });
-
+    await page.goto(pageUrl, { waitUntil: 'domcontentloaded', timeout: 150_000 });
     const finalUrl = page.url();
     const finalStatus = await checkHttpStatus(finalUrl, context);
-
+console.log(finalStatus);
     records.push({
       browserId,
       originalUrl: pageUrl,
@@ -109,23 +95,18 @@ async function checkPageAndLinks(page, pageUrl, browserId, context) {
       isRedirected: finalUrl !== pageUrl,
       childUrl: finalUrl,
       isParent: true,
-      status: finalStatus.ok ? "ok" : "failed",
+      status: finalStatus.ok ? 'ok' : 'failed',
       httpStatus: finalStatus.status,
       error: finalStatus.error || null,
     });
 
     if (!finalStatus.ok) return records;
 
-    const links = await page.evaluate(() => {
-      return Array.from(document.querySelectorAll("a[href]"))
-        .map(el => el.getAttribute("href"))
-        .filter(href =>
-          href &&
-          !href.startsWith("mailto:") &&
-          !href.startsWith("#") &&
-          !href.startsWith("tel:")
-        );
-    });
+    const links = await page.evaluate(() =>
+      Array.from(document.querySelectorAll('a[href]'))
+        .map(el => el.getAttribute('href'))
+        .filter(href => href && !href.startsWith('mailto:') && !href.startsWith('#') && !href.startsWith('tel:'))
+    );
 
     const uniqueLinks = [...new Set(links)];
 
@@ -140,7 +121,7 @@ async function checkPageAndLinks(page, pageUrl, browserId, context) {
         isRedirected: finalUrl !== pageUrl,
         childUrl: absolute,
         isParent: false,
-        status: status.ok ? "ok" : "failed",
+        status: status.ok ? 'ok' : 'failed',
         httpStatus: status.status,
         error: status.error || null,
       });
@@ -153,17 +134,22 @@ async function checkPageAndLinks(page, pageUrl, browserId, context) {
       isRedirected: null,
       childUrl: pageUrl,
       isParent: true,
-      status: "failed",
+      status: 'failed',
       httpStatus: null,
-      error: err.message
+      error: err.message,
     });
   }
 
   return records;
 }
 
+// --- Helper: check HTTP status using context request ---
 async function checkHttpStatus(url, context) {
-  const request = await context.request;
-  const res = await request.get(url);
-  return { url, status: res.status(), ok: res.ok() };
+  try {
+ const res = await context.request.get(url, { timeout: 60000 });
+    return { url, status: res.status(), ok: res.ok() };
+  } catch (err) {
+    return { url, status: null, ok: false, error: err.message };
+  }
 }
+

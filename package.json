@@ -1,6 +1,7 @@
 {
   "name": "suny-geneseo-playwright",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {},
@@ -12,6 +13,10 @@
     "@types/node": "^24.3.0"
   },
   "dependencies": {
+    "p-limit": "^7.1.1",
+    "playwright": "^1.55.1",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "xlsx": "^0.18.5"
   }
 }
