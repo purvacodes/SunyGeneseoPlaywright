@@ -101,7 +101,6 @@ async function checkPageAndLinks(page, pageUrl, browserId, context) {
 
     const finalUrl = page.url();
     const finalStatus = await checkHttpStatus(finalUrl, context);
-    console.log("finalstatus: ", finalStatus);
 
     records.push({
       browserId,
@@ -165,7 +164,6 @@ async function checkPageAndLinks(page, pageUrl, browserId, context) {
 
 async function checkHttpStatus(url, context) {
   const request = await context.request;
-  console.log(request);
   const res = await request.get(url);
   return { url, status: res.status(), ok: res.ok() };
 }

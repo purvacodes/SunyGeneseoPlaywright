@@ -1,0 +1,85 @@
+{
+  "cookies": [
+    {
+      "name": "wordpress_sec_e7686b605433b6cabb072ac7f6af68b5",
+      "value": "amit.kaushal%40infostride.com%7C1759903587%7CftJkn7QP901lztNkydQ6aZipXVDMt2tXwRnKrNGRAWU%7C8fafe8f01d85ca841ba071f41dc65fbe13e34309c9c08822f68e518a43c53eb6",
+      "domain": "palegoldenrod-ant-677872.hostingersite.com",
+      "path": "/wp-content/plugins",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wordpress_sec_e7686b605433b6cabb072ac7f6af68b5",
+      "value": "amit.kaushal%40infostride.com%7C1759903587%7CftJkn7QP901lztNkydQ6aZipXVDMt2tXwRnKrNGRAWU%7C8fafe8f01d85ca841ba071f41dc65fbe13e34309c9c08822f68e518a43c53eb6",
+      "domain": "palegoldenrod-ant-677872.hostingersite.com",
+      "path": "/wp-admin",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "hcdn",
+      "value": "AQEAyOvDKPWR41I2FCSf0LdJkos1ghD_7zpMax0JloWTTu9dXONoAAAAAAAQAQCjp1TR5D-QiQUU7G9K-5BPAAAAxfxMyNATmb1-RzlK7bZ76g",
+      "domain": "palegoldenrod-ant-677872.hostingersite.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "PHPSESSID",
+      "value": "kko8dru64242lv0ug493vejd14",
+      "domain": "palegoldenrod-ant-677872.hostingersite.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wordpress_test_cookie",
+      "value": "WP%20Cookie%20check",
+      "domain": "palegoldenrod-ant-677872.hostingersite.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wordpress_logged_in_e7686b605433b6cabb072ac7f6af68b5",
+      "value": "amit.kaushal%40infostride.com%7C1759903587%7CftJkn7QP901lztNkydQ6aZipXVDMt2tXwRnKrNGRAWU%7C5da7d7b0282add14e003d63daa5eda194d604f8ee40316e9efc2f65b63e659f4",
+      "domain": "palegoldenrod-ant-677872.hostingersite.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wp-settings-2",
+      "value": "libraryContent%3Dbrowse%26posts_list_mode%3Dlist",
+      "domain": "palegoldenrod-ant-677872.hostingersite.com",
+      "path": "/",
+      "expires": 1791266792.370072,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wp-settings-time-2",
+      "value": "1759730790",
+      "domain": "palegoldenrod-ant-677872.hostingersite.com",
+      "path": "/",
+      "expires": 1791266792.370164,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}
