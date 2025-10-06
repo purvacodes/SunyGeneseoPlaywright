@@ -63,6 +63,7 @@ test("🔥 All-in-one link checker with login & parallelization (single browser,
           results.allValidated.push(...result);
           results.broken.push(...result.filter(r => r.status === "failed"));
         } catch (err) {
+          console.log("erro: ",err);
           results.allValidated.push({
             browserId: workerId,
             originalUrl: url,
@@ -100,6 +101,7 @@ async function checkPageAndLinks(page, pageUrl, browserId, context) {
 
     const finalUrl = page.url();
     const finalStatus = await checkHttpStatus(finalUrl, context);
+    console.log("finalstatus: ", finalStatus);
 
     records.push({
       browserId,
@@ -161,25 +163,9 @@ async function checkPageAndLinks(page, pageUrl, browserId, context) {
   return records;
 }
 
-
-// --- Function: HTTP check with cookies from Playwright session ---
 async function checkHttpStatus(url, context) {
-  try {
-    const cookies = await context.cookies();
-    const cookieHeader = cookies.map(c => `${c.name}=${c.value}`).join("; ");
-
-    let res = await fetch(url, {
-      method: "GET",
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) PlaywrightBot",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Cookie": cookieHeader
-      }
-    });
-
-    return { url, status: res.status, ok: res.ok };
-  } catch (err) {
-    return { url, status: "FETCH_ERROR", ok: false, error: err.message };
-  }
+  const request = await context.request;
+  console.log(request);
+  const res = await request.get(url);
+  return { url, status: res.status(), ok: res.ok() };
 }
