@@ -7,7 +7,7 @@ const BASE_URL = 'https://palegoldenrod-ant-677872.hostingersite.com/';
 const STORAGE_FILE = './test-artifacts/session.json';
 
 // Parallel configuration
-const totalBrowsers = 2;        // number of browsers
+const totalBrowsers = 3;        // number of browsers
 const contextsPerBrowser = 2;   // contexts per browser
 const tabsPerContext = 3;       // pages per context
 
