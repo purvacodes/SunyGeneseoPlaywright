@@ -18,6 +18,7 @@ export  const credentials = {
     drupal: 'http://drupal-geneseo-backup.ddev.site',
     wordPress: 'https://dev-infostride-geneseo.pantheonsite.io',
     live: 'https://www.geneseo.edu',
-    hostinger: 'https://palegoldenrod-ant-677872.hostingersite.com/'
+    hostinger: 'https://palegoldenrod-ant-677872.hostingersite.com/',
+    hostingerLocal: 'http://localhost:10003/'
  }
 };

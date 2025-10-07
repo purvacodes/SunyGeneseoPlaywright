@@ -5,7 +5,7 @@ import { WordPressLogin } from "./WordPressLogin.js";
 
 export class SiteScannerOld {
   constructor(utility) {
-    this.env = credentials.env.hostinger; 
+    this.env = credentials.env.hostingerLocal; 
     this.postTypeBasePath = contentPostTypesUrls.wordPress.postTypeBasePath;
     this.utility = utility;
     this.wordPress = new WordPressLogin ();
@@ -235,7 +235,7 @@ export class SiteScannerOld {
 
   // --- Cached HEAD/GET request for links ---
   async checkLink(url) {
-    if (SiteScannerOld.mediaCache.has(url)) {
+      if (SiteScannerOld.mediaCache.has(url)) {
       return SiteScannerOld.mediaCache.get(url);
     }
 
@@ -260,12 +260,12 @@ export class SiteScannerOld {
     const records = [];
   
     const targetUrl = this.resolveUrl(this.env, pageUrl); // ✅ resolve
-      
+
     try {
   
       const initialStatus = await this.checkLink(targetUrl);
 
-      await page.goto(targetUrl, { waitUntil: "domcontentloaded", timeout: 150000 });
+      await page.goto(targetUrl, { waitUntil: "domcontentloaded", timeout: 200000 });
       const finalUrl = page.url();
 
       const continueButton = page.getByRole("button", { name: "Continue" });
@@ -273,7 +273,7 @@ export class SiteScannerOld {
         await continueButton.click();
         await page.waitForLoadState("domcontentloaded");
       }
-      await page.waitForLoadState("networkidle", { timeout: 60000 });
+      await page.waitForLoadState("networkidle", { timeout: 100000 });
 
       const finalStatus = await this.checkLink(finalUrl);
 
@@ -346,6 +346,46 @@ export class SiteScannerOld {
 
     return records;
   }
+  // --- Parent-only page check ---
+async checkParentPage(page, pageUrl, browserId) {
+  const records = [];
+  const targetUrl = this.resolveUrl(this.env, pageUrl);
+
+  try {
+    const status = await this.checkLink(targetUrl);
+
+    await page.goto(targetUrl, { waitUntil: "domcontentloaded", timeout: 150000 });
+    const finalUrl = page.url();
+
+    records.push({
+      browserId,
+      originalUrl: pageUrl,
+      finalUrl,
+      isRedirected: finalUrl !== pageUrl,
+      childUrl: finalUrl, // only parent URL
+      isParent: true,
+      status: status.ok ? "ok" : "failed",
+      httpStatus: status.status,
+      error: status.error || null,
+    });
+
+    return records;
+  } catch (err) {
+    records.push({
+      browserId,
+      originalUrl: pageUrl,
+      finalUrl: null,
+      isRedirected: null,
+      childUrl: pageUrl,
+      isParent: true,
+      status: "failed",
+      httpStatus: null,
+      error: err.message,
+    });
+    return records;
+  }
+}
+
 
   // --- Worker loop for link checking ---
   async runLinkCheckerWorker(browser, batchSize, browserId, urlQueue, results) {
@@ -355,8 +395,9 @@ export class SiteScannerOld {
       const batch = urlQueue.splice(0, batchSize);
 
       for (const url of batch) {
+        
         try {
-          const records = await this.checkPageAndLinks(page, url, browserId);
+          const records = await this.checkParentPage(page, url, browserId);
           results.allValidated.push(...records);
 
           const brokenSubset = records.filter(r => r.status === "failed");
