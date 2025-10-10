@@ -12,6 +12,8 @@ export  const credentials = {
  env: {
     drupal: 'http://drupal-geneseo-backup.ddev.site',
     wordPress: 'https://dev-infostride-geneseo.pantheonsite.io',
-    live: 'https://www.geneseo.edu'
+    live: 'https://www.geneseo.edu',
+    local:'http://localhost/sunny/'
+
  }
 };

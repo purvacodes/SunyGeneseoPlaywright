@@ -4,7 +4,7 @@ import { contentPostTypesUrls } from "../data/contentPostTypesUrls.js";
 export class SiteScanner {
   constructor(utility, opts = {}) {
     this.utility = utility;
-    this.env = credentials?.env?.wordPress || "";
+    this.env = this.env = credentials.env.local.endsWith('/') ? credentials.env.local : credentials.env.local + '/';
     this.postTypeBasePath = contentPostTypesUrls?.wordPress?.postTypeBasePath || "";
 
     // caches shared across instances
@@ -197,7 +197,7 @@ export class SiteScanner {
       }
 
       // allow network activity a bit; fail safe (catch) so it doesn't block forever
-      await page.waitForLoadState("networkidle", { timeout: 60_000 }).catch(() => {});
+      await page.waitForLoadState("networkidle", { timeout: 60_000 }).catch(() => { });
 
       // optimized scroll to lazy-loaded media
       await page.evaluate(async () => {
@@ -371,7 +371,7 @@ export class SiteScanner {
         await continueButton.click();
         await page.waitForLoadState("domcontentloaded");
       }
-      await page.waitForLoadState("networkidle", { timeout: 60_000 }).catch(() => {});
+      await page.waitForLoadState("networkidle", { timeout: 60_000 }).catch(() => { });
 
       const finalStatus = await this.checkLink(finalUrl);
 
@@ -447,9 +447,10 @@ export class SiteScanner {
   // ---------- Check parent page (original) ----------
   async checkParentPage(page, pageUrl, browserId) {
     const records = [];
-    const targetUrl = this.resolveUrl(this.env, pageUrl);
+    let targetUrl = this.normalizeUrl(pageUrl);
 
     try {
+
       const status = await this.checkLink(targetUrl);
 
       await page.goto(targetUrl, { waitUntil: "domcontentloaded", timeout: 150_000 });
@@ -457,9 +458,9 @@ export class SiteScanner {
 
       records.push({
         browserId,
-        originalUrl: pageUrl,
+        originalUrl: targetUrl,
         finalUrl,
-        isRedirected: finalUrl !== pageUrl,
+        isRedirected: finalUrl !== targetUrl,
         childUrl: finalUrl,
         isParent: true,
         status: status.ok ? "ok" : "failed",
@@ -471,7 +472,7 @@ export class SiteScanner {
     } catch (err) {
       records.push({
         browserId,
-        originalUrl: pageUrl,
+        originalUrl: targetUrl,
         finalUrl: null,
         isRedirected: null,
         childUrl: pageUrl,
@@ -489,31 +490,33 @@ export class SiteScanner {
     const context = await browser.newContext();
     const page = await context.newPage();
 
+
     while (urlQueue.length > 0) {
       const batch = urlQueue.splice(0, batchSize);
       // console.log(`🔍 [${browserId}] picked up ${batch.length} URLs:`, batch);
 
       for (const url of batch) {
         try {
-               
+
+
           const records = await this.checkParentPage(page, url, browserId);
+          const fullUrl = this.normalizeUrl(url);
+
+          console.log(`[${browserId}] Completed: ${fullUrl} → ${records[0]?.httpStatus ?? "N/A"}`);
 
           // push results
           results.allValidated.push(...records);
           const brokenSubset = records.filter((r) => r.status === "failed");
           results.broken.push(...brokenSubset);
 
-          // Log outcome per worker and URL
-          console.log(`[${browserId}] Completed: ${url} → ${records[0]?.httpStatus ?? "N/A"}`);
-
         } catch (err) {
-          console.warn(`⚠️ [${browserId}] Error processing ${url}: ${err.message}`);
+          console.warn(`⚠️ [${browserId}] Error processing ${fullUrl}: ${err.message}`);
           results.allValidated.push({
             browserId,
-            originalUrl: url,
-            finalUrl: null,
+            originalUrl: pageUrl,
+            finalUrl: fullUrl,
             isRedirected: null,
-            childUrl: url,
+            childUrl: fullUrl,
             isParent: true,
             status: "failed",
             httpStatus: null,
@@ -534,8 +537,15 @@ export class SiteScanner {
         await this.throttledDelay();
       }
     }
-    
+
 
     await context.close();
+  }
+  normalizeUrl(pageUrl) {
+    // If already absolute, return as-is
+    if (pageUrl.startsWith("http")) return pageUrl;
+
+    // Strip leading slashes and append to base
+    return this.resolveUrl(this.env, pageUrl.replace(/^\/+/, ""));
   }
 }

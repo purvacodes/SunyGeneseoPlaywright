@@ -3,7 +3,7 @@ import { SiteAudit } from "../../pages/SiteAudit.js";
 import { createObjects } from "../../pages/ObjectFactory.js";
 import { credentials } from "../../data/credentials.js";
 
-//test.setTimeout(15 * 60 * 60 * 1000); // 6 hours
+test.setTimeout(15 * 60 * 60 * 1000); // 6 hours
 
 
 // ---------------- CONFIG ----------------
@@ -17,7 +17,7 @@ const CONFIG = {
   OUTPUT_SUBFOLDER: "url-reports",
   VALIDATED_FILE: "validated-slugs.xlsx",
   BROKEN_FILE: "broken-slugs.xlsx",
-  ENV_BASE_URL: credentials.env.wordPress,
+  ENV_BASE_URL: credentials.env.local,
 
 };
 
@@ -36,10 +36,10 @@ test("Validate Parent Page URLs", async ({}, testInfo) => {
 
   for (let w = 0; w < totalWorkers; w++) {
     const urlsForWorker = extractedUrlsFromExcel.slice(w * chunkSize, (w + 1) * chunkSize);
-    const audit = new SiteAudit(CONFIG, w + 1, urlsForWorker);
-    await audit.run(); // sequential per internal worker
-    allValidated.push(...audit.results);
-    broken.push(...audit.broken);
+    const siteAudit = new SiteAudit(CONFIG, w + 1, urlsForWorker);
+    await siteAudit.run(); // sequential per internal worker
+    allValidated.push(...siteAudit.results);
+    broken.push(...siteAudit.broken);
   }
 
   // --- Save final Excel reports ---

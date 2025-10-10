@@ -28,10 +28,8 @@ export class SiteAudit {
 
     for (let i = 0; i < this.urls.length; i++) {
       const url = this.urls[i];
-      await this.checkParentPage(page, url);
-      await this.throttle();
-
-      // Periodic progress logging
+      await this.checkSlugStatus(page, url);
+      // await this.throttle();
       if (Date.now() - this.lastProgressLog >= this.config.PROGRESS_INTERVAL_MS) {
         this.logProgress(i + 1);
         this.lastProgressLog = Date.now();
@@ -41,71 +39,70 @@ export class SiteAudit {
     await browser.close();
   }
 
-  /**
-   * Visits a single URL, validates HTTP status with retries.
-   */async checkParentPage(page, url) {
-  // Prepend ENV_BASE_URL if URL is relative
-  const fullUrl = url.startsWith("http") 
-    ? url 
-    : `${this.config.ENV_BASE_URL.replace(/\/$/, "")}/${url.replace(/^\/+/, "")}`;
+  //Visits a single URL, validates HTTP status with retries
+   async checkSlugStatus(page, url) {
+    // Prepend ENV_BASE_URL if URL is relative
+    const fullUrl = url.startsWith("http")
+      ? url
+      : `${this.config.ENV_BASE_URL.replace(/\/$/, "")}/${url.replace(/^\/+/, "")}`;
 
-  let attempt = 0;
-  let success = false;
-  let finalStatus = null;
+    let attempt = 0;
+    let success = false;
+    let finalStatus = null;
 
-  while (attempt <= this.config.RETRY_ATTEMPTS && !success) {
-    attempt++;
-    try {
-      // Skip if cached
-      if (this.cache.has(fullUrl)) {
-        finalStatus = this.cache.get(fullUrl);
-        success = finalStatus < 400;
-        break;
+    while (attempt <= this.config.RETRY_ATTEMPTS && !success) {
+      attempt++;
+      try {
+        // Skip if cached
+        if (this.cache.has(fullUrl)) {
+          finalStatus = this.cache.get(fullUrl);
+          success = finalStatus < 400;
+          break;
+        }
+
+        // Go to initial page
+        let response = await page.goto(fullUrl, { waitUntil: "domcontentloaded", timeout: this.config.REQUEST_TIMEOUT_MS });
+
+        // Handle interstitial / Continue button
+        const continueBtn = page.getByRole("button", { name: "Continue" });
+        if (await continueBtn.isVisible().catch(() => false)) {
+          // Wait for navigation after clicking Continue
+          response = await Promise.all([
+            page.waitForNavigation({ waitUntil: "domcontentloaded", timeout: 60000 }),
+            continueBtn.click(),
+          ]).then(([resp]) => resp);
+        }
+
+        // Wait a moment to let page settle
+        await page.waitForTimeout(1000);
+
+        // Final status
+        finalStatus = response?.status() || 0;
+        success = response && response.ok();
+
+        // Cache it
+        this.cache.set(fullUrl, finalStatus);
+      } catch (err) {
+        finalStatus = "ERROR";
+        success = false;
       }
-
-      // Go to initial page
-      let response = await page.goto(fullUrl, { waitUntil: "domcontentloaded", timeout: this.config.REQUEST_TIMEOUT_MS });
-
-      // Handle interstitial / Continue button
-      const continueBtn = page.getByRole("button", { name: "Continue" });
-      if (await continueBtn.isVisible().catch(() => false)) {
-        // Wait for navigation after clicking Continue
-        response = await Promise.all([
-          page.waitForNavigation({ waitUntil: "domcontentloaded", timeout: 60000 }),
-          continueBtn.click(),
-        ]).then(([resp]) => resp);
-      }
-
-      // Wait a moment to let page settle
-      await page.waitForTimeout(500);
-
-      // Final status
-      finalStatus = response?.status() || 0;
-      success = response && response.ok();
-
-      // Cache it
-      this.cache.set(fullUrl, finalStatus);
-    } catch (err) {
-      finalStatus = "ERROR";
-      success = false;
     }
+
+    const record = {
+      workerId: this.workerId,
+      url: fullUrl,
+      status: success && finalStatus < 400 ? "ok" : "failed",
+      httpStatus: finalStatus,
+      error: success ? null : `Failed after ${attempt} attempt(s)`,
+    };
+
+    // Store results
+    this.results.push(record);
+    if (record.status === "failed") this.broken.push(record);
+
+    // Log
+    this.log(record);
   }
-
-  const record = {
-    workerId: this.workerId,
-    url: fullUrl,
-    status: success && finalStatus < 400 ? "ok" : "failed",
-    httpStatus: finalStatus,
-    error: success ? null : `Failed after ${attempt} attempt(s)`,
-  };
-
-  // Store results
-  this.results.push(record);
-  if (record.status === "failed") this.broken.push(record);
-
-  // Log
-  this.log(record);
-}
 
 
   /**
@@ -128,7 +125,7 @@ export class SiteAudit {
    */
   logProgress(processedCount) {
     console.log(
-      `[Progress] ${processedCount} / ${this.urls.length} URLs validated | Worker: ${this.workerId} | Elapsed: ${Math.floor((Date.now() - this.startTime)/60000)}m`
+      `[Progress] ${processedCount} / ${this.urls.length} URLs validated | Worker: ${this.workerId} | Elapsed: ${Math.floor((Date.now() - this.startTime) / 60000)}m`
     );
   }
 }
