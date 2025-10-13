@@ -1,48 +1,91 @@
+// 🔥 tests/validate-urls.test.js
 import { test } from "@playwright/test";
-import { SiteAudit } from "../../pages/SiteAudit.js";
+import { chromium } from "playwright";
 import { createObjects } from "../../pages/ObjectFactory.js";
-import { credentials } from "../../data/credentials.js";
 
-test.setTimeout(15 * 60 * 60 * 1000); // 6 hours
+test.setTimeout(15 * 60 * 60 * 1000);
+
+test("Validate URLs and Broken Links (with retry, throttle, progress)", async () => {
+  const tempBrowser = await chromium.launch();
+  const tempPage = await tempBrowser.newPage();
+  const objectFactory = createObjects(tempPage, tempBrowser);
+
+  const extractedUrlsFromExcel = await objectFactory.utility.loadExcel("basic_page.xlsx");
+  await tempBrowser.close();
+
+  console.log(`📄 Total URLs loaded: ${extractedUrlsFromExcel.length}`);
+
+  const urlQueue = [...extractedUrlsFromExcel];
+  const totalUrls = urlQueue.length;
+
+  const results = { allValidated: [], broken: [] };
+  const globalProgress = { total: totalUrls, completed: 0 };
+
+  const batchSize = 2;
+  let maxBrowsers = totalUrls > 400 ? 1 : 2;
+  let contextsPerBrowser = totalUrls > 400 ? 2 : 3;
+  const totalAvailableWorkers = maxBrowsers * contextsPerBrowser;
+  const totalRequiredWorkers = Math.min(Math.ceil(totalUrls / batchSize), totalAvailableWorkers);
+
+  console.log(`🧮 Total workers needed: ${totalRequiredWorkers}`);
+
+  let workerCount = 0;
+  const allBrowserTasks = [];
+
+  // 🕒 Progress logger every 5 minutes
+  const progressTimer = setInterval(() => {
+    console.log(`⏱️ [${new Date().toLocaleTimeString()}] Progress: ${globalProgress.completed}/${globalProgress.total} URLs validated`);
+  }, 5 * 60 * 1000);
+
+  for (let bIndex = 0; bIndex < maxBrowsers; bIndex++) {
+    const browser = await chromium.launch({ headless: true });
+    const browserTasks = [];
+
+    const factory = createObjects(null, browser, {
+      batchDelayMs: 2000,
+      browserLaunchDelayMs: 3000,
+    });
 
 
-// ---------------- CONFIG ----------------
-const CONFIG = {
-  MAX_PARALLEL_WORKERS: 6,
-  THROTTLE_DELAY_MS: 350,
-  RETRY_ATTEMPTS: 2,
-  REQUEST_TIMEOUT_MS: 10000,
-  PROGRESS_INTERVAL_MS: 300000, // 5 minutes
-  INPUT_FILE: "basic_page.xlsx",
-  OUTPUT_SUBFOLDER: "url-reports",
-  VALIDATED_FILE: "validated-slugs.xlsx",
-  BROKEN_FILE: "broken-slugs.xlsx",
-  ENV_BASE_URL: credentials.env.local,
+    for (let cIndex = 0; cIndex < contextsPerBrowser; cIndex++) {
+      if (workerCount >= totalRequiredWorkers) break;
 
-};
+      const workerId = `B${bIndex + 1}-W${cIndex + 1}`;
 
-test("Validate Parent Page URLs", async ({}, testInfo) => {
-  const { utility } = createObjects(null, null);
+      const task = factory.siteScanner.runLinkCheckerWorker(
+        browser,
+        batchSize,
+        workerId,
+        urlQueue,
+        results,
+        globalProgress
+      );
 
-  // --- Load URLs from Excel ---
-  const extractedUrlsFromExcel = await utility.loadExcel(CONFIG.INPUT_FILE);
-  console.log(`Total URLs loaded: ${extractedUrlsFromExcel.length}`);
+      browserTasks.push(task);
+      workerCount++;
+    }
 
-  // --- Split URLs among internal workers ---
-  const totalWorkers = CONFIG.MAX_PARALLEL_WORKERS;
-  const chunkSize = Math.ceil(extractedUrlsFromExcel.length / totalWorkers);
-  const allValidated = [];
-  const broken = [];
+    allBrowserTasks.push(
+      Promise.all(browserTasks).then(() => {
+        console.log(`🛑 Browser ${bIndex + 1} completed and closed`);
+        return browser.close();
+      })
+    );
 
-  for (let w = 0; w < totalWorkers; w++) {
-    const urlsForWorker = extractedUrlsFromExcel.slice(w * chunkSize, (w + 1) * chunkSize);
-    const siteAudit = new SiteAudit(CONFIG, w + 1, urlsForWorker);
-    await siteAudit.run(); // sequential per internal worker
-    allValidated.push(...siteAudit.results);
-    broken.push(...siteAudit.broken);
+    if (workerCount >= totalRequiredWorkers) break;
+
   }
 
-  // --- Save final Excel reports ---
-  utility.saveToExcel(CONFIG.VALIDATED_FILE, "ValidatedUrls", allValidated, CONFIG.OUTPUT_SUBFOLDER);
-  utility.saveToExcel(CONFIG.BROKEN_FILE, "BrokenLinks", broken, CONFIG.OUTPUT_SUBFOLDER);
+
+  await Promise.all(allBrowserTasks);
+  clearInterval(progressTimer);
+
+  const finalBrowser = await chromium.launch();
+  const finalFactory = createObjects(null, finalBrowser);
+
+  await finalFactory.utility.saveToExcel("validated-urls.xlsx", "ValidatedUrls", results.allValidated, "url-reports");
+  await finalFactory.utility.saveToExcel("broken-links.xlsx", "BrokenLinks", results.broken, "url-reports");
+
+  await finalBrowser.close();
+  console.log(`✅ Done. Results saved in url-reports/.`);
 });
