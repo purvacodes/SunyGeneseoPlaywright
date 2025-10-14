@@ -24,13 +24,31 @@ export class SiteScanner {
   }
 
   // ---------- Utilities ----------
-  resolveUrl(base, relative) {
-    try {
-      return new URL(relative, base).href;
-    } catch {
-      return null;
-    }
+resolveUrl(base, relative) {
+  if (!relative) return null;
+
+  // already absolute
+  if (/^https?:\/\//i.test(relative)) return relative;
+
+  // ensure base ends with "/"
+  const cleanBase = base.endsWith("/") ? base : base + "/";
+
+  // if slug starts with "/", append safely
+  if (relative.startsWith("/")) {
+    const baseUrl = new URL(cleanBase);
+    // ensure we don’t lose subpath like "/sunny/"
+    const final = `${baseUrl.origin}${baseUrl.pathname.replace(/\/$/, "")}${relative}`;
+    return final;
   }
+
+  // fallback to standard URL resolution
+  try {
+    return new URL(relative, cleanBase).href;
+  } catch {
+    return cleanBase + relative;
+  }
+}
+
 
   // small randomized throttle delay
   async throttledDelay() {
@@ -103,15 +121,20 @@ export class SiteScanner {
     await this.utility.saveUrlsToExcel(allUrls, baseName);
   }
 
-  // ---------- Media scanning worker (original runWorker) ----------
-  async runWorker(browser, batchSize, browserId, urlQueue, results) {
+  // ---------- Worker loop for media validation (parallelized like runLinkCheckerWorker) ----------
+  async runMediaCheckerWorker(browser, batchSize, browserId, urlQueue, results, globalProgress = null) {
     const context = await browser.newContext();
     const page = await context.newPage();
 
     while (urlQueue.length > 0) {
       const batch = urlQueue.splice(0, batchSize);
 
-      for (const url of batch) {
+      for (const rawUrl of batch) {
+        const url = this.resolveUrl(this.env, rawUrl);
+        if (!url) {
+          console.warn(`🚫 [${browserId}] Skipping invalid media URL: ${rawUrl}`);
+          continue;
+        }
         try {
           const { allMedia, brokenMedia, finalUrl } = await this.findBrokenMediaOnPage(page, url, browserId);
 
@@ -128,7 +151,7 @@ export class SiteScanner {
             error: null,
           });
 
-          console.log(`✅ [${browserId}] Media scan OK - ${url} (media: ${allMedia.length}, broken: ${brokenMedia.length})`);
+          console.log(`✅ [${browserId}] Media OK - ${url} (media: ${allMedia.length}, broken: ${brokenMedia.length})`);
         } catch (err) {
           results.validatedPages.push({
             browserId,
@@ -150,6 +173,14 @@ export class SiteScanner {
           });
 
           console.warn(`⚠️ [${browserId}] Error scanning ${url}: ${err.message}`);
+        }
+
+        // update progress
+        if (globalProgress) {
+          globalProgress.completed = (globalProgress.completed || 0) + 1;
+          if (globalProgress.completed % 5 === 0) {
+            console.log(`📊 [${browserId}] Progress short: ${globalProgress.completed}/${globalProgress.total}`);
+          }
         }
 
         // throttle between page scans
@@ -199,9 +230,9 @@ export class SiteScanner {
       // allow network activity a bit; fail safe (catch) so it doesn't block forever
       await page.waitForLoadState("networkidle", { timeout: 60_000 }).catch(() => { });
 
-      // optimized scroll to lazy-loaded media
+      // ✅ Scroll for lazy-loaded media
       await page.evaluate(async () => {
-        await new Promise((resolve) => {
+        await new Promise(resolve => {
           let totalHeight = 0;
           const distance = 400;
           let lastScrollHeight = 0;
@@ -226,6 +257,7 @@ export class SiteScanner {
           }, 150);
         });
       });
+
 
       const finalUrl = page.url();
 
@@ -358,7 +390,6 @@ export class SiteScanner {
   // ---------- Check page and its links (original) ----------
   async checkPageAndLinks(page, pageUrl, browserId) {
     const records = [];
-
     try {
       // check parent with HEAD/GET first
       const initialStatus = await this.checkLink(pageUrl);
@@ -447,8 +478,7 @@ export class SiteScanner {
   // ---------- Check parent page (original) ----------
   async checkParentPage(page, pageUrl, browserId) {
     const records = [];
-    let targetUrl = this.normalizeUrl(pageUrl);
-
+    const targetUrl = this.resolveUrl(this.env, pageUrl);
     try {
 
       const status = await this.checkLink(targetUrl);
@@ -498,10 +528,9 @@ export class SiteScanner {
       for (const url of batch) {
         try {
 
-
-          const records = await this.checkParentPage(page, url, browserId);
-          const fullUrl = this.normalizeUrl(url);
-
+          const fullUrl = this.resolveUrl(this.env, url);
+          const records = await this.checkParentPage(page, fullUrl, browserId);
+         // const records = await this.checkPageAndLinks(page, fullUrl, browserId);
           console.log(`[${browserId}] Completed: ${fullUrl} → ${records[0]?.httpStatus ?? "N/A"}`);
 
           // push results
@@ -541,11 +570,5 @@ export class SiteScanner {
 
     await context.close();
   }
-  normalizeUrl(pageUrl) {
-    // If already absolute, return as-is
-    if (pageUrl.startsWith("http")) return pageUrl;
 
-    // Strip leading slashes and append to base
-    return this.resolveUrl(this.env, pageUrl.replace(/^\/+/, ""));
-  }
 }

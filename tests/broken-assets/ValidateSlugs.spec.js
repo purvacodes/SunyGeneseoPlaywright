@@ -83,8 +83,8 @@ test("Validate URLs and Broken Links (with retry, throttle, progress)", async ()
   const finalBrowser = await chromium.launch();
   const finalFactory = createObjects(null, finalBrowser);
 
-  await finalFactory.utility.saveToExcel("validated-urls.xlsx", "ValidatedUrls", results.allValidated, "url-reports");
-  await finalFactory.utility.saveToExcel("broken-links.xlsx", "BrokenLinks", results.broken, "url-reports");
+  await finalFactory.utility.saveToExcel("validated-slugs.xlsx", "ValidatedSlugs", results.allValidated, "url-reports");
+  await finalFactory.utility.saveToExcel("broken-slugs.xlsx", "BrokenSlugs", results.broken, "url-reports");
 
   await finalBrowser.close();
   console.log(`✅ Done. Results saved in url-reports/.`);
