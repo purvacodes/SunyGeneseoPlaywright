@@ -13,7 +13,7 @@ export  const credentials = {
     drupal: 'http://drupal-geneseo-backup.ddev.site',
     wordPress: 'https://dev-infostride-geneseo.pantheonsite.io',
     live: 'https://www.geneseo.edu',
-    local:'http://localhost/sunny/'
+    local:'http://10.10.60.69/sunny'
 
  }
 };

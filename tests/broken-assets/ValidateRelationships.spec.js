@@ -24,11 +24,11 @@ test("📌 Compare Breadcrumbs between Live and Local with Clean Logs", async ()
 
   console.log(`📄 Total URLs to process: ${extractedUrls.length}\n`);
 
-  // ================= STEP 2: LIVE SITE =================
-  console.log("🌐 Collecting breadcrumbs from LIVE site...");
-  const liveResults = await collectBreadcrumbs("LIVE", liveBase, extractedUrls);
-  saveToExcel(liveResults, liveOutput);
-  console.log("");
+  // // ================= STEP 2: LIVE SITE =================
+  // console.log("🌐 Collecting breadcrumbs from LIVE site...");
+  // const liveResults = await collectBreadcrumbs("LIVE", liveBase, extractedUrls);
+  // saveToExcel(liveResults, liveOutput);
+  // console.log("");
 
   // ================= STEP 3: LOCAL SITE =================
   console.log("🖥️  Collecting breadcrumbs from LOCAL site...");
@@ -37,10 +37,10 @@ test("📌 Compare Breadcrumbs between Live and Local with Clean Logs", async ()
   console.log("");
 
   // ================= STEP 4: COMPARISON =================
-  console.log("⚔️ Comparison completed. Results saved to breadcrumb_comparison.xlsx\n");
-  const comparisonResults = compareBreadcrumbFiles(liveResults, localResults);
-  saveToExcel(comparisonResults, finalOutput);
-});
+//   console.log("⚔️ Comparison completed. Results saved to breadcrumb_comparison.xlsx\n");
+//   const comparisonResults = compareBreadcrumbFiles(liveResults, localResults);
+//   saveToExcel(comparisonResults, finalOutput);
+// });
 
 // 📌 Helper: Collect Breadcrumbs for a given base URL
 async function collectBreadcrumbs(envName, baseUrl, urls) {
