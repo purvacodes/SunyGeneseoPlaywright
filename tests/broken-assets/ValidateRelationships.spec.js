@@ -9,7 +9,7 @@ test.setTimeout(15 * 60 * 60 * 1000);
 test("📌 Compare Breadcrumbs between Live and Local with Clean Logs", async () => {
   // ================= CONFIG =================
   const liveBase = "https://www.geneseo.edu";
-  const localBase = "http://localhost/sunny";
+  const localBase = "http://10.10.60.69/sunny";
   const excelInput = "basic_page.xlsx";
   const liveOutput = "live_breadcrumbs.xlsx";
   const localOutput = "local_breadcrumbs.xlsx";
@@ -37,10 +37,10 @@ test("📌 Compare Breadcrumbs between Live and Local with Clean Logs", async ()
   console.log("");
 
   // ================= STEP 4: COMPARISON =================
-//   console.log("⚔️ Comparison completed. Results saved to breadcrumb_comparison.xlsx\n");
-//   const comparisonResults = compareBreadcrumbFiles(liveResults, localResults);
-//   saveToExcel(comparisonResults, finalOutput);
-// });
+  // console.log("⚔️ Comparison completed. Results saved to breadcrumb_comparison.xlsx\n");
+  // const comparisonResults = compareBreadcrumbFiles(liveResults, localResults);
+  // saveToExcel(comparisonResults, finalOutput);
+});
 
 // 📌 Helper: Collect Breadcrumbs for a given base URL
 async function collectBreadcrumbs(envName, baseUrl, urls) {
