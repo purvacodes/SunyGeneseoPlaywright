@@ -9,7 +9,7 @@ test.setTimeout(15 * 60 * 60 * 1000);
 test("📌 Compare Breadcrumbs between Live and Local with Clean Logs", async () => {
   // ================= CONFIG =================
   const liveBase = "https://www.geneseo.edu";
-  const localBase = "http://10.10.60.69/sunny";
+  const localBase = "http://localhost/sunny";
   const excelInput = "basic_page.xlsx";
   const liveOutput = "live_breadcrumbs.xlsx";
   const localOutput = "local_breadcrumbs.xlsx";
@@ -59,13 +59,13 @@ async function collectBreadcrumbs(envName, baseUrl, urls) {
     const fullUrl = buildUrls(slug, baseUrl, baseUrl).liveUrl;
 
     try {
-      console.log(`Navigating to: ${fullUrl}`);
+      //console.log(`Navigating to: ${fullUrl}`);
       const breadcrumb = await getBreadcrumb(page, fullUrl);
       results.push({ url: slug, breadcrumb, status: "OK" });
-      console.log(`Success: ${breadcrumb}`);
+     // console.log(`Success: ${breadcrumb}`);
     } catch (err) {
       results.push({ url: slug, breadcrumb: "Error", status: err.message });
-      console.log(`Failed: ${err.message}`);
+      //console.log(`Failed: ${err.message}`);
     }
 
     processed++;
