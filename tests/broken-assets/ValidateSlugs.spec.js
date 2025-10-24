@@ -10,7 +10,7 @@ test("Validate URLs and Broken Links (with retry, throttle, progress)", async ()
   const tempPage = await tempBrowser.newPage();
   const objectFactory = createObjects(tempPage, tempBrowser);
 
-  const extractedUrlsFromExcel = await objectFactory.utility.loadExcel("basic_page.xlsx");
+  const extractedUrlsFromExcel = await objectFactory.utility.loadExcel("Inventory.xlsx");
   await tempBrowser.close();
 
   console.log(`📄 Total URLs loaded: ${extractedUrlsFromExcel.length}`);

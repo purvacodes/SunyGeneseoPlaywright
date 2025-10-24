@@ -40,7 +40,7 @@ test("Verify Media Assets across pages (parallel, retry, progress)", async () =>
 
   // 🧵 Launch browsers
   for (let bIndex = 0; bIndex < maxBrowsers; bIndex++) {
-    const browser = await chromium.launch({ headless: true });
+    const browser = await chromium.launch({ headless: false });
     const browserTasks = [];
 
     const factory = createObjects(null, browser, {

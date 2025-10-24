@@ -4,7 +4,7 @@ import { contentPostTypesUrls } from "../data/contentPostTypesUrls.js";
 export class SiteScanner {
   constructor(utility, opts = {}) {
     this.utility = utility;
-    this.env = this.env = credentials.env.local.endsWith('/') ? credentials.env.local : credentials.env.local + '/';
+    this.env = this.env = credentials.env.drupal.endsWith('/') ? credentials.env.drupal : credentials.env.drupal + '/';
     this.postTypeBasePath = contentPostTypesUrls?.wordPress?.postTypeBasePath || "";
 
     // caches shared across instances
@@ -24,30 +24,30 @@ export class SiteScanner {
   }
 
   // ---------- Utilities ----------
-resolveUrl(base, relative) {
-  if (!relative) return null;
+  resolveUrl(base, relative) {
+    if (!relative) return null;
 
-  // already absolute
-  if (/^https?:\/\//i.test(relative)) return relative;
+    // already absolute
+    if (/^https?:\/\//i.test(relative)) return relative;
 
-  // ensure base ends with "/"
-  const cleanBase = base.endsWith("/") ? base : base + "/";
+    // ensure base ends with "/"
+    const cleanBase = base.endsWith("/") ? base : base + "/";
 
-  // if slug starts with "/", append safely
-  if (relative.startsWith("/")) {
-    const baseUrl = new URL(cleanBase);
-    // ensure we don’t lose subpath like "/sunny/"
-    const final = `${baseUrl.origin}${baseUrl.pathname.replace(/\/$/, "")}${relative}`;
-    return final;
+    // if slug starts with "/", append safely
+    if (relative.startsWith("/")) {
+      const baseUrl = new URL(cleanBase);
+      // ensure we don’t lose subpath like "/sunny/"
+      const final = `${baseUrl.origin}${baseUrl.pathname.replace(/\/$/, "")}${relative}`;
+      return final;
+    }
+
+    // fallback to standard URL resolution
+    try {
+      return new URL(relative, cleanBase).href;
+    } catch {
+      return cleanBase + relative;
+    }
   }
-
-  // fallback to standard URL resolution
-  try {
-    return new URL(relative, cleanBase).href;
-  } catch {
-    return cleanBase + relative;
-  }
-}
 
 
   // small randomized throttle delay
@@ -232,33 +232,30 @@ resolveUrl(base, relative) {
 
       // ✅ Scroll for lazy-loaded media
       await page.evaluate(async () => {
-        await new Promise(resolve => {
-          let totalHeight = 0;
-          const distance = 400;
-          let lastScrollHeight = 0;
-          let idleCycles = 0;
+        const delay = (ms) => new Promise((r) => setTimeout(r, ms));
 
-          const timer = setInterval(() => {
-            const scrollHeight = document.body.scrollHeight;
-            window.scrollBy(0, distance);
-            totalHeight += distance;
+        let lastHeight = 0;
+        let sameHeightCount = 0;
+        const maxIdle = 5;  // how many stable heights before stopping
+        const scrollStep = 600;
 
-            if (scrollHeight === lastScrollHeight) {
-              idleCycles++;
-            } else {
-              idleCycles = 0;
-            }
-            lastScrollHeight = scrollHeight;
+        while (sameHeightCount < maxIdle) {
+          window.scrollBy(0, scrollStep);
+          await delay(500); 
 
-            if (totalHeight >= 10000 || idleCycles > 2) {
-              clearInterval(timer);
-              resolve();
-            }
-          }, 150);
-        });
+          const newHeight = document.body.scrollHeight;
+          if (newHeight === lastHeight) {
+            sameHeightCount++;
+          } else {
+            sameHeightCount = 0;
+            lastHeight = newHeight;
+          }
+        }
+
+        // final wait for any media to finish loading
+        await delay(1500);
       });
-
-
+      
       const finalUrl = page.url();
 
       // extract media sources
@@ -530,7 +527,7 @@ resolveUrl(base, relative) {
 
           const fullUrl = this.resolveUrl(this.env, url);
           const records = await this.checkParentPage(page, fullUrl, browserId);
-         // const records = await this.checkPageAndLinks(page, fullUrl, browserId);
+          // const records = await this.checkPageAndLinks(page, fullUrl, browserId);
           console.log(`[${browserId}] Completed: ${fullUrl} → ${records[0]?.httpStatus ?? "N/A"}`);
 
           // push results
