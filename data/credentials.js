@@ -1,7 +1,7 @@
 export  const credentials = {
   drupal: {
-    url: 'http://drupal-geneseo-backup.ddev.site/user/login',
-    username: 'walters',
+    url: 'http://geneseo-drupal.ddev.site:33000/user/login',
+    username: 'cmsroot',
     password: 'Welcome@123'
   },
   wordPress: {
