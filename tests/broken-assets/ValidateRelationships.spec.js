@@ -9,7 +9,7 @@ test.setTimeout(15 * 60 * 60 * 1000);
 test("📌 Compare Breadcrumbs between Live and Local with Clean Logs", async () => {
   // ================= CONFIG =================
   const liveBase = "https://www.geneseo.edu";
-  const localBase = "http://localhost/sunny";
+  const localBase = "http://localhost/test";
   const excelInput = "basic_page.xlsx";
   const liveOutput = "live_breadcrumbs.xlsx";
   const localOutput = "local_breadcrumbs.xlsx";
@@ -24,17 +24,17 @@ test("📌 Compare Breadcrumbs between Live and Local with Clean Logs", async ()
 
   console.log(`📄 Total URLs to process: ${extractedUrls.length}\n`);
 
-  // // ================= STEP 2: LIVE SITE =================
-  // console.log("🌐 Collecting breadcrumbs from LIVE site...");
-  // const liveResults = await collectBreadcrumbs("LIVE", liveBase, extractedUrls);
-  // saveToExcel(liveResults, liveOutput);
-  // console.log("");
-
-  // ================= STEP 3: LOCAL SITE =================
-  console.log("🖥️  Collecting breadcrumbs from LOCAL site...");
-  const localResults = await collectBreadcrumbs("LOCAL", localBase, extractedUrls);
-  saveToExcel(localResults, localOutput);
+  // ================= STEP 2: LIVE SITE =================
+  console.log("🌐 Collecting breadcrumbs from LIVE site...");
+  const liveResults = await collectBreadcrumbs("LIVE", liveBase, extractedUrls);
+  saveToExcel(liveResults, liveOutput);
   console.log("");
+
+  // // ================= STEP 3: LOCAL SITE =================
+  // console.log("🖥️  Collecting breadcrumbs from LOCAL site...");
+  // const localResults = await collectBreadcrumbs("LOCAL", localBase, extractedUrls);
+  // saveToExcel(localResults, localOutput);
+  // console.log("");
 
   // ================= STEP 4: COMPARISON =================
   // console.log("⚔️ Comparison completed. Results saved to breadcrumb_comparison.xlsx\n");
