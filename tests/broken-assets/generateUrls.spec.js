@@ -6,7 +6,7 @@ import { test, chromium, firefox, webkit } from "@playwright/test";
 const inputExcel = "basic_page.xlsx";       // Input with slugs
 const generatedExcel = "generatedUrls.xlsx"; // Output with URLs
 const browserChoice = "chromium";           // chromium | firefox | webkit
-const startIndex = 41;                       // Starting row (1-based)
+const startIndex = 45;                       // Starting row (1-based)
 const endIndex = 50;                        // Ending row (inclusive)
 
 test.setTimeout(15 * 60 * 60 * 1000); // 6 hours
