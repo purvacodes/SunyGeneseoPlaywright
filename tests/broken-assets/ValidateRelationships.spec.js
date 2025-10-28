@@ -10,7 +10,7 @@ test("📌 Compare Breadcrumbs between Live and Local with Clean Logs", async ()
   // ================= CONFIG =================
   const liveBase = "https://www.geneseo.edu";
   const localBase = "http://localhost/test";
-  const excelInput = "basic_page.xlsx";
+  const excelInput = "Inventory.xlsx";
   const liveOutput = "live_breadcrumbs.xlsx";
   const localOutput = "local_breadcrumbs.xlsx";
   const finalOutput = "breadcrumb_comparison.xlsx";
@@ -25,21 +25,21 @@ test("📌 Compare Breadcrumbs between Live and Local with Clean Logs", async ()
   console.log(`📄 Total URLs to process: ${extractedUrls.length}\n`);
 
   // ================= STEP 2: LIVE SITE =================
-  console.log("🌐 Collecting breadcrumbs from LIVE site...");
-  const liveResults = await collectBreadcrumbs("LIVE", liveBase, extractedUrls);
-  saveToExcel(liveResults, liveOutput);
-  console.log("");
+  // console.log("🌐 Collecting breadcrumbs from LIVE site...");
+  // const liveResults = await collectBreadcrumbs("LIVE", liveBase, extractedUrls);
+  // saveToExcel(liveResults, liveOutput);
+  // console.log("saved resultes to",liveOutput);
 
-  // // ================= STEP 3: LOCAL SITE =================
-  // console.log("🖥️  Collecting breadcrumbs from LOCAL site...");
-  // const localResults = await collectBreadcrumbs("LOCAL", localBase, extractedUrls);
-  // saveToExcel(localResults, localOutput);
-  // console.log("");
+  // ================= STEP 3: LOCAL SITE =================
+  console.log("🖥️  Collecting breadcrumbs from LOCAL site...");
+  const localResults = await collectBreadcrumbs("LOCAL", localBase, extractedUrls);
+  saveToExcel(localResults, localOutput);
+  console.log("saved results: ",localOutput);
 
-  // ================= STEP 4: COMPARISON =================
-  // console.log("⚔️ Comparison completed. Results saved to breadcrumb_comparison.xlsx\n");
-  // const comparisonResults = compareBreadcrumbFiles(liveResults, localResults);
-  // saveToExcel(comparisonResults, finalOutput);
+  //================= STEP 4: COMPARISON =================
+  console.log("⚔️ Comparison completed. Results saved to breadcrumb_comparison.xlsx\n");
+  const comparisonResults = compareBreadcrumbFiles(liveResults, localResults);
+  saveToExcel(comparisonResults, finalOutput);
 });
 
 // 📌 Helper: Collect Breadcrumbs for a given base URL
@@ -59,13 +59,13 @@ async function collectBreadcrumbs(envName, baseUrl, urls) {
     const fullUrl = buildUrls(slug, baseUrl, baseUrl).liveUrl;
 
     try {
-      //console.log(`Navigating to: ${fullUrl}`);
+      console.log(`Navigating to: ${fullUrl}`);
       const breadcrumb = await getBreadcrumb(page, fullUrl);
       results.push({ url: slug, breadcrumb, status: "OK" });
-     // console.log(`Success: ${breadcrumb}`);
+      console.log(`Success: ${breadcrumb}`);
     } catch (err) {
       results.push({ url: slug, breadcrumb: "Error", status: err.message });
-      //console.log(`Failed: ${err.message}`);
+      console.log(`Failed: ${err.message}`);
     }
 
     processed++;

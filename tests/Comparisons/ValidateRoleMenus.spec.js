@@ -47,7 +47,7 @@ test('Compare WP Role Menu Mapper with Drupal Groups', async ({ page }) => {
   await page.waitForSelector('#toolbar-bar', { state: 'visible', timeout: 50000 });
 
   // ---- STEP 5: Go to Drupal Groups ----
-  await page.goto("http://geneseo-drupal.ddev.site:33000/admin/group", { waitUntil: "domcontentloaded" });
+  await page.goto("http://geneseo-drupal.ddev.site/admin/group", { waitUntil: "domcontentloaded" });
   await page.waitForSelector('table tbody tr');
 
   // ---- STEP 6: Extract Drupal Group Data ----

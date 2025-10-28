@@ -34,7 +34,7 @@ test("Scrape Drupal Group Nodes and Content Types", async ({ page }) => {
 
   // ---- STEP 4: Loop through all groups ----
   for (const group of groups) {
-    const url = `http://geneseo-drupal.ddev.site:33000/group/${group.id}/nodes`;
+    const url = `http://geneseo-drupal.ddev.site/group/${group.id}/nodes`;
     console.log(`🔍 Visiting: ${url}`);
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
 

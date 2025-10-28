@@ -1,6 +1,6 @@
 export  const credentials = {
   drupal: {
-    url: 'http://geneseo-drupal.ddev.site:33000/user/login',
+    url: 'http://geneseo-drupal.ddev.site/user/login',
     username: 'cmsroot',
     password: 'Welcome@123'
   },
@@ -10,7 +10,7 @@ export  const credentials = {
     password: 'Login@123'
   },
  env: {
-    drupal: 'http://geneseo-drupal.ddev.site:33000',
+    drupal: 'http://geneseo-drupal.ddev.site/',
     wordPress: 'https://dev-infostride-geneseo.pantheonsite.io',
     live: 'https://www.geneseo.edu',
     local:'http://localhost/test'
