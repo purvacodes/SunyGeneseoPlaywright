@@ -73,7 +73,7 @@ export class Utility {
             const nextButton = page.locator('.next-page.button').first();
             if (await nextButton.isDisabled()) {
                 console.log("✅ Reached last page, scraping complete.");
-                break; 
+                break;
             }
             const previousCount = lastCount;
             await Promise.all([
@@ -172,8 +172,36 @@ export class Utility {
             })
     }
 
+    // loadExcel(filePath) {
+    //     console.log(`🔍 Attempting to read Excel from: ${filePath}`);
+
+    //     if (!fs.existsSync(filePath)) {
+    //         throw new Error(`❌ File not found: ${filePath}`);
+    //     }
+
+    //     console.log(`Loading data from: ${filePath}`);
+
+    //     const workbook = XLSX.readFile(filePath);
+    //     const firstSheetName = workbook.SheetNames[0];
+    //     if (!firstSheetName) {
+    //         throw new Error(`❌ No sheets found in ${filePath}`);
+    //     }
+
+    //     const sheet = workbook.Sheets[firstSheetName];
+
+    //     // Read raw rows
+    //     const data = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+    //     if (data.length < 2) {
+    //         throw new Error("❌ Sheet contains no data rows.");
+    //     }
+    //     // Skip the first row (headers), then map the first column
+    //     const firstColumn = data.slice(1)  // skip header
+    //         .map(row => row[0])
+    //         .filter(Boolean);
+    //     return firstColumn;
+
+    // }
     loadExcel(filePath) {
-        console.log(`🔍 Attempting to read Excel from: ${filePath}`);
 
         if (!fs.existsSync(filePath)) {
             throw new Error(`❌ File not found: ${filePath}`);
@@ -189,17 +217,27 @@ export class Utility {
 
         const sheet = workbook.Sheets[firstSheetName];
 
-        // Read raw rows
-        const data = XLSX.utils.sheet_to_json(sheet, { header: 1 });
-        if (data.length < 2) {
+        // Read all rows with headers
+        const data = XLSX.utils.sheet_to_json(sheet, { defval: "" });
+        if (!data || data.length === 0) {
             throw new Error("❌ Sheet contains no data rows.");
         }
-        // Skip the first row (headers), then map the first column
-        const firstColumn = data.slice(1)  // skip header
-            .map(row => row[0])
-            .filter(Boolean);
-        return firstColumn;
-  
+
+        // Normalize column names and filter valid entries
+        const formatted = data
+            .map((row) => ({
+                cpt: (row.CPT || row.cpt || "").trim(),
+                slug: (row.Slug || row.slug || "").trim(),
+            }))
+            .filter((r) => r.cpt && r.slug);
+
+        if (formatted.length === 0) {
+            throw new Error("❌ No valid CPT/Slug rows found in Excel.");
+        }
+
+        console.log(`✅ Loaded ${formatted.length} rows from Excel.`);
+        return formatted;
     }
+
 }
 

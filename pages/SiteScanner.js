@@ -513,59 +513,137 @@ export class SiteScanner {
   }
 
   // ---------- Worker loop for link checking (enhanced) ----------
-  async runLinkCheckerWorker(browser, batchSize, browserId, urlQueue, results, globalProgress = null) {
-    const context = await browser.newContext();
-    const page = await context.newPage();
+  // async runLinkCheckerWorker(browser, batchSize, browserId, urlQueue, results, globalProgress = null) {
+  //   const context = await browser.newContext();
+  //   const page = await context.newPage();
 
 
-    while (urlQueue.length > 0) {
-      const batch = urlQueue.splice(0, batchSize);
-      // console.log(`🔍 [${browserId}] picked up ${batch.length} URLs:`, batch);
+  //   while (urlQueue.length > 0) {
+  //     const batch = urlQueue.splice(0, batchSize);
+  //     // console.log(`🔍 [${browserId}] picked up ${batch.length} URLs:`, batch);
 
-      for (const url of batch) {
-        try {
+  //     for (const url of batch) {
+  //       try {
 
-          const fullUrl = this.resolveUrl(this.env, url);
-          const records = await this.checkParentPage(page, fullUrl, browserId);
-          // const records = await this.checkPageAndLinks(page, fullUrl, browserId);
-          console.log(`[${browserId}] Completed: ${fullUrl} → ${records[0]?.httpStatus ?? "N/A"}`);
+  //         const fullUrl = this.resolveUrl(this.env, url);
+  //         const records = await this.checkParentPage(page, fullUrl, browserId);
+  //         // const records = await this.checkPageAndLinks(page, fullUrl, browserId);
+  //         console.log(`[${browserId}] Completed: ${fullUrl} → ${records[0]?.httpStatus ?? "N/A"}`);
 
-          // push results
-          results.allValidated.push(...records);
-          const brokenSubset = records.filter((r) => r.status === "failed");
-          results.broken.push(...brokenSubset);
+  //         // push results
+  //         results.allValidated.push(...records);
+  //         const brokenSubset = records.filter((r) => r.status === "failed");
+  //         results.broken.push(...brokenSubset);
 
-        } catch (err) {
-          console.warn(`⚠️ [${browserId}] Error processing ${fullUrl}: ${err.message}`);
-          results.allValidated.push({
-            browserId,
-            originalUrl: pageUrl,
-            finalUrl: fullUrl,
-            isRedirected: null,
-            childUrl: fullUrl,
-            isParent: true,
-            status: "failed",
-            httpStatus: null,
-            error: err.message,
-          });
+  //       } catch (err) {
+  //         console.warn(`⚠️ [${browserId}] Error processing ${fullUrl}: ${err.message}`);
+  //         results.allValidated.push({
+  //           browserId,
+  //           originalUrl: pageUrl,
+  //           finalUrl: fullUrl,
+  //           isRedirected: null,
+  //           childUrl: fullUrl,
+  //           isParent: true,
+  //           status: "failed",
+  //           httpStatus: null,
+  //           error: err.message,
+  //         });
+  //       }
+
+  //       // update global progress if provided
+  //       if (globalProgress) {
+  //         globalProgress.completed = (globalProgress.completed || 0) + 1;
+  //         // also print short progress every 5 URLs
+  //         if (globalProgress.completed % 5 === 0) {
+  //           console.log(`📊 [${browserId}] Progress short: ${globalProgress.completed}/${globalProgress.total}`);
+  //         }
+  //       }
+
+  //       // throttling between URLs (gentle random pause)
+  //       await this.throttledDelay();
+  //     }
+  //   }
+
+
+  //   await context.close();
+  // }
+
+async runLinkCheckerWorker(browser, batchSize, workerId, urlQueue, results, globalProgress = null) {
+  const context = await browser.newContext();
+  const page = await context.newPage();
+
+  while (urlQueue.length > 0) {
+    const batch = urlQueue.splice(0, batchSize);
+
+    for (const urlObj of batch) {
+      let cpt = "";
+      let fullUrl = "";
+
+      try {
+        if (typeof urlObj === "object") {
+          cpt = urlObj.cpt || "";
+          const originalUrl = urlObj.originalUrl || "";
+          fullUrl = this.resolveUrl(this.env, originalUrl);
+        } else {
+          fullUrl = this.resolveUrl(this.env, urlObj);
         }
 
-        // update global progress if provided
-        if (globalProgress) {
-          globalProgress.completed = (globalProgress.completed || 0) + 1;
-          // also print short progress every 5 URLs
-          if (globalProgress.completed % 5 === 0) {
-            console.log(`📊 [${browserId}] Progress short: ${globalProgress.completed}/${globalProgress.total}`);
-          }
-        }
+        // 🔎 Perform the check
+        const records = await this.checkParentPage(page, fullUrl, workerId);
 
-        // throttling between URLs (gentle random pause)
-        await this.throttledDelay();
+        // Attach CPT to all returned records
+        records.forEach((r) => (r.cpt = cpt));
+
+        // Save results
+        results.allValidated.push(...records);
+        const brokenSubset = records.filter((r) => r.status === "failed");
+        results.broken.push(...brokenSubset);
+
+        // 🟢 Log progress with status + httpStatus
+        const primary = records[0] || {};
+        const statusText = primary.status || "unknown";
+        const httpText = primary.httpStatus || "N/A";
+        console.log(
+          `[${workerId}] Completed: ${cpt || "N/A"} → ${fullUrl} → ${statusText} (${httpText})`
+        );
+
+      } catch (err) {
+        console.warn(`⚠️ [${workerId}] Error processing ${fullUrl || "Unknown"}: ${err.message}`);
+
+        const errorRecord = {
+          browserId: workerId,
+          cpt: cpt || "",
+          originalUrl: fullUrl || "",
+          finalUrl: fullUrl || "",
+          isRedirected: null,
+          childUrl: fullUrl || "",
+          isParent: true,
+          status: "failed",
+          httpStatus: null,
+          error: err.message,
+        };
+
+        results.allValidated.push(errorRecord);
+        results.broken.push(errorRecord);
       }
+
+      // Update progress
+      if (globalProgress) {
+        globalProgress.completed = (globalProgress.completed || 0) + 1;
+        if (globalProgress.completed % 5 === 0) {
+          console.log(
+            `📊 [${workerId}] Progress short: ${globalProgress.completed}/${globalProgress.total}`
+          );
+        }
+      }
+
+      await this.throttledDelay();
     }
-
-
-    await context.close();
   }
+
+  await context.close();
+}
+
+
 
 }

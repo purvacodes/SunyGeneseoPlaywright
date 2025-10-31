@@ -59,13 +59,13 @@ async function collectBreadcrumbs(envName, baseUrl, urls) {
     const fullUrl = buildUrls(slug, baseUrl, baseUrl).liveUrl;
 
     try {
-      console.log(`Navigating to: ${fullUrl}`);
+      //console.log(`Navigating to: ${fullUrl}`);
       const breadcrumb = await getBreadcrumb(page, fullUrl);
       results.push({ url: slug, breadcrumb, status: "OK" });
-      console.log(`Success: ${breadcrumb}`);
+    //  console.log(`Success: ${breadcrumb}`);
     } catch (err) {
       results.push({ url: slug, breadcrumb: "Error", status: err.message });
-      console.log(`Failed: ${err.message}`);
+    //  console.log(`Failed: ${err.message}`);
     }
 
     processed++;

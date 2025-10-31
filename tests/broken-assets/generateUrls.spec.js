@@ -6,8 +6,8 @@ import { test, chromium, firefox, webkit } from "@playwright/test";
 const inputExcel = "basic_page.xlsx";       // Input with slugs
 const generatedExcel = "generatedUrls.xlsx"; // Output with URLs
 const browserChoice = "chromium";           // chromium | firefox | webkit
-const startIndex = 31;                       // Starting row (1-based)
-const endIndex = 40;                        // Ending row (inclusive)
+const startIndex = 75;                       // Starting row (1-based)
+const endIndex = 80;                        // Ending row (inclusive)
 
 test.setTimeout(15 * 60 * 60 * 1000); // 6 hours
 test("Generate and Open Live + Dev URLs in one browser (alternate tabs)", async () => {
@@ -91,7 +91,7 @@ test("Generate and Open Live + Dev URLs in one browser (alternate tabs)", async 
     if (liveURL) {
       const livePage = await context.newPage();
       await livePage.goto(liveURL);
-      console.log(`🌎 Opened Live: ${liveURL}`);
+     // console.log(`🌎 Opened Live: ${liveURL}`);
     }
 
     if (devURL) {
@@ -103,7 +103,7 @@ test("Generate and Open Live + Dev URLs in one browser (alternate tabs)", async 
         await devPage.waitForLoadState("domcontentloaded");
       }
 
-      console.log(`💻 Opened Dev: ${devURL}`);
+      console.log(devURL);
     }
   }
   await new Promise(() => { });
