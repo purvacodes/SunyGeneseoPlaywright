@@ -8,9 +8,9 @@ test.setTimeout(15 * 60 * 60 * 1000);
 
 test("📌 Compare Breadcrumbs between Live and Local with Clean Logs", async () => {
   // ================= CONFIG =================
-  const liveBase = "https://www.geneseo.edu";
+  const liveBase = "http://geneseo-drupal.ddev.site:33000";
   const localBase = "http://localhost/test";
-  const excelInput = "Inventory.xlsx";
+  const excelInput = "basic_page.xlsx";
   const liveOutput = "live_breadcrumbs.xlsx";
   const localOutput = "local_breadcrumbs.xlsx";
   const finalOutput = "breadcrumb_comparison.xlsx";
@@ -25,21 +25,26 @@ test("📌 Compare Breadcrumbs between Live and Local with Clean Logs", async ()
   console.log(`📄 Total URLs to process: ${extractedUrls.length}\n`);
 
   // ================= STEP 2: LIVE SITE =================
-  // console.log("🌐 Collecting breadcrumbs from LIVE site...");
-  // const liveResults = await collectBreadcrumbs("LIVE", liveBase, extractedUrls);
-  // saveToExcel(liveResults, liveOutput);
-  // console.log("saved resultes to",liveOutput);
+  console.log("🌐 Collecting breadcrumbs from LIVE site...");
+  const liveResults = await collectBreadcrumbs("LIVE", liveBase, extractedUrls);
+  saveToExcel(liveResults, liveOutput);
+  console.log("saved resultes to",liveOutput);
 
-  // ================= STEP 3: LOCAL SITE =================
-  console.log("🖥️  Collecting breadcrumbs from LOCAL site...");
-  const localResults = await collectBreadcrumbs("LOCAL", localBase, extractedUrls);
-  saveToExcel(localResults, localOutput);
-  console.log("saved results: ",localOutput);
+//  // ================= STEP 3: LOCAL SITE =================
+//   console.log("🖥️  Collecting breadcrumbs from LOCAL site...");
+//   const localResults = await collectBreadcrumbs("LOCAL", localBase, extractedUrls);
+//   saveToExcel(localResults, localOutput);
+//   console.log("saved results: ",localOutput);
 
   //================= STEP 4: COMPARISON =================
-  console.log("⚔️ Comparison completed. Results saved to breadcrumb_comparison.xlsx\n");
-  const comparisonResults = compareBreadcrumbFiles(liveResults, localResults);
-  saveToExcel(comparisonResults, finalOutput);
+  // console.log("⚔️ Comparison completed. Results saved to breadcrumb_comparison.xlsx\n");
+  // const comparisonResults = compareBreadcrumbFiles(liveResults, localResults);
+  // saveToExcel(comparisonResults, finalOutput);
+//   console.log("⚔️ Loading and comparing Excel files...");
+// const comparisonResults = compareDiffFromExcel(liveOutput, localOutput);
+// saveToExcel(comparisonResults, finalOutput);
+// console.log(`✅ Comparison complete! Saved to ${finalOutput}`);
+
 });
 
 // 📌 Helper: Collect Breadcrumbs for a given base URL
@@ -217,3 +222,47 @@ function diffBreadcrumbs(liveBreadcrumb, localBreadcrumb) {
   }
   return diffs;
 }
+
+// 📘 Helper: Compare Breadcrumbs from Excel Files
+function compareDiffFromExcel(liveFile, localFile) {
+  const liveWb = XLSX.readFile(liveFile);
+  const localWb = XLSX.readFile(localFile);
+
+  const liveData = XLSX.utils.sheet_to_json(liveWb.Sheets[liveWb.SheetNames[0]]);
+  const localData = XLSX.utils.sheet_to_json(localWb.Sheets[localWb.SheetNames[0]]);
+
+  const results = [];
+
+  for (const liveRow of liveData) {
+    const url = liveRow.url;
+    const liveBreadcrumb = liveRow.breadcrumb || "";
+    const localRow = localData.find(r => r.url === url);
+    const localBreadcrumb = localRow ? localRow.breadcrumb || "" : "—";
+
+    const diffs = diffBreadcrumbs(liveBreadcrumb, localBreadcrumb);
+
+    results.push({
+      url,
+      liveBreadcrumb,
+      localBreadcrumb,
+      status: diffs.length === 0 ? "Match ✅" : "Mismatch ❌",
+      differences: diffs.map(d => `Pos ${d.position}: ${d.live} vs ${d.local}`).join(" | ")
+    });
+  }
+
+  // Also detect any local URLs missing from live file
+  for (const localRow of localData) {
+    if (!liveData.find(l => l.url === localRow.url)) {
+      results.push({
+        url: localRow.url,
+        liveBreadcrumb: "—",
+        localBreadcrumb: localRow.breadcrumb || "",
+        status: "Missing in Live ⚠️",
+        differences: "Not found in live file"
+      });
+    }
+  }
+
+  return results;
+}
+

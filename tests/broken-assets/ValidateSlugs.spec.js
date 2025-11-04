@@ -3,7 +3,7 @@ import { test } from "@playwright/test";
 import { chromium } from "playwright";
 import { createObjects } from "../../pages/ObjectFactory.js";
 
-test.setTimeout(15 * 60 * 60 * 1000); // 15 hours
+test.setTimeout(30 * 60 * 60 * 1000); // 15 hours
 
 test("Validate URLs and Broken Links (CPT + Slug support, normalized headers)", async () => {
   const tempBrowser = await chromium.launch();

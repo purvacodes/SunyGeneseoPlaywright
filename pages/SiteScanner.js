@@ -4,7 +4,7 @@ import { contentPostTypesUrls } from "../data/contentPostTypesUrls.js";
 export class SiteScanner {
   constructor(utility, opts = {}) {
     this.utility = utility;
-    this.env = this.env = credentials.env.drupal.endsWith('/') ? credentials.env.drupal : credentials.env.drupal + '/';
+    this.env = this.env = credentials.env.wordPress.endsWith('/') ? credentials.env.wordPress : credentials.env.wordPress + '/';
     this.postTypeBasePath = contentPostTypesUrls?.wordPress?.postTypeBasePath || "";
 
     // caches shared across instances

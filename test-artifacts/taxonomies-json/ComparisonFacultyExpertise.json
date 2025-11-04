@@ -1,0 +1,1242 @@
+{
+  "timestamp": "2025-11-04T12:47:19.106Z",
+  "summary": {
+    "drupalCount": 494,
+    "wpCount": 490,
+    "missingInWPCount": 4,
+    "extraInWPCount": 0,
+    "duplicateCount": 4
+  },
+  "comparison": {
+    "missingInWP": [
+      {
+        "taxonomy": "Critical Dance Studies",
+        "count": 1
+      },
+      {
+        "taxonomy": "Generative AI in Education",
+        "count": 1
+      },
+      {
+        "taxonomy": "Medieval Europe",
+        "count": 1
+      },
+      {
+        "taxonomy": "Reading Development and Best Practices for Teaching Reading",
+        "count": 1
+      }
+    ],
+    "extraInWP": [],
+    "duplicates": [
+      {
+        "taxonomy": "Critical Dance Studies",
+        "count": 2
+      },
+      {
+        "taxonomy": "Generative AI in Education",
+        "count": 2
+      },
+      {
+        "taxonomy": "Medieval Europe",
+        "count": 2
+      },
+      {
+        "taxonomy": "Reading Development and Best Practices for Teaching Reading",
+        "count": 2
+      }
+    ]
+  },
+  "quality": {
+    "drupalReport": {
+      "source": "Drupal",
+      "titleCaseIssues": [
+        {
+          "term": "18th-Century Literature",
+          "suggested": "18th-century Literature"
+        },
+        {
+          "term": "3D Printing",
+          "suggested": "3d Printing"
+        },
+        {
+          "term": "Acoustic Communication in Animals",
+          "suggested": "Acoustic Communication In Animals"
+        },
+        {
+          "term": "Adaptations to the Hadal Environment",
+          "suggested": "Adaptations To The Hadal Environment"
+        },
+        {
+          "term": "Addiction and Relapse",
+          "suggested": "Addiction And Relapse"
+        },
+        {
+          "term": "Advocacy in Special Education",
+          "suggested": "Advocacy In Special Education"
+        },
+        {
+          "term": "African-American History",
+          "suggested": "African-american History"
+        },
+        {
+          "term": "Aging and Degenerative Diseases",
+          "suggested": "Aging And Degenerative Diseases"
+        },
+        {
+          "term": "American Theatre and Musical Theatre",
+          "suggested": "American Theatre And Musical Theatre"
+        },
+        {
+          "term": "Anthropology of Love, Marriage, Divorce and Kinship",
+          "suggested": "Anthropology Of Love, Marriage, Divorce And Kinship"
+        },
+        {
+          "term": "Behavior in Microorganisms",
+          "suggested": "Behavior In Microorganisms"
+        },
+        {
+          "term": "Benefit-Cost Analysis",
+          "suggested": "Benefit-cost Analysis"
+        },
+        {
+          "term": "Biological and Evolutionary Anthropology",
+          "suggested": "Biological And Evolutionary Anthropology"
+        },
+        {
+          "term": "Biological and Medical Anthropology",
+          "suggested": "Biological And Medical Anthropology"
+        },
+        {
+          "term": "Biology of Aquatic Invertebrates",
+          "suggested": "Biology Of Aquatic Invertebrates"
+        },
+        {
+          "term": "Biology of Cancer",
+          "suggested": "Biology Of Cancer"
+        },
+        {
+          "term": "Biology of Cell Junctions",
+          "suggested": "Biology Of Cell Junctions"
+        },
+        {
+          "term": "British and Irish Modernist Literature",
+          "suggested": "British And Irish Modernist Literature"
+        },
+        {
+          "term": "Carbon Allocation in Plants",
+          "suggested": "Carbon Allocation In Plants"
+        },
+        {
+          "term": "Causal inference",
+          "suggested": "Causal Inference"
+        },
+        {
+          "term": "Civil and Environmental Engineering",
+          "suggested": "Civil And Environmental Engineering"
+        },
+        {
+          "term": "Class Inequality and Poverty",
+          "suggested": "Class Inequality And Poverty"
+        },
+        {
+          "term": "Classical and Modern Political Philosophy",
+          "suggested": "Classical And Modern Political Philosophy"
+        },
+        {
+          "term": "Computer Science and Liberal Arts",
+          "suggested": "Computer Science And Liberal Arts"
+        },
+        {
+          "term": "Culture and Institution",
+          "suggested": "Culture And Institution"
+        },
+        {
+          "term": "Cytochrome c Biogenesis",
+          "suggested": "Cytochrome C Biogenesis"
+        },
+        {
+          "term": "Dance Education and Pedagogy",
+          "suggested": "Dance Education And Pedagogy"
+        },
+        {
+          "term": "Dance in Non-Western Cultures",
+          "suggested": "Dance In Non-western Cultures"
+        },
+        {
+          "term": "Death and Dying",
+          "suggested": "Death And Dying"
+        },
+        {
+          "term": "Deep-Sea Biology",
+          "suggested": "Deep-sea Biology"
+        },
+        {
+          "term": "Deep-Sea Microbiology",
+          "suggested": "Deep-sea Microbiology"
+        },
+        {
+          "term": "Derivative-Free Optimization",
+          "suggested": "Derivative-free Optimization"
+        },
+        {
+          "term": "Discourse-Dependent Families",
+          "suggested": "Discourse-dependent Families"
+        },
+        {
+          "term": "Diversity, Equity and Inclusion in STEM",
+          "suggested": "Diversity, Equity And Inclusion In Stem"
+        },
+        {
+          "term": "Early Colonial U.S.",
+          "suggested": "Early Colonial U.s."
+        },
+        {
+          "term": "Early Modern Britain and Ireland",
+          "suggested": "Early Modern Britain And Ireland"
+        },
+        {
+          "term": "Ecology and Evolution of Plant-Insect Interactions",
+          "suggested": "Ecology And Evolution Of Plant-insect Interactions"
+        },
+        {
+          "term": "Ecology of Constructed Habitats",
+          "suggested": "Ecology Of Constructed Habitats"
+        },
+        {
+          "term": "Ecopoetry and Ecopoetics",
+          "suggested": "Ecopoetry And Ecopoetics"
+        },
+        {
+          "term": "Elementary Science and Mathematics Teaching",
+          "suggested": "Elementary Science And Mathematics Teaching"
+        },
+        {
+          "term": "Emotion and Emotion Dysregulation",
+          "suggested": "Emotion And Emotion Dysregulation"
+        },
+        {
+          "term": "Evolution of Locomotor Systems in Birds",
+          "suggested": "Evolution Of Locomotor Systems In Birds"
+        },
+        {
+          "term": "Evolution of Malagasy Vertebrates",
+          "suggested": "Evolution Of Malagasy Vertebrates"
+        },
+        {
+          "term": "Exhibit Design in Zoos and Museums",
+          "suggested": "Exhibit Design In Zoos And Museums"
+        },
+        {
+          "term": "Experience-Dependent Development",
+          "suggested": "Experience-dependent Development"
+        },
+        {
+          "term": "Forensic Anthropology/Archaeology",
+          "suggested": "Forensic Anthropology/archaeology"
+        },
+        {
+          "term": "Francophone Literatures and Civilizations",
+          "suggested": "Francophone Literatures And Civilizations"
+        },
+        {
+          "term": "French Literature and Civilization",
+          "suggested": "French Literature And Civilization"
+        },
+        {
+          "term": "Functional Morphology of Theropod Dinosaurs",
+          "suggested": "Functional Morphology Of Theropod Dinosaurs"
+        },
+        {
+          "term": "Gender and Sexuality",
+          "suggested": "Gender And Sexuality"
+        },
+        {
+          "term": "Gender and Sexuality History",
+          "suggested": "Gender And Sexuality History"
+        },
+        {
+          "term": "Generative AI in Education",
+          "suggested": "Generative Ai In Education"
+        },
+        {
+          "term": "Generative AI in Education",
+          "suggested": "Generative Ai In Education"
+        },
+        {
+          "term": "Genetic Defects of Eye Development",
+          "suggested": "Genetic Defects Of Eye Development"
+        },
+        {
+          "term": "Genomic impacts of Selfish Genetic Elements",
+          "suggested": "Genomic Impacts Of Selfish Genetic Elements"
+        },
+        {
+          "term": "Growth and Health in Children",
+          "suggested": "Growth And Health In Children"
+        },
+        {
+          "term": "Health and Disease",
+          "suggested": "Health And Disease"
+        },
+        {
+          "term": "Healthy Equity and Social Justice",
+          "suggested": "Healthy Equity And Social Justice"
+        },
+        {
+          "term": "History of Biology",
+          "suggested": "History Of Biology"
+        },
+        {
+          "term": "History of Infectious Disease and Medicine",
+          "suggested": "History Of Infectious Disease And Medicine"
+        },
+        {
+          "term": "History of Music Theory",
+          "suggested": "History Of Music Theory"
+        },
+        {
+          "term": "Host-Parasite Coevolution & Biogeography",
+          "suggested": "Host-parasite Coevolution & Biogeography"
+        },
+        {
+          "term": "Identity and Group Processes",
+          "suggested": "Identity And Group Processes"
+        },
+        {
+          "term": "Imperial and Modern China",
+          "suggested": "Imperial And Modern China"
+        },
+        {
+          "term": "Improving Academic Outcomes for Rural Youth",
+          "suggested": "Improving Academic Outcomes For Rural Youth"
+        },
+        {
+          "term": "INTD 105",
+          "suggested": "Intd 105"
+        },
+        {
+          "term": "INTD 203 Social Foundations of Education in the United States",
+          "suggested": "Intd 203 Social Foundations Of Education In The United States"
+        },
+        {
+          "term": "Interactions between species",
+          "suggested": "Interactions Between Species"
+        },
+        {
+          "term": "interfacial conformation",
+          "suggested": "Interfacial Conformation"
+        },
+        {
+          "term": "International Science and Math Education",
+          "suggested": "International Science And Math Education"
+        },
+        {
+          "term": "Introduction to Education",
+          "suggested": "Introduction To Education"
+        },
+        {
+          "term": "journalism",
+          "suggested": "Journalism"
+        },
+        {
+          "term": "Lake Biology/Limnology",
+          "suggested": "Lake Biology/limnology"
+        },
+        {
+          "term": "Language and Culture",
+          "suggested": "Language And Culture"
+        },
+        {
+          "term": "Language and Health",
+          "suggested": "Language And Health"
+        },
+        {
+          "term": "Latin American and Caribbean Studies",
+          "suggested": "Latin American And Caribbean Studies"
+        },
+        {
+          "term": "LGBTQ+ Family-Making",
+          "suggested": "Lgbtq+ Family-making"
+        },
+        {
+          "term": "Life-History Evolution",
+          "suggested": "Life-history Evolution"
+        },
+        {
+          "term": "Literature and Music of the Great War",
+          "suggested": "Literature And Music Of The Great War"
+        },
+        {
+          "term": "Masculinity and the History of Emotions",
+          "suggested": "Masculinity And The History Of Emotions"
+        },
+        {
+          "term": "Maternal and Child Health",
+          "suggested": "Maternal And Child Health"
+        },
+        {
+          "term": "Mathematics and Computer Science",
+          "suggested": "Mathematics And Computer Science"
+        },
+        {
+          "term": "Maya/Mesoamerica",
+          "suggested": "Maya/mesoamerica"
+        },
+        {
+          "term": "Media and Culture",
+          "suggested": "Media And Culture"
+        },
+        {
+          "term": "Medicine/Health Care",
+          "suggested": "Medicine/health Care"
+        },
+        {
+          "term": "Medieval French Literature and Music",
+          "suggested": "Medieval French Literature And Music"
+        },
+        {
+          "term": "Modified DNA and RNA Bases Including 5-Methylcytosine",
+          "suggested": "Modified Dna And Rna Bases Including 5-methylcytosine"
+        },
+        {
+          "term": "Molecular Mechanisms of Spindle Positioning in Yeast Mitosis",
+          "suggested": "Molecular Mechanisms Of Spindle Positioning In Yeast Mitosis"
+        },
+        {
+          "term": "Music in Spain",
+          "suggested": "Music In Spain"
+        },
+        {
+          "term": "Nano-Gold Materials",
+          "suggested": "Nano-gold Materials"
+        },
+        {
+          "term": "Nonself Recognition in Fungi",
+          "suggested": "Nonself Recognition In Fungi"
+        },
+        {
+          "term": "Origins and Evolution of Novel Genes",
+          "suggested": "Origins And Evolution Of Novel Genes"
+        },
+        {
+          "term": "Osteology and Osteoporosis",
+          "suggested": "Osteology And Osteoporosis"
+        },
+        {
+          "term": "Patterns of and Problems Associated with Cannabis Use and Alcohol Use",
+          "suggested": "Patterns Of And Problems Associated With Cannabis Use And Alcohol Use"
+        },
+        {
+          "term": "Philosophy of Art",
+          "suggested": "Philosophy Of Art"
+        },
+        {
+          "term": "Philosophy of Biology",
+          "suggested": "Philosophy Of Biology"
+        },
+        {
+          "term": "Philosophy of Nonviolence",
+          "suggested": "Philosophy Of Nonviolence"
+        },
+        {
+          "term": "Physics of Baseball",
+          "suggested": "Physics Of Baseball"
+        },
+        {
+          "term": "Physiological Responses to Stress in Plants",
+          "suggested": "Physiological Responses To Stress In Plants"
+        },
+        {
+          "term": "Physiology and Ecology of Fishes",
+          "suggested": "Physiology And Ecology Of Fishes"
+        },
+        {
+          "term": "political philosophy",
+          "suggested": "Political Philosophy"
+        },
+        {
+          "term": "Polyploidy and genetic diversity",
+          "suggested": "Polyploidy And Genetic Diversity"
+        },
+        {
+          "term": "Population Genetics and Genomics",
+          "suggested": "Population Genetics And Genomics"
+        },
+        {
+          "term": "Pottery and Ceramics",
+          "suggested": "Pottery And Ceramics"
+        },
+        {
+          "term": "Psychology of Language",
+          "suggested": "Psychology Of Language"
+        },
+        {
+          "term": "Race and Ethnicity",
+          "suggested": "Race And Ethnicity"
+        },
+        {
+          "term": "Race and Gender",
+          "suggested": "Race And Gender"
+        },
+        {
+          "term": "Race, Racism and Health Disparities",
+          "suggested": "Race, Racism And Health Disparities"
+        },
+        {
+          "term": "Reading Development and Best Practices for Teaching Reading",
+          "suggested": "Reading Development And Best Practices For Teaching Reading"
+        },
+        {
+          "term": "Reading Development and Best Practices for Teaching Reading",
+          "suggested": "Reading Development And Best Practices For Teaching Reading"
+        },
+        {
+          "term": "Refugee and Border Studies",
+          "suggested": "Refugee And Border Studies"
+        },
+        {
+          "term": "Religion and Politics",
+          "suggested": "Religion And Politics"
+        },
+        {
+          "term": "Rhetoric and Composition",
+          "suggested": "Rhetoric And Composition"
+        },
+        {
+          "term": "Scholarship of Teaching and Learning",
+          "suggested": "Scholarship Of Teaching And Learning"
+        },
+        {
+          "term": "Self-Talk and Intrapersonal Communication",
+          "suggested": "Self-talk And Intrapersonal Communication"
+        },
+        {
+          "term": "Social Problems and Public Policy",
+          "suggested": "Social Problems And Public Policy"
+        },
+        {
+          "term": "STEM",
+          "suggested": "Stem"
+        },
+        {
+          "term": "STEM Education",
+          "suggested": "Stem Education"
+        },
+        {
+          "term": "Supply Chain Challenges in a Global Society",
+          "suggested": "Supply Chain Challenges In A Global Society"
+        },
+        {
+          "term": "Systematics of Parasitic",
+          "suggested": "Systematics Of Parasitic"
+        },
+        {
+          "term": "Systematics of Phylogenetic Reconstruction",
+          "suggested": "Systematics Of Phylogenetic Reconstruction"
+        },
+        {
+          "term": "Teaching of Writing",
+          "suggested": "Teaching Of Writing"
+        },
+        {
+          "term": "Technology in Teaching Mathematics",
+          "suggested": "Technology In Teaching Mathematics"
+        },
+        {
+          "term": "The Bidirectional Relationship Between Social Support and PTSD",
+          "suggested": "The Bidirectional Relationship Between Social Support And Ptsd"
+        },
+        {
+          "term": "The Interplay Between Emotion and Substance Use",
+          "suggested": "The Interplay Between Emotion And Substance Use"
+        },
+        {
+          "term": "U.S. and Environmental History",
+          "suggested": "U.s. And Environmental History"
+        },
+        {
+          "term": "U.S. and Labor History",
+          "suggested": "U.s. And Labor History"
+        },
+        {
+          "term": "U.S. Congress",
+          "suggested": "U.s. Congress"
+        },
+        {
+          "term": "U.S. History",
+          "suggested": "U.s. History"
+        },
+        {
+          "term": "U.S. Women’s History",
+          "suggested": "U.s. Women's History"
+        },
+        {
+          "term": "UV Photobiology",
+          "suggested": "Uv Photobiology"
+        },
+        {
+          "term": "Visual Rhetoric and Communication",
+          "suggested": "Visual Rhetoric And Communication"
+        },
+        {
+          "term": "Western Theatre Dance History and Theory",
+          "suggested": "Western Theatre Dance History And Theory"
+        },
+        {
+          "term": "Women and Gender Studies",
+          "suggested": "Women And Gender Studies"
+        },
+        {
+          "term": "Women and Politics",
+          "suggested": "Women And Politics"
+        },
+        {
+          "term": "Work-Family Interface",
+          "suggested": "Work-family Interface"
+        },
+        {
+          "term": "Writing and Composition",
+          "suggested": "Writing And Composition"
+        }
+      ],
+      "punctuationIssues": [
+        {
+          "term": "U.S. Women’s History",
+          "suggested": "U.S. Women's History"
+        },
+        {
+          "term": "Women’s History",
+          "suggested": "Women's History"
+        }
+      ],
+      "commaSeparated": [
+        {
+          "term": "Anthropology of Love, Marriage, Divorce and Kinship",
+          "suggestedSplit": [
+            "Anthropology of Love",
+            "Marriage",
+            "Divorce and Kinship"
+          ]
+        },
+        {
+          "term": "Diversity, Equity and Inclusion in STEM",
+          "suggestedSplit": [
+            "Diversity",
+            "Equity and Inclusion in STEM"
+          ]
+        },
+        {
+          "term": "General Relativity, Geometrical Methods",
+          "suggestedSplit": [
+            "General Relativity",
+            "Geometrical Methods"
+          ]
+        },
+        {
+          "term": "Race, Racism and Health Disparities",
+          "suggestedSplit": [
+            "Race",
+            "Racism and Health Disparities"
+          ]
+        }
+      ],
+      "sentenceLike": [
+        "Early Colonial U.S.",
+        "INTD 203 Social Foundations of Education in the United States",
+        "Patterns of and Problems Associated with Cannabis Use and Alcohol Use"
+      ]
+    },
+    "wpReport": {
+      "source": "WordPress",
+      "titleCaseIssues": [
+        {
+          "term": "18th-Century Literature",
+          "suggested": "18th-century Literature"
+        },
+        {
+          "term": "3D Printing",
+          "suggested": "3d Printing"
+        },
+        {
+          "term": "Acoustic Communication in Animals",
+          "suggested": "Acoustic Communication In Animals"
+        },
+        {
+          "term": "Adaptations to the Hadal Environment",
+          "suggested": "Adaptations To The Hadal Environment"
+        },
+        {
+          "term": "Addiction and Relapse",
+          "suggested": "Addiction And Relapse"
+        },
+        {
+          "term": "Advocacy in Special Education",
+          "suggested": "Advocacy In Special Education"
+        },
+        {
+          "term": "African-American History",
+          "suggested": "African-american History"
+        },
+        {
+          "term": "Aging and Degenerative Diseases",
+          "suggested": "Aging And Degenerative Diseases"
+        },
+        {
+          "term": "American Theatre and Musical Theatre",
+          "suggested": "American Theatre And Musical Theatre"
+        },
+        {
+          "term": "Anthropology of Love, Marriage, Divorce and Kinship",
+          "suggested": "Anthropology Of Love, Marriage, Divorce And Kinship"
+        },
+        {
+          "term": "Behavior in Microorganisms",
+          "suggested": "Behavior In Microorganisms"
+        },
+        {
+          "term": "Benefit-Cost Analysis",
+          "suggested": "Benefit-cost Analysis"
+        },
+        {
+          "term": "Biological and Evolutionary Anthropology",
+          "suggested": "Biological And Evolutionary Anthropology"
+        },
+        {
+          "term": "Biological and Medical Anthropology",
+          "suggested": "Biological And Medical Anthropology"
+        },
+        {
+          "term": "Biology of Aquatic Invertebrates",
+          "suggested": "Biology Of Aquatic Invertebrates"
+        },
+        {
+          "term": "Biology of Cancer",
+          "suggested": "Biology Of Cancer"
+        },
+        {
+          "term": "Biology of Cell Junctions",
+          "suggested": "Biology Of Cell Junctions"
+        },
+        {
+          "term": "British and Irish Modernist Literature",
+          "suggested": "British And Irish Modernist Literature"
+        },
+        {
+          "term": "Carbon Allocation in Plants",
+          "suggested": "Carbon Allocation In Plants"
+        },
+        {
+          "term": "Causal inference",
+          "suggested": "Causal Inference"
+        },
+        {
+          "term": "Civil and Environmental Engineering",
+          "suggested": "Civil And Environmental Engineering"
+        },
+        {
+          "term": "Class Inequality and Poverty",
+          "suggested": "Class Inequality And Poverty"
+        },
+        {
+          "term": "Classical and Modern Political Philosophy",
+          "suggested": "Classical And Modern Political Philosophy"
+        },
+        {
+          "term": "Computer Science and Liberal Arts",
+          "suggested": "Computer Science And Liberal Arts"
+        },
+        {
+          "term": "Culture and Institution",
+          "suggested": "Culture And Institution"
+        },
+        {
+          "term": "Cytochrome c Biogenesis",
+          "suggested": "Cytochrome C Biogenesis"
+        },
+        {
+          "term": "Dance Education and Pedagogy",
+          "suggested": "Dance Education And Pedagogy"
+        },
+        {
+          "term": "Dance in Non-Western Cultures",
+          "suggested": "Dance In Non-western Cultures"
+        },
+        {
+          "term": "Death and Dying",
+          "suggested": "Death And Dying"
+        },
+        {
+          "term": "Deep-Sea Biology",
+          "suggested": "Deep-sea Biology"
+        },
+        {
+          "term": "Deep-Sea Microbiology",
+          "suggested": "Deep-sea Microbiology"
+        },
+        {
+          "term": "Derivative-Free Optimization",
+          "suggested": "Derivative-free Optimization"
+        },
+        {
+          "term": "Discourse-Dependent Families",
+          "suggested": "Discourse-dependent Families"
+        },
+        {
+          "term": "Diversity, Equity and Inclusion in STEM",
+          "suggested": "Diversity, Equity And Inclusion In Stem"
+        },
+        {
+          "term": "Early Colonial U.S.",
+          "suggested": "Early Colonial U.s."
+        },
+        {
+          "term": "Early Modern Britain and Ireland",
+          "suggested": "Early Modern Britain And Ireland"
+        },
+        {
+          "term": "Ecology and Evolution of Plant-Insect Interactions",
+          "suggested": "Ecology And Evolution Of Plant-insect Interactions"
+        },
+        {
+          "term": "Ecology of Constructed Habitats",
+          "suggested": "Ecology Of Constructed Habitats"
+        },
+        {
+          "term": "Ecopoetry and Ecopoetics",
+          "suggested": "Ecopoetry And Ecopoetics"
+        },
+        {
+          "term": "Elementary Science and Mathematics Teaching",
+          "suggested": "Elementary Science And Mathematics Teaching"
+        },
+        {
+          "term": "Emotion and Emotion Dysregulation",
+          "suggested": "Emotion And Emotion Dysregulation"
+        },
+        {
+          "term": "Evolution of Locomotor Systems in Birds",
+          "suggested": "Evolution Of Locomotor Systems In Birds"
+        },
+        {
+          "term": "Evolution of Malagasy Vertebrates",
+          "suggested": "Evolution Of Malagasy Vertebrates"
+        },
+        {
+          "term": "Exhibit Design in Zoos and Museums",
+          "suggested": "Exhibit Design In Zoos And Museums"
+        },
+        {
+          "term": "Experience-Dependent Development",
+          "suggested": "Experience-dependent Development"
+        },
+        {
+          "term": "Forensic Anthropology/Archaeology",
+          "suggested": "Forensic Anthropology/archaeology"
+        },
+        {
+          "term": "Francophone Literatures and Civilizations",
+          "suggested": "Francophone Literatures And Civilizations"
+        },
+        {
+          "term": "French Literature and Civilization",
+          "suggested": "French Literature And Civilization"
+        },
+        {
+          "term": "Functional Morphology of Theropod Dinosaurs",
+          "suggested": "Functional Morphology Of Theropod Dinosaurs"
+        },
+        {
+          "term": "Gender and Sexuality",
+          "suggested": "Gender And Sexuality"
+        },
+        {
+          "term": "Gender and Sexuality History",
+          "suggested": "Gender And Sexuality History"
+        },
+        {
+          "term": "Generative AI in Education",
+          "suggested": "Generative Ai In Education"
+        },
+        {
+          "term": "Genetic Defects of Eye Development",
+          "suggested": "Genetic Defects Of Eye Development"
+        },
+        {
+          "term": "Genomic impacts of Selfish Genetic Elements",
+          "suggested": "Genomic Impacts Of Selfish Genetic Elements"
+        },
+        {
+          "term": "Growth and Health in Children",
+          "suggested": "Growth And Health In Children"
+        },
+        {
+          "term": "Health and Disease",
+          "suggested": "Health And Disease"
+        },
+        {
+          "term": "Healthy Equity and Social Justice",
+          "suggested": "Healthy Equity And Social Justice"
+        },
+        {
+          "term": "History of Biology",
+          "suggested": "History Of Biology"
+        },
+        {
+          "term": "History of Infectious Disease and Medicine",
+          "suggested": "History Of Infectious Disease And Medicine"
+        },
+        {
+          "term": "History of Music Theory",
+          "suggested": "History Of Music Theory"
+        },
+        {
+          "term": "Host-Parasite Coevolution & Biogeography",
+          "suggested": "Host-parasite Coevolution & Biogeography"
+        },
+        {
+          "term": "Identity and Group Processes",
+          "suggested": "Identity And Group Processes"
+        },
+        {
+          "term": "Imperial and Modern China",
+          "suggested": "Imperial And Modern China"
+        },
+        {
+          "term": "Improving Academic Outcomes for Rural Youth",
+          "suggested": "Improving Academic Outcomes For Rural Youth"
+        },
+        {
+          "term": "INTD 105",
+          "suggested": "Intd 105"
+        },
+        {
+          "term": "INTD 203 Social Foundations of Education in the United States",
+          "suggested": "Intd 203 Social Foundations Of Education In The United States"
+        },
+        {
+          "term": "Interactions between species",
+          "suggested": "Interactions Between Species"
+        },
+        {
+          "term": "interfacial conformation",
+          "suggested": "Interfacial Conformation"
+        },
+        {
+          "term": "International Science and Math Education",
+          "suggested": "International Science And Math Education"
+        },
+        {
+          "term": "Introduction to Education",
+          "suggested": "Introduction To Education"
+        },
+        {
+          "term": "journalism",
+          "suggested": "Journalism"
+        },
+        {
+          "term": "Lake Biology/Limnology",
+          "suggested": "Lake Biology/limnology"
+        },
+        {
+          "term": "Language and Culture",
+          "suggested": "Language And Culture"
+        },
+        {
+          "term": "Language and Health",
+          "suggested": "Language And Health"
+        },
+        {
+          "term": "Latin American and Caribbean Studies",
+          "suggested": "Latin American And Caribbean Studies"
+        },
+        {
+          "term": "LGBTQ+ Family-Making",
+          "suggested": "Lgbtq+ Family-making"
+        },
+        {
+          "term": "Life-History Evolution",
+          "suggested": "Life-history Evolution"
+        },
+        {
+          "term": "Literature and Music of the Great War",
+          "suggested": "Literature And Music Of The Great War"
+        },
+        {
+          "term": "Masculinity and the History of Emotions",
+          "suggested": "Masculinity And The History Of Emotions"
+        },
+        {
+          "term": "Maternal and Child Health",
+          "suggested": "Maternal And Child Health"
+        },
+        {
+          "term": "Mathematics and Computer Science",
+          "suggested": "Mathematics And Computer Science"
+        },
+        {
+          "term": "Maya/Mesoamerica",
+          "suggested": "Maya/mesoamerica"
+        },
+        {
+          "term": "Media and Culture",
+          "suggested": "Media And Culture"
+        },
+        {
+          "term": "Medicine/Health Care",
+          "suggested": "Medicine/health Care"
+        },
+        {
+          "term": "Medieval French Literature and Music",
+          "suggested": "Medieval French Literature And Music"
+        },
+        {
+          "term": "Modified DNA and RNA Bases Including 5-Methylcytosine",
+          "suggested": "Modified Dna And Rna Bases Including 5-methylcytosine"
+        },
+        {
+          "term": "Molecular Mechanisms of Spindle Positioning in Yeast Mitosis",
+          "suggested": "Molecular Mechanisms Of Spindle Positioning In Yeast Mitosis"
+        },
+        {
+          "term": "Music in Spain",
+          "suggested": "Music In Spain"
+        },
+        {
+          "term": "Nano-Gold Materials",
+          "suggested": "Nano-gold Materials"
+        },
+        {
+          "term": "Nonself Recognition in Fungi",
+          "suggested": "Nonself Recognition In Fungi"
+        },
+        {
+          "term": "Origins and Evolution of Novel Genes",
+          "suggested": "Origins And Evolution Of Novel Genes"
+        },
+        {
+          "term": "Osteology and Osteoporosis",
+          "suggested": "Osteology And Osteoporosis"
+        },
+        {
+          "term": "Patterns of and Problems Associated with Cannabis Use and Alcohol Use",
+          "suggested": "Patterns Of And Problems Associated With Cannabis Use And Alcohol Use"
+        },
+        {
+          "term": "Philosophy of Art",
+          "suggested": "Philosophy Of Art"
+        },
+        {
+          "term": "Philosophy of Biology",
+          "suggested": "Philosophy Of Biology"
+        },
+        {
+          "term": "Philosophy of Nonviolence",
+          "suggested": "Philosophy Of Nonviolence"
+        },
+        {
+          "term": "Physics of Baseball",
+          "suggested": "Physics Of Baseball"
+        },
+        {
+          "term": "Physiological Responses to Stress in Plants",
+          "suggested": "Physiological Responses To Stress In Plants"
+        },
+        {
+          "term": "Physiology and Ecology of Fishes",
+          "suggested": "Physiology And Ecology Of Fishes"
+        },
+        {
+          "term": "political philosophy",
+          "suggested": "Political Philosophy"
+        },
+        {
+          "term": "Polyploidy and genetic diversity",
+          "suggested": "Polyploidy And Genetic Diversity"
+        },
+        {
+          "term": "Population Genetics and Genomics",
+          "suggested": "Population Genetics And Genomics"
+        },
+        {
+          "term": "Pottery and Ceramics",
+          "suggested": "Pottery And Ceramics"
+        },
+        {
+          "term": "Psychology of Language",
+          "suggested": "Psychology Of Language"
+        },
+        {
+          "term": "Race and Ethnicity",
+          "suggested": "Race And Ethnicity"
+        },
+        {
+          "term": "Race and Gender",
+          "suggested": "Race And Gender"
+        },
+        {
+          "term": "Race, Racism and Health Disparities",
+          "suggested": "Race, Racism And Health Disparities"
+        },
+        {
+          "term": "Reading Development and Best Practices for Teaching Reading",
+          "suggested": "Reading Development And Best Practices For Teaching Reading"
+        },
+        {
+          "term": "Refugee and Border Studies",
+          "suggested": "Refugee And Border Studies"
+        },
+        {
+          "term": "Religion and Politics",
+          "suggested": "Religion And Politics"
+        },
+        {
+          "term": "Rhetoric and Composition",
+          "suggested": "Rhetoric And Composition"
+        },
+        {
+          "term": "Scholarship of Teaching and Learning",
+          "suggested": "Scholarship Of Teaching And Learning"
+        },
+        {
+          "term": "Self-Talk and Intrapersonal Communication",
+          "suggested": "Self-talk And Intrapersonal Communication"
+        },
+        {
+          "term": "Social Problems and Public Policy",
+          "suggested": "Social Problems And Public Policy"
+        },
+        {
+          "term": "STEM",
+          "suggested": "Stem"
+        },
+        {
+          "term": "STEM Education",
+          "suggested": "Stem Education"
+        },
+        {
+          "term": "Supply Chain Challenges in a Global Society",
+          "suggested": "Supply Chain Challenges In A Global Society"
+        },
+        {
+          "term": "Systematics of Parasitic",
+          "suggested": "Systematics Of Parasitic"
+        },
+        {
+          "term": "Systematics of Phylogenetic Reconstruction",
+          "suggested": "Systematics Of Phylogenetic Reconstruction"
+        },
+        {
+          "term": "Teaching of Writing",
+          "suggested": "Teaching Of Writing"
+        },
+        {
+          "term": "Technology in Teaching Mathematics",
+          "suggested": "Technology In Teaching Mathematics"
+        },
+        {
+          "term": "The Bidirectional Relationship Between Social Support and PTSD",
+          "suggested": "The Bidirectional Relationship Between Social Support And Ptsd"
+        },
+        {
+          "term": "The Interplay Between Emotion and Substance Use",
+          "suggested": "The Interplay Between Emotion And Substance Use"
+        },
+        {
+          "term": "U.S. and Environmental History",
+          "suggested": "U.s. And Environmental History"
+        },
+        {
+          "term": "U.S. and Labor History",
+          "suggested": "U.s. And Labor History"
+        },
+        {
+          "term": "U.S. Congress",
+          "suggested": "U.s. Congress"
+        },
+        {
+          "term": "U.S. History",
+          "suggested": "U.s. History"
+        },
+        {
+          "term": "U.S. Women’s History",
+          "suggested": "U.s. Women's History"
+        },
+        {
+          "term": "UV Photobiology",
+          "suggested": "Uv Photobiology"
+        },
+        {
+          "term": "Visual Rhetoric and Communication",
+          "suggested": "Visual Rhetoric And Communication"
+        },
+        {
+          "term": "Western Theatre Dance History and Theory",
+          "suggested": "Western Theatre Dance History And Theory"
+        },
+        {
+          "term": "Women and Gender Studies",
+          "suggested": "Women And Gender Studies"
+        },
+        {
+          "term": "Women and Politics",
+          "suggested": "Women And Politics"
+        },
+        {
+          "term": "Work-Family Interface",
+          "suggested": "Work-family Interface"
+        },
+        {
+          "term": "Writing and Composition",
+          "suggested": "Writing And Composition"
+        }
+      ],
+      "punctuationIssues": [
+        {
+          "term": "U.S. Women’s History",
+          "suggested": "U.S. Women's History"
+        },
+        {
+          "term": "Women’s History",
+          "suggested": "Women's History"
+        }
+      ],
+      "commaSeparated": [
+        {
+          "term": "Anthropology of Love, Marriage, Divorce and Kinship",
+          "suggestedSplit": [
+            "Anthropology of Love",
+            "Marriage",
+            "Divorce and Kinship"
+          ]
+        },
+        {
+          "term": "Diversity, Equity and Inclusion in STEM",
+          "suggestedSplit": [
+            "Diversity",
+            "Equity and Inclusion in STEM"
+          ]
+        },
+        {
+          "term": "General Relativity, Geometrical Methods",
+          "suggestedSplit": [
+            "General Relativity",
+            "Geometrical Methods"
+          ]
+        },
+        {
+          "term": "Race, Racism and Health Disparities",
+          "suggestedSplit": [
+            "Race",
+            "Racism and Health Disparities"
+          ]
+        }
+      ],
+      "sentenceLike": [
+        "Early Colonial U.S.",
+        "INTD 203 Social Foundations of Education in the United States",
+        "Patterns of and Problems Associated with Cannabis Use and Alcohol Use"
+      ]
+    },
+    "formattingDiffs": []
+  }
+}

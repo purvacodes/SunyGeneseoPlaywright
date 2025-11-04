@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-11-04T12:48:41.968Z",
+  "summary": {
+    "drupalCount": 7,
+    "wpCount": 7,
+    "missingInWPCount": 0,
+    "extraInWPCount": 0,
+    "duplicateCount": 0
+  },
+  "comparison": {
+    "missingInWP": [],
+    "extraInWP": [],
+    "duplicates": []
+  },
+  "quality": {
+    "drupalReport": {
+      "source": "Drupal",
+      "titleCaseIssues": [],
+      "punctuationIssues": [],
+      "commaSeparated": [],
+      "sentenceLike": []
+    },
+    "wpReport": {
+      "source": "WordPress",
+      "titleCaseIssues": [],
+      "punctuationIssues": [],
+      "commaSeparated": [],
+      "sentenceLike": []
+    },
+    "formattingDiffs": []
+  }
+}

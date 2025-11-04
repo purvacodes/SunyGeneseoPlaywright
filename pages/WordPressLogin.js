@@ -7,7 +7,7 @@ export class WordPressLogin {
 
   async loginToWordPress() {
     await this.page.goto(credentials.wordPress.url, { timeout: 60000, waitUntil: 'domcontentloaded' });
-    await this.page.getByRole('button', { name: 'Continue' }).click();
+    // await this.page.getByRole('button', { name: 'Continue' }).click();
     await this.page.getByRole('textbox', { name: 'Username' }).click();
     await this.page.getByRole('textbox', { name: 'Username' }).fill(credentials.wordPress.username);
     await this.page.getByRole('textbox', { name: 'Password' }).click();

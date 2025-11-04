@@ -1,0 +1,98 @@
+{
+  "timestamp": "2025-11-04T12:43:09.818Z",
+  "summary": {
+    "drupalCount": 13,
+    "wpCount": 13,
+    "missingInWPCount": 0,
+    "extraInWPCount": 0,
+    "duplicateCount": 0
+  },
+  "comparison": {
+    "missingInWP": [],
+    "extraInWP": [],
+    "duplicates": []
+  },
+  "quality": {
+    "drupalReport": {
+      "source": "Drupal",
+      "titleCaseIssues": [
+        {
+          "term": "Mary C. Toale, EdD",
+          "suggested": "Mary C. Toale, Edd"
+        },
+        {
+          "term": "SUNY Geneseo",
+          "suggested": "Suny Geneseo"
+        },
+        {
+          "term": "Monique Patenaude, PhD",
+          "suggested": "Monique Patenaude, Phd"
+        }
+      ],
+      "punctuationIssues": [
+        {
+          "term": "Keith Walters ’11",
+          "suggested": "Keith Walters '11"
+        }
+      ],
+      "commaSeparated": [
+        {
+          "term": "Mary C. Toale, EdD",
+          "suggestedSplit": [
+            "Mary C. Toale",
+            "EdD"
+          ]
+        },
+        {
+          "term": "Monique Patenaude, PhD",
+          "suggestedSplit": [
+            "Monique Patenaude",
+            "PhD"
+          ]
+        }
+      ],
+      "sentenceLike": []
+    },
+    "wpReport": {
+      "source": "WordPress",
+      "titleCaseIssues": [
+        {
+          "term": "Mary C. Toale, EdD",
+          "suggested": "Mary C. Toale, Edd"
+        },
+        {
+          "term": "Monique Patenaude, PhD",
+          "suggested": "Monique Patenaude, Phd"
+        },
+        {
+          "term": "SUNY Geneseo",
+          "suggested": "Suny Geneseo"
+        }
+      ],
+      "punctuationIssues": [
+        {
+          "term": "Keith Walters ’11",
+          "suggested": "Keith Walters '11"
+        }
+      ],
+      "commaSeparated": [
+        {
+          "term": "Mary C. Toale, EdD",
+          "suggestedSplit": [
+            "Mary C. Toale",
+            "EdD"
+          ]
+        },
+        {
+          "term": "Monique Patenaude, PhD",
+          "suggestedSplit": [
+            "Monique Patenaude",
+            "PhD"
+          ]
+        }
+      ],
+      "sentenceLike": []
+    },
+    "formattingDiffs": []
+  }
+}

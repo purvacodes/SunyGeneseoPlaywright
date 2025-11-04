@@ -1,0 +1,376 @@
+{
+  "timestamp": "2025-11-04T12:45:50.186Z",
+  "summary": {
+    "drupalCount": 104,
+    "wpCount": 103,
+    "missingInWPCount": 1,
+    "extraInWPCount": 0,
+    "duplicateCount": 1
+  },
+  "comparison": {
+    "missingInWP": [
+      {
+        "taxonomy": "Tesla House",
+        "count": 1
+      }
+    ],
+    "extraInWP": [],
+    "duplicates": [
+      {
+        "taxonomy": "Tesla House",
+        "count": 2
+      }
+    ]
+  },
+  "quality": {
+    "drupalReport": {
+      "source": "Drupal",
+      "titleCaseIssues": [
+        {
+          "term": "(Stock Photos)",
+          "suggested": "(stock Photos)"
+        },
+        {
+          "term": "Campus Auxiliary Services (CAS)",
+          "suggested": "Campus Auxiliary Services (cas)"
+        },
+        {
+          "term": "Center for Community",
+          "suggested": "Center For Community"
+        },
+        {
+          "term": "Center for Digital Learning (CDL)",
+          "suggested": "Center For Digital Learning (cdl)"
+        },
+        {
+          "term": "Center for Integrative Learning (CIL)",
+          "suggested": "Center For Integrative Learning (cil)"
+        },
+        {
+          "term": "Chemistry and Biochemistry",
+          "suggested": "Chemistry And Biochemistry"
+        },
+        {
+          "term": "Dean of Academic Planning and Advising",
+          "suggested": "Dean Of Academic Planning And Advising"
+        },
+        {
+          "term": "Dean of Students",
+          "suggested": "Dean Of Students"
+        },
+        {
+          "term": "English for Speakers of Other Languages (ESL)",
+          "suggested": "English For Speakers Of Other Languages (esl)"
+        },
+        {
+          "term": "Environmental Health and Safety",
+          "suggested": "Environmental Health And Safety"
+        },
+        {
+          "term": "Geography and Sustainability Studies",
+          "suggested": "Geography And Sustainability Studies"
+        },
+        {
+          "term": "Geological, Environmental, and Planetary Sciences",
+          "suggested": "Geological, Environmental, And Planetary Sciences"
+        },
+        {
+          "term": "Global Languages and Cultures",
+          "suggested": "Global Languages And Cultures"
+        },
+        {
+          "term": "GOLD Program",
+          "suggested": "Gold Program"
+        },
+        {
+          "term": "GREAT Day",
+          "suggested": "Great Day"
+        },
+        {
+          "term": "Healthy Campus and Community Coalition",
+          "suggested": "Healthy Campus And Community Coalition"
+        },
+        {
+          "term": "League of Storytellers",
+          "suggested": "League Of Storytellers"
+        },
+        {
+          "term": "Off-Campus Living",
+          "suggested": "Off-campus Living"
+        },
+        {
+          "term": "Office of Accessibility",
+          "suggested": "Office Of Accessibility"
+        },
+        {
+          "term": "Office of Diversity and Equity",
+          "suggested": "Office Of Diversity And Equity"
+        },
+        {
+          "term": "Office of International Programs",
+          "suggested": "Office Of International Programs"
+        },
+        {
+          "term": "Office of Sustainability",
+          "suggested": "Office Of Sustainability"
+        },
+        {
+          "term": "Office of the President",
+          "suggested": "Office Of The President"
+        },
+        {
+          "term": "Office of the Provost",
+          "suggested": "Office Of The Provost"
+        },
+        {
+          "term": "Office of the Registrar",
+          "suggested": "Office Of The Registrar"
+        },
+        {
+          "term": "Philosophy, Politics, and Economics",
+          "suggested": "Philosophy, Politics, And Economics"
+        },
+        {
+          "term": "Physics and Astronomy",
+          "suggested": "Physics And Astronomy"
+        },
+        {
+          "term": "Political Science and International Relations",
+          "suggested": "Political Science And International Relations"
+        },
+        {
+          "term": "School of Arts and Sciences",
+          "suggested": "School Of Arts And Sciences"
+        },
+        {
+          "term": "School of Business",
+          "suggested": "School Of Business"
+        },
+        {
+          "term": "School of Education",
+          "suggested": "School Of Education"
+        },
+        {
+          "term": "Student Conduct and Community Standards",
+          "suggested": "Student Conduct And Community Standards"
+        },
+        {
+          "term": "Student Health and Counseling",
+          "suggested": "Student Health And Counseling"
+        },
+        {
+          "term": "SUNY Geneseo Federal Credit Union",
+          "suggested": "Suny Geneseo Federal Credit Union"
+        },
+        {
+          "term": "Teaching and Learning Center",
+          "suggested": "Teaching And Learning Center"
+        },
+        {
+          "term": "Women’s and Gender Studies",
+          "suggested": "Women's And Gender Studies"
+        }
+      ],
+      "punctuationIssues": [
+        {
+          "term": "Women’s and Gender Studies",
+          "suggested": "Women's and Gender Studies"
+        }
+      ],
+      "commaSeparated": [
+        {
+          "term": "Geological, Environmental, and Planetary Sciences",
+          "suggestedSplit": [
+            "Geological",
+            "Environmental",
+            "and Planetary Sciences"
+          ]
+        },
+        {
+          "term": "Philosophy, Politics, and Economics",
+          "suggestedSplit": [
+            "Philosophy",
+            "Politics",
+            "and Economics"
+          ]
+        }
+      ],
+      "sentenceLike": []
+    },
+    "wpReport": {
+      "source": "WordPress",
+      "titleCaseIssues": [
+        {
+          "term": "(Stock Photos)",
+          "suggested": "(stock Photos)"
+        },
+        {
+          "term": "Campus Auxiliary Services (CAS)",
+          "suggested": "Campus Auxiliary Services (cas)"
+        },
+        {
+          "term": "Center for Community",
+          "suggested": "Center For Community"
+        },
+        {
+          "term": "Center for Digital Learning (CDL)",
+          "suggested": "Center For Digital Learning (cdl)"
+        },
+        {
+          "term": "Center for Integrative Learning (CIL)",
+          "suggested": "Center For Integrative Learning (cil)"
+        },
+        {
+          "term": "Chemistry and Biochemistry",
+          "suggested": "Chemistry And Biochemistry"
+        },
+        {
+          "term": "Dean of Academic Planning and Advising",
+          "suggested": "Dean Of Academic Planning And Advising"
+        },
+        {
+          "term": "Dean of Students",
+          "suggested": "Dean Of Students"
+        },
+        {
+          "term": "English for Speakers of Other Languages (ESL)",
+          "suggested": "English For Speakers Of Other Languages (esl)"
+        },
+        {
+          "term": "Environmental Health and Safety",
+          "suggested": "Environmental Health And Safety"
+        },
+        {
+          "term": "Geography and Sustainability Studies",
+          "suggested": "Geography And Sustainability Studies"
+        },
+        {
+          "term": "Geological, Environmental, and Planetary Sciences",
+          "suggested": "Geological, Environmental, And Planetary Sciences"
+        },
+        {
+          "term": "Global Languages and Cultures",
+          "suggested": "Global Languages And Cultures"
+        },
+        {
+          "term": "GOLD Program",
+          "suggested": "Gold Program"
+        },
+        {
+          "term": "GREAT Day",
+          "suggested": "Great Day"
+        },
+        {
+          "term": "Healthy Campus and Community Coalition",
+          "suggested": "Healthy Campus And Community Coalition"
+        },
+        {
+          "term": "League of Storytellers",
+          "suggested": "League Of Storytellers"
+        },
+        {
+          "term": "Off-Campus Living",
+          "suggested": "Off-campus Living"
+        },
+        {
+          "term": "Office of Accessibility",
+          "suggested": "Office Of Accessibility"
+        },
+        {
+          "term": "Office of Diversity and Equity",
+          "suggested": "Office Of Diversity And Equity"
+        },
+        {
+          "term": "Office of International Programs",
+          "suggested": "Office Of International Programs"
+        },
+        {
+          "term": "Office of Sustainability",
+          "suggested": "Office Of Sustainability"
+        },
+        {
+          "term": "Office of the President",
+          "suggested": "Office Of The President"
+        },
+        {
+          "term": "Office of the Provost",
+          "suggested": "Office Of The Provost"
+        },
+        {
+          "term": "Office of the Registrar",
+          "suggested": "Office Of The Registrar"
+        },
+        {
+          "term": "Philosophy, Politics, and Economics",
+          "suggested": "Philosophy, Politics, And Economics"
+        },
+        {
+          "term": "Physics and Astronomy",
+          "suggested": "Physics And Astronomy"
+        },
+        {
+          "term": "Political Science and International Relations",
+          "suggested": "Political Science And International Relations"
+        },
+        {
+          "term": "School of Arts and Sciences",
+          "suggested": "School Of Arts And Sciences"
+        },
+        {
+          "term": "School of Business",
+          "suggested": "School Of Business"
+        },
+        {
+          "term": "School of Education",
+          "suggested": "School Of Education"
+        },
+        {
+          "term": "Student Conduct and Community Standards",
+          "suggested": "Student Conduct And Community Standards"
+        },
+        {
+          "term": "Student Health and Counseling",
+          "suggested": "Student Health And Counseling"
+        },
+        {
+          "term": "SUNY Geneseo Federal Credit Union",
+          "suggested": "Suny Geneseo Federal Credit Union"
+        },
+        {
+          "term": "Teaching and Learning Center",
+          "suggested": "Teaching And Learning Center"
+        },
+        {
+          "term": "Women’s and Gender Studies",
+          "suggested": "Women's And Gender Studies"
+        }
+      ],
+      "punctuationIssues": [
+        {
+          "term": "Women’s and Gender Studies",
+          "suggested": "Women's and Gender Studies"
+        }
+      ],
+      "commaSeparated": [
+        {
+          "term": "Geological, Environmental, and Planetary Sciences",
+          "suggestedSplit": [
+            "Geological",
+            "Environmental",
+            "and Planetary Sciences"
+          ]
+        },
+        {
+          "term": "Philosophy, Politics, and Economics",
+          "suggestedSplit": [
+            "Philosophy",
+            "Politics",
+            "and Economics"
+          ]
+        }
+      ],
+      "sentenceLike": []
+    },
+    "formattingDiffs": []
+  }
+}

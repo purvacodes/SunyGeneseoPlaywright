@@ -5,13 +5,13 @@ export  const credentials = {
     password: 'Welcome@123'
   },
   wordPress: {
-    url: 'https://dev-infostride-geneseo.pantheonsite.io/wp-admin/',
+    url: 'https://dev-suny-geneseo.pantheonsite.io/wp-admin/',
     username: 'amit.kaushal@infostride.com',
     password: 'Login@123'
   },
  env: {
     drupal: 'http://geneseo-drupal.ddev.site:33000/',
-    wordPress: 'https://dev-infostride-geneseo.pantheonsite.io',
+    wordPress: 'https://dev-suny-geneseo.pantheonsite.io',
     live: 'https://www.geneseo.edu',
     local:'http://localhost/test'
  }

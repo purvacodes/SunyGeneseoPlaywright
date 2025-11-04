@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-11-04T12:44:28.961Z",
+  "summary": {
+    "drupalCount": 7,
+    "wpCount": 7,
+    "missingInWPCount": 0,
+    "extraInWPCount": 0,
+    "duplicateCount": 0
+  },
+  "comparison": {
+    "missingInWP": [],
+    "extraInWP": [],
+    "duplicates": []
+  },
+  "quality": {
+    "drupalReport": {
+      "source": "Drupal",
+      "titleCaseIssues": [
+        {
+          "term": "AOD Program",
+          "suggested": "Aod Program"
+        },
+        {
+          "term": "I.T. Support",
+          "suggested": "I.t. Support"
+        }
+      ],
+      "punctuationIssues": [],
+      "commaSeparated": [],
+      "sentenceLike": []
+    },
+    "wpReport": {
+      "source": "WordPress",
+      "titleCaseIssues": [
+        {
+          "term": "AOD Program",
+          "suggested": "Aod Program"
+        },
+        {
+          "term": "I.T. Support",
+          "suggested": "I.t. Support"
+        }
+      ],
+      "punctuationIssues": [],
+      "commaSeparated": [],
+      "sentenceLike": []
+    },
+    "formattingDiffs": []
+  }
+}

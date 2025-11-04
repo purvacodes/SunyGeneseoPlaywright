@@ -1,0 +1,58 @@
+{
+  "timestamp": "2025-11-04T12:49:46.605Z",
+  "summary": {
+    "drupalCount": 11,
+    "wpCount": 11,
+    "missingInWPCount": 0,
+    "extraInWPCount": 0,
+    "duplicateCount": 0
+  },
+  "comparison": {
+    "missingInWP": [],
+    "extraInWP": [],
+    "duplicates": []
+  },
+  "quality": {
+    "drupalReport": {
+      "source": "Drupal",
+      "titleCaseIssues": [
+        {
+          "term": "American Studies contact",
+          "suggested": "American Studies Contact"
+        },
+        {
+          "term": "Full-Time",
+          "suggested": "Full-time"
+        },
+        {
+          "term": "Part-Time/Adjunct",
+          "suggested": "Part-time/adjunct"
+        }
+      ],
+      "punctuationIssues": [],
+      "commaSeparated": [],
+      "sentenceLike": []
+    },
+    "wpReport": {
+      "source": "WordPress",
+      "titleCaseIssues": [
+        {
+          "term": "American Studies contact",
+          "suggested": "American Studies Contact"
+        },
+        {
+          "term": "Full-Time",
+          "suggested": "Full-time"
+        },
+        {
+          "term": "Part-Time/Adjunct",
+          "suggested": "Part-time/adjunct"
+        }
+      ],
+      "punctuationIssues": [],
+      "commaSeparated": [],
+      "sentenceLike": []
+    },
+    "formattingDiffs": []
+  }
+}

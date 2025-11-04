@@ -1,0 +1,3654 @@
+{
+  "timestamp": "2025-11-04T12:36:59.525Z",
+  "summary": {
+    "drupalCount": 454,
+    "wpCount": 450,
+    "missingInWPCount": 4,
+    "extraInWPCount": 0,
+    "duplicateCount": 4
+  },
+  "comparison": {
+    "missingInWP": [
+      {
+        "taxonomy": "broadcasting",
+        "count": 1
+      },
+      {
+        "taxonomy": "fiction",
+        "count": 1
+      },
+      {
+        "taxonomy": "management",
+        "count": 1
+      },
+      {
+        "taxonomy": "scientific research",
+        "count": 1
+      }
+    ],
+    "extraInWP": [],
+    "duplicates": [
+      {
+        "taxonomy": "broadcasting",
+        "count": 2
+      },
+      {
+        "taxonomy": "fiction",
+        "count": 2
+      },
+      {
+        "taxonomy": "management",
+        "count": 2
+      },
+      {
+        "taxonomy": "scientific research",
+        "count": 2
+      }
+    ]
+  },
+  "quality": {
+    "drupalReport": {
+      "source": "Drupal",
+      "titleCaseIssues": [
+        {
+          "term": "accountancy",
+          "suggested": "Accountancy"
+        },
+        {
+          "term": "accountant",
+          "suggested": "Accountant"
+        },
+        {
+          "term": "accounting",
+          "suggested": "Accounting"
+        },
+        {
+          "term": "accounting bs",
+          "suggested": "Accounting Bs"
+        },
+        {
+          "term": "accounting department",
+          "suggested": "Accounting Department"
+        },
+        {
+          "term": "accounting ms",
+          "suggested": "Accounting Ms"
+        },
+        {
+          "term": "accounting program",
+          "suggested": "Accounting Program"
+        },
+        {
+          "term": "activism",
+          "suggested": "Activism"
+        },
+        {
+          "term": "actuary",
+          "suggested": "Actuary"
+        },
+        {
+          "term": "adolescence",
+          "suggested": "Adolescence"
+        },
+        {
+          "term": "adolescence education",
+          "suggested": "Adolescence Education"
+        },
+        {
+          "term": "adolescense education",
+          "suggested": "Adolescense Education"
+        },
+        {
+          "term": "adolescent",
+          "suggested": "Adolescent"
+        },
+        {
+          "term": "adolescent education",
+          "suggested": "Adolescent Education"
+        },
+        {
+          "term": "adolesence education",
+          "suggested": "Adolesence Education"
+        },
+        {
+          "term": "advertising",
+          "suggested": "Advertising"
+        },
+        {
+          "term": "african",
+          "suggested": "African"
+        },
+        {
+          "term": "african american",
+          "suggested": "African American"
+        },
+        {
+          "term": "african american studies",
+          "suggested": "African American Studies"
+        },
+        {
+          "term": "african studies",
+          "suggested": "African Studies"
+        },
+        {
+          "term": "africana",
+          "suggested": "Africana"
+        },
+        {
+          "term": "africana studies",
+          "suggested": "Africana Studies"
+        },
+        {
+          "term": "american",
+          "suggested": "American"
+        },
+        {
+          "term": "american music",
+          "suggested": "American Music"
+        },
+        {
+          "term": "american studies",
+          "suggested": "American Studies"
+        },
+        {
+          "term": "american studies ba",
+          "suggested": "American Studies Ba"
+        },
+        {
+          "term": "american studies department",
+          "suggested": "American Studies Department"
+        },
+        {
+          "term": "american studies minor",
+          "suggested": "American Studies Minor"
+        },
+        {
+          "term": "american studies program",
+          "suggested": "American Studies Program"
+        },
+        {
+          "term": "analysis",
+          "suggested": "Analysis"
+        },
+        {
+          "term": "analyst",
+          "suggested": "Analyst"
+        },
+        {
+          "term": "analytics",
+          "suggested": "Analytics"
+        },
+        {
+          "term": "analytics department",
+          "suggested": "Analytics Department"
+        },
+        {
+          "term": "analytics program",
+          "suggested": "Analytics Program"
+        },
+        {
+          "term": "anatomy",
+          "suggested": "Anatomy"
+        },
+        {
+          "term": "anthropolgy",
+          "suggested": "Anthropolgy"
+        },
+        {
+          "term": "anthropology",
+          "suggested": "Anthropology"
+        },
+        {
+          "term": "anthropology ba",
+          "suggested": "Anthropology Ba"
+        },
+        {
+          "term": "anthropology department",
+          "suggested": "Anthropology Department"
+        },
+        {
+          "term": "anthropology minor",
+          "suggested": "Anthropology Minor"
+        },
+        {
+          "term": "anthropology program",
+          "suggested": "Anthropology Program"
+        },
+        {
+          "term": "applied mathematics",
+          "suggested": "Applied Mathematics"
+        },
+        {
+          "term": "archaeologist",
+          "suggested": "Archaeologist"
+        },
+        {
+          "term": "archaeology",
+          "suggested": "Archaeology"
+        },
+        {
+          "term": "architectural history",
+          "suggested": "Architectural History"
+        },
+        {
+          "term": "art",
+          "suggested": "Art"
+        },
+        {
+          "term": "art history",
+          "suggested": "Art History"
+        },
+        {
+          "term": "art history ba",
+          "suggested": "Art History Ba"
+        },
+        {
+          "term": "art history department",
+          "suggested": "Art History Department"
+        },
+        {
+          "term": "art history minor",
+          "suggested": "Art History Minor"
+        },
+        {
+          "term": "art history program",
+          "suggested": "Art History Program"
+        },
+        {
+          "term": "arts",
+          "suggested": "Arts"
+        },
+        {
+          "term": "asian art",
+          "suggested": "Asian Art"
+        },
+        {
+          "term": "asian studies",
+          "suggested": "Asian Studies"
+        },
+        {
+          "term": "astronomy",
+          "suggested": "Astronomy"
+        },
+        {
+          "term": "author",
+          "suggested": "Author"
+        },
+        {
+          "term": "ba communication",
+          "suggested": "Ba Communication"
+        },
+        {
+          "term": "ba economics",
+          "suggested": "Ba Economics"
+        },
+        {
+          "term": "ba english",
+          "suggested": "Ba English"
+        },
+        {
+          "term": "ba finance",
+          "suggested": "Ba Finance"
+        },
+        {
+          "term": "ba french",
+          "suggested": "Ba French"
+        },
+        {
+          "term": "ba geography",
+          "suggested": "Ba Geography"
+        },
+        {
+          "term": "ba history",
+          "suggested": "Ba History"
+        },
+        {
+          "term": "ba international affairs",
+          "suggested": "Ba International Affairs"
+        },
+        {
+          "term": "ba international relations",
+          "suggested": "Ba International Relations"
+        },
+        {
+          "term": "ba journalism",
+          "suggested": "Ba Journalism"
+        },
+        {
+          "term": "ba math",
+          "suggested": "Ba Math"
+        },
+        {
+          "term": "ba mathematics",
+          "suggested": "Ba Mathematics"
+        },
+        {
+          "term": "ba music",
+          "suggested": "Ba Music"
+        },
+        {
+          "term": "bachelor of communication",
+          "suggested": "Bachelor Of Communication"
+        },
+        {
+          "term": "bachelor of communications",
+          "suggested": "Bachelor Of Communications"
+        },
+        {
+          "term": "bachelor of finance",
+          "suggested": "Bachelor Of Finance"
+        },
+        {
+          "term": "bachelors history",
+          "suggested": "Bachelors History"
+        },
+        {
+          "term": "band",
+          "suggested": "Band"
+        },
+        {
+          "term": "banker",
+          "suggested": "Banker"
+        },
+        {
+          "term": "banking",
+          "suggested": "Banking"
+        },
+        {
+          "term": "bba",
+          "suggested": "Bba"
+        },
+        {
+          "term": "bba degree",
+          "suggested": "Bba Degree"
+        },
+        {
+          "term": "biochem",
+          "suggested": "Biochem"
+        },
+        {
+          "term": "biochemistry",
+          "suggested": "Biochemistry"
+        },
+        {
+          "term": "biogeography",
+          "suggested": "Biogeography"
+        },
+        {
+          "term": "biological anthropology",
+          "suggested": "Biological Anthropology"
+        },
+        {
+          "term": "biology",
+          "suggested": "Biology"
+        },
+        {
+          "term": "biology ba",
+          "suggested": "Biology Ba"
+        },
+        {
+          "term": "biology bs",
+          "suggested": "Biology Bs"
+        },
+        {
+          "term": "biology department",
+          "suggested": "Biology Department"
+        },
+        {
+          "term": "biology minor",
+          "suggested": "Biology Minor"
+        },
+        {
+          "term": "biology program",
+          "suggested": "Biology Program"
+        },
+        {
+          "term": "biomathmatics",
+          "suggested": "Biomathmatics"
+        },
+        {
+          "term": "biophysics",
+          "suggested": "Biophysics"
+        },
+        {
+          "term": "biotechnology",
+          "suggested": "Biotechnology"
+        },
+        {
+          "term": "black",
+          "suggested": "Black"
+        },
+        {
+          "term": "black studies",
+          "suggested": "Black Studies"
+        },
+        {
+          "term": "black studies ba",
+          "suggested": "Black Studies Ba"
+        },
+        {
+          "term": "black studies department",
+          "suggested": "Black Studies Department"
+        },
+        {
+          "term": "black studies minor",
+          "suggested": "Black Studies Minor"
+        },
+        {
+          "term": "black studies program",
+          "suggested": "Black Studies Program"
+        },
+        {
+          "term": "blockchain",
+          "suggested": "Blockchain"
+        },
+        {
+          "term": "broadcast",
+          "suggested": "Broadcast"
+        },
+        {
+          "term": "broadcast journalism",
+          "suggested": "Broadcast Journalism"
+        },
+        {
+          "term": "broadcasting",
+          "suggested": "Broadcasting"
+        },
+        {
+          "term": "broadcasting",
+          "suggested": "Broadcasting"
+        },
+        {
+          "term": "bs accounting",
+          "suggested": "Bs Accounting"
+        },
+        {
+          "term": "bs data analytics",
+          "suggested": "Bs Data Analytics"
+        },
+        {
+          "term": "bs math",
+          "suggested": "Bs Math"
+        },
+        {
+          "term": "bs mathematic",
+          "suggested": "Bs Mathematic"
+        },
+        {
+          "term": "business",
+          "suggested": "Business"
+        },
+        {
+          "term": "business admin",
+          "suggested": "Business Admin"
+        },
+        {
+          "term": "business administration",
+          "suggested": "Business Administration"
+        },
+        {
+          "term": "business administration ba",
+          "suggested": "Business Administration Ba"
+        },
+        {
+          "term": "business administration program",
+          "suggested": "Business Administration Program"
+        },
+        {
+          "term": "business department",
+          "suggested": "Business Department"
+        },
+        {
+          "term": "business finance degree",
+          "suggested": "Business Finance Degree"
+        },
+        {
+          "term": "business intelligence analyst",
+          "suggested": "Business Intelligence Analyst"
+        },
+        {
+          "term": "business program",
+          "suggested": "Business Program"
+        },
+        {
+          "term": "cell biology",
+          "suggested": "Cell Biology"
+        },
+        {
+          "term": "certified financial analyst",
+          "suggested": "Certified Financial Analyst"
+        },
+        {
+          "term": "certified public accountant",
+          "suggested": "Certified Public Accountant"
+        },
+        {
+          "term": "cfa",
+          "suggested": "Cfa"
+        },
+        {
+          "term": "chem",
+          "suggested": "Chem"
+        },
+        {
+          "term": "chemical engineering",
+          "suggested": "Chemical Engineering"
+        },
+        {
+          "term": "chemistry",
+          "suggested": "Chemistry"
+        },
+        {
+          "term": "chemistry ba",
+          "suggested": "Chemistry Ba"
+        },
+        {
+          "term": "chemistry bs",
+          "suggested": "Chemistry Bs"
+        },
+        {
+          "term": "chemistry degree",
+          "suggested": "Chemistry Degree"
+        },
+        {
+          "term": "chemistry minor",
+          "suggested": "Chemistry Minor"
+        },
+        {
+          "term": "chemistry program",
+          "suggested": "Chemistry Program"
+        },
+        {
+          "term": "chemisty",
+          "suggested": "Chemisty"
+        },
+        {
+          "term": "chemsitry",
+          "suggested": "Chemsitry"
+        },
+        {
+          "term": "childhood education",
+          "suggested": "Childhood Education"
+        },
+        {
+          "term": "choral",
+          "suggested": "Choral"
+        },
+        {
+          "term": "christian art",
+          "suggested": "Christian Art"
+        },
+        {
+          "term": "climate",
+          "suggested": "Climate"
+        },
+        {
+          "term": "climate change",
+          "suggested": "Climate Change"
+        },
+        {
+          "term": "climate science",
+          "suggested": "Climate Science"
+        },
+        {
+          "term": "communication",
+          "suggested": "Communication"
+        },
+        {
+          "term": "communication ba",
+          "suggested": "Communication Ba"
+        },
+        {
+          "term": "communication degree",
+          "suggested": "Communication Degree"
+        },
+        {
+          "term": "communication department",
+          "suggested": "Communication Department"
+        },
+        {
+          "term": "communication major",
+          "suggested": "Communication Major"
+        },
+        {
+          "term": "communication program",
+          "suggested": "Communication Program"
+        },
+        {
+          "term": "communications",
+          "suggested": "Communications"
+        },
+        {
+          "term": "computer",
+          "suggested": "Computer"
+        },
+        {
+          "term": "computing",
+          "suggested": "Computing"
+        },
+        {
+          "term": "conflict studies",
+          "suggested": "Conflict Studies"
+        },
+        {
+          "term": "conservation",
+          "suggested": "Conservation"
+        },
+        {
+          "term": "cpa",
+          "suggested": "Cpa"
+        },
+        {
+          "term": "cpa accounting",
+          "suggested": "Cpa Accounting"
+        },
+        {
+          "term": "cryptocurrency",
+          "suggested": "Cryptocurrency"
+        },
+        {
+          "term": "cryptology",
+          "suggested": "Cryptology"
+        },
+        {
+          "term": "cultural anthropology",
+          "suggested": "Cultural Anthropology"
+        },
+        {
+          "term": "dance",
+          "suggested": "Dance"
+        },
+        {
+          "term": "dance education",
+          "suggested": "Dance Education"
+        },
+        {
+          "term": "data",
+          "suggested": "Data"
+        },
+        {
+          "term": "data analysis",
+          "suggested": "Data Analysis"
+        },
+        {
+          "term": "data analyst",
+          "suggested": "Data Analyst"
+        },
+        {
+          "term": "data analytics",
+          "suggested": "Data Analytics"
+        },
+        {
+          "term": "data analytics minor",
+          "suggested": "Data Analytics Minor"
+        },
+        {
+          "term": "data analytics program",
+          "suggested": "Data Analytics Program"
+        },
+        {
+          "term": "data science",
+          "suggested": "Data Science"
+        },
+        {
+          "term": "data scientist",
+          "suggested": "Data Scientist"
+        },
+        {
+          "term": "debate",
+          "suggested": "Debate"
+        },
+        {
+          "term": "dental",
+          "suggested": "Dental"
+        },
+        {
+          "term": "dentist",
+          "suggested": "Dentist"
+        },
+        {
+          "term": "dinosaurs",
+          "suggested": "Dinosaurs"
+        },
+        {
+          "term": "diversity",
+          "suggested": "Diversity"
+        },
+        {
+          "term": "early childhood development",
+          "suggested": "Early Childhood Development"
+        },
+        {
+          "term": "early childhood ed",
+          "suggested": "Early Childhood Ed"
+        },
+        {
+          "term": "early childhood education",
+          "suggested": "Early Childhood Education"
+        },
+        {
+          "term": "earth",
+          "suggested": "Earth"
+        },
+        {
+          "term": "earth and science",
+          "suggested": "Earth And Science"
+        },
+        {
+          "term": "earth science",
+          "suggested": "Earth Science"
+        },
+        {
+          "term": "earth science program",
+          "suggested": "Earth Science Program"
+        },
+        {
+          "term": "earth scientist",
+          "suggested": "Earth Scientist"
+        },
+        {
+          "term": "earth studies",
+          "suggested": "Earth Studies"
+        },
+        {
+          "term": "ece program",
+          "suggested": "Ece Program"
+        },
+        {
+          "term": "ece teacher",
+          "suggested": "Ece Teacher"
+        },
+        {
+          "term": "ecology",
+          "suggested": "Ecology"
+        },
+        {
+          "term": "economics",
+          "suggested": "Economics"
+        },
+        {
+          "term": "economics department",
+          "suggested": "Economics Department"
+        },
+        {
+          "term": "economist",
+          "suggested": "Economist"
+        },
+        {
+          "term": "economy",
+          "suggested": "Economy"
+        },
+        {
+          "term": "education",
+          "suggested": "Education"
+        },
+        {
+          "term": "education program",
+          "suggested": "Education Program"
+        },
+        {
+          "term": "electronics",
+          "suggested": "Electronics"
+        },
+        {
+          "term": "engineering",
+          "suggested": "Engineering"
+        },
+        {
+          "term": "english",
+          "suggested": "English"
+        },
+        {
+          "term": "english degree",
+          "suggested": "English Degree"
+        },
+        {
+          "term": "english department",
+          "suggested": "English Department"
+        },
+        {
+          "term": "english program",
+          "suggested": "English Program"
+        },
+        {
+          "term": "entrepreneurship",
+          "suggested": "Entrepreneurship"
+        },
+        {
+          "term": "environ earth sci",
+          "suggested": "Environ Earth Sci"
+        },
+        {
+          "term": "environment",
+          "suggested": "Environment"
+        },
+        {
+          "term": "environmental geography",
+          "suggested": "Environmental Geography"
+        },
+        {
+          "term": "environmental science",
+          "suggested": "Environmental Science"
+        },
+        {
+          "term": "environmental studies",
+          "suggested": "Environmental Studies"
+        },
+        {
+          "term": "equality",
+          "suggested": "Equality"
+        },
+        {
+          "term": "ethics",
+          "suggested": "Ethics"
+        },
+        {
+          "term": "evolution",
+          "suggested": "Evolution"
+        },
+        {
+          "term": "fiction",
+          "suggested": "Fiction"
+        },
+        {
+          "term": "fiction",
+          "suggested": "Fiction"
+        },
+        {
+          "term": "film studies",
+          "suggested": "Film Studies"
+        },
+        {
+          "term": "finance",
+          "suggested": "Finance"
+        },
+        {
+          "term": "finance degree",
+          "suggested": "Finance Degree"
+        },
+        {
+          "term": "finance manager",
+          "suggested": "Finance Manager"
+        },
+        {
+          "term": "finances",
+          "suggested": "Finances"
+        },
+        {
+          "term": "financial analysis",
+          "suggested": "Financial Analysis"
+        },
+        {
+          "term": "financial analyst",
+          "suggested": "Financial Analyst"
+        },
+        {
+          "term": "financial planner",
+          "suggested": "Financial Planner"
+        },
+        {
+          "term": "financial planning",
+          "suggested": "Financial Planning"
+        },
+        {
+          "term": "foreign language",
+          "suggested": "Foreign Language"
+        },
+        {
+          "term": "forensic science",
+          "suggested": "Forensic Science"
+        },
+        {
+          "term": "fossils",
+          "suggested": "Fossils"
+        },
+        {
+          "term": "france",
+          "suggested": "France"
+        },
+        {
+          "term": "french",
+          "suggested": "French"
+        },
+        {
+          "term": "french degree",
+          "suggested": "French Degree"
+        },
+        {
+          "term": "french department",
+          "suggested": "French Department"
+        },
+        {
+          "term": "french language",
+          "suggested": "French Language"
+        },
+        {
+          "term": "french program",
+          "suggested": "French Program"
+        },
+        {
+          "term": "french speaking",
+          "suggested": "French Speaking"
+        },
+        {
+          "term": "french teacher",
+          "suggested": "French Teacher"
+        },
+        {
+          "term": "french teaching",
+          "suggested": "French Teaching"
+        },
+        {
+          "term": "gender",
+          "suggested": "Gender"
+        },
+        {
+          "term": "gender studies",
+          "suggested": "Gender Studies"
+        },
+        {
+          "term": "genetics",
+          "suggested": "Genetics"
+        },
+        {
+          "term": "geograph",
+          "suggested": "Geograph"
+        },
+        {
+          "term": "geographic information systems",
+          "suggested": "Geographic Information Systems"
+        },
+        {
+          "term": "geography",
+          "suggested": "Geography"
+        },
+        {
+          "term": "geography department",
+          "suggested": "Geography Department"
+        },
+        {
+          "term": "geography program",
+          "suggested": "Geography Program"
+        },
+        {
+          "term": "geography science",
+          "suggested": "Geography Science"
+        },
+        {
+          "term": "geological science",
+          "suggested": "Geological Science"
+        },
+        {
+          "term": "geological science program",
+          "suggested": "Geological Science Program"
+        },
+        {
+          "term": "geology",
+          "suggested": "Geology"
+        },
+        {
+          "term": "geology program",
+          "suggested": "Geology Program"
+        },
+        {
+          "term": "geomorphology",
+          "suggested": "Geomorphology"
+        },
+        {
+          "term": "geophysics",
+          "suggested": "Geophysics"
+        },
+        {
+          "term": "geoscientist",
+          "suggested": "Geoscientist"
+        },
+        {
+          "term": "GIS",
+          "suggested": "Gis"
+        },
+        {
+          "term": "global",
+          "suggested": "Global"
+        },
+        {
+          "term": "global politics",
+          "suggested": "Global Politics"
+        },
+        {
+          "term": "global relations",
+          "suggested": "Global Relations"
+        },
+        {
+          "term": "global warming",
+          "suggested": "Global Warming"
+        },
+        {
+          "term": "green",
+          "suggested": "Green"
+        },
+        {
+          "term": "health",
+          "suggested": "Health"
+        },
+        {
+          "term": "health sciences",
+          "suggested": "Health Sciences"
+        },
+        {
+          "term": "hide",
+          "suggested": "Hide"
+        },
+        {
+          "term": "high school teacher",
+          "suggested": "High School Teacher"
+        },
+        {
+          "term": "high school teaching",
+          "suggested": "High School Teaching"
+        },
+        {
+          "term": "history",
+          "suggested": "History"
+        },
+        {
+          "term": "history department",
+          "suggested": "History Department"
+        },
+        {
+          "term": "history education",
+          "suggested": "History Education"
+        },
+        {
+          "term": "history program",
+          "suggested": "History Program"
+        },
+        {
+          "term": "history teacher",
+          "suggested": "History Teacher"
+        },
+        {
+          "term": "human development",
+          "suggested": "Human Development"
+        },
+        {
+          "term": "human resources",
+          "suggested": "Human Resources"
+        },
+        {
+          "term": "humanities",
+          "suggested": "Humanities"
+        },
+        {
+          "term": "identity",
+          "suggested": "Identity"
+        },
+        {
+          "term": "individualized studies",
+          "suggested": "Individualized Studies"
+        },
+        {
+          "term": "information technology",
+          "suggested": "Information Technology"
+        },
+        {
+          "term": "interdisciplinary",
+          "suggested": "Interdisciplinary"
+        },
+        {
+          "term": "international",
+          "suggested": "International"
+        },
+        {
+          "term": "international affairs",
+          "suggested": "International Affairs"
+        },
+        {
+          "term": "international affairs degree",
+          "suggested": "International Affairs Degree"
+        },
+        {
+          "term": "international business",
+          "suggested": "International Business"
+        },
+        {
+          "term": "international diplomacy",
+          "suggested": "International Diplomacy"
+        },
+        {
+          "term": "international economic relations",
+          "suggested": "International Economic Relations"
+        },
+        {
+          "term": "international finance",
+          "suggested": "International Finance"
+        },
+        {
+          "term": "international relations",
+          "suggested": "International Relations"
+        },
+        {
+          "term": "international relations degree",
+          "suggested": "International Relations Degree"
+        },
+        {
+          "term": "international relations major",
+          "suggested": "International Relations Major"
+        },
+        {
+          "term": "international relations program",
+          "suggested": "International Relations Program"
+        },
+        {
+          "term": "investing",
+          "suggested": "Investing"
+        },
+        {
+          "term": "investment analyst",
+          "suggested": "Investment Analyst"
+        },
+        {
+          "term": "investment banker",
+          "suggested": "Investment Banker"
+        },
+        {
+          "term": "investment banking",
+          "suggested": "Investment Banking"
+        },
+        {
+          "term": "islamic art",
+          "suggested": "Islamic Art"
+        },
+        {
+          "term": "IT",
+          "suggested": "It"
+        },
+        {
+          "term": "jazz",
+          "suggested": "Jazz"
+        },
+        {
+          "term": "journalism",
+          "suggested": "Journalism"
+        },
+        {
+          "term": "journalism ba",
+          "suggested": "Journalism Ba"
+        },
+        {
+          "term": "journalist",
+          "suggested": "Journalist"
+        },
+        {
+          "term": "judaic art",
+          "suggested": "Judaic Art"
+        },
+        {
+          "term": "kindergarten teacher",
+          "suggested": "Kindergarten Teacher"
+        },
+        {
+          "term": "kindergarten teaching",
+          "suggested": "Kindergarten Teaching"
+        },
+        {
+          "term": "language",
+          "suggested": "Language"
+        },
+        {
+          "term": "languages",
+          "suggested": "Languages"
+        },
+        {
+          "term": "law",
+          "suggested": "Law"
+        },
+        {
+          "term": "lawyer",
+          "suggested": "Lawyer"
+        },
+        {
+          "term": "legal studies",
+          "suggested": "Legal Studies"
+        },
+        {
+          "term": "LGBT",
+          "suggested": "Lgbt"
+        },
+        {
+          "term": "LGBTQ+",
+          "suggested": "Lgbtq+"
+        },
+        {
+          "term": "linguistics",
+          "suggested": "Linguistics"
+        },
+        {
+          "term": "literature",
+          "suggested": "Literature"
+        },
+        {
+          "term": "logistics",
+          "suggested": "Logistics"
+        },
+        {
+          "term": "ma history",
+          "suggested": "Ma History"
+        },
+        {
+          "term": "ma music",
+          "suggested": "Ma Music"
+        },
+        {
+          "term": "management",
+          "suggested": "Management"
+        },
+        {
+          "term": "management",
+          "suggested": "Management"
+        },
+        {
+          "term": "market research",
+          "suggested": "Market Research"
+        },
+        {
+          "term": "marketing",
+          "suggested": "Marketing"
+        },
+        {
+          "term": "mars",
+          "suggested": "Mars"
+        },
+        {
+          "term": "mars geology",
+          "suggested": "Mars Geology"
+        },
+        {
+          "term": "mass communication",
+          "suggested": "Mass Communication"
+        },
+        {
+          "term": "mass media",
+          "suggested": "Mass Media"
+        },
+        {
+          "term": "masters",
+          "suggested": "Masters"
+        },
+        {
+          "term": "masters accounting",
+          "suggested": "Masters Accounting"
+        },
+        {
+          "term": "masters music",
+          "suggested": "Masters Music"
+        },
+        {
+          "term": "master’s history",
+          "suggested": "Master's History"
+        },
+        {
+          "term": "math",
+          "suggested": "Math"
+        },
+        {
+          "term": "math department",
+          "suggested": "Math Department"
+        },
+        {
+          "term": "math program",
+          "suggested": "Math Program"
+        },
+        {
+          "term": "math teacher",
+          "suggested": "Math Teacher"
+        },
+        {
+          "term": "math teaching",
+          "suggested": "Math Teaching"
+        },
+        {
+          "term": "mathematics",
+          "suggested": "Mathematics"
+        },
+        {
+          "term": "MBA",
+          "suggested": "Mba"
+        },
+        {
+          "term": "mechanics",
+          "suggested": "Mechanics"
+        },
+        {
+          "term": "media",
+          "suggested": "Media"
+        },
+        {
+          "term": "medical",
+          "suggested": "Medical"
+        },
+        {
+          "term": "medicine",
+          "suggested": "Medicine"
+        },
+        {
+          "term": "medieval art",
+          "suggested": "Medieval Art"
+        },
+        {
+          "term": "medieval studies",
+          "suggested": "Medieval Studies"
+        },
+        {
+          "term": "money",
+          "suggested": "Money"
+        },
+        {
+          "term": "ms accounting",
+          "suggested": "Ms Accounting"
+        },
+        {
+          "term": "museum studies",
+          "suggested": "Museum Studies"
+        },
+        {
+          "term": "music",
+          "suggested": "Music"
+        },
+        {
+          "term": "music artist",
+          "suggested": "Music Artist"
+        },
+        {
+          "term": "music business",
+          "suggested": "Music Business"
+        },
+        {
+          "term": "music department",
+          "suggested": "Music Department"
+        },
+        {
+          "term": "music education",
+          "suggested": "Music Education"
+        },
+        {
+          "term": "music performance",
+          "suggested": "Music Performance"
+        },
+        {
+          "term": "music producer",
+          "suggested": "Music Producer"
+        },
+        {
+          "term": "music production",
+          "suggested": "Music Production"
+        },
+        {
+          "term": "music program",
+          "suggested": "Music Program"
+        },
+        {
+          "term": "music teacher",
+          "suggested": "Music Teacher"
+        },
+        {
+          "term": "musical instruments",
+          "suggested": "Musical Instruments"
+        },
+        {
+          "term": "musical theater",
+          "suggested": "Musical Theater"
+        },
+        {
+          "term": "musical theater department",
+          "suggested": "Musical Theater Department"
+        },
+        {
+          "term": "musical theater program",
+          "suggested": "Musical Theater Program"
+        },
+        {
+          "term": "musical theatre",
+          "suggested": "Musical Theatre"
+        },
+        {
+          "term": "musical theatre department",
+          "suggested": "Musical Theatre Department"
+        },
+        {
+          "term": "musical theatre program",
+          "suggested": "Musical Theatre Program"
+        },
+        {
+          "term": "musician",
+          "suggested": "Musician"
+        },
+        {
+          "term": "nasa geology",
+          "suggested": "Nasa Geology"
+        },
+        {
+          "term": "native american",
+          "suggested": "Native American"
+        },
+        {
+          "term": "native american studies",
+          "suggested": "Native American Studies"
+        },
+        {
+          "term": "native studies",
+          "suggested": "Native Studies"
+        },
+        {
+          "term": "neuroscience",
+          "suggested": "Neuroscience"
+        },
+        {
+          "term": "new media",
+          "suggested": "New Media"
+        },
+        {
+          "term": "nfp accounting",
+          "suggested": "Nfp Accounting"
+        },
+        {
+          "term": "nonfiction",
+          "suggested": "Nonfiction"
+        },
+        {
+          "term": "novelist",
+          "suggested": "Novelist"
+        },
+        {
+          "term": "oil drilling",
+          "suggested": "Oil Drilling"
+        },
+        {
+          "term": "opera",
+          "suggested": "Opera"
+        },
+        {
+          "term": "optometry",
+          "suggested": "Optometry"
+        },
+        {
+          "term": "organic chemistry",
+          "suggested": "Organic Chemistry"
+        },
+        {
+          "term": "osteopathic",
+          "suggested": "Osteopathic"
+        },
+        {
+          "term": "performing arts",
+          "suggested": "Performing Arts"
+        },
+        {
+          "term": "pharmacy",
+          "suggested": "Pharmacy"
+        },
+        {
+          "term": "philosophy",
+          "suggested": "Philosophy"
+        },
+        {
+          "term": "philosophy department",
+          "suggested": "Philosophy Department"
+        },
+        {
+          "term": "physical anthropology",
+          "suggested": "Physical Anthropology"
+        },
+        {
+          "term": "physical therapy",
+          "suggested": "Physical Therapy"
+        },
+        {
+          "term": "physics",
+          "suggested": "Physics"
+        },
+        {
+          "term": "physics department",
+          "suggested": "Physics Department"
+        },
+        {
+          "term": "physiology",
+          "suggested": "Physiology"
+        },
+        {
+          "term": "planet",
+          "suggested": "Planet"
+        },
+        {
+          "term": "planetary geology",
+          "suggested": "Planetary Geology"
+        },
+        {
+          "term": "planets",
+          "suggested": "Planets"
+        },
+        {
+          "term": "play music",
+          "suggested": "Play Music"
+        },
+        {
+          "term": "political science",
+          "suggested": "Political Science"
+        },
+        {
+          "term": "political science degree",
+          "suggested": "Political Science Degree"
+        },
+        {
+          "term": "politics",
+          "suggested": "Politics"
+        },
+        {
+          "term": "politics and art",
+          "suggested": "Politics And Art"
+        },
+        {
+          "term": "pr",
+          "suggested": "Pr"
+        },
+        {
+          "term": "pre-law",
+          "suggested": "Pre-law"
+        },
+        {
+          "term": "pre-med",
+          "suggested": "Pre-med"
+        },
+        {
+          "term": "preschool education",
+          "suggested": "Preschool Education"
+        },
+        {
+          "term": "preschool teacher",
+          "suggested": "Preschool Teacher"
+        },
+        {
+          "term": "programming",
+          "suggested": "Programming"
+        },
+        {
+          "term": "psychology",
+          "suggested": "Psychology"
+        },
+        {
+          "term": "psychology department",
+          "suggested": "Psychology Department"
+        },
+        {
+          "term": "public accounting",
+          "suggested": "Public Accounting"
+        },
+        {
+          "term": "public health",
+          "suggested": "Public Health"
+        },
+        {
+          "term": "public relations",
+          "suggested": "Public Relations"
+        },
+        {
+          "term": "python",
+          "suggested": "Python"
+        },
+        {
+          "term": "r",
+          "suggested": "R"
+        },
+        {
+          "term": "race",
+          "suggested": "Race"
+        },
+        {
+          "term": "racial",
+          "suggested": "Racial"
+        },
+        {
+          "term": "regional planning",
+          "suggested": "Regional Planning"
+        },
+        {
+          "term": "religious studies",
+          "suggested": "Religious Studies"
+        },
+        {
+          "term": "renaissance art",
+          "suggested": "Renaissance Art"
+        },
+        {
+          "term": "research",
+          "suggested": "Research"
+        },
+        {
+          "term": "resource management",
+          "suggested": "Resource Management"
+        },
+        {
+          "term": "rocks",
+          "suggested": "Rocks"
+        },
+        {
+          "term": "sales",
+          "suggested": "Sales"
+        },
+        {
+          "term": "science",
+          "suggested": "Science"
+        },
+        {
+          "term": "scientific research",
+          "suggested": "Scientific Research"
+        },
+        {
+          "term": "scientific research",
+          "suggested": "Scientific Research"
+        },
+        {
+          "term": "sedimentology",
+          "suggested": "Sedimentology"
+        },
+        {
+          "term": "sexuality",
+          "suggested": "Sexuality"
+        },
+        {
+          "term": "singing",
+          "suggested": "Singing"
+        },
+        {
+          "term": "social justice",
+          "suggested": "Social Justice"
+        },
+        {
+          "term": "social media",
+          "suggested": "Social Media"
+        },
+        {
+          "term": "social sciences",
+          "suggested": "Social Sciences"
+        },
+        {
+          "term": "sociology",
+          "suggested": "Sociology"
+        },
+        {
+          "term": "sociology department",
+          "suggested": "Sociology Department"
+        },
+        {
+          "term": "sociomedical",
+          "suggested": "Sociomedical"
+        },
+        {
+          "term": "sociomedical sciences",
+          "suggested": "Sociomedical Sciences"
+        },
+        {
+          "term": "Spanish education",
+          "suggested": "Spanish Education"
+        },
+        {
+          "term": "Spanish teaching",
+          "suggested": "Spanish Teaching"
+        },
+        {
+          "term": "special ed",
+          "suggested": "Special Ed"
+        },
+        {
+          "term": "special ed teacher",
+          "suggested": "Special Ed Teacher"
+        },
+        {
+          "term": "special ed teaching",
+          "suggested": "Special Ed Teaching"
+        },
+        {
+          "term": "special education",
+          "suggested": "Special Education"
+        },
+        {
+          "term": "statistics",
+          "suggested": "Statistics"
+        },
+        {
+          "term": "stock market",
+          "suggested": "Stock Market"
+        },
+        {
+          "term": "stocks",
+          "suggested": "Stocks"
+        },
+        {
+          "term": "structural geology",
+          "suggested": "Structural Geology"
+        },
+        {
+          "term": "studying the earth",
+          "suggested": "Studying The Earth"
+        },
+        {
+          "term": "studying the planets",
+          "suggested": "Studying The Planets"
+        },
+        {
+          "term": "sustainability",
+          "suggested": "Sustainability"
+        },
+        {
+          "term": "sustainability program",
+          "suggested": "Sustainability Program"
+        },
+        {
+          "term": "sustainable",
+          "suggested": "Sustainable"
+        },
+        {
+          "term": "tax",
+          "suggested": "Tax"
+        },
+        {
+          "term": "teach math",
+          "suggested": "Teach Math"
+        },
+        {
+          "term": "teach music",
+          "suggested": "Teach Music"
+        },
+        {
+          "term": "teacher",
+          "suggested": "Teacher"
+        },
+        {
+          "term": "teaching",
+          "suggested": "Teaching"
+        },
+        {
+          "term": "teaching history",
+          "suggested": "Teaching History"
+        },
+        {
+          "term": "technology",
+          "suggested": "Technology"
+        },
+        {
+          "term": "theater",
+          "suggested": "Theater"
+        },
+        {
+          "term": "theatre",
+          "suggested": "Theatre"
+        },
+        {
+          "term": "theatre education",
+          "suggested": "Theatre Education"
+        },
+        {
+          "term": "trading",
+          "suggested": "Trading"
+        },
+        {
+          "term": "train to be a music artist",
+          "suggested": "Train To Be A Music Artist"
+        },
+        {
+          "term": "train to be a singer",
+          "suggested": "Train To Be A Singer"
+        },
+        {
+          "term": "tribal",
+          "suggested": "Tribal"
+        },
+        {
+          "term": "tribe",
+          "suggested": "Tribe"
+        },
+        {
+          "term": "urban planning",
+          "suggested": "Urban Planning"
+        },
+        {
+          "term": "us history",
+          "suggested": "Us History"
+        },
+        {
+          "term": "visual studies",
+          "suggested": "Visual Studies"
+        },
+        {
+          "term": "warming",
+          "suggested": "Warming"
+        },
+        {
+          "term": "women’s and gender studies",
+          "suggested": "Women's And Gender Studies"
+        },
+        {
+          "term": "women’s studies",
+          "suggested": "Women's Studies"
+        },
+        {
+          "term": "world politics",
+          "suggested": "World Politics"
+        },
+        {
+          "term": "writing",
+          "suggested": "Writing"
+        }
+      ],
+      "punctuationIssues": [
+        {
+          "term": "master’s history",
+          "suggested": "master's history"
+        },
+        {
+          "term": "women’s and gender studies",
+          "suggested": "women's and gender studies"
+        },
+        {
+          "term": "women’s studies",
+          "suggested": "women's studies"
+        }
+      ],
+      "commaSeparated": [],
+      "sentenceLike": []
+    },
+    "wpReport": {
+      "source": "WordPress",
+      "titleCaseIssues": [
+        {
+          "term": "accountancy",
+          "suggested": "Accountancy"
+        },
+        {
+          "term": "accountant",
+          "suggested": "Accountant"
+        },
+        {
+          "term": "accounting",
+          "suggested": "Accounting"
+        },
+        {
+          "term": "accounting bs",
+          "suggested": "Accounting Bs"
+        },
+        {
+          "term": "accounting department",
+          "suggested": "Accounting Department"
+        },
+        {
+          "term": "accounting ms",
+          "suggested": "Accounting Ms"
+        },
+        {
+          "term": "accounting program",
+          "suggested": "Accounting Program"
+        },
+        {
+          "term": "activism",
+          "suggested": "Activism"
+        },
+        {
+          "term": "actuary",
+          "suggested": "Actuary"
+        },
+        {
+          "term": "adolescence",
+          "suggested": "Adolescence"
+        },
+        {
+          "term": "adolescence education",
+          "suggested": "Adolescence Education"
+        },
+        {
+          "term": "adolescense education",
+          "suggested": "Adolescense Education"
+        },
+        {
+          "term": "adolescent",
+          "suggested": "Adolescent"
+        },
+        {
+          "term": "adolescent education",
+          "suggested": "Adolescent Education"
+        },
+        {
+          "term": "adolesence education",
+          "suggested": "Adolesence Education"
+        },
+        {
+          "term": "advertising",
+          "suggested": "Advertising"
+        },
+        {
+          "term": "african",
+          "suggested": "African"
+        },
+        {
+          "term": "african american",
+          "suggested": "African American"
+        },
+        {
+          "term": "african american studies",
+          "suggested": "African American Studies"
+        },
+        {
+          "term": "african studies",
+          "suggested": "African Studies"
+        },
+        {
+          "term": "africana",
+          "suggested": "Africana"
+        },
+        {
+          "term": "africana studies",
+          "suggested": "Africana Studies"
+        },
+        {
+          "term": "american",
+          "suggested": "American"
+        },
+        {
+          "term": "american music",
+          "suggested": "American Music"
+        },
+        {
+          "term": "american studies",
+          "suggested": "American Studies"
+        },
+        {
+          "term": "american studies ba",
+          "suggested": "American Studies Ba"
+        },
+        {
+          "term": "american studies department",
+          "suggested": "American Studies Department"
+        },
+        {
+          "term": "american studies minor",
+          "suggested": "American Studies Minor"
+        },
+        {
+          "term": "american studies program",
+          "suggested": "American Studies Program"
+        },
+        {
+          "term": "analysis",
+          "suggested": "Analysis"
+        },
+        {
+          "term": "analyst",
+          "suggested": "Analyst"
+        },
+        {
+          "term": "analytics",
+          "suggested": "Analytics"
+        },
+        {
+          "term": "analytics department",
+          "suggested": "Analytics Department"
+        },
+        {
+          "term": "analytics program",
+          "suggested": "Analytics Program"
+        },
+        {
+          "term": "anatomy",
+          "suggested": "Anatomy"
+        },
+        {
+          "term": "anthropolgy",
+          "suggested": "Anthropolgy"
+        },
+        {
+          "term": "anthropology",
+          "suggested": "Anthropology"
+        },
+        {
+          "term": "anthropology ba",
+          "suggested": "Anthropology Ba"
+        },
+        {
+          "term": "anthropology department",
+          "suggested": "Anthropology Department"
+        },
+        {
+          "term": "anthropology minor",
+          "suggested": "Anthropology Minor"
+        },
+        {
+          "term": "anthropology program",
+          "suggested": "Anthropology Program"
+        },
+        {
+          "term": "applied mathematics",
+          "suggested": "Applied Mathematics"
+        },
+        {
+          "term": "archaeologist",
+          "suggested": "Archaeologist"
+        },
+        {
+          "term": "archaeology",
+          "suggested": "Archaeology"
+        },
+        {
+          "term": "architectural history",
+          "suggested": "Architectural History"
+        },
+        {
+          "term": "art",
+          "suggested": "Art"
+        },
+        {
+          "term": "art history",
+          "suggested": "Art History"
+        },
+        {
+          "term": "art history ba",
+          "suggested": "Art History Ba"
+        },
+        {
+          "term": "art history department",
+          "suggested": "Art History Department"
+        },
+        {
+          "term": "art history minor",
+          "suggested": "Art History Minor"
+        },
+        {
+          "term": "art history program",
+          "suggested": "Art History Program"
+        },
+        {
+          "term": "arts",
+          "suggested": "Arts"
+        },
+        {
+          "term": "asian art",
+          "suggested": "Asian Art"
+        },
+        {
+          "term": "asian studies",
+          "suggested": "Asian Studies"
+        },
+        {
+          "term": "astronomy",
+          "suggested": "Astronomy"
+        },
+        {
+          "term": "author",
+          "suggested": "Author"
+        },
+        {
+          "term": "ba communication",
+          "suggested": "Ba Communication"
+        },
+        {
+          "term": "ba economics",
+          "suggested": "Ba Economics"
+        },
+        {
+          "term": "ba english",
+          "suggested": "Ba English"
+        },
+        {
+          "term": "ba finance",
+          "suggested": "Ba Finance"
+        },
+        {
+          "term": "ba french",
+          "suggested": "Ba French"
+        },
+        {
+          "term": "ba geography",
+          "suggested": "Ba Geography"
+        },
+        {
+          "term": "ba history",
+          "suggested": "Ba History"
+        },
+        {
+          "term": "ba international affairs",
+          "suggested": "Ba International Affairs"
+        },
+        {
+          "term": "ba international relations",
+          "suggested": "Ba International Relations"
+        },
+        {
+          "term": "ba journalism",
+          "suggested": "Ba Journalism"
+        },
+        {
+          "term": "ba math",
+          "suggested": "Ba Math"
+        },
+        {
+          "term": "ba mathematics",
+          "suggested": "Ba Mathematics"
+        },
+        {
+          "term": "ba music",
+          "suggested": "Ba Music"
+        },
+        {
+          "term": "bachelor of communication",
+          "suggested": "Bachelor Of Communication"
+        },
+        {
+          "term": "bachelor of communications",
+          "suggested": "Bachelor Of Communications"
+        },
+        {
+          "term": "bachelor of finance",
+          "suggested": "Bachelor Of Finance"
+        },
+        {
+          "term": "bachelors history",
+          "suggested": "Bachelors History"
+        },
+        {
+          "term": "band",
+          "suggested": "Band"
+        },
+        {
+          "term": "banker",
+          "suggested": "Banker"
+        },
+        {
+          "term": "banking",
+          "suggested": "Banking"
+        },
+        {
+          "term": "bba",
+          "suggested": "Bba"
+        },
+        {
+          "term": "bba degree",
+          "suggested": "Bba Degree"
+        },
+        {
+          "term": "biochem",
+          "suggested": "Biochem"
+        },
+        {
+          "term": "biochemistry",
+          "suggested": "Biochemistry"
+        },
+        {
+          "term": "biogeography",
+          "suggested": "Biogeography"
+        },
+        {
+          "term": "biological anthropology",
+          "suggested": "Biological Anthropology"
+        },
+        {
+          "term": "biology",
+          "suggested": "Biology"
+        },
+        {
+          "term": "biology ba",
+          "suggested": "Biology Ba"
+        },
+        {
+          "term": "biology bs",
+          "suggested": "Biology Bs"
+        },
+        {
+          "term": "biology department",
+          "suggested": "Biology Department"
+        },
+        {
+          "term": "biology minor",
+          "suggested": "Biology Minor"
+        },
+        {
+          "term": "biology program",
+          "suggested": "Biology Program"
+        },
+        {
+          "term": "biomathmatics",
+          "suggested": "Biomathmatics"
+        },
+        {
+          "term": "biophysics",
+          "suggested": "Biophysics"
+        },
+        {
+          "term": "biotechnology",
+          "suggested": "Biotechnology"
+        },
+        {
+          "term": "black",
+          "suggested": "Black"
+        },
+        {
+          "term": "black studies",
+          "suggested": "Black Studies"
+        },
+        {
+          "term": "black studies ba",
+          "suggested": "Black Studies Ba"
+        },
+        {
+          "term": "black studies department",
+          "suggested": "Black Studies Department"
+        },
+        {
+          "term": "black studies minor",
+          "suggested": "Black Studies Minor"
+        },
+        {
+          "term": "black studies program",
+          "suggested": "Black Studies Program"
+        },
+        {
+          "term": "blockchain",
+          "suggested": "Blockchain"
+        },
+        {
+          "term": "broadcast",
+          "suggested": "Broadcast"
+        },
+        {
+          "term": "broadcast journalism",
+          "suggested": "Broadcast Journalism"
+        },
+        {
+          "term": "broadcasting",
+          "suggested": "Broadcasting"
+        },
+        {
+          "term": "bs accounting",
+          "suggested": "Bs Accounting"
+        },
+        {
+          "term": "bs data analytics",
+          "suggested": "Bs Data Analytics"
+        },
+        {
+          "term": "bs math",
+          "suggested": "Bs Math"
+        },
+        {
+          "term": "bs mathematic",
+          "suggested": "Bs Mathematic"
+        },
+        {
+          "term": "business",
+          "suggested": "Business"
+        },
+        {
+          "term": "business admin",
+          "suggested": "Business Admin"
+        },
+        {
+          "term": "business administration",
+          "suggested": "Business Administration"
+        },
+        {
+          "term": "business administration ba",
+          "suggested": "Business Administration Ba"
+        },
+        {
+          "term": "business administration program",
+          "suggested": "Business Administration Program"
+        },
+        {
+          "term": "business department",
+          "suggested": "Business Department"
+        },
+        {
+          "term": "business finance degree",
+          "suggested": "Business Finance Degree"
+        },
+        {
+          "term": "business intelligence analyst",
+          "suggested": "Business Intelligence Analyst"
+        },
+        {
+          "term": "business program",
+          "suggested": "Business Program"
+        },
+        {
+          "term": "cell biology",
+          "suggested": "Cell Biology"
+        },
+        {
+          "term": "certified financial analyst",
+          "suggested": "Certified Financial Analyst"
+        },
+        {
+          "term": "certified public accountant",
+          "suggested": "Certified Public Accountant"
+        },
+        {
+          "term": "cfa",
+          "suggested": "Cfa"
+        },
+        {
+          "term": "chem",
+          "suggested": "Chem"
+        },
+        {
+          "term": "chemical engineering",
+          "suggested": "Chemical Engineering"
+        },
+        {
+          "term": "chemistry",
+          "suggested": "Chemistry"
+        },
+        {
+          "term": "chemistry ba",
+          "suggested": "Chemistry Ba"
+        },
+        {
+          "term": "chemistry bs",
+          "suggested": "Chemistry Bs"
+        },
+        {
+          "term": "chemistry degree",
+          "suggested": "Chemistry Degree"
+        },
+        {
+          "term": "chemistry minor",
+          "suggested": "Chemistry Minor"
+        },
+        {
+          "term": "chemistry program",
+          "suggested": "Chemistry Program"
+        },
+        {
+          "term": "chemisty",
+          "suggested": "Chemisty"
+        },
+        {
+          "term": "chemsitry",
+          "suggested": "Chemsitry"
+        },
+        {
+          "term": "childhood education",
+          "suggested": "Childhood Education"
+        },
+        {
+          "term": "choral",
+          "suggested": "Choral"
+        },
+        {
+          "term": "christian art",
+          "suggested": "Christian Art"
+        },
+        {
+          "term": "climate",
+          "suggested": "Climate"
+        },
+        {
+          "term": "climate change",
+          "suggested": "Climate Change"
+        },
+        {
+          "term": "climate science",
+          "suggested": "Climate Science"
+        },
+        {
+          "term": "communication",
+          "suggested": "Communication"
+        },
+        {
+          "term": "communication ba",
+          "suggested": "Communication Ba"
+        },
+        {
+          "term": "communication degree",
+          "suggested": "Communication Degree"
+        },
+        {
+          "term": "communication department",
+          "suggested": "Communication Department"
+        },
+        {
+          "term": "communication major",
+          "suggested": "Communication Major"
+        },
+        {
+          "term": "communication program",
+          "suggested": "Communication Program"
+        },
+        {
+          "term": "communications",
+          "suggested": "Communications"
+        },
+        {
+          "term": "computer",
+          "suggested": "Computer"
+        },
+        {
+          "term": "computing",
+          "suggested": "Computing"
+        },
+        {
+          "term": "conflict studies",
+          "suggested": "Conflict Studies"
+        },
+        {
+          "term": "conservation",
+          "suggested": "Conservation"
+        },
+        {
+          "term": "cpa",
+          "suggested": "Cpa"
+        },
+        {
+          "term": "cpa accounting",
+          "suggested": "Cpa Accounting"
+        },
+        {
+          "term": "cryptocurrency",
+          "suggested": "Cryptocurrency"
+        },
+        {
+          "term": "cryptology",
+          "suggested": "Cryptology"
+        },
+        {
+          "term": "cultural anthropology",
+          "suggested": "Cultural Anthropology"
+        },
+        {
+          "term": "dance",
+          "suggested": "Dance"
+        },
+        {
+          "term": "dance education",
+          "suggested": "Dance Education"
+        },
+        {
+          "term": "data",
+          "suggested": "Data"
+        },
+        {
+          "term": "data analysis",
+          "suggested": "Data Analysis"
+        },
+        {
+          "term": "data analyst",
+          "suggested": "Data Analyst"
+        },
+        {
+          "term": "data analytics",
+          "suggested": "Data Analytics"
+        },
+        {
+          "term": "data analytics minor",
+          "suggested": "Data Analytics Minor"
+        },
+        {
+          "term": "data analytics program",
+          "suggested": "Data Analytics Program"
+        },
+        {
+          "term": "data science",
+          "suggested": "Data Science"
+        },
+        {
+          "term": "data scientist",
+          "suggested": "Data Scientist"
+        },
+        {
+          "term": "debate",
+          "suggested": "Debate"
+        },
+        {
+          "term": "dental",
+          "suggested": "Dental"
+        },
+        {
+          "term": "dentist",
+          "suggested": "Dentist"
+        },
+        {
+          "term": "dinosaurs",
+          "suggested": "Dinosaurs"
+        },
+        {
+          "term": "diversity",
+          "suggested": "Diversity"
+        },
+        {
+          "term": "early childhood development",
+          "suggested": "Early Childhood Development"
+        },
+        {
+          "term": "early childhood ed",
+          "suggested": "Early Childhood Ed"
+        },
+        {
+          "term": "early childhood education",
+          "suggested": "Early Childhood Education"
+        },
+        {
+          "term": "earth",
+          "suggested": "Earth"
+        },
+        {
+          "term": "earth and science",
+          "suggested": "Earth And Science"
+        },
+        {
+          "term": "earth science",
+          "suggested": "Earth Science"
+        },
+        {
+          "term": "earth science program",
+          "suggested": "Earth Science Program"
+        },
+        {
+          "term": "earth scientist",
+          "suggested": "Earth Scientist"
+        },
+        {
+          "term": "earth studies",
+          "suggested": "Earth Studies"
+        },
+        {
+          "term": "ece program",
+          "suggested": "Ece Program"
+        },
+        {
+          "term": "ece teacher",
+          "suggested": "Ece Teacher"
+        },
+        {
+          "term": "ecology",
+          "suggested": "Ecology"
+        },
+        {
+          "term": "economics",
+          "suggested": "Economics"
+        },
+        {
+          "term": "economics department",
+          "suggested": "Economics Department"
+        },
+        {
+          "term": "economist",
+          "suggested": "Economist"
+        },
+        {
+          "term": "economy",
+          "suggested": "Economy"
+        },
+        {
+          "term": "education",
+          "suggested": "Education"
+        },
+        {
+          "term": "education program",
+          "suggested": "Education Program"
+        },
+        {
+          "term": "electronics",
+          "suggested": "Electronics"
+        },
+        {
+          "term": "engineering",
+          "suggested": "Engineering"
+        },
+        {
+          "term": "english",
+          "suggested": "English"
+        },
+        {
+          "term": "english degree",
+          "suggested": "English Degree"
+        },
+        {
+          "term": "english department",
+          "suggested": "English Department"
+        },
+        {
+          "term": "english program",
+          "suggested": "English Program"
+        },
+        {
+          "term": "entrepreneurship",
+          "suggested": "Entrepreneurship"
+        },
+        {
+          "term": "environ earth sci",
+          "suggested": "Environ Earth Sci"
+        },
+        {
+          "term": "environment",
+          "suggested": "Environment"
+        },
+        {
+          "term": "environmental geography",
+          "suggested": "Environmental Geography"
+        },
+        {
+          "term": "environmental science",
+          "suggested": "Environmental Science"
+        },
+        {
+          "term": "environmental studies",
+          "suggested": "Environmental Studies"
+        },
+        {
+          "term": "equality",
+          "suggested": "Equality"
+        },
+        {
+          "term": "ethics",
+          "suggested": "Ethics"
+        },
+        {
+          "term": "evolution",
+          "suggested": "Evolution"
+        },
+        {
+          "term": "fiction",
+          "suggested": "Fiction"
+        },
+        {
+          "term": "film studies",
+          "suggested": "Film Studies"
+        },
+        {
+          "term": "finance",
+          "suggested": "Finance"
+        },
+        {
+          "term": "finance degree",
+          "suggested": "Finance Degree"
+        },
+        {
+          "term": "finance manager",
+          "suggested": "Finance Manager"
+        },
+        {
+          "term": "finances",
+          "suggested": "Finances"
+        },
+        {
+          "term": "financial analysis",
+          "suggested": "Financial Analysis"
+        },
+        {
+          "term": "financial analyst",
+          "suggested": "Financial Analyst"
+        },
+        {
+          "term": "financial planner",
+          "suggested": "Financial Planner"
+        },
+        {
+          "term": "financial planning",
+          "suggested": "Financial Planning"
+        },
+        {
+          "term": "foreign language",
+          "suggested": "Foreign Language"
+        },
+        {
+          "term": "forensic science",
+          "suggested": "Forensic Science"
+        },
+        {
+          "term": "fossils",
+          "suggested": "Fossils"
+        },
+        {
+          "term": "france",
+          "suggested": "France"
+        },
+        {
+          "term": "french",
+          "suggested": "French"
+        },
+        {
+          "term": "french degree",
+          "suggested": "French Degree"
+        },
+        {
+          "term": "french department",
+          "suggested": "French Department"
+        },
+        {
+          "term": "french language",
+          "suggested": "French Language"
+        },
+        {
+          "term": "french program",
+          "suggested": "French Program"
+        },
+        {
+          "term": "french speaking",
+          "suggested": "French Speaking"
+        },
+        {
+          "term": "french teacher",
+          "suggested": "French Teacher"
+        },
+        {
+          "term": "french teaching",
+          "suggested": "French Teaching"
+        },
+        {
+          "term": "gender",
+          "suggested": "Gender"
+        },
+        {
+          "term": "gender studies",
+          "suggested": "Gender Studies"
+        },
+        {
+          "term": "genetics",
+          "suggested": "Genetics"
+        },
+        {
+          "term": "geograph",
+          "suggested": "Geograph"
+        },
+        {
+          "term": "geographic information systems",
+          "suggested": "Geographic Information Systems"
+        },
+        {
+          "term": "geography",
+          "suggested": "Geography"
+        },
+        {
+          "term": "geography department",
+          "suggested": "Geography Department"
+        },
+        {
+          "term": "geography program",
+          "suggested": "Geography Program"
+        },
+        {
+          "term": "geography science",
+          "suggested": "Geography Science"
+        },
+        {
+          "term": "geological science",
+          "suggested": "Geological Science"
+        },
+        {
+          "term": "geological science program",
+          "suggested": "Geological Science Program"
+        },
+        {
+          "term": "geology",
+          "suggested": "Geology"
+        },
+        {
+          "term": "geology program",
+          "suggested": "Geology Program"
+        },
+        {
+          "term": "geomorphology",
+          "suggested": "Geomorphology"
+        },
+        {
+          "term": "geophysics",
+          "suggested": "Geophysics"
+        },
+        {
+          "term": "geoscientist",
+          "suggested": "Geoscientist"
+        },
+        {
+          "term": "GIS",
+          "suggested": "Gis"
+        },
+        {
+          "term": "global",
+          "suggested": "Global"
+        },
+        {
+          "term": "global politics",
+          "suggested": "Global Politics"
+        },
+        {
+          "term": "global relations",
+          "suggested": "Global Relations"
+        },
+        {
+          "term": "global warming",
+          "suggested": "Global Warming"
+        },
+        {
+          "term": "green",
+          "suggested": "Green"
+        },
+        {
+          "term": "health",
+          "suggested": "Health"
+        },
+        {
+          "term": "health sciences",
+          "suggested": "Health Sciences"
+        },
+        {
+          "term": "hide",
+          "suggested": "Hide"
+        },
+        {
+          "term": "high school teacher",
+          "suggested": "High School Teacher"
+        },
+        {
+          "term": "high school teaching",
+          "suggested": "High School Teaching"
+        },
+        {
+          "term": "history",
+          "suggested": "History"
+        },
+        {
+          "term": "history department",
+          "suggested": "History Department"
+        },
+        {
+          "term": "history education",
+          "suggested": "History Education"
+        },
+        {
+          "term": "history program",
+          "suggested": "History Program"
+        },
+        {
+          "term": "history teacher",
+          "suggested": "History Teacher"
+        },
+        {
+          "term": "human development",
+          "suggested": "Human Development"
+        },
+        {
+          "term": "human resources",
+          "suggested": "Human Resources"
+        },
+        {
+          "term": "humanities",
+          "suggested": "Humanities"
+        },
+        {
+          "term": "identity",
+          "suggested": "Identity"
+        },
+        {
+          "term": "individualized studies",
+          "suggested": "Individualized Studies"
+        },
+        {
+          "term": "information technology",
+          "suggested": "Information Technology"
+        },
+        {
+          "term": "interdisciplinary",
+          "suggested": "Interdisciplinary"
+        },
+        {
+          "term": "international",
+          "suggested": "International"
+        },
+        {
+          "term": "international affairs",
+          "suggested": "International Affairs"
+        },
+        {
+          "term": "international affairs degree",
+          "suggested": "International Affairs Degree"
+        },
+        {
+          "term": "international business",
+          "suggested": "International Business"
+        },
+        {
+          "term": "international diplomacy",
+          "suggested": "International Diplomacy"
+        },
+        {
+          "term": "international economic relations",
+          "suggested": "International Economic Relations"
+        },
+        {
+          "term": "international finance",
+          "suggested": "International Finance"
+        },
+        {
+          "term": "international relations",
+          "suggested": "International Relations"
+        },
+        {
+          "term": "international relations degree",
+          "suggested": "International Relations Degree"
+        },
+        {
+          "term": "international relations major",
+          "suggested": "International Relations Major"
+        },
+        {
+          "term": "international relations program",
+          "suggested": "International Relations Program"
+        },
+        {
+          "term": "investing",
+          "suggested": "Investing"
+        },
+        {
+          "term": "investment analyst",
+          "suggested": "Investment Analyst"
+        },
+        {
+          "term": "investment banker",
+          "suggested": "Investment Banker"
+        },
+        {
+          "term": "investment banking",
+          "suggested": "Investment Banking"
+        },
+        {
+          "term": "islamic art",
+          "suggested": "Islamic Art"
+        },
+        {
+          "term": "IT",
+          "suggested": "It"
+        },
+        {
+          "term": "jazz",
+          "suggested": "Jazz"
+        },
+        {
+          "term": "journalism",
+          "suggested": "Journalism"
+        },
+        {
+          "term": "journalism ba",
+          "suggested": "Journalism Ba"
+        },
+        {
+          "term": "journalist",
+          "suggested": "Journalist"
+        },
+        {
+          "term": "judaic art",
+          "suggested": "Judaic Art"
+        },
+        {
+          "term": "kindergarten teacher",
+          "suggested": "Kindergarten Teacher"
+        },
+        {
+          "term": "kindergarten teaching",
+          "suggested": "Kindergarten Teaching"
+        },
+        {
+          "term": "language",
+          "suggested": "Language"
+        },
+        {
+          "term": "languages",
+          "suggested": "Languages"
+        },
+        {
+          "term": "law",
+          "suggested": "Law"
+        },
+        {
+          "term": "lawyer",
+          "suggested": "Lawyer"
+        },
+        {
+          "term": "legal studies",
+          "suggested": "Legal Studies"
+        },
+        {
+          "term": "LGBT",
+          "suggested": "Lgbt"
+        },
+        {
+          "term": "LGBTQ+",
+          "suggested": "Lgbtq+"
+        },
+        {
+          "term": "linguistics",
+          "suggested": "Linguistics"
+        },
+        {
+          "term": "literature",
+          "suggested": "Literature"
+        },
+        {
+          "term": "logistics",
+          "suggested": "Logistics"
+        },
+        {
+          "term": "ma history",
+          "suggested": "Ma History"
+        },
+        {
+          "term": "ma music",
+          "suggested": "Ma Music"
+        },
+        {
+          "term": "management",
+          "suggested": "Management"
+        },
+        {
+          "term": "market research",
+          "suggested": "Market Research"
+        },
+        {
+          "term": "marketing",
+          "suggested": "Marketing"
+        },
+        {
+          "term": "mars",
+          "suggested": "Mars"
+        },
+        {
+          "term": "mars geology",
+          "suggested": "Mars Geology"
+        },
+        {
+          "term": "mass communication",
+          "suggested": "Mass Communication"
+        },
+        {
+          "term": "mass media",
+          "suggested": "Mass Media"
+        },
+        {
+          "term": "master’s history",
+          "suggested": "Master's History"
+        },
+        {
+          "term": "masters",
+          "suggested": "Masters"
+        },
+        {
+          "term": "masters accounting",
+          "suggested": "Masters Accounting"
+        },
+        {
+          "term": "masters music",
+          "suggested": "Masters Music"
+        },
+        {
+          "term": "math",
+          "suggested": "Math"
+        },
+        {
+          "term": "math department",
+          "suggested": "Math Department"
+        },
+        {
+          "term": "math program",
+          "suggested": "Math Program"
+        },
+        {
+          "term": "math teacher",
+          "suggested": "Math Teacher"
+        },
+        {
+          "term": "math teaching",
+          "suggested": "Math Teaching"
+        },
+        {
+          "term": "mathematics",
+          "suggested": "Mathematics"
+        },
+        {
+          "term": "MBA",
+          "suggested": "Mba"
+        },
+        {
+          "term": "mechanics",
+          "suggested": "Mechanics"
+        },
+        {
+          "term": "media",
+          "suggested": "Media"
+        },
+        {
+          "term": "medical",
+          "suggested": "Medical"
+        },
+        {
+          "term": "medicine",
+          "suggested": "Medicine"
+        },
+        {
+          "term": "medieval art",
+          "suggested": "Medieval Art"
+        },
+        {
+          "term": "medieval studies",
+          "suggested": "Medieval Studies"
+        },
+        {
+          "term": "money",
+          "suggested": "Money"
+        },
+        {
+          "term": "ms accounting",
+          "suggested": "Ms Accounting"
+        },
+        {
+          "term": "museum studies",
+          "suggested": "Museum Studies"
+        },
+        {
+          "term": "music",
+          "suggested": "Music"
+        },
+        {
+          "term": "music artist",
+          "suggested": "Music Artist"
+        },
+        {
+          "term": "music business",
+          "suggested": "Music Business"
+        },
+        {
+          "term": "music department",
+          "suggested": "Music Department"
+        },
+        {
+          "term": "music education",
+          "suggested": "Music Education"
+        },
+        {
+          "term": "music performance",
+          "suggested": "Music Performance"
+        },
+        {
+          "term": "music producer",
+          "suggested": "Music Producer"
+        },
+        {
+          "term": "music production",
+          "suggested": "Music Production"
+        },
+        {
+          "term": "music program",
+          "suggested": "Music Program"
+        },
+        {
+          "term": "music teacher",
+          "suggested": "Music Teacher"
+        },
+        {
+          "term": "musical instruments",
+          "suggested": "Musical Instruments"
+        },
+        {
+          "term": "musical theater",
+          "suggested": "Musical Theater"
+        },
+        {
+          "term": "musical theater department",
+          "suggested": "Musical Theater Department"
+        },
+        {
+          "term": "musical theater program",
+          "suggested": "Musical Theater Program"
+        },
+        {
+          "term": "musical theatre",
+          "suggested": "Musical Theatre"
+        },
+        {
+          "term": "musical theatre department",
+          "suggested": "Musical Theatre Department"
+        },
+        {
+          "term": "musical theatre program",
+          "suggested": "Musical Theatre Program"
+        },
+        {
+          "term": "musician",
+          "suggested": "Musician"
+        },
+        {
+          "term": "nasa geology",
+          "suggested": "Nasa Geology"
+        },
+        {
+          "term": "native american",
+          "suggested": "Native American"
+        },
+        {
+          "term": "native american studies",
+          "suggested": "Native American Studies"
+        },
+        {
+          "term": "native studies",
+          "suggested": "Native Studies"
+        },
+        {
+          "term": "neuroscience",
+          "suggested": "Neuroscience"
+        },
+        {
+          "term": "new media",
+          "suggested": "New Media"
+        },
+        {
+          "term": "nfp accounting",
+          "suggested": "Nfp Accounting"
+        },
+        {
+          "term": "nonfiction",
+          "suggested": "Nonfiction"
+        },
+        {
+          "term": "novelist",
+          "suggested": "Novelist"
+        },
+        {
+          "term": "oil drilling",
+          "suggested": "Oil Drilling"
+        },
+        {
+          "term": "opera",
+          "suggested": "Opera"
+        },
+        {
+          "term": "optometry",
+          "suggested": "Optometry"
+        },
+        {
+          "term": "organic chemistry",
+          "suggested": "Organic Chemistry"
+        },
+        {
+          "term": "osteopathic",
+          "suggested": "Osteopathic"
+        },
+        {
+          "term": "performing arts",
+          "suggested": "Performing Arts"
+        },
+        {
+          "term": "pharmacy",
+          "suggested": "Pharmacy"
+        },
+        {
+          "term": "philosophy",
+          "suggested": "Philosophy"
+        },
+        {
+          "term": "philosophy department",
+          "suggested": "Philosophy Department"
+        },
+        {
+          "term": "physical anthropology",
+          "suggested": "Physical Anthropology"
+        },
+        {
+          "term": "physical therapy",
+          "suggested": "Physical Therapy"
+        },
+        {
+          "term": "physics",
+          "suggested": "Physics"
+        },
+        {
+          "term": "physics department",
+          "suggested": "Physics Department"
+        },
+        {
+          "term": "physiology",
+          "suggested": "Physiology"
+        },
+        {
+          "term": "planet",
+          "suggested": "Planet"
+        },
+        {
+          "term": "planetary geology",
+          "suggested": "Planetary Geology"
+        },
+        {
+          "term": "planets",
+          "suggested": "Planets"
+        },
+        {
+          "term": "play music",
+          "suggested": "Play Music"
+        },
+        {
+          "term": "political science",
+          "suggested": "Political Science"
+        },
+        {
+          "term": "political science degree",
+          "suggested": "Political Science Degree"
+        },
+        {
+          "term": "politics",
+          "suggested": "Politics"
+        },
+        {
+          "term": "politics and art",
+          "suggested": "Politics And Art"
+        },
+        {
+          "term": "pr",
+          "suggested": "Pr"
+        },
+        {
+          "term": "pre-law",
+          "suggested": "Pre-law"
+        },
+        {
+          "term": "pre-med",
+          "suggested": "Pre-med"
+        },
+        {
+          "term": "preschool education",
+          "suggested": "Preschool Education"
+        },
+        {
+          "term": "preschool teacher",
+          "suggested": "Preschool Teacher"
+        },
+        {
+          "term": "programming",
+          "suggested": "Programming"
+        },
+        {
+          "term": "psychology",
+          "suggested": "Psychology"
+        },
+        {
+          "term": "psychology department",
+          "suggested": "Psychology Department"
+        },
+        {
+          "term": "public accounting",
+          "suggested": "Public Accounting"
+        },
+        {
+          "term": "public health",
+          "suggested": "Public Health"
+        },
+        {
+          "term": "public relations",
+          "suggested": "Public Relations"
+        },
+        {
+          "term": "python",
+          "suggested": "Python"
+        },
+        {
+          "term": "r",
+          "suggested": "R"
+        },
+        {
+          "term": "race",
+          "suggested": "Race"
+        },
+        {
+          "term": "racial",
+          "suggested": "Racial"
+        },
+        {
+          "term": "regional planning",
+          "suggested": "Regional Planning"
+        },
+        {
+          "term": "religious studies",
+          "suggested": "Religious Studies"
+        },
+        {
+          "term": "renaissance art",
+          "suggested": "Renaissance Art"
+        },
+        {
+          "term": "research",
+          "suggested": "Research"
+        },
+        {
+          "term": "resource management",
+          "suggested": "Resource Management"
+        },
+        {
+          "term": "rocks",
+          "suggested": "Rocks"
+        },
+        {
+          "term": "sales",
+          "suggested": "Sales"
+        },
+        {
+          "term": "science",
+          "suggested": "Science"
+        },
+        {
+          "term": "scientific research",
+          "suggested": "Scientific Research"
+        },
+        {
+          "term": "sedimentology",
+          "suggested": "Sedimentology"
+        },
+        {
+          "term": "sexuality",
+          "suggested": "Sexuality"
+        },
+        {
+          "term": "singing",
+          "suggested": "Singing"
+        },
+        {
+          "term": "social justice",
+          "suggested": "Social Justice"
+        },
+        {
+          "term": "social media",
+          "suggested": "Social Media"
+        },
+        {
+          "term": "social sciences",
+          "suggested": "Social Sciences"
+        },
+        {
+          "term": "sociology",
+          "suggested": "Sociology"
+        },
+        {
+          "term": "sociology department",
+          "suggested": "Sociology Department"
+        },
+        {
+          "term": "sociomedical",
+          "suggested": "Sociomedical"
+        },
+        {
+          "term": "sociomedical sciences",
+          "suggested": "Sociomedical Sciences"
+        },
+        {
+          "term": "Spanish education",
+          "suggested": "Spanish Education"
+        },
+        {
+          "term": "Spanish teaching",
+          "suggested": "Spanish Teaching"
+        },
+        {
+          "term": "special ed",
+          "suggested": "Special Ed"
+        },
+        {
+          "term": "special ed teacher",
+          "suggested": "Special Ed Teacher"
+        },
+        {
+          "term": "special ed teaching",
+          "suggested": "Special Ed Teaching"
+        },
+        {
+          "term": "special education",
+          "suggested": "Special Education"
+        },
+        {
+          "term": "statistics",
+          "suggested": "Statistics"
+        },
+        {
+          "term": "stock market",
+          "suggested": "Stock Market"
+        },
+        {
+          "term": "stocks",
+          "suggested": "Stocks"
+        },
+        {
+          "term": "structural geology",
+          "suggested": "Structural Geology"
+        },
+        {
+          "term": "studying the earth",
+          "suggested": "Studying The Earth"
+        },
+        {
+          "term": "studying the planets",
+          "suggested": "Studying The Planets"
+        },
+        {
+          "term": "sustainability",
+          "suggested": "Sustainability"
+        },
+        {
+          "term": "sustainability program",
+          "suggested": "Sustainability Program"
+        },
+        {
+          "term": "sustainable",
+          "suggested": "Sustainable"
+        },
+        {
+          "term": "tax",
+          "suggested": "Tax"
+        },
+        {
+          "term": "teach math",
+          "suggested": "Teach Math"
+        },
+        {
+          "term": "teach music",
+          "suggested": "Teach Music"
+        },
+        {
+          "term": "teacher",
+          "suggested": "Teacher"
+        },
+        {
+          "term": "teaching",
+          "suggested": "Teaching"
+        },
+        {
+          "term": "teaching history",
+          "suggested": "Teaching History"
+        },
+        {
+          "term": "technology",
+          "suggested": "Technology"
+        },
+        {
+          "term": "theater",
+          "suggested": "Theater"
+        },
+        {
+          "term": "theatre",
+          "suggested": "Theatre"
+        },
+        {
+          "term": "theatre education",
+          "suggested": "Theatre Education"
+        },
+        {
+          "term": "trading",
+          "suggested": "Trading"
+        },
+        {
+          "term": "train to be a music artist",
+          "suggested": "Train To Be A Music Artist"
+        },
+        {
+          "term": "train to be a singer",
+          "suggested": "Train To Be A Singer"
+        },
+        {
+          "term": "tribal",
+          "suggested": "Tribal"
+        },
+        {
+          "term": "tribe",
+          "suggested": "Tribe"
+        },
+        {
+          "term": "urban planning",
+          "suggested": "Urban Planning"
+        },
+        {
+          "term": "us history",
+          "suggested": "Us History"
+        },
+        {
+          "term": "visual studies",
+          "suggested": "Visual Studies"
+        },
+        {
+          "term": "warming",
+          "suggested": "Warming"
+        },
+        {
+          "term": "women’s and gender studies",
+          "suggested": "Women's And Gender Studies"
+        },
+        {
+          "term": "women’s studies",
+          "suggested": "Women's Studies"
+        },
+        {
+          "term": "world politics",
+          "suggested": "World Politics"
+        },
+        {
+          "term": "writing",
+          "suggested": "Writing"
+        }
+      ],
+      "punctuationIssues": [
+        {
+          "term": "master’s history",
+          "suggested": "master's history"
+        },
+        {
+          "term": "women’s and gender studies",
+          "suggested": "women's and gender studies"
+        },
+        {
+          "term": "women’s studies",
+          "suggested": "women's studies"
+        }
+      ],
+      "commaSeparated": [],
+      "sentenceLike": []
+    },
+    "formattingDiffs": []
+  }
+}

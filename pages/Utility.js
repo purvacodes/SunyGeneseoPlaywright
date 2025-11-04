@@ -172,36 +172,36 @@ export class Utility {
             })
     }
 
-    // loadExcel(filePath) {
-    //     console.log(`🔍 Attempting to read Excel from: ${filePath}`);
-
-    //     if (!fs.existsSync(filePath)) {
-    //         throw new Error(`❌ File not found: ${filePath}`);
-    //     }
-
-    //     console.log(`Loading data from: ${filePath}`);
-
-    //     const workbook = XLSX.readFile(filePath);
-    //     const firstSheetName = workbook.SheetNames[0];
-    //     if (!firstSheetName) {
-    //         throw new Error(`❌ No sheets found in ${filePath}`);
-    //     }
-
-    //     const sheet = workbook.Sheets[firstSheetName];
-
-    //     // Read raw rows
-    //     const data = XLSX.utils.sheet_to_json(sheet, { header: 1 });
-    //     if (data.length < 2) {
-    //         throw new Error("❌ Sheet contains no data rows.");
-    //     }
-    //     // Skip the first row (headers), then map the first column
-    //     const firstColumn = data.slice(1)  // skip header
-    //         .map(row => row[0])
-    //         .filter(Boolean);
-    //     return firstColumn;
-
-    // }
     loadExcel(filePath) {
+        console.log(`🔍 Attempting to read Excel from: ${filePath}`);
+
+        if (!fs.existsSync(filePath)) {
+            throw new Error(`❌ File not found: ${filePath}`);
+        }
+
+        console.log(`Loading data from: ${filePath}`);
+
+        const workbook = XLSX.readFile(filePath);
+        const firstSheetName = workbook.SheetNames[0];
+        if (!firstSheetName) {
+            throw new Error(`❌ No sheets found in ${filePath}`);
+        }
+
+        const sheet = workbook.Sheets[firstSheetName];
+
+        // Read raw rows
+        const data = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+        if (data.length < 2) {
+            throw new Error("❌ Sheet contains no data rows.");
+        }
+        // Skip the first row (headers), then map the first column
+        const firstColumn = data.slice(1)  // skip header
+            .map(row => row[0])
+            .filter(Boolean);
+        return firstColumn;
+
+    }
+    loadExcelwithCPT(filePath) {
 
         if (!fs.existsSync(filePath)) {
             throw new Error(`❌ File not found: ${filePath}`);
