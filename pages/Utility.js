@@ -201,7 +201,7 @@ export class Utility {
         return firstColumn;
 
     }
-    loadExcelwithCPT(filePath) {
+    loadUrlswithCPT(filePath) {
 
         if (!fs.existsSync(filePath)) {
             throw new Error(`❌ File not found: ${filePath}`);

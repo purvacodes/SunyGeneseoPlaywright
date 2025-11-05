@@ -1,51 +1,52 @@
-// 🔥 tests/compare-breadcrumbs.test.js
 import { test } from "@playwright/test";
 import { chromium } from "playwright";
 import XLSX from "xlsx";
+import fs from "fs";
+import path from "path";
 import { createObjects } from "../../pages/ObjectFactory.js";
 
 test.setTimeout(15 * 60 * 60 * 1000);
 
-test("📌 Compare Breadcrumbs between Live and Local with Clean Logs", async () => {
+test("📌 Compare Breadcrumbs between Live and Local", async () => {
   // ================= CONFIG =================
   const liveBase = "http://geneseo-drupal.ddev.site:33000";
-  const localBase = "http://localhost/test";
+  const localBase = "https://dev-suny-geneseo.pantheonsite.io";
   const excelInput = "basic_page.xlsx";
   const liveOutput = "live_breadcrumbs.xlsx";
   const localOutput = "local_breadcrumbs.xlsx";
   const finalOutput = "breadcrumb_comparison.xlsx";
 
-  console.log(`\n📥 Loading data from: ${excelInput}`);
+  console.log(`\n📥 Loading URLs from: ${excelInput}`);
   const tempBrowser = await chromium.launch();
   const tempPage = await tempBrowser.newPage();
   const objectFactory = createObjects(tempPage, tempBrowser);
-  const extractedUrls = await objectFactory.utility.loadExcel(excelInput);
+  const extractedUrls = await objectFactory.utility.loadUrlswithCPT(excelInput);
   await tempBrowser.close();
 
-  console.log(`📄 Total URLs to process: ${extractedUrls.length}\n`);
+ console.log(`📄 Total URLs to process: ${extractedUrls.length}\n`);
 
   // ================= STEP 2: LIVE SITE =================
   console.log("🌐 Collecting breadcrumbs from LIVE site...");
   const liveResults = await collectBreadcrumbs("LIVE", liveBase, extractedUrls);
   saveToExcel(liveResults, liveOutput);
-  console.log("saved resultes to",liveOutput);
+  console.log("✅ Saved:", liveOutput);
 
-//  // ================= STEP 3: LOCAL SITE =================
-//   console.log("🖥️  Collecting breadcrumbs from LOCAL site...");
-//   const localResults = await collectBreadcrumbs("LOCAL", localBase, extractedUrls);
-//   saveToExcel(localResults, localOutput);
-//   console.log("saved results: ",localOutput);
+  // ================= STEP 3: LOCAL SITE =================
+  console.log("🖥️ Collecting breadcrumbs from LOCAL site...");
+  const localResults = await collectBreadcrumbs("LOCAL", localBase, extractedUrls);
+  saveToExcel(localResults, localOutput);
+  console.log("✅ Saved:", localOutput);
 
-  //================= STEP 4: COMPARISON =================
-  // console.log("⚔️ Comparison completed. Results saved to breadcrumb_comparison.xlsx\n");
+  // ================= STEP 4: COMPARISON =================
+  console.log("⚔️ Comparing Live vs Local...");
   // const comparisonResults = compareBreadcrumbFiles(liveResults, localResults);
   // saveToExcel(comparisonResults, finalOutput);
-//   console.log("⚔️ Loading and comparing Excel files...");
-// const comparisonResults = compareDiffFromExcel(liveOutput, localOutput);
-// saveToExcel(comparisonResults, finalOutput);
-// console.log(`✅ Comparison complete! Saved to ${finalOutput}`);
-
+  // console.log(`✅ Comparison complete! Saved to ${finalOutput}\n`);
+const comparisonResults = compareDiffFromExcel(liveOutput, localOutput, excelInput);
+ saveToExcel(comparisonResults, finalOutput);
+console.log(`✅ Comparison complete! Saved to ${finalOutput}`);
 });
+
 
 // 📌 Helper: Collect Breadcrumbs for a given base URL
 async function collectBreadcrumbs(envName, baseUrl, urls) {
@@ -54,77 +55,147 @@ async function collectBreadcrumbs(envName, baseUrl, urls) {
   const results = [];
   let processed = 0;
 
-  // ⏱️ Progress log every 10 minutes
-  const progressTimer = setInterval(() => {
-    console.log(`⏳ [${envName}] Progress: ${processed}/${urls.length}`);
-  }, 10 * 60 * 1000); // 10 min
-
-  for (const urlObj of urls) {
-    const slug = urlObj.url || urlObj;
-    const fullUrl = buildUrls(slug, baseUrl, baseUrl).liveUrl;
+  for (const { cpt, slug } of urls) {
+    const { liveUrl } = buildUrls(slug, baseUrl, baseUrl);
+    let finalUrl = liveUrl;
+    let isRedirected = false;
 
     try {
-      //console.log(`Navigating to: ${fullUrl}`);
-      const breadcrumb = await getBreadcrumb(page, fullUrl);
-      results.push({ url: slug, breadcrumb, status: "OK" });
-    //  console.log(`Success: ${breadcrumb}`);
+      const response = await page.goto(liveUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
+      finalUrl = response.url();
+      isRedirected = finalUrl !== liveUrl;
+
+      const breadcrumb = await getBreadcrumb(page, finalUrl);
+      results.push({
+        CPT: cpt,
+        originalUrl: liveUrl,
+        finalUrl,
+        isRedirected,
+        breadcrumb,
+        status: "OK"
+      });
     } catch (err) {
-      results.push({ url: slug, breadcrumb: "Error", status: err.message });
-    //  console.log(`Failed: ${err.message}`);
+      results.push({
+        CPT: cpt,
+        originalUrl: liveUrl,
+        finalUrl: "—",
+        isRedirected,
+        breadcrumb: "—",
+        status: `Error: ${err.message}`
+      });
     }
 
     processed++;
+    if (processed % 10 === 0) console.log(`⏳ [${envName}] ${processed}/${urls.length} done`);
   }
 
-  // 🧹 Clear progress timer after all URLs are processed
-  clearInterval(progressTimer);
   console.log(`✅ [${envName}] Finished ${processed}/${urls.length}`);
-
   await browser.close();
   return results;
 }
 
-// 📌 Helper: Save JSON to Excel
+
+// 📘 Save JSON to Excel
 function saveToExcel(data, filename) {
-  const wb = XLSX.utils.book_new();
   const ws = XLSX.utils.json_to_sheet(data);
-  XLSX.utils.book_append_sheet(wb, ws, "Breadcrumbs");
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, "Data");
   XLSX.writeFile(wb, filename);
 }
 
-// 📌 Helper: Compare Live vs Local Breadcrumbs
+
+// 📘 Compare Live vs Local Breadcrumbs
 function compareBreadcrumbFiles(liveResults, localResults) {
   const results = [];
 
-  for (const live of liveResults) {
-    const local = localResults.find(l => l.url === live.url);
-    if (!local) continue;
+  // 🧠 Normalize and dedupe both sides
+  const uniqueLive = dedupeBySlug(liveResults);
+  const uniqueLocal = dedupeBySlug(localResults);
 
-    const liveBreadcrumb = live.breadcrumb || "";
-    const localBreadcrumb = local.breadcrumb || "";
+  for (const live of uniqueLive) {
+    const liveSlug = extractSlug(live.originalUrl);
+    const local = uniqueLocal.find(l => extractSlug(l.originalUrl) === liveSlug);
 
+    if (!local) {
+      results.push({
+        CPT: live.CPT,
+        slug: liveSlug,
+        liveBreadcrumb: live.breadcrumb || "—",
+        localBreadcrumb: "—",
+        status: "⚠️ Missing in Local",
+        differences: "Not found in local file"
+      });
+      continue;
+    }
+
+    const liveBreadcrumb = live.breadcrumb || "—";
+    const localBreadcrumb = local.breadcrumb || "—";
     const diffs = diffBreadcrumbs(liveBreadcrumb, localBreadcrumb);
 
     results.push({
-      url: live.url,
+      CPT: live.CPT,
+      slug: liveSlug,
       liveBreadcrumb,
       localBreadcrumb,
-      status: diffs.length === 0 ? "Match ✅" : "Mismatch ❌",
-      differences: diffs.map(d => `Pos ${d.position}: ${d.live} vs ${d.local}`).join(" | ")
+      status: diffs.length === 0 ? "✅ Match" : "❌ Mismatch",
+      differences: diffs.length
+        ? diffs.map(d => `Pos ${d.position}: ${d.live} vs ${d.local}`).join(" | ")
+        : "—"
     });
   }
 
+  // 🧭 detect local-only pages
+  for (const local of uniqueLocal) {
+    const localSlug = extractSlug(local.originalUrl);
+    if (!uniqueLive.find(l => extractSlug(l.originalUrl) === localSlug)) {
+      results.push({
+        CPT: local.CPT,
+        slug: localSlug,
+        liveBreadcrumb: "—",
+        localBreadcrumb: local.breadcrumb || "—",
+        status: "⚠️ Missing in Live",
+        differences: "Not found in live file"
+      });
+    }
+  }
+
+  // ✅ sort alphabetically for readability
+  results.sort((a, b) => a.slug.localeCompare(b.slug));
   return results;
 }
 
 
-// 📌 Helper: Build URLs
-function buildUrls(slug, liveBase, localBase) {
-  if (/^https?:\/\//i.test(slug)) {
-    const liveUrl = slug.includes(liveBase) ? slug : slug.replace(localBase, liveBase);
-    const localUrl = slug.includes(localBase) ? slug : slug.replace(liveBase, localBase);
-    return { liveUrl, localUrl };
+// 📘 Helpers
+function dedupeBySlug(list) {
+  const seen = new Set();
+  return list.filter(item => {
+    const slug = extractSlug(item.originalUrl);
+    if (seen.has(slug)) return false;
+    seen.add(slug);
+    return true;
+  });
+}
+
+function normalizeUrl(url = "") {
+  return url.trim().replace(/^https?:\/\//, "").replace(/\/+$/, "").toLowerCase();
+}
+
+function extractSlug(url = "") {
+  try {
+    const u = new URL(url);
+    let slug = u.pathname || "/";
+    slug = slug.replace(/^\/test/, ""); // ✅ strip /test prefix for local
+    slug = slug.replace(/\/+$/, "");   // ✅ remove trailing slashes
+    return slug || "/";
+  } catch {
+    return url;
   }
+}
+
+
+// 📘 Build URLs
+function buildUrls(slug, liveBase, localBase) {
+  if (typeof slug !== "string") slug = String(slug || "");
   const cleanSlug = slug.startsWith("/") ? slug : `/${slug}`;
   return {
     liveUrl: `${liveBase}${cleanSlug}`,
@@ -132,7 +203,8 @@ function buildUrls(slug, liveBase, localBase) {
   };
 }
 
-// 📌 Helper: Get Breadcrumb Text (semantic + fallback)
+
+// 📘 Extract Breadcrumbs from Page
 async function getBreadcrumb(page, url) {
   await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
 
@@ -191,7 +263,53 @@ async function getBreadcrumb(page, url) {
   return breadcrumbParts.join(" > ");
 }
 
-// 📌 Helper: Diff Breadcrumbs
+function compareDiffFromExcel(liveFile, localFile) {
+  const liveWb = XLSX.readFile(liveFile);
+  const localWb = XLSX.readFile(localFile);
+
+  const liveData = XLSX.utils.sheet_to_json(liveWb.Sheets[liveWb.SheetNames[0]]);
+  const localData = XLSX.utils.sheet_to_json(localWb.Sheets[localWb.SheetNames[0]]);
+
+  const results = [];
+
+  const maxLen = Math.max(liveData.length, localData.length);
+
+  for (let i = 0; i < maxLen; i++) {
+    const liveRow = liveData[i] || {};
+    const localRow = localData[i] || {};
+
+    const cpt = liveRow.CPT || localRow.CPT || "";
+    const liveUrl = liveRow.finalUrl || liveRow.originalUrl || liveRow.url || "—";
+    const devUrl = localRow.finalUrl || localRow.originalUrl || localRow.url || "—";
+    const liveBreadcrumb = liveRow.breadcrumb || "—";
+    const localBreadcrumb = localRow.breadcrumb || "—";
+
+    const diffs = diffBreadcrumbs(liveBreadcrumb, localBreadcrumb);
+
+    results.push({
+      CPT: cpt,
+      devUrl,
+      liveUrl,
+      liveBreadcrumb,
+      localBreadcrumb,
+      status:
+        !liveRow.breadcrumb && !localRow.breadcrumb
+          ? "⚠️ Missing Breadcrumbs"
+          : diffs.length === 0
+          ? "✅ Match"
+          : "❌ Mismatch",
+      differences:
+        diffs.length > 0
+          ? diffs.map(d => `Pos ${d.position}: ${d.live} vs ${d.local}`).join(" | ")
+          : "—"
+    });
+  }
+
+  return results;
+}
+
+
+// 📘 Breadcrumb Diff Logic
 function diffBreadcrumbs(liveBreadcrumb, localBreadcrumb) {
   const normalize = str =>
     (str || "")
@@ -222,47 +340,3 @@ function diffBreadcrumbs(liveBreadcrumb, localBreadcrumb) {
   }
   return diffs;
 }
-
-// 📘 Helper: Compare Breadcrumbs from Excel Files
-function compareDiffFromExcel(liveFile, localFile) {
-  const liveWb = XLSX.readFile(liveFile);
-  const localWb = XLSX.readFile(localFile);
-
-  const liveData = XLSX.utils.sheet_to_json(liveWb.Sheets[liveWb.SheetNames[0]]);
-  const localData = XLSX.utils.sheet_to_json(localWb.Sheets[localWb.SheetNames[0]]);
-
-  const results = [];
-
-  for (const liveRow of liveData) {
-    const url = liveRow.url;
-    const liveBreadcrumb = liveRow.breadcrumb || "";
-    const localRow = localData.find(r => r.url === url);
-    const localBreadcrumb = localRow ? localRow.breadcrumb || "" : "—";
-
-    const diffs = diffBreadcrumbs(liveBreadcrumb, localBreadcrumb);
-
-    results.push({
-      url,
-      liveBreadcrumb,
-      localBreadcrumb,
-      status: diffs.length === 0 ? "Match ✅" : "Mismatch ❌",
-      differences: diffs.map(d => `Pos ${d.position}: ${d.live} vs ${d.local}`).join(" | ")
-    });
-  }
-
-  // Also detect any local URLs missing from live file
-  for (const localRow of localData) {
-    if (!liveData.find(l => l.url === localRow.url)) {
-      results.push({
-        url: localRow.url,
-        liveBreadcrumb: "—",
-        localBreadcrumb: localRow.breadcrumb || "",
-        status: "Missing in Live ⚠️",
-        differences: "Not found in live file"
-      });
-    }
-  }
-
-  return results;
-}
-
