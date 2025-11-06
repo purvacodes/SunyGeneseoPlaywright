@@ -26,10 +26,10 @@ test("📌 Compare Breadcrumbs between Live and Local", async () => {
  console.log(`📄 Total URLs to process: ${extractedUrls.length}\n`);
 
   // ================= STEP 2: LIVE SITE =================
-  console.log("🌐 Collecting breadcrumbs from LIVE site...");
-  const liveResults = await collectBreadcrumbs("LIVE", liveBase, extractedUrls);
-  saveToExcel(liveResults, liveOutput);
-  console.log("✅ Saved:", liveOutput);
+  // console.log("🌐 Collecting breadcrumbs from LIVE site...");
+  // const liveResults = await collectBreadcrumbs("LIVE", liveBase, extractedUrls);
+  // saveToExcel(liveResults, liveOutput);
+  // console.log("✅ Saved:", liveOutput);
 
   // ================= STEP 3: LOCAL SITE =================
   console.log("🖥️ Collecting breadcrumbs from LOCAL site...");
@@ -55,16 +55,39 @@ async function collectBreadcrumbs(envName, baseUrl, urls) {
   const results = [];
   let processed = 0;
 
+  // Log navigations to detect unexpected redirects
+  // page.on('framenavigated', frame => {
+  //   if (frame === page.mainFrame()) {
+  //     console.log(`➡️ Navigated to: ${frame.url()}`);
+  //   }
+  // });
+
   for (const { cpt, slug } of urls) {
     const { liveUrl } = buildUrls(slug, baseUrl, baseUrl);
     let finalUrl = liveUrl;
     let isRedirected = false;
 
     try {
-      const response = await page.goto(liveUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
-      finalUrl = response.url();
+      // --- Option 1 Fix: safer navigation handling ---
+      try {
+        const response = await page.goto(liveUrl, {
+          waitUntil: "load", // wait until full load instead of domcontentloaded
+          timeout: 60000,
+        });
+        finalUrl = response?.url() || liveUrl;
+      } catch (e) {
+        if (e.message.includes("interrupted by another navigation")) {
+          console.log(`⚠️ Navigation overlap on ${liveUrl}, retrying...`);
+          await page.waitForLoadState("networkidle", { timeout: 15000 });
+          finalUrl = page.url();
+        } else {
+          throw e; // rethrow unknown errors
+        }
+      }
+
       isRedirected = finalUrl !== liveUrl;
 
+      // 🧭 Extract breadcrumb from already loaded page (no new goto)
       const breadcrumb = await getBreadcrumb(page, finalUrl);
       results.push({
         CPT: cpt,
@@ -72,7 +95,7 @@ async function collectBreadcrumbs(envName, baseUrl, urls) {
         finalUrl,
         isRedirected,
         breadcrumb,
-        status: "OK"
+        status: "OK",
       });
     } catch (err) {
       results.push({
@@ -81,18 +104,20 @@ async function collectBreadcrumbs(envName, baseUrl, urls) {
         finalUrl: "—",
         isRedirected,
         breadcrumb: "—",
-        status: `Error: ${err.message}`
+        status: `Error: ${err.message}`,
       });
     }
 
     processed++;
-    if (processed % 10 === 0) console.log(`⏳ [${envName}] ${processed}/${urls.length} done`);
+    if (processed % 10 === 0)
+      console.log(`⏳ [${envName}] ${processed}/${urls.length} done`);
   }
 
   console.log(`✅ [${envName}] Finished ${processed}/${urls.length}`);
   await browser.close();
   return results;
 }
+
 
 
 // 📘 Save JSON to Excel
@@ -206,7 +231,7 @@ function buildUrls(slug, liveBase, localBase) {
 
 // 📘 Extract Breadcrumbs from Page
 async function getBreadcrumb(page, url) {
-  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
+  //await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
 
   let breadcrumbParts = [];
 

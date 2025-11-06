@@ -11,7 +11,7 @@ test("Validate URLs and Broken Links (CPT + Slug support, normalized headers)", 
   const objectFactory = createObjects(tempPage, tempBrowser);
 
   console.log("🔍 Attempting to read Excel from: Inventory.xlsx");
-  const extractedRows = await objectFactory.utility.loadExcel("Inventory.xlsx");
+  const extractedRows = await objectFactory.utility.loadUrlswithCPT("Inventory.xlsx");
   await tempBrowser.close();
 
 

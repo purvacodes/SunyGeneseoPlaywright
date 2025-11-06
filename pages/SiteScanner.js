@@ -385,92 +385,145 @@ export class SiteScanner {
   }
 
   // ---------- Check page and its links (original) ----------
-  async checkPageAndLinks(page, pageUrl, browserId) {
-    const records = [];
+async checkPageAndLinks(page, pageUrl, browserId) {
+  const records = [];
+
+  // Resolve full URL
+  const fullPageUrl = this.resolveUrl(this.env, pageUrl);
+
+  try {
+    // 1️⃣ Check parent URL with HEAD/GET first
+    let initialStatus = { ok: false, status: null, error: null };
     try {
-      // check parent with HEAD/GET first
-      const initialStatus = await this.checkLink(pageUrl);
-
-      await page.goto(pageUrl, { waitUntil: "domcontentloaded", timeout: 150_000 });
-      const finalUrl = page.url();
-
-      const continueButton = page.getByRole("button", { name: "Continue" });
-      if (await continueButton.isVisible().catch(() => false)) {
-        await continueButton.click();
-        await page.waitForLoadState("domcontentloaded");
-      }
-      await page.waitForLoadState("networkidle", { timeout: 60_000 }).catch(() => { });
-
-      const finalStatus = await this.checkLink(finalUrl);
-
-      // Always record parent first
-      records.push({
-        browserId,
-        originalUrl: pageUrl,
-        finalUrl,
-        isRedirected: finalUrl !== pageUrl,
-        childUrl: finalUrl,
-        isParent: true,
-        status: finalStatus.ok ? "ok" : "failed",
-        httpStatus: finalStatus.status,
-        error: finalStatus.error || null,
-      });
-
-      // stop here if parent failed
-      if (!finalStatus.ok) {
-        return records;
-      }
-
-      // collect child links
-      const links = await page.evaluate(() =>
-        Array.from(document.querySelectorAll("a[href]"))
-          .filter((el) => {
-            const href = el.getAttribute("href") || "";
-            return !el.classList.contains("menu-link") && !href.startsWith("mailto:") && !href.startsWith("#") && !href.startsWith("tel:");
-          })
-          .map((el) => el.href.trim())
-          .filter(Boolean)
-      );
-
-      const uniqueLinks = [...new Set(links)];
-
-      for (const link of uniqueLinks) {
-        if (SiteScanner.linkCache.has(link)) continue;
-        SiteScanner.linkCache.add(link);
-
-        const status = await this.checkLink(link);
-
-        records.push({
-          browserId,
-          originalUrl: pageUrl,
-          finalUrl,
-          isRedirected: finalUrl !== pageUrl,
-          childUrl: link,
-          isParent: false,
-          status: status.ok ? "ok" : "failed",
-          httpStatus: status.status,
-          error: status.error || null,
-        });
-
-        // throttle between link checks to be gentle
-        await this.throttledDelay();
-      }
+      initialStatus = await this.checkLink(fullPageUrl);
     } catch (err) {
-      records.push({
-        browserId,
-        originalUrl: pageUrl,
-        finalUrl: null,
-        isRedirected: null,
-        childUrl: pageUrl,
-        isParent: true,
-        status: "failed",
-        httpStatus: null,
-        error: err.message,
-      });
+      console.warn(`[${browserId}] HEAD/GET check failed for ${fullPageUrl}: ${err.message}`);
     }
 
-    return records;
+    // 2️⃣ Try to navigate
+    let finalUrl = null;
+    try {
+      await page.goto(fullPageUrl, { waitUntil: "domcontentloaded", timeout: 180_000 });
+      finalUrl = page.url();
+    } catch (navErr) {
+      console.error(`❌ [${browserId}] Failed to navigate to ${fullPageUrl}: ${navErr.message}`);
+      records.push({
+        browserId,
+        originalUrl: fullPageUrl,
+        finalUrl: null,
+        isRedirected: null,
+        childUrl: fullPageUrl,
+        isParent: true,
+        status: "failed",
+        httpStatus: initialStatus.status,
+        error: navErr.message,
+      });
+      return records; // Stop processing this page
+    }
+
+    // 3️⃣ Handle "Continue" buttons or interstitials
+    try {
+      const continueButton = page.getByRole("button", { name: "Continue" });
+      if (await continueButton.isVisible().catch(() => false)) {
+        await Promise.all([
+          page.waitForNavigation({ waitUntil: "domcontentloaded", timeout: 60_000 }).catch(() => {}),
+          continueButton.click(),
+        ]);
+        finalUrl = page.url();
+      }
+    } catch {
+      // optional: silently ignore if no interstitial
+    }
+
+    // 4️⃣ Check final URL status
+    let finalStatus = { ok: false, status: null, error: null };
+    try {
+      finalStatus = await this.checkLink(finalUrl);
+    } catch (err) {
+      console.warn(`[${browserId}] HEAD/GET check failed for final URL ${finalUrl}: ${err.message}`);
+    }
+
+    // 5️⃣ Record parent
+    const parentOk = finalStatus.ok;
+    records.push({
+      browserId,
+      originalUrl: fullPageUrl,
+      finalUrl,
+      isRedirected: finalUrl !== fullPageUrl,
+      childUrl: finalUrl,
+      isParent: true,
+      status: parentOk ? "ok" : "failed",
+      httpStatus: finalStatus.status,
+      error: parentOk ? null : finalStatus.error || "Failed to load final URL",
+    });
+
+    if (!parentOk) return records; // Stop if parent failed
+
+    // 6️⃣ Collect child links safely
+    let uniqueLinks = [];
+    try {
+      uniqueLinks = await page.evaluate(() => {
+        return Array.from(document.querySelectorAll("a[href]"))
+          .filter(el =>
+            el.href &&
+            !el.href.startsWith("mailto:") &&
+            !el.href.startsWith("#") &&
+            !el.href.startsWith("tel:") &&
+            !el.classList?.contains?.("menu-link")
+          )
+          .map(el => new URL(el.href, window.location.origin).href.trim());
+      });
+      uniqueLinks = [...new Set(uniqueLinks)]; // remove duplicates
+    } catch (evalErr) {
+      console.warn(`[${browserId}] Failed to extract child links from ${finalUrl}: ${evalErr.message}`);
+    }
+
+    // 7️⃣ Check each child link
+    for (const link of uniqueLinks) {
+      if (SiteScanner.linkCache.has(link)) continue;
+      SiteScanner.linkCache.add(link);
+
+      let status = { ok: false, status: null, error: null };
+      try {
+        status = await this.checkLink(link);
+      } catch (linkErr) {
+        console.warn(`[${browserId}] Failed HEAD/GET for ${link}: ${linkErr.message}`);
+      }
+
+      records.push({
+        browserId,
+        originalUrl: fullPageUrl,
+        finalUrl,
+        isRedirected: finalUrl !== fullPageUrl,
+        childUrl: link,
+        isParent: false,
+        status: status.ok ? "ok" : "failed",
+        httpStatus: status.status,
+        error: status.ok ? null : status.error || "Failed to load child link",
+      });
+
+      await this.throttledDelay();
+    }
+  } catch (err) {
+    // Catch-all for unexpected errors
+    console.error(`⚠️ [${browserId}] Unexpected error for ${fullPageUrl}: ${err.message}`);
+    records.push({
+      browserId,
+      originalUrl: fullPageUrl,
+      finalUrl: null,
+      isRedirected: null,
+      childUrl: fullPageUrl,
+      isParent: true,
+      status: "failed",
+      httpStatus: null,
+      error: err.message,
+    });
   }
+
+  return records;
+}
+
+
 
   // ---------- Check parent page (original) ----------
   async checkParentPage(page, pageUrl, browserId) {
@@ -589,7 +642,7 @@ async runLinkCheckerWorker(browser, batchSize, workerId, urlQueue, results, glob
         }
 
         // 🔎 Perform the check
-        const records = await this.checkParentPage(page, fullUrl, workerId);
+        const records = await this.checkPageAndLinks(page, fullUrl, workerId);
 
         // Attach CPT to all returned records
         records.forEach((r) => (r.cpt = cpt));
