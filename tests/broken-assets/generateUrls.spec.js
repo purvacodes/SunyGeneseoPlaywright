@@ -6,47 +6,47 @@ import { test, chromium, firefox, webkit } from "@playwright/test";
 const inputExcel = "basic_page.xlsx";       // Input with slugs
 const generatedExcel = "generatedUrls.xlsx"; // Output with URLs
 const browserChoice = "chromium";           // chromium | firefox | webkit
-const startIndex = 75;                       // Starting row (1-based)
-const endIndex = 80;                        // Ending row (inclusive)
+const startIndex = 1;                       // Starting row (1-based)
+const endIndex = 15;                        // Ending row (inclusive)
 
 test.setTimeout(15 * 60 * 60 * 1000); // 6 hours
 test("Generate and Open Live + Dev URLs in one browser (alternate tabs)", async () => {
 
-  // ===== STEP 1: Generate Excel with URLs =====
-  console.log("📘 Step 1: Generating URLs Excel...");
+  // // ===== STEP 1: Generate Excel with URLs =====
+  // console.log("📘 Step 1: Generating URLs Excel...");
 
-  if (!fs.existsSync(inputExcel)) {
-    throw new Error(`❌ Input Excel not found: ${inputExcel}`);
-  }
+  // if (!fs.existsSync(inputExcel)) {
+  //   throw new Error(`❌ Input Excel not found: ${inputExcel}`);
+  // }
 
-  const workbook = XLSX.readFile(inputExcel);
-  const sheetName = workbook.SheetNames[0];
-  const worksheet = workbook.Sheets[sheetName];
-  const rawData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+  // const workbook = XLSX.readFile(inputExcel);
+  // const sheetName = workbook.SheetNames[0];
+  // const worksheet = workbook.Sheets[sheetName];
+  // const rawData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
-  if (!rawData.length) throw new Error("❌ Excel file is empty.");
+  // if (!rawData.length) throw new Error("❌ Excel file is empty.");
 
-  // Extract slugs (ignore headers)
-  const hasHeader = typeof rawData[0][0] === "string" && rawData[0][0].includes("/");
-  const rows = hasHeader ? rawData : rawData.slice(1);
-  const slugs = rows.map(r => (r[0] || "").toString().trim()).filter(Boolean);
+  // // Extract slugs (ignore headers)
+  // const hasHeader = typeof rawData[0][0] === "string" && rawData[0][0].includes("/");
+  // const rows = hasHeader ? rawData : rawData.slice(1);
+  // const slugs = rows.map(r => (r[0] || "").toString().trim()).filter(Boolean);
 
-  if (!slugs.length) throw new Error("❌ No valid slugs found.");
+  // if (!slugs.length) throw new Error("❌ No valid slugs found.");
 
-  const outputData = slugs.map(slug => {
-    const cleanSlug = slug.replace(/^\/+/, "");
-    return {
-      "Production URL": `https://www.geneseo.edu/${cleanSlug}`,
-      "Localhost URL": `https://dev-suny-geneseo.pantheonsite.io/${cleanSlug}`
-    };
-  });
+  // const outputData = slugs.map(slug => {
+  //   const cleanSlug = slug.replace(/^\/+/, "");
+  //   return {
+  //     "Production URL": `https://www.geneseo.edu/${cleanSlug}`,
+  //     "Localhost URL": `https://dev-suny-geneseo.pantheonsite.io/${cleanSlug}`
+  //   };
+  // });
 
-  const newWorkbook = XLSX.utils.book_new();
-  const newWorksheet = XLSX.utils.json_to_sheet(outputData);
-  XLSX.utils.book_append_sheet(newWorkbook, newWorksheet, "URLs");
-  XLSX.writeFile(newWorkbook, generatedExcel);
+  // const newWorkbook = XLSX.utils.book_new();
+  // const newWorksheet = XLSX.utils.json_to_sheet(outputData);
+  // XLSX.utils.book_append_sheet(newWorkbook, newWorksheet, "URLs");
+  // XLSX.writeFile(newWorkbook, generatedExcel);
 
-  console.log(`✅ Step 1 Done: Created ${generatedExcel}`);
+  // console.log(`✅ Step 1 Done: Created ${generatedExcel}`);
 
   // ===== STEP 2: Open URLs in Browser Tabs =====
   const generatedWb = XLSX.readFile(generatedExcel);

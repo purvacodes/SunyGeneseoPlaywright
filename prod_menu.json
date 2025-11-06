@@ -1,0 +1,144 @@
+[
+  {
+    "text": "GREAT Day",
+    "href": null,
+    "subMenu": []
+  },
+  {
+    "text": "New to GREAT Day?",
+    "href": "https://www.geneseo.edu/great_day/new-great-day",
+    "subMenu": []
+  },
+  {
+    "text": "GREAT Day",
+    "href": "/great_day",
+    "subMenu": [
+      {
+        "text": "New to GREAT Day?",
+        "href": "https://www.geneseo.edu/great_day/new-great-day",
+        "subMenu": []
+      },
+      {
+        "text": "GREAT Day",
+        "href": "/great_day",
+        "subMenu": []
+      },
+      {
+        "text": "How to Submit an Abstract",
+        "href": "/great_day/how-submit-great-day-abstract",
+        "subMenu": []
+      },
+      {
+        "text": "GREAT Day Posters",
+        "href": "/great_day/creating-and-printing-great-day-posters",
+        "subMenu": []
+      },
+      {
+        "text": "GREAT Day Faculty FAQ",
+        "href": "/great_day/great-day-faculty-faq",
+        "subMenu": []
+      },
+      {
+        "text": "2007-2024 Archives",
+        "href": "/great_day/archives",
+        "subMenu": [
+          {
+            "text": "New to GREAT Day?",
+            "href": "https://www.geneseo.edu/great_day/new-great-day",
+            "subMenu": []
+          },
+          {
+            "text": "GREAT Day",
+            "href": "/great_day",
+            "subMenu": []
+          },
+          {
+            "text": "2007-2024 Archives",
+            "href": "/great_day/archives",
+            "subMenu": []
+          },
+          {
+            "text": "GREAT Day 2025 Keynote: V Spehar",
+            "href": "/great_day/great-day-2025-keynote-v-spehar",
+            "subMenu": []
+          },
+          {
+            "text": "2024 Keynote Address: Renée Cummings",
+            "href": "/great_day/great-day-2024-keynote-address",
+            "subMenu": []
+          },
+          {
+            "text": "2023 Keynote Address: Wendsler Nosie Sr.",
+            "href": "/great_day/great-day-keynote",
+            "subMenu": []
+          },
+          {
+            "text": "2022 Keynote Speaker: Dr. Diane Stanitski",
+            "href": "https://www.geneseo.edu/great_day/2022-keynote-speaker",
+            "subMenu": []
+          },
+          {
+            "text": "2021 Keynote Speaker: Dr. Adam Frank",
+            "href": "/great_day/keynote-speaker-2021-dr-adam-frank",
+            "subMenu": []
+          },
+          {
+            "text": "2008-2019 Keynote Videos",
+            "href": "/great_day/great-day-keynotes",
+            "subMenu": []
+          },
+          {
+            "text": "Contact Us",
+            "href": "/great_day/contact-us",
+            "subMenu": []
+          }
+        ]
+      },
+      {
+        "text": "2022 Keynote Speaker: Dr. Diane Stanitski",
+        "href": "https://www.geneseo.edu/great_day/2022-keynote-speaker",
+        "subMenu": []
+      }
+    ]
+  },
+  {
+    "text": "2007-2024 Archives",
+    "href": "/great_day/archives",
+    "subMenu": []
+  },
+  {
+    "text": "GREAT Day 2025 Keynote: V Spehar",
+    "href": "/great_day/great-day-2025-keynote-v-spehar",
+    "subMenu": []
+  },
+  {
+    "text": "2024 Keynote Address: Renée Cummings",
+    "href": "/great_day/great-day-2024-keynote-address",
+    "subMenu": []
+  },
+  {
+    "text": "2023 Keynote Address: Wendsler Nosie Sr.",
+    "href": "/great_day/great-day-keynote",
+    "subMenu": []
+  },
+  {
+    "text": "2022 Keynote Speaker: Dr. Diane Stanitski",
+    "href": "https://www.geneseo.edu/great_day/2022-keynote-speaker",
+    "subMenu": []
+  },
+  {
+    "text": "2021 Keynote Speaker: Dr. Adam Frank",
+    "href": "/great_day/keynote-speaker-2021-dr-adam-frank",
+    "subMenu": []
+  },
+  {
+    "text": "2008-2019 Keynote Videos",
+    "href": "/great_day/great-day-keynotes",
+    "subMenu": []
+  },
+  {
+    "text": "Contact Us",
+    "href": "/great_day/contact-us",
+    "subMenu": []
+  }
+]

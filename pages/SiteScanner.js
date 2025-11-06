@@ -8,8 +8,8 @@ export class SiteScanner {
     this.postTypeBasePath = contentPostTypesUrls?.wordPress?.postTypeBasePath || "";
 
     // caches shared across instances
-    if (!SiteScanner.mediaCache) SiteScanner.mediaCache = new Map();
-    if (!SiteScanner.linkCache) SiteScanner.linkCache = new Set();
+    //if (!SiteScanner.mediaCache) SiteScanner.mediaCache = new Map();
+    // if (!SiteScanner.linkCache) SiteScanner.linkCache = new Set();
 
     // options / defaults
     this.retryCount = opts.retryCount ?? 2;
@@ -360,9 +360,9 @@ export class SiteScanner {
 
   // ---------- Cached HEAD/GET request for links (original checkLink) ----------
   async checkLink(url) {
-    if (SiteScanner.mediaCache.has(url)) {
-      return SiteScanner.mediaCache.get(url);
-    }
+    // if (SiteScanner.mediaCache.has(url)) {
+    //   return SiteScanner.mediaCache.get(url);
+    // }
 
     const doFetch = async () => {
       const options = { method: "HEAD", headers: this.requestHeaders || undefined };
@@ -375,11 +375,11 @@ export class SiteScanner {
 
     try {
       const result = await this.retry(doFetch, this.retryCount, this.retryDelayMs);
-      SiteScanner.mediaCache.set(url, result);
+      //SiteScanner.mediaCache.set(url, result);
       return result;
     } catch (err) {
       const result = { url, status: "FETCH_ERROR", ok: false, error: err.message };
-      SiteScanner.mediaCache.set(url, result);
+      //SiteScanner.mediaCache.set(url, result);
       return result;
     }
   }
@@ -480,8 +480,8 @@ async checkPageAndLinks(page, pageUrl, browserId) {
 
     // 7️⃣ Check each child link
     for (const link of uniqueLinks) {
-      if (SiteScanner.linkCache.has(link)) continue;
-      SiteScanner.linkCache.add(link);
+      // if (SiteScanner.linkCache.has(link)) continue;
+      // SiteScanner.linkCache.add(link);
 
       let status = { ok: false, status: null, error: null };
       try {
@@ -642,7 +642,7 @@ async runLinkCheckerWorker(browser, batchSize, workerId, urlQueue, results, glob
         }
 
         // 🔎 Perform the check
-        const records = await this.checkPageAndLinks(page, fullUrl, workerId);
+        const records = await this.checkParentPage(page, fullUrl, workerId);
 
         // Attach CPT to all returned records
         records.forEach((r) => (r.cpt = cpt));

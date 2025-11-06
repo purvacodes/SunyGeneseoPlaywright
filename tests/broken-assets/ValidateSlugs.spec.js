@@ -83,7 +83,9 @@ test("Validate URLs and Broken Links (CPT + Slug support, normalized headers)", 
       if (workerCount >= totalRequiredWorkers) break;
 
       const workerId = `B${bIndex + 1}-W${cIndex + 1}`;
-
+  const context = await browser.newContext();
+  await context.clearCookies();
+  await context.storageState({ path: 'empty.json' });
       const task = factory.siteScanner.runLinkCheckerWorker(
         browser,
         batchSize,
