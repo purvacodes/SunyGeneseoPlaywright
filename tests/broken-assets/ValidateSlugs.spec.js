@@ -9,9 +9,11 @@ test("Validate URLs and Broken Links (CPT + Slug support, normalized headers)", 
   const tempBrowser = await chromium.launch();
   const tempPage = await tempBrowser.newPage();
   const objectFactory = createObjects(tempPage, tempBrowser);
+  // 🔄 Clear any old caches from previous runs
+if (objectFactory.siteScanner.mediaCache) factory.siteScanner.mediaCache.clear?.();
+if (objectFactory.siteScanner.linkCache) factory.siteScanner.linkCache.clear?.();
 
-  console.log("🔍 Attempting to read Excel from: Inventory.xlsx");
-  const extractedRows = await objectFactory.utility.loadUrlswithCPT("Inventory.xlsx");
+  const extractedRows = await objectFactory.utility.loadUrlswithCPT("basic_page.xlsx");
   await tempBrowser.close();
 
 

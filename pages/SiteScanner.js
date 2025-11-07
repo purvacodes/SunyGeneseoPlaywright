@@ -359,30 +359,34 @@ export class SiteScanner {
   }
 
   // ---------- Cached HEAD/GET request for links (original checkLink) ----------
-  async checkLink(url) {
-    // if (SiteScanner.mediaCache.has(url)) {
-    //   return SiteScanner.mediaCache.get(url);
-    // }
+ async checkLink(url) {
+  // 🧩 Add cache-busting query parameter
+  const freshUrl = url.includes("?") ? `${url}&_t=${Date.now()}` : `${url}?_t=${Date.now()}`;
 
-    const doFetch = async () => {
-      const options = { method: "HEAD", headers: this.requestHeaders || undefined };
-      let res = await fetch(url, options);
-      if (res.status === 405 || res.status === 501) {
-        res = await fetch(url, { method: "GET", headers: this.requestHeaders || undefined });
-      }
-      return { url, status: res.status, ok: res.ok };
+  const doFetch = async () => {
+    const headers = {
+      ...(this.requestHeaders || {}),
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0',
+      'User-Agent': `FreshValidator/${Date.now()}`,
     };
 
-    try {
-      const result = await this.retry(doFetch, this.retryCount, this.retryDelayMs);
-      //SiteScanner.mediaCache.set(url, result);
-      return result;
-    } catch (err) {
-      const result = { url, status: "FETCH_ERROR", ok: false, error: err.message };
-      //SiteScanner.mediaCache.set(url, result);
-      return result;
+    let res = await fetch(freshUrl, { method: "HEAD", headers });
+    if (res.status === 405 || res.status === 501) {
+      res = await fetch(freshUrl, { method: "GET", headers });
     }
+
+    return { url: freshUrl, status: res.status, ok: res.ok };
+  };
+
+  try {
+    return await this.retry(doFetch, this.retryCount, this.retryDelayMs);
+  } catch (err) {
+    return { url: freshUrl, status: "FETCH_ERROR", ok: false, error: err.message };
   }
+}
+
 
   // ---------- Check page and its links (original) ----------
 async checkPageAndLinks(page, pageUrl, browserId) {
@@ -622,7 +626,22 @@ async checkPageAndLinks(page, pageUrl, browserId) {
   // }
 
 async runLinkCheckerWorker(browser, batchSize, workerId, urlQueue, results, globalProgress = null) {
-  const context = await browser.newContext();
+const context = await browser.newContext({
+    bypassCSP: true,
+    ignoreHTTPSErrors: true,
+  });
+
+  // 🧠 Disable caching for every request
+  await context.route('**/*', route => {
+    const headers = {
+      ...route.request().headers(),
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0',
+    };
+    route.continue({ headers });
+  });
+
   const page = await context.newPage();
 
   while (urlQueue.length > 0) {
