@@ -469,11 +469,11 @@ async checkPageAndLinks(page, pageUrl, browserId) {
       uniqueLinks = await page.evaluate(() => {
         return Array.from(document.querySelectorAll("a[href]"))
           .filter(el =>
-            el.href &&
-            !el.href.startsWith("mailto:") &&
-            !el.href.startsWith("#") &&
-            !el.href.startsWith("tel:") &&
-            !el.classList?.contains?.("menu-link")
+              el.href &&
+              !el.href.startsWith("mailto:") &&
+              !el.href.startsWith("#") &&
+              !el.href.startsWith("tel:") &&
+              !el.classList?.contains?.("menu-link")
           )
           .map(el => new URL(el.href, window.location.origin).href.trim());
       });

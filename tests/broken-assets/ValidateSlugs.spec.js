@@ -13,6 +13,7 @@ test("Validate URLs and Broken Links (CPT + Slug support, normalized headers)", 
 if (objectFactory.siteScanner.mediaCache) factory.siteScanner.mediaCache.clear?.();
 if (objectFactory.siteScanner.linkCache) factory.siteScanner.linkCache.clear?.();
 
+
   const extractedRows = await objectFactory.utility.loadUrlswithCPT("basic_page.xlsx");
   await tempBrowser.close();
 
