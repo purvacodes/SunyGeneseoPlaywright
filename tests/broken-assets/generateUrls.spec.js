@@ -12,7 +12,7 @@ const endIndex = 15;                        // Ending row (inclusive)
 test.setTimeout(15 * 60 * 60 * 1000); // 6 hours
 test("Generate and Open Live + Dev URLs in one browser (alternate tabs)", async () => {
 
-  // // ===== STEP 1: Generate Excel with URLs =====
+  // ===== STEP 1: Generate Excel with URLs =====
   // console.log("📘 Step 1: Generating URLs Excel...");
 
   // if (!fs.existsSync(inputExcel)) {
