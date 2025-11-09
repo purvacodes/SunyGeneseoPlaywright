@@ -6,13 +6,13 @@ import { test, chromium, firefox, webkit } from "@playwright/test";
 const inputExcel = "basic_page.xlsx";       // Input with slugs
 const generatedExcel = "generatedUrls.xlsx"; // Output with URLs
 const browserChoice = "chromium";           // chromium | firefox | webkit
-const startIndex = 1;                       // Starting row (1-based)
-const endIndex = 15;                        // Ending row (inclusive)
+const startIndex = 71;                       // Starting row (1-based)
+const endIndex = 80;                        // Ending row (inclusive)
 
 test.setTimeout(15 * 60 * 60 * 1000); // 6 hours
 test("Generate and Open Live + Dev URLs in one browser (alternate tabs)", async () => {
 
-  // ===== STEP 1: Generate Excel with URLs =====
+  //===== STEP 1: Generate Excel with URLs =====
   // console.log("📘 Step 1: Generating URLs Excel...");
 
   // if (!fs.existsSync(inputExcel)) {
