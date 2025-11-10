@@ -1,6 +1,77 @@
 [
   {
-    "heading": "Great Day",
-    "menuItems": []
+    "CPT": "basic",
+    "slug": "/alumni/get-involved",
+    "url": "https://dev-suny-geneseo.pantheonsite.io/alumni/get-involved",
+    "menu": [
+      {
+        "menutext": "Reunion",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/reunion/",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "SGAA",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/alumni/sgaa/",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "SGAA Leadership",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/alumni/sgaa/leadership/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Alumni Awards",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/alumni/sgaa/awards/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Alumni Chapters",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/alumni/alumni-chapters/",
+            "type": "submenu",
+            "submenu": []
+          }
+        ]
+      },
+      {
+        "menutext": "Alumni Travel Program",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/alumni/alumni-travel-program/",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Frequently Asked Questions",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/alumni/frequently-asked-questions/",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Alumni Relations Staff",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/alumni/alumni-relations-staff/",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Yearbooks",
+        "menuhref": "http://geneseoyearbook.smugmug.com/",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Class Notes",
+        "menuhref": "https://securelb.imodules.com/s/1648/Alumni/index.aspx?sid=1648&gid=2&pgid=3&cid=40&returnurl=http%3A//uknight.geneseo.edu/s/1648/Alumni/index.aspx%3Fsid%3D1648%26gid%3D2%26pgid%3D106%26cid%3D283",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Alumni Directory",
+        "menuhref": "https://securelb.imodules.com/s/1648/Alumni/index.aspx?sid=1648&gid=2&pgid=3&cid=40&returnurl=http%3A//uknight.geneseo.edu/s/1648/Alumni/index.aspx%3Fsid%3D1648%26gid%3D2%26pgid%3D6%26cid%3D41#/Search/Simple",
+        "type": "mainmenu",
+        "submenu": []
+      }
+    ],
+    "status": "OK"
   }
 ]

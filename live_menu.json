@@ -1,0 +1,71 @@
+[
+  {
+    "CPT": "basic",
+    "slug": "/alumni/get-involved",
+    "url": "https://www.geneseo.edu/alumni/get-involved",
+    "menu": [
+      {
+        "menutext": "Event Calendar",
+        "menuhref": "http://uknight.geneseo.edu/s/1648/Alumni/index.aspx?sid=1648&gid=2&pgid=460",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Reunion",
+        "menuhref": "https://www.geneseo.edu/reunion",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "SGAA",
+        "menuhref": "https://www.geneseo.edu/alumni/sgaa",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "SGAA Leadership",
+            "submenuhref": "https://www.geneseo.edu/alumni/SGAA/leadership",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Alumni Awards",
+            "submenuhref": "https://www.geneseo.edu/alumni/sgaa/awards",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Alumni Chapters",
+            "submenuhref": "https://www.geneseo.edu/alumni/alumni-chapters",
+            "type": "submenu",
+            "submenu": []
+          }
+        ]
+      },
+      {
+        "menutext": "U-Knight Community",
+        "menuhref": "http://uknight.geneseo.edu/s/1648/Alumni/index.aspx?sid=1648&gid=2&pgid=531",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Alumni Travel Program",
+        "menuhref": "https://www.geneseo.edu/alumni/alumni-travel-program",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Frequently Asked Questions",
+        "menuhref": "https://www.geneseo.edu/alumni/frequently-asked-questions",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Alumni Relations Staff",
+        "menuhref": "https://www.geneseo.edu/alumni/alumni-relations-staff",
+        "type": "mainmenu",
+        "submenu": []
+      }
+    ],
+    "status": "OK"
+  }
+]
