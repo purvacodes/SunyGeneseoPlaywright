@@ -5,18 +5,6 @@
     "url": "https://dev-suny-geneseo.pantheonsite.io/biology",
     "menu": [
       {
-        "menutext": "Biology Facilities",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/facilities_resources/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Diversity, Equity & Inclusion",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/diversity-equity-and-inclusion-biology/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
         "menutext": "Biology Home",
         "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/",
         "type": "mainmenu",
