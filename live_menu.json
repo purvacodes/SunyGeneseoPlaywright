@@ -1,67 +1,84 @@
 [
   {
     "CPT": "basic",
-    "slug": "/alumni/get-involved",
-    "url": "https://www.geneseo.edu/alumni/get-involved",
+    "slug": "/biology",
+    "url": "https://www.geneseo.edu/biology",
     "menu": [
       {
-        "menutext": "Event Calendar",
-        "menuhref": "http://uknight.geneseo.edu/s/1648/Alumni/index.aspx?sid=1648&gid=2&pgid=460",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Reunion",
-        "menuhref": "https://www.geneseo.edu/reunion",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "SGAA",
-        "menuhref": "https://www.geneseo.edu/alumni/sgaa",
+        "menutext": "Biology Home",
+        "menuhref": "https://www.geneseo.edu/biology",
         "type": "mainmenu",
         "submenu": [
           {
-            "submenutext": "SGAA Leadership",
-            "submenuhref": "https://www.geneseo.edu/alumni/SGAA/leadership",
-            "type": "submenu",
-            "submenu": []
+            "submenutext": "Biology Facilities",
+            "submenuhref": "https://www.geneseo.edu/biology/facilities_resources",
+            "type": "submenu"
           },
           {
-            "submenutext": "Alumni Awards",
-            "submenuhref": "https://www.geneseo.edu/alumni/sgaa/awards",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Alumni Chapters",
-            "submenuhref": "https://www.geneseo.edu/alumni/alumni-chapters",
-            "type": "submenu",
-            "submenu": []
+            "submenutext": "Diversity, Equity & Inclusion",
+            "submenuhref": "https://www.geneseo.edu/biology/diversity-equity-and-inclusion-biology",
+            "type": "submenu"
           }
         ]
       },
       {
-        "menutext": "U-Knight Community",
-        "menuhref": "http://uknight.geneseo.edu/s/1648/Alumni/index.aspx?sid=1648&gid=2&pgid=531",
+        "menutext": "Programs of Study",
+        "menuhref": "https://www.geneseo.edu/biology/program_information",
         "type": "mainmenu",
         "submenu": []
       },
       {
-        "menutext": "Alumni Travel Program",
-        "menuhref": "https://www.geneseo.edu/alumni/alumni-travel-program",
+        "menutext": "Faculty and Staff",
+        "menuhref": "https://www.geneseo.edu/biology/faculty-staff",
         "type": "mainmenu",
         "submenu": []
       },
       {
-        "menutext": "Frequently Asked Questions",
-        "menuhref": "https://www.geneseo.edu/alumni/frequently-asked-questions",
+        "menutext": "Student Resources",
+        "menuhref": "https://www.geneseo.edu/biology/student_resources",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "For Prospective Students",
+            "submenuhref": "https://www.geneseo.edu/biology/prospective_students",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Tutoring",
+            "submenuhref": "https://www.geneseo.edu/biology/tutoring",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Seminars",
+            "submenuhref": "https://www.geneseo.edu/biology/biology-department-seminars",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Awards Info and Recipients",
+            "submenuhref": "https://www.geneseo.edu/biology/awards_information_and_recipients",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Career Options",
+            "submenuhref": "https://www.geneseo.edu/biology/career_options",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Research & Internships",
+            "submenuhref": "https://www.geneseo.edu/biology/research_and_internships",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Department News",
+        "menuhref": "https://www.geneseo.edu/biology/biology-department-news",
         "type": "mainmenu",
         "submenu": []
       },
       {
-        "menutext": "Alumni Relations Staff",
-        "menuhref": "https://www.geneseo.edu/alumni/alumni-relations-staff",
+        "menutext": "Donate to Biology",
+        "menuhref": "https://www.geneseo.edu/biology/donating_to_biology",
         "type": "mainmenu",
         "submenu": []
       }

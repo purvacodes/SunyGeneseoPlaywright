@@ -135,18 +135,14 @@ async function scrapeDevMenu(page, baseUrl) {
   return menuData;
 }
 
-
-
 // ========================================================
-// 🧭 LIVE SITE MENU SCRAPER (No duplicate children in main menu)
-// ========================================================
-// ========================================================
-// 🧭 LIVE SITE MENU SCRAPER (with type labels + no duplicates)
+// 🧭 LIVE SITE MENU SCRAPER — submenus removed from mainmenu
 // ========================================================
 const visited = new Set();
 
 async function scrapeLiveMenuRecursive(page, baseUrl, fullUrl, depth = 0) {
   const result = [];
+  const allSubmenuHrefs = new Set(); // Track all submenu URLs
   if (visited.has(fullUrl)) {
     console.log(`${"  ".repeat(depth)}↩️ Already visited: ${fullUrl}`);
     return result;
@@ -157,69 +153,102 @@ async function scrapeLiveMenuRecursive(page, baseUrl, fullUrl, depth = 0) {
     console.log(`${"  ".repeat(depth)}🌍 Navigating to: ${fullUrl}`);
     await safeGoto(page, fullUrl, { timeout: 90000 });
     await closeCookiePopup(page);
+    await page.waitForTimeout(800);
 
-    // Check if .group-menu-expanded exists (submenu context)
-    const hasExpanded = await page.locator(".group-menu-expanded").isVisible().catch(() => false);
-    if (hasExpanded) {
-      console.log(`${"  ".repeat(depth)}📑 Found expanded submenu section`);
-      const submenuLinks = page.locator(".group-menu-expanded > li > a");
-      const submenuCount = await submenuLinks.count();
-      const submenus = [];
+    const menuItems = page.locator("li.nav-item.list-group-item > a.nav-link");
+    const count = await menuItems.count();
+    const toggleQueue = [];
 
-      for (let i = 0; i < submenuCount; i++) {
-        const link = submenuLinks.nth(i);
-        const submenutext = (await link.innerText().catch(() => "—")).trim();
-        let submenuhref = await link.getAttribute("href");
-        if (!submenuhref) continue;
-        if (submenuhref.startsWith("/")) submenuhref = `${baseUrl.replace(/\/+$/, "")}${submenuhref}`;
-
-        submenus.push({
-          submenutext,
-          submenuhref,
-          type: "submenu",
-          submenu: []
-        });
-      }
-
-      return submenus;
-    }
-
-    // Scrape top-level menu
-    const topLinks = page.locator("li.nav-item.list-group-item > a.nav-link");
-    const topCount = await topLinks.count();
-    const allChildrenHrefs = new Set();
-
-    for (let i = 0; i < topCount; i++) {
-      const link = topLinks.nth(i);
-      const menutext = (await link.innerText().catch(() => "—")).trim();
-      let menuhref = await link.getAttribute("href");
+    for (let i = 0; i < count; i++) {
+      const item = menuItems.nth(i);
+      const menutext = (await item.innerText().catch(() => "—")).trim();
+      let menuhref = await item.getAttribute("href");
       if (!menuhref) continue;
       if (menuhref.startsWith("/")) menuhref = `${baseUrl.replace(/\/+$/, "")}${menuhref}`;
 
-      const isDropdown = await link.evaluate(el => el.classList.contains("dropdown-toggle"));
-      const entry = { menutext, menuhref, type: "mainmenu", submenu: [] };
+      const parentLi = item.locator("..");
+      const isDropdown = await item.evaluate(el => el.classList.contains("dropdown-toggle"));
+      const hasExpanded = await parentLi.locator(".group-menu-expanded").count() > 0;
 
-      if (isDropdown && menuhref !== fullUrl) {
-        console.log(`${"  ".repeat(depth)}📂 Dropdown found: ${menutext}`);
-        console.log(`${"  ".repeat(depth)}➡️ Navigating submenu page: ${menuhref}`);
+      const entry = {
+        menutext,
+        menuhref,
+        type: "mainmenu",
+        submenu: []
+      };
 
-        const subResult = await scrapeLiveMenuRecursive(page, baseUrl, menuhref, depth + 1);
-        entry.submenu = subResult;
-        subResult.forEach(child => allChildrenHrefs.add(child.submenuhref));
+      // Case 1: already expanded submenu
+      if (hasExpanded) {
+        const subLinks = parentLi.locator(".group-menu-expanded li > a");
+        const subCount = await subLinks.count();
+
+        for (let j = 0; j < subCount; j++) {
+          const subLink = subLinks.nth(j);
+          const submenutext = (await subLink.innerText().catch(() => "—")).trim();
+          let submenuhref = await subLink.getAttribute("href");
+          if (!submenuhref) continue;
+          if (submenuhref.startsWith("/")) submenuhref = `${baseUrl.replace(/\/+$/, "")}${submenuhref}`;
+
+          entry.submenu.push({ submenutext, submenuhref, type: "submenu" });
+          allSubmenuHrefs.add(submenuhref); // Track submenu
+        }
       }
+
+      // Case 2: collapsed dropdown (navigate later)
+      else if (isDropdown) {
+        toggleQueue.push({ menutext, menuhref });
+      }
+
+      // Case 3: simple link - nothing extra needed
 
       result.push(entry);
     }
 
-    // Remove duplicates (if already part of a submenu)
-    return result.filter(item => !allChildrenHrefs.has(item.menuhref));
+    // Step 2: visit collapsed toggles to collect their submenus
+    for (const toggle of toggleQueue) {
+      try {
+        await safeGoto(page, toggle.menuhref, { timeout: 90000 });
+        await closeCookiePopup(page);
+        await page.waitForTimeout(1000);
+
+        const expanded = page.locator(".group-menu-expanded");
+        const subLinks = expanded.locator("li > a");
+        const subCount = await subLinks.count();
+        const submenuArr = [];
+
+        for (let k = 0; k < subCount; k++) {
+          const subLink = subLinks.nth(k);
+          const submenutext = (await subLink.innerText().catch(() => "—")).trim();
+          let submenuhref = await subLink.getAttribute("href");
+          if (!submenuhref) continue;
+          if (submenuhref.startsWith("/")) submenuhref = `${baseUrl.replace(/\/+$/, "")}${submenuhref}`;
+
+          submenuArr.push({ submenutext, submenuhref, type: "submenu" });
+          allSubmenuHrefs.add(submenuhref); // Track submenu
+        }
+
+        // attach to correct parent
+        const parent = result.find(m => m.menutext === toggle.menutext);
+        if (parent) parent.submenu = submenuArr;
+
+        // return to main page
+        await safeGoto(page, fullUrl, { timeout: 90000 });
+        await closeCookiePopup(page);
+        await page.waitForTimeout(800);
+      } catch (err) {
+        console.warn(`${"  ".repeat(depth)}❌ Error expanding "${toggle.menutext}": ${err.message}`);
+      }
+    }
+
+    // Step 3: remove submenu items from top-level result
+    const filteredResult = result.filter(item => !allSubmenuHrefs.has(item.menuhref));
+    return filteredResult;
 
   } catch (err) {
     console.warn(`${"  ".repeat(depth)}❌ Error scraping ${fullUrl}: ${err.message}`);
     return result;
   }
 }
-
 
 
 

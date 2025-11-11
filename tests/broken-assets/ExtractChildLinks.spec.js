@@ -6,7 +6,7 @@ import { createObjects } from "../../pages/ObjectFactory.js";
 const finalFactory = createObjects();
 
 // ================= CONFIG =================
-const BASE_URL = "https://www.geneseo.edu";
+const BASE_URL = "https://dev-suny-geneseo.pantheonsite.io";
 const EXCEL_INPUT = "Inventory.xlsx";
 const OUTPUT_DIR = "url-reports";
 

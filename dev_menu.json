@@ -1,73 +1,104 @@
 [
   {
     "CPT": "basic",
-    "slug": "/alumni/get-involved",
-    "url": "https://dev-suny-geneseo.pantheonsite.io/alumni/get-involved",
+    "slug": "/biology",
+    "url": "https://dev-suny-geneseo.pantheonsite.io/biology",
     "menu": [
       {
-        "menutext": "Reunion",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/reunion/",
+        "menutext": "Biology Facilities",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/facilities_resources/",
         "type": "mainmenu",
         "submenu": []
       },
       {
-        "menutext": "SGAA",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/alumni/sgaa/",
+        "menutext": "Diversity, Equity & Inclusion",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/diversity-equity-and-inclusion-biology/",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Biology Home",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/",
         "type": "mainmenu",
         "submenu": [
           {
-            "submenutext": "SGAA Leadership",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/alumni/sgaa/leadership/",
+            "submenutext": "Biology Facilities",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/facilities_resources/",
             "type": "submenu",
             "submenu": []
           },
           {
-            "submenutext": "Alumni Awards",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/alumni/sgaa/awards/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Alumni Chapters",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/alumni/alumni-chapters/",
+            "submenutext": "Diversity, Equity & Inclusion",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/diversity-equity-and-inclusion-biology/",
             "type": "submenu",
             "submenu": []
           }
         ]
       },
       {
-        "menutext": "Alumni Travel Program",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/alumni/alumni-travel-program/",
+        "menutext": "Programs of Study",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/program_information/",
         "type": "mainmenu",
         "submenu": []
       },
       {
-        "menutext": "Frequently Asked Questions",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/alumni/frequently-asked-questions/",
+        "menutext": "Faculty and Staff",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/faculty-staff/",
         "type": "mainmenu",
         "submenu": []
       },
       {
-        "menutext": "Alumni Relations Staff",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/alumni/alumni-relations-staff/",
+        "menutext": "Student Resources",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/student_resources/",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "For Prospective Students",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/prospective_students/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Tutoring",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/tutoring/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Seminars",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/biology-department-seminars/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Awards Info and Recipients",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/awards_information_and_recipients/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Career Options",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/career_options/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Research & Internships",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/research_and_internships/",
+            "type": "submenu",
+            "submenu": []
+          }
+        ]
+      },
+      {
+        "menutext": "Department News",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/biology-department-news/",
         "type": "mainmenu",
         "submenu": []
       },
       {
-        "menutext": "Yearbooks",
-        "menuhref": "http://geneseoyearbook.smugmug.com/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Class Notes",
-        "menuhref": "https://securelb.imodules.com/s/1648/Alumni/index.aspx?sid=1648&gid=2&pgid=3&cid=40&returnurl=http%3A//uknight.geneseo.edu/s/1648/Alumni/index.aspx%3Fsid%3D1648%26gid%3D2%26pgid%3D106%26cid%3D283",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Alumni Directory",
-        "menuhref": "https://securelb.imodules.com/s/1648/Alumni/index.aspx?sid=1648&gid=2&pgid=3&cid=40&returnurl=http%3A//uknight.geneseo.edu/s/1648/Alumni/index.aspx%3Fsid%3D1648%26gid%3D2%26pgid%3D6%26cid%3D41#/Search/Simple",
+        "menutext": "Donate to Biology",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/donating_to_biology/",
         "type": "mainmenu",
         "submenu": []
       }
