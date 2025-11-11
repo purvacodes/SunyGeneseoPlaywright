@@ -1,84 +1,95 @@
 [
   {
     "CPT": "basic",
-    "slug": "/biology",
-    "url": "https://www.geneseo.edu/biology",
+    "slug": "/career-design/",
+    "url": "https://www.geneseo.edu/career-design/",
     "menu": [
       {
-        "menutext": "Biology Home",
-        "menuhref": "https://www.geneseo.edu/biology",
+        "menutext": "About Us/ Staff",
+        "menuhref": "https://www.geneseo.edu/career_development/about-us-staff",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Connect With a Career Coach",
+        "menuhref": "https://www.geneseo.edu/career-design/connect-career-coach",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Handshake Guidance",
+        "menuhref": "https://www.geneseo.edu/career_development/handshake",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Events",
+        "menuhref": "https://www.geneseo.edu/career-design/events/calendar",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Online Resources",
+        "menuhref": "https://www.geneseo.edu/career-design/online-resources",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "For Students",
+        "menuhref": "https://www.geneseo.edu/career-design/students",
         "type": "mainmenu",
         "submenu": [
           {
-            "submenutext": "Biology Facilities",
-            "submenuhref": "https://www.geneseo.edu/biology/facilities_resources",
+            "submenutext": "Resources for Education Majors",
+            "submenuhref": "https://www.geneseo.edu/career_development/resources-education-majors",
             "type": "submenu"
           },
           {
-            "submenutext": "Diversity, Equity & Inclusion",
-            "submenuhref": "https://www.geneseo.edu/biology/diversity-equity-and-inclusion-biology",
+            "submenutext": "Resources for Pre-Health Track",
+            "submenuhref": "https://www.geneseo.edu/premed",
             "type": "submenu"
           }
         ]
       },
       {
-        "menutext": "Programs of Study",
-        "menuhref": "https://www.geneseo.edu/biology/program_information",
+        "menutext": "For Alumni",
+        "menuhref": "https://www.geneseo.edu/career-design/alumni",
         "type": "mainmenu",
         "submenu": []
       },
       {
-        "menutext": "Faculty and Staff",
-        "menuhref": "https://www.geneseo.edu/biology/faculty-staff",
+        "menutext": "For Faculty & Staff",
+        "menuhref": "https://sunygeneseo.sharepoint.com/sites/CareerDesign/SitePages/Career-Design-Info-for-Faculty-and-Staff.aspx",
         "type": "mainmenu",
         "submenu": []
       },
       {
-        "menutext": "Student Resources",
-        "menuhref": "https://www.geneseo.edu/biology/student_resources",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "For Prospective Students",
-            "submenuhref": "https://www.geneseo.edu/biology/prospective_students",
-            "type": "submenu"
-          },
-          {
-            "submenutext": "Tutoring",
-            "submenuhref": "https://www.geneseo.edu/biology/tutoring",
-            "type": "submenu"
-          },
-          {
-            "submenutext": "Seminars",
-            "submenuhref": "https://www.geneseo.edu/biology/biology-department-seminars",
-            "type": "submenu"
-          },
-          {
-            "submenutext": "Awards Info and Recipients",
-            "submenuhref": "https://www.geneseo.edu/biology/awards_information_and_recipients",
-            "type": "submenu"
-          },
-          {
-            "submenutext": "Career Options",
-            "submenuhref": "https://www.geneseo.edu/biology/career_options",
-            "type": "submenu"
-          },
-          {
-            "submenutext": "Research & Internships",
-            "submenuhref": "https://www.geneseo.edu/biology/research_and_internships",
-            "type": "submenu"
-          }
-        ]
-      },
-      {
-        "menutext": "Department News",
-        "menuhref": "https://www.geneseo.edu/biology/biology-department-news",
+        "menutext": "For Families & Supporters",
+        "menuhref": "https://www.geneseo.edu/career-design/families",
         "type": "mainmenu",
         "submenu": []
       },
       {
-        "menutext": "Donate to Biology",
-        "menuhref": "https://www.geneseo.edu/biology/donating_to_biology",
+        "menutext": "For Employers",
+        "menuhref": "https://www.geneseo.edu/career-design/employers",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Outcomes",
+        "menuhref": "https://www.geneseo.edu/career-design/outcomes",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Empire State Service Corps",
+        "menuhref": "https://www.geneseo.edu/career-design/empire-state-service-corps",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Career Ready Fellows",
+        "menuhref": "https://www.geneseo.edu/career-design/career-ready-fellows-using-course-learning-experiences-prepare-students-careers",
         "type": "mainmenu",
         "submenu": []
       }
