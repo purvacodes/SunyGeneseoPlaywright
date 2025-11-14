@@ -6,7 +6,7 @@ import { createObjects } from "../../pages/ObjectFactory.js";
 const finalFactory = createObjects();
 
 // ================= CONFIG =================
-const BASE_URL = "https://dev-suny-geneseo.pantheonsite.io";
+const BASE_URL = "https://www.geneseo.edu";
 const EXCEL_INPUT = "Inventory.xlsx";
 const OUTPUT_DIR = "url-reports";
 
@@ -40,11 +40,35 @@ class LinkExtractorSequential {
       const parentUrl = this.buildUrl(slug);
 
       try {
-        const response = await page.goto(parentUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
+        let response;
+
+        try {
+          response = await page.goto(parentUrl, {
+            waitUntil: "domcontentloaded",
+            timeout: 60000,
+          });
+        } catch (err) {
+          // ✅ Handle navigation interruptions gracefully
+          if (
+            err.message.includes("Navigation to") &&
+            err.message.includes("interrupted")
+          ) {
+            console.warn(`⚠️ Navigation interrupted, retrying once: ${parentUrl}`);
+            // Wait a bit and retry once
+            await page.waitForTimeout(3000);
+            response = await page.goto(parentUrl, {
+              waitUntil: "domcontentloaded",
+              timeout: 60000,
+            });
+          } else {
+            throw err; // rethrow other errors
+          }
+        }
+
         if (!response) throw new Error("No response from server");
 
         const httpStatus = response.status();
-        const finalUrl = response.url();
+        const finalUrl = page.url();
         const isRedirected = finalUrl !== parentUrl;
         const status = httpStatus < 400 ? "ok" : "failed";
 
@@ -93,6 +117,7 @@ class LinkExtractorSequential {
           error: err.message,
         });
       }
+
 
       completed++;
       console.log(`📊 Progress: ${completed}/${urlQueue.length}`);
