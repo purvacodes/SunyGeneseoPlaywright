@@ -1,21 +1,21 @@
 [
-    {
-      "menuTitle": "Academic Support Services                    [Menu ID: academic-support-services]",
-      "menuId": "academic-support-services",
-      "menuSlug": "academic-support-services-[menu-id:-academic-support-services]",
-      "items": []
-    },
-    {
-      "menuTitle": "Alliance for Community Enrichment                    [Menu ID: alliance-for-community-enri]",
-      "menuId": "alliance-for-community-enri",
-      "menuSlug": "alliance-for-community-enrichment-[menu-id:-alliance-for-community-enri]",
-      "items": [
+  {
+    "menuTitle": "Academic Support Services                    [Menu ID: academic-support-services]",
+    "menuId": "academic-support-services",
+    "menuSlug": "academic-support-services-[menu-id:-academic-support-services]",
+    "items": []
+  },
+  {
+    "menuTitle": "Alliance for Community Enrichment                    [Menu ID: alliance-for-community-enri]",
+    "menuId": "alliance-for-community-enri",
+    "menuSlug": "alliance-for-community-enrichment-[menu-id:-alliance-for-community-enri]",
+    "items": [
       {
         "title": "Home",
         "href": "http://localhost/drupal-geneseo/list_menus.php/ace",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/aceStatus: EnabledPlugin ID: menu_link_content:70cb99c6-b13f-424a-90ed-ecacd8aaaac6Parent Plugin: rootMenu: alliance-for-community-enri",
         "children": []
-      },  
+      },
       {
         "title": "ACE Executive Committee",
         "href": "https://www.geneseo.edu/ace/ace-executive-committee",
