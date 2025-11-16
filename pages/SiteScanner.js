@@ -193,9 +193,6 @@ export class SiteScanner {
 
   // ---------- Media helper: cached HEAD with fallback and retry ----------
   async checkMediaStatus(mediaUrl) {
-    if (SiteScanner.mediaCache.has(mediaUrl)) {
-      return SiteScanner.mediaCache.get(mediaUrl);
-    }
 
     const doHead = async () => {
       const options = { method: "HEAD", headers: this.requestHeaders || undefined };
@@ -207,91 +204,96 @@ export class SiteScanner {
 
     try {
       const result = await this.retry(doHead, this.retryCount, this.retryDelayMs);
-      SiteScanner.mediaCache.set(mediaUrl, result);
+    
       return result;
     } catch (err) {
       const result = { url: mediaUrl, status: "FETCH_ERROR", ok: false, error: err.message };
-      SiteScanner.mediaCache.set(mediaUrl, result);
       return result;
     }
   }
 
   // ---------- Scan one page for media ----------
-  async findBrokenMediaOnPage(page, url, browserId) {
-    try {
-      await page.goto(url, { timeout: 60_000, waitUntil: "domcontentloaded" });
+// ---------- Scan one page for media (optimized) ----------
+async findBrokenMediaOnPage(page, url, browserId) {
+  try {
+    await page.goto(url, { timeout: 60_000, waitUntil: "domcontentloaded" });
 
-      const continueButton = page.getByRole("button", { name: "Continue" });
-      if (await continueButton.isVisible().catch(() => false)) {
-        await continueButton.click();
-        await page.waitForLoadState("domcontentloaded");
-      }
+    // Handle "Continue" button if present
+    const continueButton = page.getByRole("button", { name: "Continue" });
+    if (await continueButton.isVisible().catch(() => false)) {
+      await continueButton.click();
+      await page.waitForLoadState("domcontentloaded");
+    }
 
-      // allow network activity a bit; fail safe (catch) so it doesn't block forever
-      await page.waitForLoadState("networkidle", { timeout: 60_000 }).catch(() => { });
+    // Allow network activity a bit; fail-safe so it doesn't block forever
+    await page.waitForLoadState("networkidle", { timeout: 60_000 }).catch(() => { });
 
-      // ✅ Scroll for lazy-loaded media
-      await page.evaluate(async () => {
-        const delay = (ms) => new Promise((r) => setTimeout(r, ms));
-
-        let lastHeight = 0;
-        let sameHeightCount = 0;
-        const maxIdle = 5;  // how many stable heights before stopping
-        const scrollStep = 600;
-
-        while (sameHeightCount < maxIdle) {
-          window.scrollBy(0, scrollStep);
-          await delay(500); 
-
-          const newHeight = document.body.scrollHeight;
-          if (newHeight === lastHeight) {
-            sameHeightCount++;
-          } else {
-            sameHeightCount = 0;
-            lastHeight = newHeight;
-          }
+    // ✅ Scroll for lazy-loaded media (optimized)
+    await page.evaluate(async () => {
+      const delay = (ms) => new Promise((r) => setTimeout(r, ms));
+      let lastHeight = 0;
+      let sameHeightCount = 0;
+      const maxIdle = 3;      // fewer idle loops
+      const scrollStep = 1000; // scroll bigger step
+      while (sameHeightCount < maxIdle) {
+        window.scrollBy(0, scrollStep);
+        await delay(250);      // shorter delay
+        const newHeight = document.body.scrollHeight;
+        if (newHeight === lastHeight) {
+          sameHeightCount++;
+        } else {
+          sameHeightCount = 0;
+          lastHeight = newHeight;
         }
+      }
+      await delay(1000);       // final wait for media to load
+    });
 
-        // final wait for any media to finish loading
-        await delay(1500);
-      });
-      
-      const finalUrl = page.url();
+    const finalUrl = page.url();
 
-      // extract media sources
-      const mediaSources = await page.evaluate(() => {
-        const results = [];
-        document.querySelectorAll("img[src]").forEach((el) =>
-          results.push({ type: "image", src: el.getAttribute("src") })
-        );
-        document.querySelectorAll("video[src], video source[src]").forEach((el) =>
-          results.push({ type: "video", src: el.getAttribute("src") })
-        );
+    // Extract media sources
+    const mediaSources = await page.evaluate(() => {
+      const results = [];
+      document.querySelectorAll("img[src]").forEach((el) =>
+        results.push({ type: "image", src: el.getAttribute("src") })
+      );
+      document.querySelectorAll("video[src], video source[src]").forEach((el) =>
+        results.push({ type: "video", src: el.getAttribute("src") })
+      );
 
-        const fileRegex = /\.(pdf|docx?|xlsx?|pptx?|csv|txt|rtf|odt|ods|odp)(\?.*)?$/i;
-        document.querySelectorAll("a[href], embed[src], iframe[src], object[data]").forEach((el) => {
-          let src = el.href || el.src || el.getAttribute("data");
-          if (src && fileRegex.test(src)) {
-            const match = src.match(fileRegex);
-            const ext = match ? match[1].toLowerCase() : "file";
-            results.push({ type: ext, src });
-          }
-        });
-
-        return results;
+      const fileRegex = /\.(pdf|docx?|xlsx?|pptx?|csv|txt|rtf|odt|ods|odp)(\?.*)?$/i;
+      document.querySelectorAll("a[href], embed[src], iframe[src], object[data]").forEach((el) => {
+        let src = el.href || el.src || el.getAttribute("data");
+        if (src && fileRegex.test(src)) {
+          const match = src.match(fileRegex);
+          const ext = match ? match[1].toLowerCase() : "file";
+          results.push({ type: ext, src });
+        }
       });
 
-      const uniqueMedia = [...new Map(mediaSources.map((item) => [item.src, item])).values()];
+      return results;
+    });
 
-      const allMedia = [];
-      const brokenMedia = [];
+    const uniqueMedia = [...new Map(mediaSources.map((item) => [item.src, item])).values()];
 
-      for (const media of uniqueMedia) {
+    const allMedia = [];
+    const brokenMedia = [];
+
+    // ---------- Batched media checks ----------
+    const batchSize = 5; // check 5 media at a time
+    for (let i = 0; i < uniqueMedia.length; i += batchSize) {
+      const batch = uniqueMedia.slice(i, i + batchSize);
+
+      const results = await Promise.all(batch.map(async (media) => {
         const fullMediaUrl = this.resolveUrl(finalUrl, media.src);
-        if (!fullMediaUrl) continue;
-
+        if (!fullMediaUrl) return null;
         const status = await this.checkMediaStatus(fullMediaUrl);
+        return { media, status, fullMediaUrl };
+      }));
 
+      results.forEach((res) => {
+        if (!res) return;
+        const { media, status, fullMediaUrl } = res;
         const mediaItem = {
           browserId,
           parentPage: finalUrl,
@@ -304,17 +306,18 @@ export class SiteScanner {
         };
         allMedia.push(mediaItem);
         if (!status.ok) brokenMedia.push(mediaItem);
+      });
 
-        // throttle between media checks
-        await this.throttledDelay();
-      }
-
-      return { allMedia, brokenMedia, finalUrl };
-    } catch (err) {
-      console.warn(`⚠️ [${browserId}] Error scanning ${url}: ${err.message}`);
-      return { allMedia: [], brokenMedia: [], finalUrl: null };
+      await this.throttledDelay(); // keep small delay between batches
     }
+
+    return { allMedia, brokenMedia, finalUrl };
+  } catch (err) {
+    console.warn(`⚠️ [${browserId}] Error scanning ${url}: ${err.message}`);
+    return { allMedia: [], brokenMedia: [], finalUrl: null };
   }
+}
+
 
   // ---------- Sequential media checker (original) ----------
   async checkBrokenMedia(page, urls, browserId = 1) {

@@ -10,7 +10,7 @@ test("Verify Media Assets across pages (parallel, retry, progress)", async () =>
   const tempPage = await tempBrowser.newPage();
   const objectFactory = createObjects(tempPage, tempBrowser);
 
-  const extractedUrlsFromExcel = await objectFactory.utility.loadExcel("basic_page.xlsx");
+  const extractedUrlsFromExcel = await objectFactory.utility.loadExcel("Inventory.xlsx");
   await tempBrowser.close();
 
   console.log(`📄 Total URLs loaded: ${extractedUrlsFromExcel.length}`);
@@ -24,7 +24,7 @@ test("Verify Media Assets across pages (parallel, retry, progress)", async () =>
   // 🧮 Parallelism strategy
   const batchSize = 2;
   let maxBrowsers = totalUrls > 400 ? 1 : 2;
-  let contextsPerBrowser = totalUrls > 400 ? 2 : 3;
+  let contextsPerBrowser = totalUrls > 400 ? 1 : 3;
   const totalAvailableWorkers = maxBrowsers * contextsPerBrowser;
   const totalRequiredWorkers = Math.min(Math.ceil(totalUrls / batchSize), totalAvailableWorkers);
 
