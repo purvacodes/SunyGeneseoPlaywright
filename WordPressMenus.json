@@ -163,8 +163,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Title IX & Equity Compliance",
+        "href": "http://localhost/wordpress-test/diversity-equity/title-ix-equity-compliance/",
         "text": "",
         "children": [
           {
@@ -256,8 +256,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Dining & Catering",
+        "href": "http://localhost/wordpress-test/cas/dining-catering/",
         "text": "",
         "children": [
           {
@@ -321,8 +321,8 @@
             "children": []
           },
           {
-            "title": "",
-            "href": "",
+            "title": "Campus Catering",
+            "href": "http://localhost/wordpress-test/cas/catering/",
             "text": "",
             "children": [
               {
@@ -360,8 +360,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "ID Cards & Meal Plans",
+        "href": "http://localhost/wordpress-test/cas/id-cards-meal-plans/",
         "text": "",
         "children": [
           {
@@ -403,8 +403,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Employment",
+        "href": "http://localhost/wordpress-test/cas/cas-employment/",
         "text": "",
         "children": [
           {
@@ -428,8 +428,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Other Services",
+        "href": "http://localhost/wordpress-test/cas/services/",
         "text": "",
         "children": [
           {
@@ -489,8 +489,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "About Us",
+        "href": "http://localhost/wordpress-test/cas/about-us/",
         "text": "",
         "children": [
           {
@@ -575,8 +575,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Enrollment Operations and Student Engagement",
+        "href": "http://localhost/wordpress-test/enrollment-management/enrollment-operations-and-student-engagement/",
         "text": "",
         "children": [
           {
@@ -908,8 +908,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Programs of Study",
+        "href": "http://localhost/wordpress-test/department-anthropology/programs-study/",
         "text": "",
         "children": [
           {
@@ -919,8 +919,8 @@
             "children": []
           },
           {
-            "title": "",
-            "href": "",
+            "title": "Sociomedical Sciences",
+            "href": "http://localhost/wordpress-test/department-anthropology/sociomedical-sciences/",
             "text": "",
             "children": [
               {
@@ -934,8 +934,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Minors",
+        "href": "http://localhost/wordpress-test/department-anthropology/anthropology-minors/",
         "text": "",
         "children": [
           {
@@ -959,8 +959,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Microcredentials",
+        "href": "http://localhost/wordpress-test/department-anthropology/microcredentials-anthropology/",
         "text": "",
         "children": [
           {
@@ -1014,8 +1014,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/department-anthropology/student-resources/",
         "text": "",
         "children": [
           {
@@ -1076,8 +1076,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Table of Knot Mosaics",
+        "href": "http://localhost/wordpress-test/knotmosaics/knot-table/",
         "text": "",
         "children": [
           {
@@ -1250,8 +1250,8 @@
     "menuSlug": "group-467-menu-[term-id:-1757]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Projects Home",
+        "href": "http://localhost/wordpress-test/construction-projects/",
         "text": "",
         "children": [
           {
@@ -1325,8 +1325,8 @@
     "menuSlug": "group-471-menu-[term-id:-1545]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "ROTC",
+        "href": "http://localhost/wordpress-test/rotc/",
         "text": "",
         "children": [
           {
@@ -1368,8 +1368,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "What is Army ROTC?",
+        "href": "http://localhost/wordpress-test/www.geneseo.edu/rotc",
         "text": "",
         "children": [
           {
@@ -1394,8 +1394,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Academic Program",
+        "href": "http://localhost/wordpress-test/themajor/",
         "text": "",
         "children": [
           {
@@ -1475,13 +1475,13 @@
     "menuSlug": "group-475-menu-[term-id:-1573]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Home",
+        "href": "http://localhost/wordpress-test/writing-program/",
         "text": "",
         "children": [
           {
-            "title": "",
-            "href": "",
+            "title": "WRTG 105: First-Year Writing Seminar",
+            "href": "http://localhost/wordpress-test/writing-program/wrtg-105-first-year-writing-seminar/",
             "text": "",
             "children": [
               {
@@ -1505,8 +1505,8 @@
             ]
           },
           {
-            "title": "",
-            "href": "",
+            "title": "The Writing Center",
+            "href": "http://localhost/wordpress-test/writing-program/writing-center/",
             "text": "",
             "children": [
               {
@@ -1538,8 +1538,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "First-Year Writing Seminar",
+        "href": "http://localhost/wordpress-test/writing-program/wrtg105",
         "text": "",
         "children": [
           {
@@ -1551,8 +1551,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Writing Learning Center",
+        "href": "http://localhost/wordpress-test/writing-program/writing_center",
         "text": "",
         "children": [
           {
@@ -1571,8 +1571,8 @@
     "menuSlug": "group-476-menu-[term-id:-1762]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Home",
+        "href": "http://localhost/wordpress-test/clubsportsassociation/",
         "text": "",
         "children": [
           {
@@ -1708,13 +1708,13 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Programs of Study",
+        "href": "http://localhost/wordpress-test/performing-arts/programs-study/",
         "text": "",
         "children": [
           {
-            "title": "",
-            "href": "",
+            "title": "Dance",
+            "href": "http://localhost/wordpress-test/dance/",
             "text": "",
             "children": [
               {
@@ -1762,13 +1762,13 @@
             ]
           },
           {
-            "title": "",
-            "href": "",
+            "title": "Music",
+            "href": "http://localhost/wordpress-test/performingarts/music/",
             "text": "",
             "children": [
               {
-                "title": "",
-                "href": "",
+                "title": "Academic Programs",
+                "href": "http://localhost/wordpress-test/performingarts/music_academic_programs/",
                 "text": "",
                 "children": [
                   {
@@ -1806,8 +1806,8 @@
             ]
           },
           {
-            "title": "",
-            "href": "",
+            "title": "Musical Theatre",
+            "href": "http://localhost/wordpress-test/musical_theatre/",
             "text": "",
             "children": [
               {
@@ -1849,8 +1849,8 @@
             ]
           },
           {
-            "title": "",
-            "href": "",
+            "title": "Theatre",
+            "href": "http://localhost/wordpress-test/theatre/",
             "text": "",
             "children": [
               {
@@ -2035,8 +2035,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Visit Campus",
+        "href": "http://localhost/wordpress-test/about/visit/",
         "text": "",
         "children": [
           {
@@ -2152,8 +2152,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "General Education",
+        "href": "http://localhost/wordpress-test/curriculum/general-education/",
         "text": "",
         "children": [
           {
@@ -2203,8 +2203,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "About Us",
+        "href": "http://localhost/wordpress-test/accounting_society/about/",
         "text": "",
         "children": [
           {
@@ -2412,8 +2412,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Executive Board and Chairs",
+        "href": "http://localhost/wordpress-test/akpsi.geneseo/executive-board-and-chairs/",
         "text": "",
         "children": [
           {
@@ -2475,8 +2475,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "SGAA",
+        "href": "http://localhost/wordpress-test/alumni/sgaa/",
         "text": "",
         "children": [
           {
@@ -2684,8 +2684,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Educational Opportunity Program (EOP)",
+        "href": "http://localhost/wordpress-test/aop/educational-opportunity-program/",
         "text": "",
         "children": [
           {
@@ -2758,8 +2758,8 @@
     "menuSlug": "group-menu-art-history-[term-id:-1572]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Home",
+        "href": "http://localhost/wordpress-test/art-history/",
         "text": "",
         "children": [
           {
@@ -2777,8 +2777,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/art_history/art-history-student-resources/",
         "text": "",
         "children": [
           {
@@ -2993,8 +2993,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Biology Home",
+        "href": "http://localhost/wordpress-test/biology/",
         "text": "",
         "children": [
           {
@@ -3024,8 +3024,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/biology/student_resources/",
         "text": "",
         "children": [
           {
@@ -3184,8 +3184,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Events",
+        "href": "http://localhost/wordpress-test/abs/events/",
         "text": "",
         "children": [
           {
@@ -3351,8 +3351,8 @@
     "menuSlug": "group-menu-campus-living-[term-id:-1574]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Core Purpose and Focus",
+        "href": "http://localhost/wordpress-test/residence-life/student-life-core-purpose-and-focus/",
         "text": "",
         "children": [
           {
@@ -3376,8 +3376,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Prospective Student Information",
+        "href": "http://localhost/wordpress-test/residence-life/prospective-student-information/",
         "text": "",
         "children": [
           {
@@ -3395,8 +3395,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Living On Campus",
+        "href": "http://localhost/wordpress-test/residence-life/living-campus/",
         "text": "",
         "children": [
           {
@@ -3436,8 +3436,8 @@
             "children": []
           },
           {
-            "title": "",
-            "href": "",
+            "title": "Residential Concerns",
+            "href": "http://localhost/wordpress-test/residence-life/residence-hall-concerns/",
             "text": "",
             "children": [
               {
@@ -3463,8 +3463,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Move-In Information Fall 2025",
+        "href": "http://localhost/wordpress-test/residence-life/move-in/",
         "text": "",
         "children": [
           {
@@ -3488,8 +3488,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Policies",
+        "href": "http://localhost/wordpress-test/residence-life/residency-requirement",
         "text": "",
         "children": [
           {
@@ -3575,8 +3575,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "On Campus Users",
+        "href": "http://localhost/wordpress-test/events_office/on_campus_users/",
         "text": "",
         "children": [
           {
@@ -3612,8 +3612,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Off Campus Users",
+        "href": "http://localhost/wordpress-test/events_office/conference_services/",
         "text": "",
         "children": [
           {
@@ -3698,8 +3698,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "For Students",
+        "href": "http://localhost/wordpress-test/career-design/students/",
         "text": "",
         "children": [
           {
@@ -3723,8 +3723,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Internships and Applied Learning",
+        "href": "http://localhost/wordpress-test/career-design/internship-information/",
         "text": "",
         "children": [
           {
@@ -3734,8 +3734,8 @@
             "children": []
           },
           {
-            "title": "",
-            "href": "",
+            "title": "Internship and Living Stipend Program",
+            "href": "http://localhost/wordpress-test/career-design/suny-geneseo-internship-and-living-stipend-application/",
             "text": "",
             "children": [
               {
@@ -3817,8 +3817,8 @@
     "menuSlug": "group-menu-chemistry-[term-id:-1577]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Home",
+        "href": "http://localhost/wordpress-test/chemistry/",
         "text": "",
         "children": [
           {
@@ -3830,8 +3830,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Programs of Study",
+        "href": "http://localhost/wordpress-test/chemistry/chemistry-majors-minors/",
         "text": "",
         "children": [
           {
@@ -3849,8 +3849,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/chemistry/resources-biology-and-chemistry-students/",
         "text": "",
         "children": [
           {
@@ -3965,8 +3965,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Safety Data Sheets (SDS)",
+        "href": "http://localhost/wordpress-test/chemstockroom/safety-data-sheets",
         "text": "",
         "children": [
           {
@@ -4057,8 +4057,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Explore IAL Experiences",
+        "href": "http://localhost/wordpress-test/cil/explore-integrative-applied-learning-ial-experiences/",
         "text": "",
         "children": [
           {
@@ -4076,8 +4076,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Ambassador Program",
+        "href": "http://localhost/wordpress-test/cil/student_ambassadorships/",
         "text": "",
         "children": [
           {
@@ -4107,8 +4107,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Integrative & Interdisciplinary Curriculum",
+        "href": "http://localhost/wordpress-test/cil/integrative-interdisciplinary-curriculum/",
         "text": "",
         "children": [
           {
@@ -4138,8 +4138,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Past Projects and Events",
+        "href": "http://localhost/wordpress-test/cil/past-projects-and-events",
         "text": "",
         "children": [
           {
@@ -4334,8 +4334,8 @@
     "menuSlug": "group-menu-communication-[term-id:-1554]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Communication Home",
+        "href": "http://localhost/wordpress-test/communication/",
         "text": "",
         "children": [
           {
@@ -4347,8 +4347,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Programs of Study",
+        "href": "http://localhost/wordpress-test/communication/ba-communication/",
         "text": "",
         "children": [
           {
@@ -4366,8 +4366,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/communication/student_resources/",
         "text": "",
         "children": [
           {
@@ -4595,8 +4595,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "General Education",
+        "href": "http://localhost/wordpress-test/gened/general-education-suny-geneseo/",
         "text": "",
         "children": [
           {
@@ -4865,8 +4865,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Commission on Diversity and Community",
+        "href": "http://localhost/wordpress-test/diversity/president/",
         "text": "",
         "children": [
           {
@@ -5018,8 +5018,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Services and Equipment",
+        "href": "http://localhost/wordpress-test/duplicating_center/services_and_equipment/",
         "text": "",
         "children": [
           {
@@ -5105,8 +5105,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Medical Emergencies",
+        "href": "http://localhost/wordpress-test/emergency/medical-emergencies/",
         "text": "",
         "children": [
           {
@@ -5142,8 +5142,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Bomb Threats",
+        "href": "http://localhost/wordpress-test/emergency/bomb-threats/",
         "text": "",
         "children": [
           {
@@ -5204,8 +5204,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Programs of Study",
+        "href": "http://localhost/wordpress-test/english/programs-english/",
         "text": "",
         "children": [
           {
@@ -5271,8 +5271,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/english/resources-english-and-creative-writing-students/",
         "text": "",
         "children": [
           {
@@ -5294,8 +5294,8 @@
             "children": []
           },
           {
-            "title": "",
-            "href": "",
+            "title": "Leadership & Hands-On Learning",
+            "href": "http://localhost/wordpress-test/english/leadership-and-hands-learning/",
             "text": "",
             "children": [
               {
@@ -5345,13 +5345,13 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Department News",
+        "href": "http://localhost/wordpress-test/english/english-department-news/",
         "text": "",
         "children": [
           {
-            "title": "",
-            "href": "",
+            "title": "Events",
+            "href": "http://localhost/wordpress-test/english/english-department-events/",
             "text": "",
             "children": [
               {
@@ -5434,8 +5434,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Projects",
+        "href": "http://localhost/wordpress-test/facilities_planning/projects/",
         "text": "",
         "children": [
           {
@@ -5490,8 +5490,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Custodial Services",
+        "href": "http://localhost/wordpress-test/facilities_services/custodial/",
         "text": "",
         "children": [
           {
@@ -5644,8 +5644,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Geneseo Scholarships",
+        "href": "http://localhost/wordpress-test/scholarships/",
         "text": "",
         "children": [
           {
@@ -5657,8 +5657,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Financial Aid FAQ",
+        "href": "http://localhost/wordpress-test/financial_aid/financial-aid-faq/",
         "text": "",
         "children": [
           {
@@ -5670,8 +5670,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Applying for Financial Aid",
+        "href": "http://localhost/wordpress-test/financial_aid/applying_for_aid/",
         "text": "",
         "children": [
           {
@@ -5737,13 +5737,13 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Types of Financial Aid",
+        "href": "http://localhost/wordpress-test/financial_aid/undergrad_aid/",
         "text": "",
         "children": [
           {
-            "title": "",
-            "href": "",
+            "title": "Loans",
+            "href": "http://localhost/wordpress-test/financial_aid/student_loan_center/",
             "text": "",
             "children": [
               {
@@ -5763,8 +5763,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Maintaining Aid Eligibility",
+        "href": "http://localhost/wordpress-test/financial_aid/maintaining-eligibility/",
         "text": "",
         "children": [
           {
@@ -5776,8 +5776,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Loan Repayment",
+        "href": "http://localhost/wordpress-test/financial_aid/loan-repayment/",
         "text": "",
         "children": [
           {
@@ -5863,8 +5863,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "International Admissions",
+        "href": "http://localhost/wordpress-test/admissions/international-admissions/",
         "text": "",
         "children": [
           {
@@ -5937,8 +5937,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Running GAGG",
+        "href": "http://localhost/wordpress-test/gagg/runninggagg/",
         "text": "",
         "children": [
           {
@@ -6066,8 +6066,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Programs of Study",
+        "href": "http://localhost/wordpress-test/geography/geography-sustainability-studies-mission-and-programs/",
         "text": "",
         "children": [
           {
@@ -6097,13 +6097,13 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/geography/student_resources/",
         "text": "",
         "children": [
           {
-            "title": "",
-            "href": "",
+            "title": "Careers in Geography and Sustainability",
+            "href": "http://localhost/wordpress-test/geography-and-sustainability-career-information/",
             "text": "",
             "children": [
               {
@@ -6185,8 +6185,8 @@
     "menuSlug": "group-menu-geological-sciences-[term-id:-1532]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Home",
+        "href": "http://localhost/wordpress-test/geology/",
         "text": "",
         "children": [
           {
@@ -6204,8 +6204,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Programs of Study",
+        "href": "http://localhost/wordpress-test/geology/program-information/",
         "text": "",
         "children": [
           {
@@ -6229,13 +6229,13 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/geology/current_students/",
         "text": "",
         "children": [
           {
-            "title": "",
-            "href": "",
+            "title": "Why Study Geology?",
+            "href": "http://localhost/wordpress-test/geology/prospective_students/",
             "text": "",
             "children": [
               {
@@ -6390,8 +6390,8 @@
     "menuSlug": "group-menu-governance-[term-id:-1587]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Shared Governance",
+        "href": "http://localhost/wordpress-test/governance/",
         "text": "",
         "children": [
           {
@@ -6403,8 +6403,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Links out of Governance",
+        "href": "http://localhost/wordpress-test/",
         "text": "",
         "children": [
           {
@@ -6520,8 +6520,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "GREAT Day",
+        "href": "http://localhost/wordpress-test/great_day/",
         "text": "",
         "children": [
           {
@@ -6545,8 +6545,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "2007-2024 Archives",
+        "href": "http://localhost/wordpress-test/great_day/archives/",
         "text": "",
         "children": [
           {
@@ -6643,8 +6643,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Parent and Family FAQs",
+        "href": "http://localhost/wordpress-test/greek/parent-and-family-faq/",
         "text": "",
         "children": [
           {
@@ -6674,8 +6674,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Resources",
+        "href": "http://localhost/wordpress-test/greek/resources/",
         "text": "",
         "children": [
           {
@@ -6749,8 +6749,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "FAQ",
+        "href": "http://localhost/wordpress-test/health/faq/",
         "text": "",
         "children": [
           {
@@ -6786,8 +6786,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Health Services",
+        "href": "http://localhost/wordpress-test/health/health-services/",
         "text": "",
         "children": [
           {
@@ -6817,8 +6817,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Counseling Services",
+        "href": "http://localhost/wordpress-test/health/counseling/",
         "text": "",
         "children": [
           {
@@ -6854,8 +6854,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Care & Outreach",
+        "href": "http://localhost/wordpress-test/health/care/",
         "text": "",
         "children": [
           {
@@ -6867,8 +6867,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Health Promotion",
+        "href": "http://localhost/wordpress-test/health/health-promotion/",
         "text": "",
         "children": [
           {
@@ -6911,8 +6911,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "About Us",
+        "href": "http://localhost/wordpress-test/hillel/about-us/",
         "text": "",
         "children": [
           {
@@ -6949,8 +6949,8 @@
     "menuSlug": "group-menu-history-[term-id:-1593]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Home",
+        "href": "http://localhost/wordpress-test/history/",
         "text": "",
         "children": [
           {
@@ -6962,8 +6962,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Programs of Study",
+        "href": "http://localhost/wordpress-test/history/history-programs-study/",
         "text": "",
         "children": [
           {
@@ -6999,8 +6999,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/history/student_resources/",
         "text": "",
         "children": [
           {
@@ -7074,8 +7074,8 @@
     "menuSlug": "group-menu-human-resources-[term-id:-1538]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "About Us",
+        "href": "http://localhost/wordpress-test/hr/about-human-resources/",
         "text": "",
         "children": [
           {
@@ -7093,8 +7093,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "New Employee Portal",
+        "href": "http://localhost/wordpress-test/hr/new-employee-portal/",
         "text": "",
         "children": [
           {
@@ -7124,8 +7124,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Current Employees",
+        "href": "http://localhost/wordpress-test/hr/information-benefits-payroll/",
         "text": "",
         "children": [
           {
@@ -7161,8 +7161,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Manager Resources",
+        "href": "http://localhost/wordpress-test/hr/dept-supervisor-resources/",
         "text": "",
         "children": [
           {
@@ -7186,8 +7186,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Training & Development",
+        "href": "http://localhost/wordpress-test/hr/training/",
         "text": "",
         "children": [
           {
@@ -7425,8 +7425,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Rush | Recruitment",
+        "href": "http://localhost/wordpress-test/inter_greek_council/potential_new_members/",
         "text": "",
         "children": [
           {
@@ -7657,8 +7657,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "International Admissions",
+        "href": "http://localhost/wordpress-test/admissions/international-admissions/",
         "text": "",
         "children": [
           {
@@ -7670,8 +7670,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Admitted International Students",
+        "href": "http://localhost/wordpress-test/international/admitted-international-students/",
         "text": "",
         "children": [
           {
@@ -7725,8 +7725,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Current International Students",
+        "href": "http://localhost/wordpress-test/international/currentstudents/",
         "text": "",
         "children": [
           {
@@ -7838,8 +7838,8 @@
     "menuSlug": "group-menu-languages-literatures-[term-id:-1579]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Home",
+        "href": "http://localhost/wordpress-test/global-languages-cultures/",
         "text": "",
         "children": [
           {
@@ -7863,8 +7863,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Programs of Study",
+        "href": "http://localhost/wordpress-test/languages_literatures/academic_programs/",
         "text": "",
         "children": [
           {
@@ -7922,8 +7922,8 @@
             "children": []
           },
           {
-            "title": "",
-            "href": "",
+            "title": "Minor in European Studies",
+            "href": "http://localhost/wordpress-test/global-languages-cultures/minor-european-studies/",
             "text": "",
             "children": [
               {
@@ -7949,8 +7949,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/languages_literatures/student_resources/",
         "text": "",
         "children": [
           {
@@ -8035,8 +8035,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Program Minor",
+        "href": "http://localhost/wordpress-test/latin_american_caribbean_studies/latin-american-and-caribbean-studies-minor-requirements-overview/",
         "text": "",
         "children": [
           {
@@ -8048,8 +8048,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/latin_american_caribbean_studies/online-resources-latin-american-studies/",
         "text": "",
         "children": [
           {
@@ -8259,8 +8259,8 @@
     "menuSlug": "group-menu-mathematics-[term-id:-1553]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Home",
+        "href": "http://localhost/wordpress-test/math/",
         "text": "",
         "children": [
           {
@@ -8284,8 +8284,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Programs of Study",
+        "href": "http://localhost/wordpress-test/math/programs/",
         "text": "",
         "children": [
           {
@@ -8345,8 +8345,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/math/student_resources/",
         "text": "",
         "children": [
           {
@@ -8410,8 +8410,8 @@
             "children": []
           },
           {
-            "title": "",
-            "href": "",
+            "title": "Student Organizations",
+            "href": "http://localhost/wordpress-test/math/student-organizations/",
             "text": "",
             "children": [
               {
@@ -8567,8 +8567,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Scholarships",
+        "href": "http://localhost/wordpress-test/multicultural/scholarships/",
         "text": "",
         "children": [
           {
@@ -9030,8 +9030,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Mary C. Toale, Officer in Charge",
+        "href": "http://localhost/wordpress-test/president/biographyvita/",
         "text": "",
         "children": [
           {
@@ -9103,8 +9103,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "College Handbook and Policies",
+        "href": "http://localhost/wordpress-test/president/college-handbook/",
         "text": "",
         "children": [
           {
@@ -9520,8 +9520,8 @@
     "menuSlug": "group-menu-philosophy-[term-id:-1541]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Home",
+        "href": "http://localhost/wordpress-test/philosophy/",
         "text": "",
         "children": [
           {
@@ -9539,8 +9539,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Programs of Study",
+        "href": "http://localhost/wordpress-test/philosophy/general_info/",
         "text": "",
         "children": [
           {
@@ -9558,8 +9558,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/philosophy/philosophy-student-resources/",
         "text": "",
         "children": [
           {
@@ -9608,8 +9608,8 @@
     "menuSlug": "group-menu-physics-astronomy-[term-id:-1557]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Home",
+        "href": "http://localhost/wordpress-test/physics/",
         "text": "",
         "children": [
           {
@@ -9639,8 +9639,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/physics/links/",
         "text": "",
         "children": [
           {
@@ -9664,8 +9664,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Contact Us",
+        "href": "http://localhost/wordpress-test/physics/contact/",
         "text": "",
         "children": [
           {
@@ -9696,8 +9696,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "BLT Program",
+        "href": "http://localhost/wordpress-test/phystec/blt/",
         "text": "",
         "children": [
           {
@@ -9807,8 +9807,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Programs of Study",
+        "href": "http://localhost/wordpress-test/political_science/academic_programs_menu/",
         "text": "",
         "children": [
           {
@@ -9862,8 +9862,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/political_science/student_resources/",
         "text": "",
         "children": [
           {
@@ -9911,8 +9911,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Department News",
+        "href": "http://localhost/wordpress-test/political_science/political-science-department-news/",
         "text": "",
         "children": [
           {
@@ -9924,8 +9924,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Meet Our Alumni",
+        "href": "http://localhost/wordpress-test/political_science/alumni_resources/",
         "text": "",
         "children": [
           {
@@ -9975,8 +9975,8 @@
     "menuSlug": "group-menu-power-of-physical-sci-[term-id:-1535]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "POPS Matrix",
+        "href": "http://localhost/wordpress-test/?page_id=42723",
         "text": "",
         "children": [
           {
@@ -10208,8 +10208,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Courses",
+        "href": "http://localhost/wordpress-test/gu/courses/",
         "text": "",
         "children": [
           {
@@ -10289,8 +10289,8 @@
     "menuSlug": "group-menu-proofspace-[term-id:-1552]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Ch1: Preliminaries",
+        "href": "http://localhost/wordpress-test/proofspace/chapter-1/",
         "text": "",
         "children": [
           {
@@ -10326,8 +10326,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Ch2: Proof Techniques",
+        "href": "http://localhost/wordpress-test/proofspace/chapter-2/",
         "text": "",
         "children": [
           {
@@ -10357,8 +10357,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Ch3: Sets",
+        "href": "http://localhost/wordpress-test/proofspace/chapter-3/",
         "text": "",
         "children": [
           {
@@ -10388,8 +10388,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Ch4: Functions",
+        "href": "http://localhost/wordpress-test/proofspace/chapter-4/",
         "text": "",
         "children": [
           {
@@ -10419,8 +10419,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Ch5: Relations",
+        "href": "http://localhost/wordpress-test/proofspace/chapter-5/",
         "text": "",
         "children": [
           {
@@ -10500,8 +10500,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "About Us",
+        "href": "http://localhost/wordpress-test/psychology/about-department/",
         "text": "",
         "children": [
           {
@@ -10513,8 +10513,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Programs of Study",
+        "href": "http://localhost/wordpress-test/psychology/programs-study-psychology-and-neuroscience/",
         "text": "",
         "children": [
           {
@@ -10538,8 +10538,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/psychology/psychology-student-resources/",
         "text": "",
         "children": [
           {
@@ -10636,8 +10636,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Duplicating Center",
+        "href": "http://localhost/wordpress-test/",
         "text": "",
         "children": [
           {
@@ -10754,8 +10754,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Registration Information",
+        "href": "http://localhost/wordpress-test/registrar/registrationdates/",
         "text": "",
         "children": [
           {
@@ -10779,8 +10779,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/registrar/students/",
         "text": "",
         "children": [
           {
@@ -10915,8 +10915,8 @@
     "menuSlug": "group-menu-rose-mcewen-[term-id:-1591]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Contact",
+        "href": "http://localhost/wordpress-test/mcewen/contact/",
         "text": "",
         "children": [
           {
@@ -10972,8 +10972,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Laws & Policies",
+        "href": "http://localhost/wordpress-test/safeparty/laws/",
         "text": "",
         "children": [
           {
@@ -11122,8 +11122,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Academic Programs",
+        "href": "http://localhost/wordpress-test/education/academic_programs/",
         "text": "",
         "children": [
           {
@@ -11159,8 +11159,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Office of Field Experiences",
+        "href": "http://localhost/wordpress-test/education/office-field-experiences/",
         "text": "",
         "children": [
           {
@@ -11184,8 +11184,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Teacher Certification",
+        "href": "http://localhost/wordpress-test/education/teacher-certification/",
         "text": "",
         "children": [
           {
@@ -11251,8 +11251,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Resources",
+        "href": "http://localhost/wordpress-test/education/student_resources/",
         "text": "",
         "children": [
           {
@@ -11286,8 +11286,8 @@
             "children": []
           },
           {
-            "title": "",
-            "href": "",
+            "title": "Fulbright Opportunities",
+            "href": "http://localhost/wordpress-test/education/fulbright-opportunities/",
             "text": "",
             "children": [
               {
@@ -11319,8 +11319,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Accreditation",
+        "href": "http://localhost/wordpress-test/accreditation/",
         "text": "",
         "children": [
           {
@@ -11548,8 +11548,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Organization",
+        "href": "http://localhost/wordpress-test/shrm/organization/",
         "text": "",
         "children": [
           {
@@ -11573,8 +11573,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Links",
+        "href": "http://localhost/wordpress-test/shrm/links/",
         "text": "",
         "children": [
           {
@@ -11593,8 +11593,8 @@
     "menuSlug": "group-menu-sociology-[term-id:-1555]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Home",
+        "href": "http://localhost/wordpress-test/sociology/",
         "text": "",
         "children": [
           {
@@ -11606,8 +11606,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Programs of Study",
+        "href": "http://localhost/wordpress-test/sociology/suny-geneseos-sociology-programs-study/",
         "text": "",
         "children": [
           {
@@ -11631,8 +11631,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Resources",
+        "href": "http://localhost/wordpress-test/sociology/links/",
         "text": "",
         "children": [
           {
@@ -11668,8 +11668,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Department News",
+        "href": "http://localhost/wordpress-test/sociology/sociology-department-news/",
         "text": "",
         "children": [
           {
@@ -11700,8 +11700,8 @@
     "menuSlug": "group-menu-sociomedical-sciences-[term-id:-1534]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Academic Program",
+        "href": "http://localhost/wordpress-test/sociomedical_sciences/sociomedical-sciences-major-and-minor/",
         "text": "",
         "children": [
           {
@@ -12006,8 +12006,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "SA Ticket Office",
+        "href": "http://localhost/wordpress-test/sa/ticketoffice/",
         "text": "",
         "children": [
           {
@@ -12061,8 +12061,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "SA Tech",
+        "href": "http://localhost/wordpress-test/sa/satech/",
         "text": "",
         "children": [
           {
@@ -12129,8 +12129,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Campus Resources",
+        "href": "http://localhost/wordpress-test/conduct/campus_resources/",
         "text": "",
         "children": [
           {
@@ -12278,8 +12278,8 @@
     "menuSlug": "group-menu-student-life-[term-id:-1530]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "About Us",
+        "href": "http://localhost/wordpress-test/student_life/about_us/",
         "text": "",
         "children": [
           {
@@ -12339,8 +12339,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Student Organizations",
+        "href": "http://localhost/wordpress-test/student_life/student_organizations/",
         "text": "",
         "children": [
           {
@@ -12413,8 +12413,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Get Started!",
+        "href": "http://localhost/wordpress-test/study_abroad/get-started/",
         "text": "",
         "children": [
           {
@@ -12468,8 +12468,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Accepted Students",
+        "href": "http://localhost/wordpress-test/study_abroad/accepted-student-resources/",
         "text": "",
         "children": [
           {
@@ -12561,8 +12561,8 @@
     "menuSlug": "group-menu-support-geneseo-[term-id:-1542]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "Geneseo Foundation",
+        "href": "http://localhost/wordpress-test/support/geneseo-foundation/",
         "text": "",
         "children": [
           {
@@ -12592,8 +12592,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Ways to Give",
+        "href": "http://localhost/wordpress-test/support/ways-to-give/",
         "text": "",
         "children": [
           {
@@ -12666,8 +12666,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "eGarden",
+        "href": "http://localhost/wordpress-test/sustainability/egarden/",
         "text": "",
         "children": [
           {
@@ -12727,8 +12727,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Sustainability News",
+        "href": "http://localhost/wordpress-test/sustainability-news",
         "text": "",
         "children": [
           {
@@ -12875,8 +12875,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "The LIVES Student Experience",
+        "href": "http://localhost/wordpress-test/lives/lives-student-experience/",
         "text": "",
         "children": [
           {
@@ -12931,8 +12931,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Research Opportunities",
+        "href": "http://localhost/wordpress-test/psi_chi/research/",
         "text": "",
         "children": [
           {
@@ -13204,8 +13204,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Prevention Education",
+        "href": "http://localhost/wordpress-test/titleix/prevention-education/",
         "text": "",
         "children": [
           {
@@ -13394,8 +13394,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Research Funding",
+        "href": "http://localhost/wordpress-test/undergraduate_research/campus-based-research-funding/",
         "text": "",
         "children": [
           {
@@ -13468,8 +13468,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Courses",
+        "href": "http://localhost/wordpress-test/ventureworks/courses/",
         "text": "",
         "children": [
           {
@@ -13615,8 +13615,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Knights’ Harvest Pantry",
+        "href": "http://localhost/wordpress-test/volunteer_center/knights-harvest-pantry/",
         "text": "",
         "children": [
           {
@@ -13874,8 +13874,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Program Information",
+        "href": "http://localhost/wordpress-test/wgst/major-and-minor/",
         "text": "",
         "children": [
           {
@@ -14064,8 +14064,8 @@
     "menuSlug": "header-menu-[term-id:-153]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "About",
+        "href": "http://localhost/wordpress-test/about/",
         "text": "",
         "children": [
           {
@@ -14119,8 +14119,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Academics",
+        "href": "http://localhost/wordpress-test/academics/",
         "text": "",
         "children": [
           {
@@ -14168,8 +14168,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Admissions",
+        "href": "http://localhost/wordpress-test/admissions/",
         "text": "",
         "children": [
           {
@@ -14223,8 +14223,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Campus Life",
+        "href": "http://localhost/wordpress-test/student_and_campus_life/",
         "text": "",
         "children": [
           {
@@ -14260,8 +14260,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Info For",
+        "href": "http://localhost/wordpress-test/about/information-for-community/",
         "text": "",
         "children": [
           {
@@ -14373,8 +14373,8 @@
     "menuSlug": "mcnair-[term-id:-1528]",
     "items": [
       {
-        "title": "",
-        "href": "",
+        "title": "McNair Scholars Program",
+        "href": "http://localhost/wordpress-test/mcnair/",
         "text": "",
         "children": [
           {
@@ -14398,8 +14398,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Application Information and Forms",
+        "href": "http://localhost/wordpress-test/mcnair/mcnair-program-application-information/",
         "text": "",
         "children": [
           {
@@ -14417,8 +14417,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Geneseo Introductory Research Opportunity (GIRO)",
+        "href": "http://localhost/wordpress-test/mcnair/giro/",
         "text": "",
         "children": [
           {
@@ -14560,8 +14560,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Academic Accommodations",
+        "href": "http://localhost/wordpress-test/accessibility-office/academic-accommodations-overview/",
         "text": "",
         "children": [
           {
@@ -14579,8 +14579,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Accessible Campus Housing",
+        "href": "http://localhost/wordpress-test/accessibility-office/housing-accommodation-requests-overview/",
         "text": "",
         "children": [
           {
@@ -14604,8 +14604,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Testing Center",
+        "href": "http://localhost/wordpress-test/accessibility-office/testing-center/",
         "text": "",
         "children": [
           {
@@ -14623,8 +14623,8 @@
         ]
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Campus Accessibility",
+        "href": "http://localhost/wordpress-test/accessibility-office/campus-accessibility/",
         "text": "",
         "children": [
           {
@@ -14885,8 +14885,8 @@
         "children": []
       },
       {
-        "title": "",
-        "href": "",
+        "title": "Station History",
+        "href": "http://localhost/wordpress-test/wgsu/history/",
         "text": "",
         "children": [
           {

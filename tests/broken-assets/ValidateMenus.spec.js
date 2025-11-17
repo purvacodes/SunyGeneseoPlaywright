@@ -35,13 +35,21 @@ async function extractWpItems(ulLocator, depth = 0) {
 
     console.log(`${indent}📁 Reading WP items at depth ${depth}...`);
 
-    const liNodes = await ulLocator.locator(":scope > li.menu-item-box").all();
+    // FIX: matches ANY class containing menu-item-box
+    const liNodes = await ulLocator.locator(":scope > li[class*='menu-item-box']").all();
     console.log(`${indent}Found ${liNodes.length} WP <li> nodes`);
 
     for (const li of liNodes) {
-        const title = (await li.locator(".menu-item-title").textContent().catch(() => "")).trim();
-        const href = await li.locator(".menu-item-meta a").getAttribute("href").catch(() => "");
-        const text = await li.locator(".menu-item-meta").textContent().catch(() => "");
+        // safe title
+        
+        const title = (await li.locator(".menu-item-title strong").first().textContent().catch(() => "")).trim();
+
+        // safe meta href
+        let href = "";
+       const aTag = li.locator(".menu-item-meta a").first();
+        if (await aTag.count()) href = await aTag.getAttribute("href");
+
+        const text = await li.locator(".menu-item-meta").innerText().catch(() => "");
 
         console.log(`${indent}🔹 WP Item: ${title} (${href})`);
 
@@ -50,12 +58,16 @@ async function extractWpItems(ulLocator, depth = 0) {
         const hasChildren = await li.evaluate(el => el.classList.contains("has-children"));
         if (hasChildren) {
             console.log(`${indent}↳ WP Item "${title}" has children...`);
-            const childUl = li.locator(":scope > ul.menu-level");
+
+            // FIX: match ANY menu-level-X
+            const childUl = li.locator(":scope > ul[class*='menu-level']");
+
             menuItem.children = await extractWpItems(childUl, depth + 1);
         }
 
         items.push(menuItem);
     }
+
     return items;
 }
 
@@ -93,20 +105,28 @@ async function extractDrupalItems(ulLocator, depth = 0) {
 
     console.log(`${indent}📁 Reading Drupal items at depth ${depth}...`);
 
-    const liNodes = await ulLocator.locator(":scope > li.menu-item-box").all();
+    // FIX: matches ANY class containing menu-item-box
+    const liNodes = await ulLocator.locator(":scope > li[class*='menu-item-box']").all();
     console.log(`${indent}Found ${liNodes.length} Drupal <li> nodes`);
 
     for (const li of liNodes) {
-        const status = await li.locator(".status-badge").textContent().catch(() => "");
-        const isEnabled = status.includes("Enabled");
+        const status = await li.locator(".status-badge").innerText().catch(() => "");
 
-        const title = (await li.locator(".menu-item-title").textContent().catch(() => "")).trim();
-        const href = await li.locator(".menu-item-meta a").getAttribute("href").catch(() => "");
-        const text = await li.locator(".menu-item-meta").textContent().catch(() => "");
+        // only skip if explicitly disabled
+        const isDisabled = status.includes("Disabled");
+
+        const title = (await li.locator(".menu-item-title strong").first().textContent().catch(() => "")).trim();
+
+        // safe href
+        let href = "";
+        const link = li.locator(".menu-item-meta a").first();
+        if (await link.count()) href = await link.getAttribute("href");
+
+        const text = await li.locator(".menu-item-meta").innerText().catch(() => "");
 
         console.log(`${indent}🔹 Drupal Item: ${title} (${href}) [${status}]`);
 
-        if (!isEnabled) {
+        if (isDisabled) {
             console.log(`${indent}⚠️ Skipping disabled item`);
             continue;
         }
@@ -116,7 +136,10 @@ async function extractDrupalItems(ulLocator, depth = 0) {
         const hasChildren = await li.evaluate(el => el.classList.contains("has-children"));
         if (hasChildren) {
             console.log(`${indent}↳ Drupal Item "${title}" has children...`);
-            const subUl = li.locator(":scope > ul.menu-level");
+
+            // FIX: match ANY level
+            const subUl = li.locator(":scope > ul[class*='menu-level']");
+
             menuItem.children = await extractDrupalItems(subUl, depth + 1);
         }
 
@@ -167,6 +190,7 @@ class MenuComparator {
                 path,
                 title: item.title,
                 href: item.href,
+                parent
             });
 
             if (item.children?.length) {
@@ -175,6 +199,27 @@ class MenuComparator {
         }
 
         return result;
+    }
+
+    static detectDuplicates(flatList, sourceLabel) {
+        const seen = new Map();
+        const duplicates = [];
+
+        for (const row of flatList) {
+            if (seen.has(row.title)) {
+                duplicates.push({
+                    Node: row.path,
+                    Parent: row.parent,
+                    Item: row.title,
+                    Issue: `Duplicate menu item in ${sourceLabel}`,
+                    DrupalURL: "",
+                    WordPressURL: ""
+                });
+            }
+            seen.set(row.title, true);
+        }
+
+        return duplicates;
     }
 
     static compareMenus(drupalItems, wpItems, menuName) {
@@ -186,13 +231,34 @@ class MenuComparator {
         const mapWP = new Map(flatWP.map(i => [i.path, i]));
         const mapDrupal = new Map(flatDrupal.map(i => [i.path, i]));
 
-        // Drupal → WP  
+        // 5️⃣ Duplicate items check
+        results.push(...MenuComparator.detectDuplicates(flatDrupal, "Drupal"));
+        results.push(...MenuComparator.detectDuplicates(flatWP, "WordPress"));
+
+        // Drupal → WP
         for (const d of flatDrupal) {
             const w = mapWP.get(d.path);
 
             if (!w) {
+                // 3️⃣ Hierarchy mismatch: title exists elsewhere
+                const existsElsewhere = flatWP.find(x => x.title === d.title);
+
+                if (existsElsewhere) {
+                    results.push({
+                        Node: d.path,
+                        Parent: d.parent,
+                        Item: d.title,
+                        Issue: "Hierarchy mismatch — title exists under different parent",
+                        DrupalURL: d.href,
+                        WordPressURL: existsElsewhere.href
+                    });
+                    continue;
+                }
+
+                // Normal missing
                 results.push({
                     Node: d.path,
+                    Parent: d.parent,
                     Item: d.title,
                     Issue: "Missing in WordPress",
                     DrupalURL: d.href,
@@ -204,6 +270,7 @@ class MenuComparator {
             if (d.href !== w.href) {
                 results.push({
                     Node: d.path,
+                    Parent: d.parent,
                     Item: d.title,
                     Issue: "URL mismatch",
                     DrupalURL: d.href,
@@ -217,6 +284,7 @@ class MenuComparator {
             if (!mapDrupal.has(w.path)) {
                 results.push({
                     Node: w.path,
+                    Parent: w.parent,
                     Item: w.title,
                     Issue: "Extra in WordPress or hierarchy mismatch",
                     DrupalURL: "",
@@ -228,6 +296,7 @@ class MenuComparator {
         return results;
     }
 }
+
 
 /* ======================================================================
    MAIN TEST

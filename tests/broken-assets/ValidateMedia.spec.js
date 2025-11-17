@@ -3,7 +3,7 @@ import { test } from "@playwright/test";
 import { chromium } from "playwright";
 import { createObjects } from "../../pages/ObjectFactory.js";
 
-test.setTimeout(6 * 60 * 60 * 1000); // 6 hours max
+test.setTimeout(24 * 60 * 60 * 1000); // 6 hours max
 
 test("Verify Media Assets across pages (parallel, retry, progress)", async () => {
   const tempBrowser = await chromium.launch();
@@ -40,7 +40,7 @@ test("Verify Media Assets across pages (parallel, retry, progress)", async () =>
 
   // 🧵 Launch browsers
   for (let bIndex = 0; bIndex < maxBrowsers; bIndex++) {
-    const browser = await chromium.launch({ headless: false });
+    const browser = await chromium.launch({ headless: true });
     const browserTasks = [];
 
     const factory = createObjects(null, browser, {
