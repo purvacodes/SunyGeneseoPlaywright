@@ -35,18 +35,14 @@ async function extractWpItems(ulLocator, depth = 0) {
 
     console.log(`${indent}📁 Reading WP items at depth ${depth}...`);
 
-    // FIX: matches ANY class containing menu-item-box
     const liNodes = await ulLocator.locator(":scope > li[class*='menu-item-box']").all();
     console.log(`${indent}Found ${liNodes.length} WP <li> nodes`);
 
     for (const li of liNodes) {
-        // safe title
-        
         const title = (await li.locator(".menu-item-title strong").first().textContent().catch(() => "")).trim();
 
-        // safe meta href
         let href = "";
-       const aTag = li.locator(".menu-item-meta a").first();
+        const aTag = li.locator(".menu-item-meta a").first();
         if (await aTag.count()) href = await aTag.getAttribute("href");
 
         const text = await li.locator(".menu-item-meta").innerText().catch(() => "");
@@ -57,11 +53,7 @@ async function extractWpItems(ulLocator, depth = 0) {
 
         const hasChildren = await li.evaluate(el => el.classList.contains("has-children"));
         if (hasChildren) {
-            console.log(`${indent}↳ WP Item "${title}" has children...`);
-
-            // FIX: match ANY menu-level-X
             const childUl = li.locator(":scope > ul[class*='menu-level']");
-
             menuItem.children = await extractWpItems(childUl, depth + 1);
         }
 
@@ -77,19 +69,17 @@ async function extractWordPressMenus(page) {
     const menus = [];
     const wrappers = await page.locator(".menu-wrapper").all();
 
-    console.log(`Found ${wrappers.length} WP menu sections`);
-
     for (const wrap of wrappers) {
         const menuTitle = (await wrap.locator("h2").textContent().catch(() => "")).trim();
         const termIdText = await wrap.locator("span.menu-term-id").textContent().catch(() => "");
         const menuId = termIdText.replace("[Term ID:", "").replace("]", "").trim();
-        const slug = menuTitle.toLowerCase().replace(/\s+/g, "-");
 
-        console.log(`📘 WP Menu: ${menuTitle} (ID: ${menuId})`);
+        // WP slug contains [term-id] suffix - we remove later
+        const menuSlug = `${menuTitle.toLowerCase().replace(/\s+/g, "-")}`
 
         const items = await extractWpItems(wrap.locator("ul.menu-level.menu-level-0"));
 
-        menus.push(new MainMenu({ menuTitle, menuId, menuSlug: slug, items }));
+        menus.push(new MainMenu({ menuTitle, menuId, menuSlug, items }));
     }
 
     console.log("🔵 WP extraction complete.\n");
@@ -103,43 +93,27 @@ async function extractDrupalItems(ulLocator, depth = 0) {
     const items = [];
     const indent = "  ".repeat(depth);
 
-    console.log(`${indent}📁 Reading Drupal items at depth ${depth}...`);
-
-    // FIX: matches ANY class containing menu-item-box
     const liNodes = await ulLocator.locator(":scope > li[class*='menu-item-box']").all();
-    console.log(`${indent}Found ${liNodes.length} Drupal <li> nodes`);
 
     for (const li of liNodes) {
         const status = await li.locator(".status-badge").innerText().catch(() => "");
 
-        // only skip if explicitly disabled
         const isDisabled = status.includes("Disabled");
-
         const title = (await li.locator(".menu-item-title strong").first().textContent().catch(() => "")).trim();
 
-        // safe href
         let href = "";
         const link = li.locator(".menu-item-meta a").first();
         if (await link.count()) href = await link.getAttribute("href");
 
         const text = await li.locator(".menu-item-meta").innerText().catch(() => "");
 
-        console.log(`${indent}🔹 Drupal Item: ${title} (${href}) [${status}]`);
-
-        if (isDisabled) {
-            console.log(`${indent}⚠️ Skipping disabled item`);
-            continue;
-        }
+        if (isDisabled) continue;
 
         const menuItem = new MenuItem({ title, href, text, children: [] });
 
         const hasChildren = await li.evaluate(el => el.classList.contains("has-children"));
         if (hasChildren) {
-            console.log(`${indent}↳ Drupal Item "${title}" has children...`);
-
-            // FIX: match ANY level
             const subUl = li.locator(":scope > ul[class*='menu-level']");
-
             menuItem.children = await extractDrupalItems(subUl, depth + 1);
         }
 
@@ -155,20 +129,16 @@ async function extractDrupalMenus(page) {
     const menus = [];
     const wrappers = await page.locator(".menu-wrapper").all();
 
-    console.log(`Found ${wrappers.length} Drupal menu sections`);
-
     for (const wrap of wrappers) {
         const menuTitle = (await wrap.locator("h2").textContent().catch(() => "")).trim();
         const menuIdText = await wrap.locator("span.menu-id").textContent().catch(() => "");
-        
-        const menuId = menuIdText.replace("[Menu ID:", "").replace("]", "").trim();
-        const slug = menuTitle.toLowerCase().replace(/\s+/g, "-");
 
-        console.log(`📗 Drupal Menu: ${menuTitle} (ID: ${menuId})`);
+        const menuId = menuIdText.replace("[Menu ID:", "").replace("]", "").trim();
+        const menuSlug = menuTitle.toLowerCase().replace(/\s+/g, "-");
 
         const items = await extractDrupalItems(wrap.locator("ul.menu-level.menu-level-0"));
 
-        menus.push(new MainMenu({ menuTitle, menuId, menuSlug: slug, items }));
+        menus.push(new MainMenu({ menuTitle, menuId, menuSlug, items }));
     }
 
     console.log("🟣 Drupal extraction complete.\n");
@@ -176,130 +146,168 @@ async function extractDrupalMenus(page) {
 }
 
 /* ======================================================================
-   COMPARATOR (UPDATED — HIERARCHY AWARE)
+   COMPARATOR
+====================================================================== */
+/* ======================================================================
+   NEW COMPARATOR (REPLACES OLD ONE)
 ====================================================================== */
 class MenuComparator {
 
-    static flattenTree(items, parent = "") {
-        let result = [];
+    static normalizeSlug(slug) {
+        return slug.replace(/\[term-id.*?\]/gi, "").replace(/-0$/, "").trim();
+    }
 
-        for (const item of items) {
-            const path = parent ? `${parent} > ${item.title}` : item.title;
+    static normalizeHref(href) {
+        return href
+            ?.replace("http://localhost/drupal-geneseo/list_menus.php", "")
+            ?.replace("http://localhost/wordpress-test", "")
+            ?.replace("https://www.geneseo.edu", "")
+            ?.replace("http://www.geneseo.edu", "")
+            ?.replace(/\/$/, "")
+            ?.trim();
+    }
 
-            result.push({
-                path,
-                title: item.title,
-                href: item.href,
-                parent
+    static compareMenus(drupalMenus, wpMenus) {
+        const rows = [];
+
+        for (const dMenu of drupalMenus) {
+            const slug = this.normalizeSlug(dMenu.menuId);
+            const wpMenu = wpMenus.find(w => this.normalizeSlug(w.menuSlug) === slug);
+
+            // Menu existence check
+            rows.push({
+                WhichMenu: slug,
+                WhichItem: "MENU",
+                DrupalValue: dMenu.menuTitle,
+                WordPressValue: wpMenu?.menuTitle || "",
+                Status: wpMenu ? "OK" : "Missing in WP",
             });
 
-            if (item.children?.length) {
-                result.push(...MenuComparator.flattenTree(item.children, path));
-            }
+            if (!wpMenu) continue;
+
+            this.compareItems(
+                dMenu.items,
+                wpMenu.items,
+                slug,
+                "ITEM",
+                rows
+            );
         }
 
-        return result;
-    }
+        // EXTRA MENUS IN WORDPRESS
+        const dIds = drupalMenus.map(m => this.normalizeSlug(m.menuId));
 
-    static detectDuplicates(flatList, sourceLabel) {
-        const seen = new Map();
-        const duplicates = [];
-
-        for (const row of flatList) {
-            if (seen.has(row.title)) {
-                duplicates.push({
-                    Node: row.path,
-                    Parent: row.parent,
-                    Item: row.title,
-                    Issue: `Duplicate menu item in ${sourceLabel}`,
-                    DrupalURL: "",
-                    WordPressURL: ""
+        for (const wpMenu of wpMenus) {
+            const slug = this.normalizeSlug(wpMenu.menuSlug);
+            if (!dIds.includes(slug)) {
+                rows.push({
+                    WhichMenu: slug,
+                    WhichItem: "MENU",
+                    DrupalValue: "",
+                    WordPressValue: wpMenu.menuTitle,
+                    Status: "Extra in WP",
                 });
             }
-            seen.set(row.title, true);
         }
 
-        return duplicates;
+        return rows;
     }
 
-    static compareMenus(drupalItems, wpItems, menuName) {
-        let results = [];
+    static compareItems(dItems, wItems, menuId, level, rows) {
+        const used = new Set();
 
-        const flatDrupal = MenuComparator.flattenTree(drupalItems);
-        const flatWP = MenuComparator.flattenTree(wpItems);
+        for (const d of dItems) {
+            const matchIndex = wItems.findIndex(
+                (w, i) =>
+                    !used.has(i) &&
+                    (w.title?.trim() === d.title?.trim() ||
+                     this.normalizeHref(w.href) === this.normalizeHref(d.href))
+            );
 
-        const mapWP = new Map(flatWP.map(i => [i.path, i]));
-        const mapDrupal = new Map(flatDrupal.map(i => [i.path, i]));
+            const nextLevel =
+                level === "ITEM" ? "CHILD" :
+                level === "CHILD" ? "SUBCHILD" :
+                "SUBCHILD";
 
-        // 5️⃣ Duplicate items check
-        results.push(...MenuComparator.detectDuplicates(flatDrupal, "Drupal"));
-        results.push(...MenuComparator.detectDuplicates(flatWP, "WordPress"));
-
-        // Drupal → WP
-        for (const d of flatDrupal) {
-            const w = mapWP.get(d.path);
-
-            if (!w) {
-                // 3️⃣ Hierarchy mismatch: title exists elsewhere
-                const existsElsewhere = flatWP.find(x => x.title === d.title);
-
-                if (existsElsewhere) {
-                    results.push({
-                        Node: d.path,
-                        Parent: d.parent,
-                        Item: d.title,
-                        Issue: "Hierarchy mismatch — title exists under different parent",
-                        DrupalURL: d.href,
-                        WordPressURL: existsElsewhere.href
-                    });
-                    continue;
-                }
-
-                // Normal missing
-                results.push({
-                    Node: d.path,
-                    Parent: d.parent,
-                    Item: d.title,
-                    Issue: "Missing in WordPress",
-                    DrupalURL: d.href,
-                    WordPressURL: ""
+            if (matchIndex === -1) {
+                // title missing
+                rows.push({
+                    WhichMenu: menuId,
+                    WhichItem: `${level}_TITLE`,
+                    DrupalValue: d.title,
+                    WordPressValue: "",
+                    Status: "Missing in WP",
+                });
+                // href missing
+                rows.push({
+                    WhichMenu: menuId,
+                    WhichItem: `${level}_HREF`,
+                    DrupalValue: this.normalizeHref(d.href),
+                    WordPressValue: "",
+                    Status: "Missing in WP",
                 });
                 continue;
             }
 
-            if (d.href !== w.href) {
-                results.push({
-                    Node: d.path,
-                    Parent: d.parent,
-                    Item: d.title,
-                    Issue: "URL mismatch",
-                    DrupalURL: d.href,
-                    WordPressURL: w.href
-                });
-            }
+            const w = wItems[matchIndex];
+            used.add(matchIndex);
+
+            // TITLE
+            rows.push({
+                WhichMenu: menuId,
+                WhichItem: `${level}_TITLE`,
+                DrupalValue: d.title,
+                WordPressValue: w.title,
+                Status: d.title === w.title ? "OK" : "Title Mismatch",
+            });
+
+            // HREF
+            const dHref = this.normalizeHref(d.href);
+            const wHref = this.normalizeHref(w.href);
+
+            rows.push({
+                WhichMenu: menuId,
+                WhichItem: `${level}_HREF`,
+                DrupalValue: dHref,
+                WordPressValue: wHref,
+                Status: dHref === wHref ? "OK" : "URL Mismatch",
+            });
+
+            // now children
+            this.compareItems(
+                d.children || [],
+                w.children || [],
+                menuId,
+                nextLevel,
+                rows
+            );
         }
 
-        // WP → Drupal
-        for (const w of flatWP) {
-            if (!mapDrupal.has(w.path)) {
-                results.push({
-                    Node: w.path,
-                    Parent: w.parent,
-                    Item: w.title,
-                    Issue: "Extra in WordPress or hierarchy mismatch",
-                    DrupalURL: "",
-                    WordPressURL: w.href
+        // EXTRA WORDPRESS ITEMS
+        wItems.forEach((w, i) => {
+            if (!used.has(i)) {
+                rows.push({
+                    WhichMenu: menuId,
+                    WhichItem: `${level}_TITLE`,
+                    DrupalValue: "",
+                    WordPressValue: w.title,
+                    Status: "Extra in WP",
+                });
+                rows.push({
+                    WhichMenu: menuId,
+                    WhichItem: `${level}_HREF`,
+                    DrupalValue: "",
+                    WordPressValue: this.normalizeHref(w.href),
+                    Status: "Extra in WP",
                 });
             }
-        }
-
-        return results;
+        });
     }
 }
 
 
 /* ======================================================================
-   MAIN TEST
+   MAIN TEST (UPDATED)
 ====================================================================== */
 test.setTimeout(15 * 60 * 60 * 1000);
 
@@ -308,57 +316,47 @@ test("🔥 Full Drupal vs WordPress Menu Comparison", async ({ page }) => {
     const drupalFile = "file://" + path.resolve(__dirname, "Drupalv3.html");
     const wpFile = "file://" + path.resolve(__dirname, "WordpressV3.html");
 
-    console.log("📥 Extracting Drupal HTML menus...");
-    await page.goto(drupalFile);
-    const drupalMenus = await extractDrupalMenus(page);
+    // console.log("📥 Extracting Drupal HTML menus...");
+    // await page.goto(drupalFile);
+    // const drupalMenusExtracted = await extractDrupalMenus(page);
 
-    console.log("📥 Extracting WordPress HTML menus...");
-    await page.goto(wpFile);
-    const wpMenus = await extractWordPressMenus(page);
+    // console.log("📥 Extracting WordPress HTML menus...");
+    // await page.goto(wpFile);
+    // const wpMenusExtracted = await extractWordPressMenus(page);
 
-    fs.writeFileSync("DrupalMenus.json", JSON.stringify(drupalMenus, null, 2));
-    fs.writeFileSync("WordPressMenus.json", JSON.stringify(wpMenus, null, 2));
+    // SAVE JSONS
+    // fs.writeFileSync("DrupalMenus.json", JSON.stringify(drupalMenusExtracted, null, 2));
+    // fs.writeFileSync("WordPressMenus.json", JSON.stringify(wpMenusExtracted, null, 2));
 
-    let comparison = [];
+    // console.log("💾 Saved extract JSONs, reloading from file...");
 
-    // Compare each Drupal menu with WP menu
+    // RE-LOAD for comparison
+    const drupalMenus = JSON.parse(fs.readFileSync("DrupalMenus.json", "utf8"));
+    const wpMenus = JSON.parse(fs.readFileSync("WordPressMenus.json", "utf8"));
+
+    let results = [];
+
     for (const d of drupalMenus) {
-        const w = wpMenus.find(x => x.menuSlug === d.menuSlug);
+        const wpMatch = wpMenus.find(w =>
+            w.menuSlug.replace(/\[term-id.*?\]/gi, "").trim() === d.menuId.trim()
+        );
 
-        if (!w) {
-            comparison.push({
+        if (!wpMatch) {
+            results.push({
                 Node: d.menuTitle,
                 Item: "",
-                Issue: "Entire menu missing in WordPress",
+                Issue: "WP menu missing",
                 DrupalURL: "",
                 WordPressURL: ""
             });
             continue;
         }
 
-        comparison.push(...MenuComparator.compareMenus(d.items, w.items, d.menuTitle));
+        results.push(...MenuComparator.compare(d.items, wpMatch.items));
     }
 
-    // Check extra WP menus
-    for (const w of wpMenus) {
-        const exists = drupalMenus.find(x => x.menuSlug === w.menuSlug);
-        if (!exists) {
-            comparison.push({
-                Node: w.menuTitle,
-                Item: "",
-                Issue: "Extra menu in WordPress",
-                DrupalURL: "",
-                WordPressURL: ""
-            });
-        }
-    }
+    fs.writeFileSync("MenuComparison.json", JSON.stringify(results, null, 2));
+    await finalFactory.utility.saveToExcel("menuHtmlsComparison.xlsx", "menuHtmlsComparison", results, "comparison");
 
-    fs.writeFileSync("MenuComparison.json", JSON.stringify(comparison, null, 2));
-    await finalFactory.utility.saveToExcel("menuHtmlsComparison.xlsx", "menuHtmlsComparison", comparison, "comparison");
-
-    console.log("🎉 Comparison completed!");
-    console.log("✔ DrupalMenus.json created");
-    console.log("✔ WordPressMenus.json created");
-    console.log("✔ MenuComparison.json created");
-    console.log("✔ Excel saved: comparison/menuHtmlsComparison.xlsx");
+    console.log("🎉 DONE!");
 });
