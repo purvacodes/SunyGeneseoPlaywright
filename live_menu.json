@@ -1,0 +1,850 @@
+[
+  {
+    "CPT": "/steinhauer/",
+    "slug": "/steinhauer/",
+    "url": "https://www.geneseo.edu/steinhauer/",
+    "menu": [
+      {
+        "menutext": "Research",
+        "menuhref": "https://www.geneseo.edu/steinhauer/research",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Reference Letter Form (PDF)",
+        "menuhref": "https://www.geneseo.edu/sites/default/files/sites/steinhauer/ReferenceLetterForm.pdf",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "FERPA Release Form (PDF)",
+        "menuhref": "https://www.geneseo.edu/sites/default/files/sites/steinhauer/Reference_Request_and_Ferpa_Release.pdf",
+        "type": "mainmenu",
+        "submenu": []
+      }
+    ],
+    "status": "OK"
+  },
+  {
+    "CPT": "/rotc/",
+    "slug": "/rotc/",
+    "url": "https://www.geneseo.edu/rotc/",
+    "menu": [
+      {
+        "menutext": "ROTC",
+        "menuhref": "https://www.geneseo.edu/rotc",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "A Day in the Life of an ROTC Cadet",
+            "submenuhref": "https://www.geneseo.edu/army-rotc/day-life-rotc-cadet",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Army ROTC Scholarships",
+            "submenuhref": "https://www.geneseo.edu/army-rotc/army-rotc-scholarships",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Our Cadets In Action",
+            "submenuhref": "https://www.geneseo.edu/army-rotc/our-cadets-action",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Contact Us",
+            "submenuhref": "https://www.geneseo.edu/army-rotc/contact-us",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Meet Our Cadets",
+            "submenuhref": "https://www.geneseo.edu/army-rotc/meet-our-cadets",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Links",
+            "submenuhref": "https://www.geneseo.edu/army-rotc/army-rotc-links",
+            "type": "submenu"
+          }
+        ]
+      }
+    ],
+    "status": "OK"
+  },
+  {
+    "CPT": "biochemistry",
+    "slug": "/biochemistry",
+    "url": "https://www.geneseo.edu/biochemistry",
+    "menu": [
+      {
+        "menutext": "Home",
+        "menuhref": "https://www.geneseo.edu/biochemistry",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "About the Program",
+        "menuhref": "https://www.geneseo.edu/biochemistry/program",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Facilities and Equipment",
+        "menuhref": "https://www.geneseo.edu/biochemistry/facilities",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Research Opportunities",
+        "menuhref": "https://www.geneseo.edu/biochemistry/research-opportunities",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Student Awards",
+        "menuhref": "https://www.geneseo.edu/biochemistry/student-awards",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Student Success",
+        "menuhref": "https://www.geneseo.edu/biochemistry/student-success",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Contact Us",
+        "menuhref": "https://www.geneseo.edu/biochemistry/contact",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Biology Department",
+        "menuhref": "https://www.geneseo.edu/biology",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Chemistry & Biochemistry Department",
+        "menuhref": "https://www.geneseo.edu/chemistry",
+        "type": "mainmenu",
+        "submenu": []
+      }
+    ],
+    "status": "OK"
+  },
+  {
+    "CPT": "/cit/",
+    "slug": "/cit/",
+    "url": "https://www.geneseo.edu/cit/",
+    "menu": [
+      {
+        "menutext": "Home",
+        "menuhref": "https://www.geneseo.edu/cit",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Systems Status",
+        "menuhref": "https://status.geneseo.edu/",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "CIT Self Help",
+        "menuhref": "https://geneseo.atlassian.net/wiki/spaces/HELP/overview?homepageId=76775434",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Staff",
+        "menuhref": "https://www.geneseo.edu/cit/faculty-staff",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "CIT KnightNet (employees & students)",
+        "menuhref": "https://sunygeneseo.sharepoint.com/sites/CITKnightNet",
+        "type": "mainmenu",
+        "submenu": []
+      }
+    ],
+    "status": "OK"
+  },
+  {
+    "CPT": "/education/undergraduate_to_take_graduate_course",
+    "slug": "/education/undergraduate_to_take_graduate_course",
+    "url": "https://www.geneseo.edu/education/undergraduate_to_take_graduate_course",
+    "menu": [
+      {
+        "menutext": "About Us",
+        "menuhref": "https://www.geneseo.edu/education/about_us",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Accreditation",
+        "menuhref": "https://www.geneseo.edu/education/accreditation",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Accreditation Process",
+            "submenuhref": "https://www.geneseo.edu/education/accreditation-process",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Admission",
+        "menuhref": "https://www.geneseo.edu/education/admissions",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Academic Programs",
+        "menuhref": "https://www.geneseo.edu/education/academic_programs",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Accreditation Process",
+            "submenuhref": "https://www.geneseo.edu/education/accreditation-process",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Adolescence Education",
+            "submenuhref": "https://www.geneseo.edu/education/adolescence-education",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Early Childhood/Childhood Education",
+            "submenuhref": "https://www.geneseo.edu/education/early-childhood-and-childhood-education",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Childhood with Special Education (Grades 1-6)",
+            "submenuhref": "https://www.geneseo.edu/education/childhood-special-education-grades-1-6",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Teaching Students with Disabilities (All Grades) with Childhood Education (Grades 1-6)",
+            "submenuhref": "https://www.geneseo.edu/education/teaching-students-disabilities-all-grades-childhood-education-grades-1-6",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Graduate Program",
+            "submenuhref": "https://www.geneseo.edu/education/graduate-programs-education",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Office of Field Experiences",
+        "menuhref": "https://www.geneseo.edu/education/office-field-experiences",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Accreditation Process",
+            "submenuhref": "https://www.geneseo.edu/education/accreditation-process",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Field Placements",
+            "submenuhref": "https://www.geneseo.edu/education/field-placementpractica",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Student Teaching",
+            "submenuhref": "https://www.geneseo.edu/education/student-teaching-official-page",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Forms for Student Teaching",
+            "submenuhref": "https://www.geneseo.edu/education/forms_student_teaching",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Teacher Certification",
+        "menuhref": "https://www.geneseo.edu/education/teacher-certification",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Accreditation Process",
+            "submenuhref": "https://www.geneseo.edu/education/accreditation-process",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "TEACH Walkthrough",
+            "submenuhref": "https://www.geneseo.edu/education/teach-walkthrough",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "TEACH Certification Application Fields",
+            "submenuhref": "https://www.geneseo.edu/education/teach-certification-application-help",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Previous Program Codes",
+            "submenuhref": "https://www.geneseo.edu/education/previous-program-codes-state-certification",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Current NYSED Program Codes",
+            "submenuhref": "https://www.geneseo.edu/education/current-nysed-program-codes",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Exams",
+            "submenuhref": "https://www.geneseo.edu/education/nysed-exams",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Fingerprinting",
+            "submenuhref": "https://www.geneseo.edu/education/fingerprinting-requirement-new-york-state-teaching-certification",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Certification FAQs",
+            "submenuhref": "https://www.geneseo.edu/education/certification-faqs",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Certification Notices",
+            "submenuhref": "https://www.geneseo.edu/education/certification-notices",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Extensions & Additional Certifications",
+            "submenuhref": "https://www.geneseo.edu/education/extensions-additional-certifications",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "September 2025 Child Abuse Identification Training",
+            "submenuhref": "https://www.geneseo.edu/education/september-2025-child-abuse-identification-training",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Resources",
+        "menuhref": "https://www.geneseo.edu/education/student_resources",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Dispositions",
+            "submenuhref": "https://www.geneseo.edu/education/dispositions",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Community Outreach Programs",
+            "submenuhref": "https://www.geneseo.edu/education/related_programs",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Organizations for Candidates",
+            "submenuhref": "https://www.geneseo.edu/education/orgs",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "FAQs",
+            "submenuhref": "https://www.geneseo.edu/education/faqs",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Fulbright Opportunities",
+            "submenuhref": "https://www.geneseo.edu/education/fulbright-opportunities",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "SOE Newsletter",
+            "submenuhref": "https://www.geneseo.edu/education/school-education-newsletter",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Education Faculty & Staff",
+        "menuhref": "https://www.geneseo.edu/education/faculty-staff",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Recent News",
+        "menuhref": "https://www.geneseo.edu/education/school-education-news",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Contact Us",
+        "menuhref": "https://www.geneseo.edu/education/contact",
+        "type": "mainmenu",
+        "submenu": []
+      }
+    ],
+    "status": "OK"
+  },
+  {
+    "CPT": "/geology/mission_statement/",
+    "slug": "/geology/mission_statement/",
+    "url": "https://www.geneseo.edu/geology/mission_statement/",
+    "menu": [
+      {
+        "menutext": "Home",
+        "menuhref": "https://www.geneseo.edu/geology",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Photo Gallery",
+            "submenuhref": "https://www.geneseo.edu/geology/photos",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Research Facilities",
+            "submenuhref": "https://www.geneseo.edu/geology/facilities-department-geological-sciences",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Programs of Study",
+        "menuhref": "https://www.geneseo.edu/geology/program-information",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Course Offerings",
+            "submenuhref": "https://www.geneseo.edu/geology/course-offerings",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "January Field Trips",
+            "submenuhref": "https://www.geneseo.edu/geology/january-field-trips",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Faculty and Staff",
+        "menuhref": "https://www.geneseo.edu/geology/faculty-staff",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Student Resources",
+        "menuhref": "https://www.geneseo.edu/geology/current_students",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Why Study Geology?",
+            "submenuhref": "https://www.geneseo.edu/geology/prospective_students",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Mission Statement",
+            "submenuhref": "https://www.geneseo.edu/geology/mission_statement",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Career Options",
+            "submenuhref": "https://www.geneseo.edu/geology/careers",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Career Information",
+            "submenuhref": "https://www.geneseo.edu/geology/career_information",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Earth Science Links",
+            "submenuhref": "https://www.geneseo.edu/geology/teaching_resource",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Geneseo Resources",
+            "submenuhref": "https://www.geneseo.edu/geology/resources",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Research Opportunities",
+            "submenuhref": "https://www.geneseo.edu/geology/how-apply-research",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Graduate School",
+            "submenuhref": "https://www.geneseo.edu/geology/grad_school",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Internships & Volunteering",
+            "submenuhref": "https://www.geneseo.edu/geology/intern",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Scholarships & Awards",
+            "submenuhref": "https://www.geneseo.edu/geology/scholarships",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Department News",
+        "menuhref": "https://www.geneseo.edu/geology/geological-environmental-and-planetary-sciences-department-news",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Alumni",
+        "menuhref": "https://www.geneseo.edu/geology/alumni",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Donate to Geology",
+        "menuhref": "https://www.geneseo.edu/geology/donations-geology-department",
+        "type": "mainmenu",
+        "submenu": []
+      }
+    ],
+    "status": "OK"
+  },
+  {
+    "CPT": "/geology/prospective_students/",
+    "slug": "/geology/prospective_students/",
+    "url": "https://www.geneseo.edu/geology/prospective_students/",
+    "menu": [
+      {
+        "menutext": "Home",
+        "menuhref": "https://www.geneseo.edu/geology",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Photo Gallery",
+            "submenuhref": "https://www.geneseo.edu/geology/photos",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Research Facilities",
+            "submenuhref": "https://www.geneseo.edu/geology/facilities-department-geological-sciences",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Programs of Study",
+        "menuhref": "https://www.geneseo.edu/geology/program-information",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Course Offerings",
+            "submenuhref": "https://www.geneseo.edu/geology/course-offerings",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "January Field Trips",
+            "submenuhref": "https://www.geneseo.edu/geology/january-field-trips",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Faculty and Staff",
+        "menuhref": "https://www.geneseo.edu/geology/faculty-staff",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Student Resources",
+        "menuhref": "https://www.geneseo.edu/geology/current_students",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Why Study Geology?",
+            "submenuhref": "https://www.geneseo.edu/geology/prospective_students",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Mission Statement",
+            "submenuhref": "https://www.geneseo.edu/geology/mission_statement",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Career Options",
+            "submenuhref": "https://www.geneseo.edu/geology/careers",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Career Information",
+            "submenuhref": "https://www.geneseo.edu/geology/career_information",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Earth Science Links",
+            "submenuhref": "https://www.geneseo.edu/geology/teaching_resource",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Geneseo Resources",
+            "submenuhref": "https://www.geneseo.edu/geology/resources",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Research Opportunities",
+            "submenuhref": "https://www.geneseo.edu/geology/how-apply-research",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Graduate School",
+            "submenuhref": "https://www.geneseo.edu/geology/grad_school",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Internships & Volunteering",
+            "submenuhref": "https://www.geneseo.edu/geology/intern",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Scholarships & Awards",
+            "submenuhref": "https://www.geneseo.edu/geology/scholarships",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Department News",
+        "menuhref": "https://www.geneseo.edu/geology/geological-environmental-and-planetary-sciences-department-news",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Alumni",
+        "menuhref": "https://www.geneseo.edu/geology/alumni",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Donate to Geology",
+        "menuhref": "https://www.geneseo.edu/geology/donations-geology-department",
+        "type": "mainmenu",
+        "submenu": []
+      }
+    ],
+    "status": "OK"
+  },
+  {
+    "CPT": "/education/admissions",
+    "slug": "/education/admissions",
+    "url": "https://www.geneseo.edu/education/admissions",
+    "menu": [
+      {
+        "menutext": "About Us",
+        "menuhref": "https://www.geneseo.edu/education/about_us",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Accreditation",
+        "menuhref": "https://www.geneseo.edu/education/accreditation",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Accreditation Process",
+            "submenuhref": "https://www.geneseo.edu/education/accreditation-process",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Admission",
+        "menuhref": "https://www.geneseo.edu/education/admissions",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Academic Programs",
+        "menuhref": "https://www.geneseo.edu/education/academic_programs",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Accreditation Process",
+            "submenuhref": "https://www.geneseo.edu/education/accreditation-process",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Adolescence Education",
+            "submenuhref": "https://www.geneseo.edu/education/adolescence-education",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Early Childhood/Childhood Education",
+            "submenuhref": "https://www.geneseo.edu/education/early-childhood-and-childhood-education",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Childhood with Special Education (Grades 1-6)",
+            "submenuhref": "https://www.geneseo.edu/education/childhood-special-education-grades-1-6",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Teaching Students with Disabilities (All Grades) with Childhood Education (Grades 1-6)",
+            "submenuhref": "https://www.geneseo.edu/education/teaching-students-disabilities-all-grades-childhood-education-grades-1-6",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Graduate Program",
+            "submenuhref": "https://www.geneseo.edu/education/graduate-programs-education",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Office of Field Experiences",
+        "menuhref": "https://www.geneseo.edu/education/office-field-experiences",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Accreditation Process",
+            "submenuhref": "https://www.geneseo.edu/education/accreditation-process",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Field Placements",
+            "submenuhref": "https://www.geneseo.edu/education/field-placementpractica",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Student Teaching",
+            "submenuhref": "https://www.geneseo.edu/education/student-teaching-official-page",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Forms for Student Teaching",
+            "submenuhref": "https://www.geneseo.edu/education/forms_student_teaching",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Teacher Certification",
+        "menuhref": "https://www.geneseo.edu/education/teacher-certification",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Accreditation Process",
+            "submenuhref": "https://www.geneseo.edu/education/accreditation-process",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "TEACH Walkthrough",
+            "submenuhref": "https://www.geneseo.edu/education/teach-walkthrough",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "TEACH Certification Application Fields",
+            "submenuhref": "https://www.geneseo.edu/education/teach-certification-application-help",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Previous Program Codes",
+            "submenuhref": "https://www.geneseo.edu/education/previous-program-codes-state-certification",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Current NYSED Program Codes",
+            "submenuhref": "https://www.geneseo.edu/education/current-nysed-program-codes",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Exams",
+            "submenuhref": "https://www.geneseo.edu/education/nysed-exams",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Fingerprinting",
+            "submenuhref": "https://www.geneseo.edu/education/fingerprinting-requirement-new-york-state-teaching-certification",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Certification FAQs",
+            "submenuhref": "https://www.geneseo.edu/education/certification-faqs",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Certification Notices",
+            "submenuhref": "https://www.geneseo.edu/education/certification-notices",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Extensions & Additional Certifications",
+            "submenuhref": "https://www.geneseo.edu/education/extensions-additional-certifications",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "September 2025 Child Abuse Identification Training",
+            "submenuhref": "https://www.geneseo.edu/education/september-2025-child-abuse-identification-training",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Resources",
+        "menuhref": "https://www.geneseo.edu/education/student_resources",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Accreditation Process",
+            "submenuhref": "https://www.geneseo.edu/education/accreditation-process",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Dispositions",
+            "submenuhref": "https://www.geneseo.edu/education/dispositions",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Community Outreach Programs",
+            "submenuhref": "https://www.geneseo.edu/education/related_programs",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Organizations for Candidates",
+            "submenuhref": "https://www.geneseo.edu/education/orgs",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "FAQs",
+            "submenuhref": "https://www.geneseo.edu/education/faqs",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Fulbright Opportunities",
+            "submenuhref": "https://www.geneseo.edu/education/fulbright-opportunities",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "SOE Newsletter",
+            "submenuhref": "https://www.geneseo.edu/education/school-education-newsletter",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Education Faculty & Staff",
+        "menuhref": "https://www.geneseo.edu/education/faculty-staff",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Recent News",
+        "menuhref": "https://www.geneseo.edu/education/school-education-news",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Contact Us",
+        "menuhref": "https://www.geneseo.edu/education/contact",
+        "type": "mainmenu",
+        "submenu": []
+      }
+    ],
+    "status": "OK"
+  }
+]

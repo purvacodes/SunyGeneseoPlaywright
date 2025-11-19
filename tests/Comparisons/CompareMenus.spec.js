@@ -68,43 +68,104 @@ function compareMenus(liveArr, devArr, path = "") {
   const len = Math.max(liveArr.length, devArr.length);
 
   for (let i = 0; i < len; i++) {
-    const liveItem = liveArr[i];
-    const devItem = devArr[i];
-    const currentPath = path + " > " + (liveItem?.menutext || liveItem?.submenutext || devItem?.menutext || devItem?.submenutext || `Item${i}`);
+    const L = liveArr[i];
+    const D = devArr[i];
 
-    if (!liveItem) {
-      diffs.push({ Type: "Missing in LIVE", LIVE: "", DEV: devItem.menutext || devItem.submenutext, Details: currentPath });
-      continue;
-    }
-    if (!devItem) {
-      diffs.push({ Type: "Missing in DEV", LIVE: liveItem.menutext || liveItem.submenutext, DEV: "", Details: currentPath });
+    const current = path + " > " + (L?.menutext || L?.submenutext || D?.menutext || D?.submenutext || "");
+
+    if (!L) {
+      diffs.push({ Type: "Missing in LIVE", LIVE: "", DEV: D.menutext, Details: current });
       continue;
     }
 
-    if ((liveItem.menutext || liveItem.submenutext) !== (devItem.menutext || devItem.submenutext)) {
+    if (!D) {
+      diffs.push({ Type: "Missing in DEV", LIVE: L.menutext, DEV: "", Details: current });
+      continue;
+    }
+
+    if (L.menutext !== D.menutext)
+      diffs.push({ Type: "Text Mismatch", LIVE: L.menutext, DEV: D.menutext, Details: current });
+
+    if (L.menuhref !== D.menuhref)
+      diffs.push({ Type: "Href Mismatch", LIVE: L.menuhref, DEV: D.menuhref, Details: current });
+
+    // SUBMENU LEVEL 1
+    diffs.push(...compareSubItems(L.submenuItems, D.submenuItems, current));
+  }
+
+  return diffs;
+}
+
+function compareSubItems(liveSub, devSub, path) {
+  const diffs = [];
+  liveSub = liveSub || [];
+devSub = devSub || [];
+
+const len = Math.max(liveSub.length, devSub.length);
+
+
+  for (let i = 0; i < len; i++) {
+    const L = liveSub[i];
+    const D = devSub[i];
+    const current = path + " > " + (L?.submenutext || D?.submenutext || "");
+
+    if (!L) {
+      diffs.push({ Type: "Missing in LIVE", LIVE: "", DEV: D.submenutext, Details: current });
+      continue;
+    }
+
+    if (!D) {
+      diffs.push({ Type: "Missing in DEV", LIVE: L.submenutext, DEV: "", Details: current });
+      continue;
+    }
+
+    if (L.submenutext !== D.submenutext)
+      diffs.push({ Type: "Text Mismatch", LIVE: L.submenutext, DEV: D.submenutext, Details: current });
+
+    if (L.submenuhref !== D.submenuhref)
+      diffs.push({ Type: "Href Mismatch", LIVE: L.submenuhref, DEV: D.submenuhref, Details: current });
+
+    // nested submenu
+    diffs.push(...compareNestedItems(L.nestedsubmenuItems, D.nestedsubmenuItems, current));
+  }
+
+  return diffs;
+}
+
+function compareNestedItems(LN, DN, path) {
+  const diffs = [];
+  const len = Math.max(LN.length, DN.length);
+
+  for (let i = 0; i < len; i++) {
+    const L = LN[i];
+    const D = DN[i];
+    const current = path + " > " + (L?.nestedmenutext || D?.nestedmenutext || "");
+
+    if (!L) {
+      diffs.push({ Type: "Missing in LIVE", LIVE: "", DEV: D?.nestedmenutext, Details: current });
+      continue;
+    }
+
+    if (!D) {
+      diffs.push({ Type: "Missing in DEV", LIVE: L?.nestedmenutext, DEV: "", Details: current });
+      continue;
+    }
+
+    if (L.nestedmenutext !== D.nestedmenutext)
       diffs.push({
         Type: "Text Mismatch",
-        LIVE: liveItem.menutext || liveItem.submenutext,
-        DEV: devItem.menutext || devItem.submenutext,
-        Details: currentPath
+        LIVE: L.nestedmenutext,
+        DEV: D.nestedmenutext,
+        Details: current
       });
-    }
 
-    if ((liveItem.menuhref || liveItem.submenuhref) !== (devItem.menuhref || devItem.submenuhref)) {
+    if (L.nestedmenuhref !== D.nestedmenuhref)
       diffs.push({
         Type: "Href Mismatch",
-        LIVE: liveItem.menuhref || liveItem.submenuhref,
-        DEV: devItem.menuhref || devItem.submenuhref,
-        Details: currentPath
+        LIVE: L.nestedmenuhref,
+        DEV: D.nestedmenuhref,
+        Details: current
       });
-    }
-
-    if (liveItem.submenu && devItem.submenu)
-      diffs.push(...compareMenus(liveItem.submenu, devItem.submenu, currentPath));
-    else if (liveItem.submenu && !devItem.submenu)
-      diffs.push({ Type: "Missing Submenu in DEV", LIVE: currentPath, DEV: "", Details: currentPath });
-    else if (!liveItem.submenu && devItem.submenu)
-      diffs.push({ Type: "Missing Submenu in LIVE", LIVE: "", DEV: currentPath, Details: currentPath });
   }
 
   return diffs;
@@ -166,62 +227,90 @@ async function collectMenus(envName, baseUrl, urls) {
 // 🧭 DEV MENU SCRAPER (handles multiple dropdowns)
 // ========================================================
 async function scrapeDevMenu(page, baseUrl) {
-  console.log("🖥️ Scraping DEV site...");
+  console.log(`\n🖥️ Scraping DEV: ${page.url()}`);
+
   const menuData = [];
   const visitedSubmenuHrefs = new Set();
 
   const headers = page.locator("h2.subsite-menu-header");
   const headerCount = await headers.count();
-  console.log(`Found ${headerCount} headers`);
+
+  console.log(`🔹 Found ${headerCount} menu headers.`);
 
   for (let i = 0; i < headerCount; i++) {
     const headerText = await headers.nth(i).innerText().catch(() => "—");
-    console.log(`Header: ${headerText}`);
+    console.log(`📂 Header: ${headerText}`);
 
     const items = page.locator("li.menu-item a.menu-link.subsite-menu-item");
     const itemCount = await items.count();
-    console.log(`Found ${itemCount} top-level menu items under this header`);
+
+    console.log(`   🔸 Found ${itemCount} top-level menu items under this header.`);
 
     for (let j = 0; j < itemCount; j++) {
       const item = items.nth(j);
 
-      // Skip items that are already in a submenu
-      const isInsideSubmenu = await item.locator("xpath=ancestor::ul[contains(@class,'sub-menu')]").count() > 0;
+      const parentLi = item.locator("..").locator("..");
+
+      const isInsideSubmenu =
+        (await item.locator("xpath=ancestor::ul[contains(@class,'sub-menu')]").count()) > 0;
+
+      const hasOwnSubmenu =
+        (await parentLi.locator("> ul.sub-menu").count()) > 0;
+
+      // keep your rule exactly
       if (isInsideSubmenu) continue;
+
 
       const menutext = await item.locator("span.link-text").innerText().catch(() => "—");
       let menuhref = await item.getAttribute("href");
-      if (menuhref?.startsWith("/")) menuhref = `${baseUrl.replace(/\/+$/, "")}${menuhref}`;
+      if (menuhref?.startsWith("/"))
+        menuhref = `${baseUrl.replace(/\/+$/, "")}${menuhref}`;
 
-      console.log(`Top menu: ${menutext} -> ${menuhref}`);
+      console.log(`   🔹 Menu: ${menutext}  →  ${menuhref}`);
 
-      const parentLi = item.locator("..").locator("..");
       const arrow = parentLi.locator("span.dropdown-arrow");
+      const arrowCount = await arrow.count();
+
       const submenu = [];
 
-      // Check if the dropdown exists
-      const arrowCount = await arrow.count();
       if (arrowCount > 0) {
-        console.log(`Dropdown found for ${menutext} (${arrowCount} arrow(s))`);
+        console.log(`      📦 Dropdown detected (${arrowCount} arrow(s)) for "${menutext}"`);
 
         for (let a = 0; a < arrowCount; a++) {
           const thisArrow = arrow.nth(a);
+
+          // 🔥 NEW FIX: ensure arrow belongs to THIS menu item only
+          const arrowLi = await thisArrow.evaluateHandle(el => el.closest("li"));
+
+          const isDirectArrow = await parentLi.evaluate(
+            (li, arrowLi) => li === arrowLi,
+            arrowLi
+          );
+
+          if (!isDirectArrow) continue; // skip child submenu arrows
+
+          // now safe to click
           if (await thisArrow.isVisible()) {
             await thisArrow.scrollIntoViewIfNeeded();
             await thisArrow.click({ force: true });
             await page.waitForTimeout(300);
 
-            const subLinks = parentLi.locator("ul.sub-menu li.submenu-item a.menu-link.subsite-menu-item");
+            const subLinks = parentLi.locator(
+              "> ul.sub-menu li.submenu-item a.menu-link.subsite-menu-item"
+            );
             const subCount = await subLinks.count();
-            console.log(`Found ${subCount} submenu item(s) under ${menutext}`);
+
+            console.log(`         🔸 Found ${subCount} submenu items under "${menutext}"`);
 
             for (let k = 0; k < subCount; k++) {
               const subLink = subLinks.nth(k);
               const submenutext = await subLink.locator("span.link-text").innerText().catch(() => "—");
               let submenuhref = await subLink.getAttribute("href");
-              if (submenuhref?.startsWith("/")) submenuhref = `${baseUrl.replace(/\/+$/, "")}${submenuhref}`;
 
-              console.log(`  Submenu: ${submenutext} -> ${submenuhref}`);
+              if (submenuhref?.startsWith("/"))
+                submenuhref = `${baseUrl.replace(/\/+$/, "")}${submenuhref}`;
+
+              console.log(`            ↳ Submenu: ${submenutext}  →  ${submenuhref}`);
 
               submenu.push({
                 submenutext,
@@ -230,7 +319,7 @@ async function scrapeDevMenu(page, baseUrl) {
                 submenu: []
               });
 
-              visitedSubmenuHrefs.add(submenuhref); // track submenu hrefs
+              visitedSubmenuHrefs.add(submenuhref);
             }
           }
         }
@@ -239,23 +328,28 @@ async function scrapeDevMenu(page, baseUrl) {
       menuData.push({
         menutext,
         menuhref,
-        type: "mainmenu",
+        type: isInsideSubmenu ? "submenu-parent" : "mainmenu",
         submenu
       });
     }
   }
 
-  // Remove top-level menu items that are actually submenus
   const filteredMenu = menuData.filter(item => !visitedSubmenuHrefs.has(item.menuhref));
-  console.log(`✅ DEV menu scraped: ${filteredMenu.length} top-level items`);
+
+  console.log(`\n✅ DEV scraping complete.`);
+  console.log(`📊 Final menu count: ${filteredMenu.length}`);
+
   return filteredMenu;
 }
 
 
-const visited = new Set();
 
+
+const visited = new Set();
 async function scrapeLiveMenuRecursive(page, baseUrl, fullUrl) {
+
   console.log(`\n🌍 Scraping LIVE: ${fullUrl}`);
+
   const result = [];
   const allSubmenuHrefs = new Set();
 
@@ -263,6 +357,7 @@ async function scrapeLiveMenuRecursive(page, baseUrl, fullUrl) {
     console.log(`↩️ Already visited: ${fullUrl}`);
     return result;
   }
+
   visited.add(fullUrl);
 
   try {
@@ -270,90 +365,144 @@ async function scrapeLiveMenuRecursive(page, baseUrl, fullUrl) {
     await closeCookiePopup(page);
     await page.waitForTimeout(800);
 
-    // Get all top-level menu links
-    const menuItems = page.locator("li.nav-item.list-group-item > a.nav-link");
+    // ------------------------------
+    // GET TOP-LEVEL MENU ITEMS
+    // ------------------------------
+const menuItems = page.locator("li.nav-item.list-group-item > a.nav-link:not(.sub-menu-link)");
+
     const count = await menuItems.count();
+
     console.log(`🔹 Found ${count} top-level menu items.`);
 
     const toggleQueue = [];
 
-    // Pass 1: Collect all menu links + detect toggles
+    // ------------------------------
+    // PASS 1 — READ TOP-LEVEL
+    // ------------------------------
     for (let i = 0; i < count; i++) {
+
       const item = menuItems.nth(i);
+
       const menutext = (await item.innerText().catch(() => "—")).trim();
+
       let menuhref = await item.getAttribute("href");
       if (!menuhref) continue;
-      if (menuhref.startsWith("/")) menuhref = `${baseUrl.replace(/\/+$/, "")}${menuhref}`;
+
+      if (menuhref.startsWith("/")) {
+        menuhref = `${baseUrl.replace(/\/+$/, "")}${menuhref}`;
+      }
 
       const parentLi = item.locator("..");
       const isDropdown = await item.evaluate(el => el.classList.contains("dropdown-toggle"));
-      const hasExpanded = await parentLi.locator(".group-menu-expanded").count() > 0;
+      const hasExpanded = (await parentLi.locator(".group-menu-expanded").count()) > 0;
+const isInsideSubmenu = await item.evaluate(el => !!el.closest(".sub-menu"));
+  if (isInsideSubmenu) {
+    console.log(`⏭️ Skipped submenu item (wrongly detected as main): ${menutext}`);
+    continue;
+  }
+      const entry = {
+        menutext,
+        menuhref,
+        type: "mainmenu",
+        submenu: []
+      };
 
-      const entry = { menutext, menuhref, type: "mainmenu", submenu: [] };
-
+      // Case: submenu already visible on same page
       if (hasExpanded) {
-        // scrape immediately if already expanded
         const subLinks = parentLi.locator(".group-menu-expanded li > a");
         const subCount = await subLinks.count();
+
         console.log(`📂 "${menutext}" already expanded with ${subCount} submenu items.`);
+
         for (let j = 0; j < subCount; j++) {
           const subLink = subLinks.nth(j);
           const submenutext = (await subLink.innerText().catch(() => "—")).trim();
+
           let submenuhref = await subLink.getAttribute("href");
           if (!submenuhref) continue;
-          if (submenuhref.startsWith("/")) submenuhref = `${baseUrl.replace(/\/+$/, "")}${submenuhref}`;
-          entry.submenu.push({ submenutext, submenuhref, type: "submenu" });
+
+          if (submenuhref.startsWith("/")) {
+            submenuhref = `${baseUrl.replace(/\/+$/, "")}${submenuhref}`;
+          }
+
+          entry.submenu.push({
+            submenutext,
+            submenuhref,
+            type: "submenu"
+          });
+
           allSubmenuHrefs.add(submenuhref);
         }
-      } else if (isDropdown) {
-        // store for later visit
+      }
+
+      // Case: dropdown toggle, submenu loads on navigation
+      else if (isDropdown) {
         toggleQueue.push({ menutext, menuhref });
       }
 
       result.push(entry);
     }
 
-    console.log(`📦 LIVE toggleQueue (${toggleQueue.length}): ${JSON.stringify(toggleQueue, null, 2)}`);
+    console.log(`📦 LIVE toggleQueue (${toggleQueue.length}):`);
+    console.log(toggleQueue);
 
-    // Pass 2: visit each toggle page
+    // ------------------------------
+    // PASS 2 — VISIT DROPDOWN PAGES
+    // ------------------------------
     for (const toggle of toggleQueue) {
       try {
-        console.log(`   ↳ Navigating to toggle page: ${toggle.menuhref}`);
+        console.log(`↳ Navigating to toggle page: ${toggle.menuhref}`);
+
         await safeGoto(page, toggle.menuhref, { timeout: 90000 });
         await closeCookiePopup(page);
         await page.waitForTimeout(1200);
 
-        // Find expanded section (on navigated page)
         const expandedSection = page.locator(".group-menu-expanded li > a");
         const subCount = await expandedSection.count();
-        console.log(`      🔸 Found ${subCount} submenu links under "${toggle.menutext}"`);
+
+        console.log(`🔸 Found ${subCount} submenu links under "${toggle.menutext}"`);
 
         const submenuArr = [];
+
         for (let k = 0; k < subCount; k++) {
           const subLink = expandedSection.nth(k);
           const submenutext = (await subLink.innerText().catch(() => "—")).trim();
+
           let submenuhref = await subLink.getAttribute("href");
           if (!submenuhref) continue;
-          if (submenuhref.startsWith("/")) submenuhref = `${baseUrl.replace(/\/+$/, "")}${submenuhref}`;
-          submenuArr.push({ submenutext, submenuhref, type: "submenu" });
+
+          if (submenuhref.startsWith("/")) {
+            submenuhref = `${baseUrl.replace(/\/+$/, "")}${submenuhref}`;
+          }
+
+          submenuArr.push({
+            submenutext,
+            submenuhref,
+            type: "submenu"
+          });
+
           allSubmenuHrefs.add(submenuhref);
         }
 
         const parent = result.find(m => m.menutext === toggle.menutext);
         if (parent) {
           parent.submenu = submenuArr;
-          console.log(`      ✅ Attached ${submenuArr.length} submenu items to "${toggle.menutext}"`);
+          console.log(`✅ Attached ${submenuArr.length} submenu items to "${toggle.menutext}"`);
         }
+
       } catch (err) {
         console.warn(`❌ Error expanding "${toggle.menutext}": ${err.message}`);
       }
     }
 
-    // Remove submenu links that appeared as main menu items
+    // --------------------------------
+    // CLEANUP — REMOVE DUPLICATE MAIN ITEMS
+    // --------------------------------
     const filteredResult = result.filter(item => !allSubmenuHrefs.has(item.menuhref));
 
     console.log(`\n✅ LIVE scraping complete for: ${fullUrl}`);
     console.log(`📊 Final menu count: ${filteredResult.length}`);
+
     return filteredResult;
 
   } catch (err) {
@@ -361,7 +510,6 @@ async function scrapeLiveMenuRecursive(page, baseUrl, fullUrl) {
     return result;
   }
 }
-
 
 
 // ========================================================
