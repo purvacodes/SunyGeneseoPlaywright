@@ -154,8 +154,11 @@ async function extractDrupalMenus(page) {
 class MenuComparator {
 
     static normalizeSlug(slug) {
-        return slug.replace(/\[term-id.*?\]/gi, "").replace(/-0$/, "").trim();
-    }
+    return slug
+        ?.replace(/-?\[term-id.*?\]/gi, "")   // remove prefix dash + term-id block
+        ?.replace(/-0$/, "")                 // your previous rule
+        ?.trim();
+}
 
     static normalizeHref(href) {
         return href
@@ -166,143 +169,105 @@ class MenuComparator {
             ?.replace(/\/$/, "")
             ?.trim();
     }
+static compareMenus(drupalMenus, wpMenus) {
+    console.log("🔍 Starting compareMenus -- Drupal:", drupalMenus.length, "WP:", wpMenus.length);
 
-    static compareMenus(drupalMenus, wpMenus) {
-        const rows = [];
+    const rows = [];
 
-        for (const dMenu of drupalMenus) {
-            const slug = this.normalizeSlug(dMenu.menuId);
-            const wpMenu = wpMenus.find(w => this.normalizeSlug(w.menuSlug) === slug);
+    for (const dMenu of drupalMenus) {
 
-            // Menu existence check
-            rows.push({
-                WhichMenu: slug,
-                WhichItem: "MENU",
-                DrupalValue: dMenu.menuTitle,
-                WordPressValue: wpMenu?.menuTitle || "",
-                Status: wpMenu ? "OK" : "Missing in WP",
-            });
+        const slug = this.normalizeSlug(dMenu.menuId);
+        const wpMenu = wpMenus.find(w => this.normalizeSlug(w.menuSlug) === slug);
 
-            if (!wpMenu) continue;
+        console.log(`\n==============================`);
+        console.log(`🔎 Comparing Menu: ${dMenu.menuTitle}`);
+        console.log(`Drupal menuId: ${dMenu.menuId}`);
+        console.log(`WordPress normalizedSlug: ${slug}`);
+        console.log(`==============================\n`);
 
-            this.compareItems(
-                dMenu.items,
-                wpMenu.items,
-                slug,
-                "ITEM",
-                rows
-            );
+        rows.push({
+            WhichMenu: slug,
+            WhichItem: "MENU",
+            DrupalValue: dMenu.menuTitle,
+            WordPressValue: wpMenu?.menuTitle || "",
+            Status: wpMenu ? "OK" : "Missing in WP",
+        });
+
+        if (!wpMenu) {
+            console.log(`❌ WP menu missing: ${slug}`);
+            continue;
         }
 
-        // EXTRA MENUS IN WORDPRESS
-        const dIds = drupalMenus.map(m => this.normalizeSlug(m.menuId));
-
-        for (const wpMenu of wpMenus) {
-            const slug = this.normalizeSlug(wpMenu.menuSlug);
-            if (!dIds.includes(slug)) {
-                rows.push({
-                    WhichMenu: slug,
-                    WhichItem: "MENU",
-                    DrupalValue: "",
-                    WordPressValue: wpMenu.menuTitle,
-                    Status: "Extra in WP",
-                });
-            }
-        }
-
-        return rows;
+        this.compareItems(dMenu.items, wpMenu.items, slug, "ITEM", rows);
     }
 
-    static compareItems(dItems, wItems, menuId, level, rows) {
-        const used = new Set();
+    return rows;
+}
 
-        for (const d of dItems) {
-            const matchIndex = wItems.findIndex(
-                (w, i) =>
-                    !used.has(i) &&
-                    (w.title?.trim() === d.title?.trim() ||
-                     this.normalizeHref(w.href) === this.normalizeHref(d.href))
-            );
 
-            const nextLevel =
-                level === "ITEM" ? "CHILD" :
-                level === "CHILD" ? "SUBCHILD" :
-                "SUBCHILD";
+static compareItems(dItems, wItems, menuId, level, rows) {
 
-            if (matchIndex === -1) {
-                // title missing
-                rows.push({
-                    WhichMenu: menuId,
-                    WhichItem: `${level}_TITLE`,
-                    DrupalValue: d.title,
-                    WordPressValue: "",
-                    Status: "Missing in WP",
-                });
-                // href missing
-                rows.push({
-                    WhichMenu: menuId,
-                    WhichItem: `${level}_HREF`,
-                    DrupalValue: this.normalizeHref(d.href),
-                    WordPressValue: "",
-                    Status: "Missing in WP",
-                });
-                continue;
-            }
+    if (!dItems || dItems.length === 0) {
+        console.log(`⚠ No Drupal ${level}s.`);
+    }
+    if (!wItems || wItems.length === 0) {
+        console.log(`⚠ No WordPress ${level}s.`);
+    }
 
-            const w = wItems[matchIndex];
-            used.add(matchIndex);
+    const used = new Set();
 
-            // TITLE
+    for (const d of dItems) {
+
+        console.log(`  🔸 Compare ${level}:`);
+        console.log(`      Drupal title: ${d.title}`);
+        console.log(`      Drupal href: ${this.normalizeHref(d.href)}`);
+
+        const matchIndex = wItems.findIndex(
+            (w, i) =>
+                !used.has(i) &&
+                (w.title?.trim() === d.title?.trim() ||
+                 this.normalizeHref(w.href) === this.normalizeHref(d.href))
+        );
+
+        if (matchIndex === -1) {
+            console.log("      ❌ No match found in WP\n");
+
             rows.push({
                 WhichMenu: menuId,
                 WhichItem: `${level}_TITLE`,
                 DrupalValue: d.title,
-                WordPressValue: w.title,
-                Status: d.title === w.title ? "OK" : "Title Mismatch",
+                WordPressValue: "",
+                Status: "Missing in WP",
             });
-
-            // HREF
-            const dHref = this.normalizeHref(d.href);
-            const wHref = this.normalizeHref(w.href);
 
             rows.push({
                 WhichMenu: menuId,
                 WhichItem: `${level}_HREF`,
-                DrupalValue: dHref,
-                WordPressValue: wHref,
-                Status: dHref === wHref ? "OK" : "URL Mismatch",
+                DrupalValue: this.normalizeHref(d.href),
+                WordPressValue: "",
+                Status: "Missing in WP",
             });
 
-            // now children
-            this.compareItems(
-                d.children || [],
-                w.children || [],
-                menuId,
-                nextLevel,
-                rows
-            );
+            continue;
         }
 
-        // EXTRA WORDPRESS ITEMS
-        wItems.forEach((w, i) => {
-            if (!used.has(i)) {
-                rows.push({
-                    WhichMenu: menuId,
-                    WhichItem: `${level}_TITLE`,
-                    DrupalValue: "",
-                    WordPressValue: w.title,
-                    Status: "Extra in WP",
-                });
-                rows.push({
-                    WhichMenu: menuId,
-                    WhichItem: `${level}_HREF`,
-                    DrupalValue: "",
-                    WordPressValue: this.normalizeHref(w.href),
-                    Status: "Extra in WP",
-                });
-            }
-        });
+        const w = wItems[matchIndex];
+        used.add(matchIndex);
+
+        console.log(`      WP title: ${w.title}`);
+        console.log(`      WP href: ${this.normalizeHref(w.href)}`);
+        console.log(`      ✔ Match found at index ${matchIndex}\n`);
+
+        const nextLevel =
+            level === "ITEM" ? "CHILD" :
+            level === "CHILD" ? "SUBCHILD" :
+            "SUBCHILD";
+
+        this.compareItems(d.children || [], w.children || [], menuId, nextLevel, rows);
     }
+}
+
+
 }
 
 
@@ -313,8 +278,8 @@ test.setTimeout(15 * 60 * 60 * 1000);
 
 test("🔥 Full Drupal vs WordPress Menu Comparison", async ({ page }) => {
 
-    const drupalFile = "file://" + path.resolve(__dirname, "Drupalv3.html");
-    const wpFile = "file://" + path.resolve(__dirname, "WordpressV3.html");
+    // const drupalFile = "file://" + path.resolve(__dirname, "Drupalv3.html");
+    // const wpFile = "file://" + path.resolve(__dirname, "WordpressV3.html");
 
     // console.log("📥 Extracting Drupal HTML menus...");
     // await page.goto(drupalFile);
@@ -334,29 +299,10 @@ test("🔥 Full Drupal vs WordPress Menu Comparison", async ({ page }) => {
     const drupalMenus = JSON.parse(fs.readFileSync("DrupalMenus.json", "utf8"));
     const wpMenus = JSON.parse(fs.readFileSync("WordPressMenus.json", "utf8"));
 
-    let results = [];
+   console.log("\n\n============================");
+console.log("🔥 RUNNING MENU COMPARATOR");
+console.log("============================\n");
 
-    for (const d of drupalMenus) {
-        const wpMatch = wpMenus.find(w =>
-            w.menuSlug.replace(/\[term-id.*?\]/gi, "").trim() === d.menuId.trim()
-        );
-
-        if (!wpMatch) {
-            results.push({
-                Node: d.menuTitle,
-                Item: "",
-                Issue: "WP menu missing",
-                DrupalURL: "",
-                WordPressURL: ""
-            });
-            continue;
-        }
-
-        results.push(...MenuComparator.compare(d.items, wpMatch.items));
-    }
-
-    fs.writeFileSync("MenuComparison.json", JSON.stringify(results, null, 2));
+const results = MenuComparator.compareMenus(drupalMenus, wpMenus);
     await finalFactory.utility.saveToExcel("menuHtmlsComparison.xlsx", "menuHtmlsComparison", results, "comparison");
-
-    console.log("🎉 DONE!");
 });
