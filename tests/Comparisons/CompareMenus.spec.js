@@ -20,20 +20,26 @@ test("📊 Scrape & Compare Menus from LIVE and DEV + Export Excel", async () =>
   console.log(`📄 Total URLs: ${extractedUrls.length}`);
 
   // -------- LIVE SCRAPE --------
-  console.log("🌍 Scraping LIVE site...");
-  const liveResults = await collectMenus("LIVE", liveBase, extractedUrls);
-  fs.writeFileSync(liveOutput, JSON.stringify(liveResults, null, 2));
+  // console.log("🌍 Scraping LIVE site...");
+  // const liveResults = await collectMenus("LIVE", liveBase, extractedUrls);
+  // fs.writeFileSync(liveOutput, JSON.stringify(liveResults, null, 2));
 
-  // -------- DEV SCRAPE --------
-  console.log("🖥️ Scraping DEV site...");
-  const devResults = await collectMenus("DEV", devBase, extractedUrls);
-  fs.writeFileSync(devOutput, JSON.stringify(devResults, null, 2));
+  // // -------- DEV SCRAPE --------
+  // console.log("🖥️ Scraping DEV site...");
+  // const devResults = await collectMenus("DEV", devBase, extractedUrls);
+  // fs.writeFileSync(devOutput, JSON.stringify(devResults, null, 2));
 
-  console.log("✅ JSON saved!");
+  // console.log("✅ JSON saved!");
 
   // -------- COMPARE --------
-  console.log("🔍 Comparing LIVE vs DEV...");
-  const diffs = compareAll(liveResults, devResults);
+console.log("📥 Reloading JSON files for comparison...");
+
+const liveJson = JSON.parse(fs.readFileSync(liveOutput, "utf8"));
+const devJson = JSON.parse(fs.readFileSync(devOutput, "utf8"));
+
+console.log("🔍 Comparing LIVE vs DEV using JSON files...");
+
+const diffs = compareAll_JSON(liveJson, devJson);
 
   // -------- EXCEL EXPORT --------
   exportToExcel(diffs, excelOutput);
@@ -44,24 +50,197 @@ test("📊 Scrape & Compare Menus from LIVE and DEV + Export Excel", async () =>
 // ========================================================
 // 📘 Compare Function (with hierarchy + order)
 // ========================================================
-function compareAll(live, dev) {
+function compareAll_JSON(live, dev) {
   const diffs = [];
 
-  for (let i = 0; i < live.length; i++) {
-    const livePage = live[i];
+  for (const livePage of live) {
     const devPage = dev.find(p => p.slug === livePage.slug);
 
     if (!devPage) {
-      diffs.push({ Type: "Missing Page", LIVE: livePage.url, DEV: "", Details: "Not found in DEV" });
+      diffs.push({
+        WhichMenu: livePage.slug,
+        WhichItem: "",
+        LiveValue: livePage.url,
+        DevValue: "",
+        Status: "Page Missing in DEV"
+      });
       continue;
     }
 
-    const pageDiffs = compareMenus(livePage.menu || [], devPage.menu || [], livePage.slug);
-    diffs.push(...pageDiffs);
+    // MENU EXISTS / NOT EXISTS
+    const liveHasMenu = livePage.menu?.length > 0;
+    const devHasMenu = devPage.menu?.length > 0;
+
+    if (liveHasMenu && !devHasMenu) {
+      diffs.push({
+        WhichMenu: livePage.slug,
+        WhichItem: "",
+        LiveValue: "FOUND",
+        DevValue: "NOT FOUND",
+        Status: "Menu Missing in DEV"
+      });
+      continue;
+    }
+
+    if (devHasMenu && !liveHasMenu) {
+      diffs.push({
+        WhichMenu: livePage.slug,
+        WhichItem: "",
+        LiveValue: "NOT FOUND",
+        DevValue: "FOUND",
+        Status: "Menu Missing in LIVE"
+      });
+      continue;
+    }
+
+    // BOTH MENUS EXIST → COMPARE ITEMS
+    diffs.push(...compareMenuItems_JSON(livePage.menu, devPage.menu, livePage.slug));
   }
 
   return diffs;
 }
+function compareMenuItems_JSON(liveMenu, devMenu, whichMenu) {
+    const diffs = [];
+
+    function addRow(whichItem, liveValue, devValue, status) {
+        diffs.push({
+            WhichMenu: whichMenu,
+            WhichItem: whichItem,
+            LiveValue: liveValue ?? "NOT FOUND",
+            DevValue: devValue ?? "NOT FOUND",
+            Status: status
+        });
+    }
+
+    function norm(x) {
+        return (x || "").trim().toLowerCase();
+    }
+
+    // NEW FIX: Strip base URL
+    function getPath(url) {
+        try {
+            const u = new URL(url);
+            return u.pathname.replace(/\/+$/, "");
+        } catch {
+            return (url || "")
+                .replace(/https?:\/\/[^/]+/i, "")
+                .replace(/\/+$/, "");
+        }
+    }
+
+    const L_header = liveMenu.filter(i => i.type === "header");
+    const D_header = devMenu.filter(i => i.type === "header");
+
+    const L_main = liveMenu.filter(i => i.type === "mainmenu");
+    const D_main = devMenu.filter(i => i.type === "mainmenu");
+
+    const L_sub = L_main.flatMap(m => m.submenu || []);
+    const D_sub = D_main.flatMap(m => m.submenu || []);
+
+    // HEADER
+    if (L_header.length || D_header.length) {
+        const liveH = L_header[0];
+        const devH  = D_header[0];
+
+        if (!liveH || !devH) {
+            addRow("header", liveH?.menutext, devH?.menutext, "Header Missing");
+        } else if (norm(liveH.menutext) !== norm(devH.menutext)) {
+            addRow("header", liveH.menutext, devH.menutext, "Text Mismatch");
+        }
+    }
+
+    // Helper compare for mainmenu + submenu
+    function compareGroup(liveList, devList, typeLabel, textKey, hrefKey) {
+        const usedDev = new Set();
+
+        for (const L of liveList) {
+            let matched = false;
+
+            for (let j = 0; j < devList.length; j++) {
+                if (usedDev.has(j)) continue;
+
+                const D = devList[j];
+
+                if (norm(L[textKey]) === norm(D[textKey])) {
+                    matched = true;
+                    usedDev.add(j);
+
+                    // ★ FIX: Compare hrefs by PATH only
+                    if (getPath(L[hrefKey]) !== getPath(D[hrefKey])) {
+                        addRow(
+                            `${typeLabel} > href`,
+                            L[hrefKey],
+                            D[hrefKey],
+                            "Href Mismatch"
+                        );
+                    }
+                    break;
+                }
+            }
+
+            if (!matched) {
+                addRow(
+                    `${typeLabel} > text`,
+                    L[textKey],
+                    "NOT FOUND",
+                    "Menu Missing in DEV"
+                );
+            }
+        }
+
+        // Extra in DEV
+        for (let j = 0; j < devList.length; j++) {
+            if (!usedDev.has(j)) {
+                addRow(
+                    `${typeLabel} > text`,
+                    "NOT FOUND",
+                    devList[j][textKey],
+                    "Menu Extra in DEV"
+                );
+            }
+        }
+    }
+
+    // MAIN MENU
+    compareGroup(L_main, D_main, "menu", "menutext", "menuhref");
+
+    // SUBMENU
+    compareGroup(L_sub, D_sub, "submenu", "submenutext", "submenuhref");
+
+    // ORDER MISMATCH
+    const liveOrder = L_main.map(x => norm(x.menutext)).join("|");
+    const devOrder  = D_main.map(x => norm(x.menutext)).join("|");
+
+    if (liveOrder !== devOrder) {
+        addRow("menu > order", liveOrder, devOrder, "Order Mismatch");
+    }
+
+    // HIERARCHY MISMATCH
+    const allTexts = new Set([
+        ...L_main.map(i => norm(i.menutext)),
+        ...D_main.map(i => norm(i.menutext)),
+        ...L_sub.map(i => norm(i.submenutext)),
+        ...D_sub.map(i => norm(i.submenutext))
+    ]);
+
+    for (const t of allTexts) {
+
+        const Ltype =
+            L_main.some(i => norm(i.menutext) === t) ? "menu" :
+            L_sub.some(i => norm(i.submenutext) === t) ? "submenu" : null;
+
+        const Dtype =
+            D_main.some(i => norm(i.menutext) === t) ? "menu" :
+            D_sub.some(i => norm(i.submenutext) === t) ? "submenu" : null;
+
+        if (Ltype && Dtype && Ltype !== Dtype) {
+            addRow(t, Ltype, Dtype, "Hierarchy Mismatch");
+        }
+    }
+
+    return diffs;
+}
+
 
 function textOrEmpty(v) {
   return typeof v === "string" ? v : (v?.toString?.() || "");
@@ -294,14 +473,17 @@ async function scrapeDevMenu(page, baseUrl) {
 
   // ----- Add DEV global heading (at top) if present -----
   const devGlobalHeading = await page.locator("div.menu-header h2.subsite-menu-header span").innerText().catch(() => "");
-  if (devGlobalHeading) {
+  const devGlobalHeadingTrim = devGlobalHeading ? devGlobalHeading.trim() : "";
+
+  if (devGlobalHeadingTrim) {
+    // push only if not already present (defensive)
     menuData.push({
-      menutext: devGlobalHeading.trim(),
+      menutext: devGlobalHeadingTrim,
       menuhref: "",
       type: "header",
       submenu: []
     });
-    console.log(`📌 DEV Heading Found: ${devGlobalHeading}`);
+    console.log(`📌 DEV Heading Found: ${devGlobalHeadingTrim}`);
   }
 
   // Existing header blocks (if present)
@@ -311,19 +493,40 @@ async function scrapeDevMenu(page, baseUrl) {
   console.log(`🔹 Found ${headerCount} menu headers (subsite-menu-header).`);
 
   for (let i = 0; i < headerCount; i++) {
-    const headerText = await headers.nth(i).innerText().catch(() => "—");
+    const headerEl = headers.nth(i);
+    const headerTextRaw = await headerEl.innerText().catch(() => "—");
+    const headerText = headerTextRaw ? headerTextRaw.trim() : "—";
     console.log(`📂 Header: ${headerText}`);
 
-    // push header as a header item (keeps it visible in comparison)
-    menuData.push({
-      menutext: headerText,
-      menuhref: "",
-      type: "header",
-      submenu: []
-    });
+    // Skip pushing the header if it matches the global heading we already pushed
+    if (devGlobalHeadingTrim && headerText === devGlobalHeadingTrim) {
+      console.log(`   ↳ Skipping header because it duplicates the global heading: ${headerText}`);
+    } else {
+      // Avoid adding duplicate consecutive headers (defensive)
+      const last = menuData.length ? menuData[menuData.length - 1] : null;
+      if (!(last && last.type === "header" && last.menutext === headerText)) {
+        menuData.push({
+          menutext: headerText,
+          menuhref: "",
+          type: "header",
+          submenu: []
+        });
+      } else {
+        console.log(`   ↳ Skipped consecutive duplicate header: ${headerText}`);
+      }
+    }
 
-    const items = page.locator("li.menu-item a.menu-link.subsite-menu-item");
-    const itemCount = await items.count().catch(() => 0);
+    // --- Find top-level items that belong under this header ---
+    // We attempt to scope items near the header. If that fails we fall back to the global selector.
+    // Because DOM structures vary, we try a sibling <ul> after the header first.
+    let items = headerEl.locator("xpath=following-sibling::ul[1]//li[contains(@class,'menu-item')]//a[contains(@class,'menu-link')]");
+    let itemCount = await items.count().catch(() => 0);
+
+    if (itemCount === 0) {
+      // fallback: global selector used previously
+      items = page.locator("li.menu-item a.menu-link.subsite-menu-item");
+      itemCount = await items.count().catch(() => 0);
+    }
 
     console.log(`   🔸 Found ${itemCount} top-level menu items under this header.`);
 
@@ -332,10 +535,9 @@ async function scrapeDevMenu(page, baseUrl) {
 
       const parentLi = item.locator("..").locator("..");
 
+      // skip items that are inside sub-menus (we want top-level under this header)
       const isInsideSubmenu =
         (await item.locator("xpath=ancestor::ul[contains(@class,'sub-menu')]").count()) > 0;
-
-      // keep your rule exactly
       if (isInsideSubmenu) continue;
 
       const menutext = await item.locator("span.link-text").innerText().catch(() => "—");
@@ -343,7 +545,8 @@ async function scrapeDevMenu(page, baseUrl) {
       if (menuhref?.startsWith("/"))
         menuhref = `${baseUrl.replace(/\/+$/, "")}${menuhref}`;
 
-      console.log(`   🔹 Menu: ${menutext}  →  ${menuhref}`);
+      const menutextTrim = menutext ? menutext.trim() : "—";
+      console.log(`   🔹 Menu: ${menutextTrim}  →  ${menuhref}`);
 
       const arrow = parentLi.locator("span.dropdown-arrow");
       const arrowCount = await arrow.count().catch(() => 0);
@@ -351,14 +554,13 @@ async function scrapeDevMenu(page, baseUrl) {
       const submenu = [];
 
       if (arrowCount > 0) {
-        console.log(`      📦 Dropdown detected (${arrowCount} arrow(s)) for "${menutext}"`);
+        console.log(`      📦 Dropdown detected (${arrowCount} arrow(s)) for "${menutextTrim}"`);
 
         for (let a = 0; a < arrowCount; a++) {
           const thisArrow = arrow.nth(a);
 
           // ensure arrow belongs to THIS menu item only
           const arrowLi = await thisArrow.evaluateHandle(el => el.closest("li"));
-
           const isDirectArrow = await parentLi.evaluate(
             (li, arrowLi) => li === arrowLi,
             arrowLi
@@ -376,7 +578,7 @@ async function scrapeDevMenu(page, baseUrl) {
             );
             const subCount = await subLinks.count().catch(() => 0);
 
-            console.log(`         🔸 Found ${subCount} submenu items under "${menutext}"`);
+            console.log(`         🔸 Found ${subCount} submenu items under "${menutextTrim}"`);
 
             for (let k = 0; k < subCount; k++) {
               const subLink = subLinks.nth(k);
@@ -386,10 +588,12 @@ async function scrapeDevMenu(page, baseUrl) {
               if (submenuhref?.startsWith("/"))
                 submenuhref = `${baseUrl.replace(/\/+$/, "")}${submenuhref}`;
 
-              console.log(`            ↳ Submenu: ${submenutext}  →  ${submenuhref}`);
+              const submenutextTrim = submenutext ? submenutext.trim() : "—";
+
+              console.log(`            ↳ Submenu: ${submenutextTrim}  →  ${submenuhref}`);
 
               submenu.push({
-                submenutext,
+                submenutext: submenutextTrim,
                 submenuhref,
                 type: "submenu",
                 submenu: []
@@ -401,12 +605,19 @@ async function scrapeDevMenu(page, baseUrl) {
         }
       }
 
-      menuData.push({
-        menutext,
-        menuhref,
-        type: "mainmenu",
-        submenu
-      });
+      // When pushing menu entries, avoid pushing duplicates that match immediately previous entry
+      const lastMenu = menuData.length ? menuData[menuData.length - 1] : null;
+      const entryKey = `${menutextTrim}|${menuhref}|mainmenu`;
+      if (!(lastMenu && lastMenu.menutext === menutextTrim && lastMenu.menuhref === menuhref && lastMenu.type === "mainmenu")) {
+        menuData.push({
+          menutext: menutextTrim,
+          menuhref,
+          type: "mainmenu",
+          submenu
+        });
+      } else {
+        console.log(`   ↳ Skipped consecutive duplicate menu item: ${menutextTrim}`);
+      }
     }
   }
 
@@ -432,8 +643,6 @@ async function scrapeDevMenu(page, baseUrl) {
 
   return filteredMenu;
 }
-
-
 
 
 const visited = new Set();
@@ -637,7 +846,10 @@ async function closeCookiePopup(page) {
     }
   }
 }
-
+function normalizeUrl(href) {
+  if (!href) return "";
+  return href.replace(/^https?:\/\/[^/]+/i, "");  // strip domain
+}
 async function safeGoto(page, url, { timeout = 90000, retries = 2 } = {}) {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {

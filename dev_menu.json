@@ -3,7 +3,7 @@
     "CPT": "/steinhauer/",
     "slug": "/steinhauer/",
     "url": "https://dev-suny-geneseo.pantheonsite.io/steinhauer/",
-    "menuStatus": "INVALID OR NOT FOUND",
+    "menuStatus": "INVALID OR NO MENU",
     "menu": [],
     "status": "OK"
   },
@@ -13,12 +13,6 @@
     "url": "https://dev-suny-geneseo.pantheonsite.io/rotc/",
     "menuStatus": "VALID MENU",
     "menu": [
-      {
-        "menutext": "Army Rotc",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
       {
         "menutext": "Army Rotc",
         "menuhref": "",
@@ -77,12 +71,6 @@
     "url": "https://dev-suny-geneseo.pantheonsite.io/biochemistry",
     "menuStatus": "VALID MENU",
     "menu": [
-      {
-        "menutext": "Biochemistry Program",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
       {
         "menutext": "Biochemistry Program",
         "menuhref": "",
@@ -153,12 +141,6 @@
         "submenu": []
       },
       {
-        "menutext": "Cit",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
-      {
         "menutext": "Home",
         "menuhref": "https://dev-suny-geneseo.pantheonsite.io/cit/",
         "type": "mainmenu",
@@ -197,12 +179,6 @@
     "url": "https://dev-suny-geneseo.pantheonsite.io/education/undergraduate_to_take_graduate_course",
     "menuStatus": "VALID MENU",
     "menu": [
-      {
-        "menutext": "School Of Education",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
       {
         "menutext": "School Of Education",
         "menuhref": "",
@@ -433,12 +409,6 @@
         "submenu": []
       },
       {
-        "menutext": "Geological Environmental And Planetary Sciences",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
-      {
         "menutext": "Programs of Study",
         "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/program-information/",
         "type": "mainmenu",
@@ -564,12 +534,6 @@
         "submenu": []
       },
       {
-        "menutext": "Geological Environmental And Planetary Sciences",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
-      {
         "menutext": "Programs of Study",
         "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/program-information/",
         "type": "mainmenu",
@@ -688,12 +652,6 @@
     "url": "https://dev-suny-geneseo.pantheonsite.io/education/admissions",
     "menuStatus": "VALID MENU",
     "menu": [
-      {
-        "menutext": "School Of Education",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
       {
         "menutext": "School Of Education",
         "menuhref": "",
@@ -930,12 +888,6 @@
         "submenu": []
       },
       {
-        "menutext": "Geological Environmental And Planetary Sciences",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
-      {
         "menutext": "Programs of Study",
         "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/program-information/",
         "type": "mainmenu",
@@ -1052,7 +1004,7 @@
     "CPT": "students/honor-societies",
     "slug": "/students/honor-societies",
     "url": "https://dev-suny-geneseo.pantheonsite.io/students/honor-societies",
-    "menuStatus": "INVALID OR NOT FOUND",
+    "menuStatus": "INVALID OR NO MENU",
     "menu": [],
     "status": "OK"
   },
@@ -1060,7 +1012,7 @@
     "CPT": "news",
     "slug": "/news",
     "url": "https://dev-suny-geneseo.pantheonsite.io/news",
-    "menuStatus": "INVALID OR NOT FOUND",
+    "menuStatus": "INVALID OR NO MENU",
     "menu": [],
     "status": "OK"
   }
