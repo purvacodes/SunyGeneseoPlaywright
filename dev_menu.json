@@ -3,6 +3,7 @@
     "CPT": "/steinhauer/",
     "slug": "/steinhauer/",
     "url": "https://dev-suny-geneseo.pantheonsite.io/steinhauer/",
+    "menuStatus": "INVALID OR NOT FOUND",
     "menu": [],
     "status": "OK"
   },
@@ -10,7 +11,20 @@
     "CPT": "/rotc/",
     "slug": "/rotc/",
     "url": "https://dev-suny-geneseo.pantheonsite.io/rotc/",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "Army Rotc",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
+      {
+        "menutext": "Army Rotc",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "ROTC",
         "menuhref": "https://dev-suny-geneseo.pantheonsite.io/rotc/",
@@ -61,7 +75,20 @@
     "CPT": "biochemistry",
     "slug": "/biochemistry",
     "url": "https://dev-suny-geneseo.pantheonsite.io/biochemistry",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "Biochemistry Program",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
+      {
+        "menutext": "Biochemistry Program",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "About the Program",
         "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biochemistry/program/",
@@ -117,7 +144,20 @@
     "CPT": "/cit/",
     "slug": "/cit/",
     "url": "https://dev-suny-geneseo.pantheonsite.io/cit/",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "Cit",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
+      {
+        "menutext": "Cit",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "Home",
         "menuhref": "https://dev-suny-geneseo.pantheonsite.io/cit/",
@@ -155,7 +195,20 @@
     "CPT": "/education/undergraduate_to_take_graduate_course",
     "slug": "/education/undergraduate_to_take_graduate_course",
     "url": "https://dev-suny-geneseo.pantheonsite.io/education/undergraduate_to_take_graduate_course",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "School Of Education",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
+      {
+        "menutext": "School Of Education",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "About Us",
         "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/about_us/",
@@ -371,7 +424,20 @@
     "CPT": "/geology/mission_statement/",
     "slug": "/geology/mission_statement/",
     "url": "https://dev-suny-geneseo.pantheonsite.io/geology/mission_statement/",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "Geological Environmental And Planetary Sciences",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
+      {
+        "menutext": "Geological Environmental And Planetary Sciences",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "Programs of Study",
         "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/program-information/",
@@ -489,7 +555,20 @@
     "CPT": "/geology/prospective_students/",
     "slug": "/geology/prospective_students/",
     "url": "https://dev-suny-geneseo.pantheonsite.io/geology/prospective_students/",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "Geological Environmental And Planetary Sciences",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
+      {
+        "menutext": "Geological Environmental And Planetary Sciences",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "Programs of Study",
         "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/program-information/",
@@ -607,7 +686,20 @@
     "CPT": "/education/admissions",
     "slug": "/education/admissions",
     "url": "https://dev-suny-geneseo.pantheonsite.io/education/admissions",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "School Of Education",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
+      {
+        "menutext": "School Of Education",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "About Us",
         "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/about_us/",
@@ -823,6 +915,153 @@
         "submenu": []
       }
     ],
+    "status": "OK"
+  },
+  {
+    "CPT": "/geology/faculty-staff",
+    "slug": "/geology/faculty-staff",
+    "url": "https://dev-suny-geneseo.pantheonsite.io/geology/faculty-staff",
+    "menuStatus": "VALID MENU",
+    "menu": [
+      {
+        "menutext": "Geological Environmental And Planetary Sciences",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
+      {
+        "menutext": "Geological Environmental And Planetary Sciences",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
+      {
+        "menutext": "Programs of Study",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/program-information/",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Course Offerings",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/course-offerings/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "January Field Trips",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/january-field-trips/",
+            "type": "submenu",
+            "submenu": []
+          }
+        ]
+      },
+      {
+        "menutext": "Faculty and Staff",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/faculty-staff/",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Student Resources",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/current_students/",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Why Study Geology?",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/prospective_students/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Mission Statement",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/mission_statement/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Career Options",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/careers/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Career Information",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/career_information/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Earth Science Links",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/teaching_resource/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Geneseo Resources",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/resources/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Research Opportunities",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/how-apply-research/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Graduate School",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/grad_school/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Internships & Volunteering",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/intern/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Scholarships & Awards",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/scholarships/",
+            "type": "submenu",
+            "submenu": []
+          }
+        ]
+      },
+      {
+        "menutext": "Department News",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/geological-environmental-and-planetary-sciences-department-news/",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Alumni",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/alumni/",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Donate to Geology",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/donations-geology-department/",
+        "type": "mainmenu",
+        "submenu": []
+      }
+    ],
+    "status": "OK"
+  },
+  {
+    "CPT": "students/honor-societies",
+    "slug": "/students/honor-societies",
+    "url": "https://dev-suny-geneseo.pantheonsite.io/students/honor-societies",
+    "menuStatus": "INVALID OR NOT FOUND",
+    "menu": [],
+    "status": "OK"
+  },
+  {
+    "CPT": "news",
+    "slug": "/news",
+    "url": "https://dev-suny-geneseo.pantheonsite.io/news",
+    "menuStatus": "INVALID OR NOT FOUND",
+    "menu": [],
     "status": "OK"
   }
 ]

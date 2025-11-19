@@ -3,7 +3,14 @@
     "CPT": "/steinhauer/",
     "slug": "/steinhauer/",
     "url": "https://www.geneseo.edu/steinhauer/",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "Aaron J Steinhauer",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "Research",
         "menuhref": "https://www.geneseo.edu/steinhauer/research",
@@ -29,7 +36,14 @@
     "CPT": "/rotc/",
     "slug": "/rotc/",
     "url": "https://www.geneseo.edu/rotc/",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "Army ROTC",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "ROTC",
         "menuhref": "https://www.geneseo.edu/rotc",
@@ -74,7 +88,14 @@
     "CPT": "biochemistry",
     "slug": "/biochemistry",
     "url": "https://www.geneseo.edu/biochemistry",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "Biochemistry Program",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "Home",
         "menuhref": "https://www.geneseo.edu/biochemistry",
@@ -136,7 +157,14 @@
     "CPT": "/cit/",
     "slug": "/cit/",
     "url": "https://www.geneseo.edu/cit/",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "CIT",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "Home",
         "menuhref": "https://www.geneseo.edu/cit",
@@ -174,7 +202,14 @@
     "CPT": "/education/undergraduate_to_take_graduate_course",
     "slug": "/education/undergraduate_to_take_graduate_course",
     "url": "https://www.geneseo.edu/education/undergraduate_to_take_graduate_course",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "School of Education",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "About Us",
         "menuhref": "https://www.geneseo.edu/education/about_us",
@@ -387,7 +422,14 @@
     "CPT": "/geology/mission_statement/",
     "slug": "/geology/mission_statement/",
     "url": "https://www.geneseo.edu/geology/mission_statement/",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "Geological, Environmental, and Planetary Sciences",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "Home",
         "menuhref": "https://www.geneseo.edu/geology",
@@ -510,7 +552,14 @@
     "CPT": "/geology/prospective_students/",
     "slug": "/geology/prospective_students/",
     "url": "https://www.geneseo.edu/geology/prospective_students/",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "Geological, Environmental, and Planetary Sciences",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "Home",
         "menuhref": "https://www.geneseo.edu/geology",
@@ -633,7 +682,14 @@
     "CPT": "/education/admissions",
     "slug": "/education/admissions",
     "url": "https://www.geneseo.edu/education/admissions",
+    "menuStatus": "VALID MENU",
     "menu": [
+      {
+        "menutext": "School of Education",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
       {
         "menutext": "About Us",
         "menuhref": "https://www.geneseo.edu/education/about_us",
@@ -845,6 +901,203 @@
         "submenu": []
       }
     ],
+    "status": "OK"
+  },
+  {
+    "CPT": "/geology/faculty-staff",
+    "slug": "/geology/faculty-staff",
+    "url": "https://www.geneseo.edu/geology/faculty-staff",
+    "menuStatus": "VALID MENU",
+    "menu": [
+      {
+        "menutext": "Geological, Environmental, and Planetary Sciences",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
+      {
+        "menutext": "Home",
+        "menuhref": "https://www.geneseo.edu/geology",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Photo Gallery",
+            "submenuhref": "https://www.geneseo.edu/geology/photos",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Research Facilities",
+            "submenuhref": "https://www.geneseo.edu/geology/facilities-department-geological-sciences",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Programs of Study",
+        "menuhref": "https://www.geneseo.edu/geology/program-information",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Course Offerings",
+            "submenuhref": "https://www.geneseo.edu/geology/course-offerings",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "January Field Trips",
+            "submenuhref": "https://www.geneseo.edu/geology/january-field-trips",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Faculty and Staff",
+        "menuhref": "https://www.geneseo.edu/geology/faculty-staff",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Student Resources",
+        "menuhref": "https://www.geneseo.edu/geology/current_students",
+        "type": "mainmenu",
+        "submenu": [
+          {
+            "submenutext": "Why Study Geology?",
+            "submenuhref": "https://www.geneseo.edu/geology/prospective_students",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Career Information",
+            "submenuhref": "https://www.geneseo.edu/geology/career_information",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Earth Science Links",
+            "submenuhref": "https://www.geneseo.edu/geology/teaching_resource",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Geneseo Resources",
+            "submenuhref": "https://www.geneseo.edu/geology/resources",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Research Opportunities",
+            "submenuhref": "https://www.geneseo.edu/geology/how-apply-research",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Graduate School",
+            "submenuhref": "https://www.geneseo.edu/geology/grad_school",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Internships & Volunteering",
+            "submenuhref": "https://www.geneseo.edu/geology/intern",
+            "type": "submenu"
+          },
+          {
+            "submenutext": "Scholarships & Awards",
+            "submenuhref": "https://www.geneseo.edu/geology/scholarships",
+            "type": "submenu"
+          }
+        ]
+      },
+      {
+        "menutext": "Department News",
+        "menuhref": "https://www.geneseo.edu/geology/geological-environmental-and-planetary-sciences-department-news",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Alumni",
+        "menuhref": "https://www.geneseo.edu/geology/alumni",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Donate to Geology",
+        "menuhref": "https://www.geneseo.edu/geology/donations-geology-department",
+        "type": "mainmenu",
+        "submenu": []
+      }
+    ],
+    "status": "OK"
+  },
+  {
+    "CPT": "students/honor-societies",
+    "slug": "/students/honor-societies",
+    "url": "https://www.geneseo.edu/students/honor-societies",
+    "menuStatus": "VALID MENU",
+    "menu": [
+      {
+        "menutext": "Students",
+        "menuhref": "",
+        "type": "header",
+        "submenu": []
+      },
+      {
+        "menutext": "Bookstore",
+        "menuhref": "http://geneseo.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=87906&catalogId=10001&langId=-1",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Campus Map",
+        "menuhref": "https://www.geneseo.edu/about/campus-map",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Commencement",
+        "menuhref": "https://www.geneseo.edu/commencement",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Dining",
+        "menuhref": "http://www.geneseo.edu/cas",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "myGeneseo",
+        "menuhref": "https://my.geneseo.edu/",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Multicultural Programs",
+        "menuhref": "https://www.geneseo.edu/multicultural",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Student Life",
+        "menuhref": "https://www.geneseo.edu/student_life",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "Student Organizations",
+        "menuhref": "https://www.geneseo.edu/student_life/student-organization-directory",
+        "type": "mainmenu",
+        "submenu": []
+      },
+      {
+        "menutext": "University Police",
+        "menuhref": "https://www.geneseo.edu/police",
+        "type": "mainmenu",
+        "submenu": []
+      }
+    ],
+    "status": "OK"
+  },
+  {
+    "CPT": "news",
+    "slug": "/news",
+    "url": "https://www.geneseo.edu/news",
+    "menuStatus": "NO MENU",
+    "menu": [],
     "status": "OK"
   }
 ]
