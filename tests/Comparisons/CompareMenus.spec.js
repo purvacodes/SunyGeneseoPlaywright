@@ -20,15 +20,15 @@ test("📊 Scrape & Compare Menus from LIVE and DEV + Export Excel", async () =>
 
   console.log(`📄 Total URLs: ${extractedUrls.length}`);
 
-  // // -------- LIVE SCRAPE (kept intact but commented here as in your original)
+  //-------- LIVE SCRAPE (kept intact but commented here as in your original)
   //  console.log("🌍 Scraping LIVE site...");
   // const liveResults = await collectMenus("LIVE", liveBase, extractedUrls);
   // fs.writeFileSync(liveOutput, JSON.stringify(liveResults, null, 2));
 
-  // -------- DEV SCRAPE (kept intact but commented here as in your original)
-  console.log("🖥️ Scraping DEV site...");
-  const devResults = await collectMenus("DEV", devBase, extractedUrls);
-  fs.writeFileSync(devOutput, JSON.stringify(devResults, null, 2));
+  // // -------- DEV SCRAPE (kept intact but commented here as in your original)
+  // console.log("🖥️ Scraping DEV site...");
+  // const devResults = await collectMenus("DEV", devBase, extractedUrls);
+  // fs.writeFileSync(devOutput, JSON.stringify(devResults, null, 2));
 
   console.log("✅ JSON saved!");
 
@@ -82,10 +82,66 @@ function getChildren(node) {
 // ============================================================================
 //  TOP-LEVEL COMPARE (iterates pages and produces diffs)
 // ============================================================================
+
+
+function summaryRow(slug, liveVal, devVal, status) {
+  return {
+    WhichMenu: slug,
+    WhichItem: "summary",
+    LiveValue: liveVal || "",
+    DevValue: devVal || "",
+    Status: status
+  };
+}
+
+function determineSummary(itemDiffs) {
+  if (!itemDiffs || itemDiffs.length === 0)
+    return "MENU MATCHED COMPLETELY";  // No diffs, so menus are completely matched
+
+  const missingLive = itemDiffs.some(d => (d.Status || "").includes("Missing in LIVE"));
+  const missingDev  = itemDiffs.some(d => (d.Status || "").includes("Missing in DEV"));
+  const orderMismatch = itemDiffs.some(d => (d.Status || "").includes("Order Mismatch"));
+  const hierarchyMismatch = itemDiffs.some(d =>
+    ["submenuhref", "submenutext"].includes(d.WhichItem) &&
+    !["Href Match", "Text Match"].includes(d.Status)
+  );
+  const textMismatch = itemDiffs.some(d => d.Status === "Text Mismatch");
+  const hrefMismatch = itemDiffs.some(d => d.Status === "Href Mismatch");
+
+  // Check for missing items
+  if (missingLive && !missingDev) return "Items MISSING IN LIVE";  // Items missing in LIVE but not in DEV
+  if (missingDev && !missingLive) return "Items MISSING IN DEV";  // Items missing in DEV but not in LIVE
+  if (missingLive && missingDev) return "MENU MISMATCH";  // Items missing in both LIVE and DEV
+
+  // Check for order mismatch
+  if (orderMismatch) return "Menu matched but order mismatch";  // Order mismatch detected
+
+  // Check for hierarchy mismatch (non-matching submenus or structure)
+  if (hierarchyMismatch) return "Menu matched but hierarchy mismatch";  // Hierarchy mismatch detected
+
+  // Check for any other mismatches (text or href mismatches)
+  if (textMismatch || hrefMismatch) return "MENU ITEMS MISMATCH";  // Non-matching items detected (text or href)
+
+  // If no issues found, menus are matched completely
+  return "MENU MATCHED COMPLETELY";
+}
+
+
+// ============================================================================
+//  FULL, ORDER-TOLERANT, TWO-WAY MENU COMPARISON
+//  - Compares mainmenu items by normalized text (so DEV→LIVE and LIVE→DEV are both checked)
+//  - Compares headers, hrefs, and submenus recursively
+// ============================================================================
+function normalizeMenuStructure(menu = []) {
+  return menu.map(item => ({
+    ...item,
+    submenu: Array.isArray(item.submenu)
+      ? normalizeMenuStructure(item.submenu)
+      : []
+  }));
+}
 function compareAll_JSON(livePages = [], devPages = []) {
   const diffs = [];
-
-  // Index dev pages by slug for quick lookup
   const devIndex = new Map(devPages.map(p => [p.slug, p]));
 
   for (const livePage of livePages) {
@@ -110,19 +166,26 @@ function compareAll_JSON(livePages = [], devPages = []) {
       diffs.push(summaryRow(slug, "NOT FOUND", "FOUND", "Menu Missing in LIVE"));
       continue;
     }
-if (!liveHas && !devHas) {
-  diffs.push(summaryRow(slug, "NOT FOUND", "NOT FOUND", "NO MENU FOUND on Both"));
-  continue;
-}
-const liveMenuNorm = normalizeMenuStructure(livePage.menu || []);
-const devMenuNorm  = normalizeMenuStructure(devPage.menu || []);
 
-const itemDiffs = compareMenuItems_FULL(liveMenuNorm, devMenuNorm, slug);
+    // Menu invalid
+    if (devPage.menuStatus === "INVALID MENU") {
+      diffs.push(summaryRow(slug, "FOUND", "INVALID", "Invalid Menu on DEV"));
+      continue;
+    }
+
+    if (livePage.menuStatus === "INVALID MENU") {
+      diffs.push(summaryRow(slug, "INVALID", "FOUND", "Invalid Menu on LIVE"));
+      continue;
+    }
+
+    const liveMenuNorm = normalizeMenuStructure(livePage.menu || []);
+    const devMenuNorm = normalizeMenuStructure(devPage.menu || []);
+
+    const itemDiffs = compareMenuItems_FULL(liveMenuNorm, devMenuNorm, slug);
     diffs.push(...itemDiffs);
 
-    // summary
-    
-   const summaryStatus = determineSummary(itemDiffs);
+    // Summary row
+    const summaryStatus = determineSummary(itemDiffs);
     diffs.push({
       WhichMenu: slug,
       WhichItem: "summary",
@@ -135,67 +198,22 @@ const itemDiffs = compareMenuItems_FULL(liveMenuNorm, devMenuNorm, slug);
   return diffs;
 }
 
-function summaryRow(slug, liveVal, devVal, status) {
-  return {
-    WhichMenu: slug,
-    WhichItem: "summary",
-    LiveValue: liveVal || "",
-    DevValue: devVal || "",
-    Status: status
-  };
-}
-
-function determineSummary(itemDiffs) {
-  if (!itemDiffs || itemDiffs.length === 0)
-    return "MENU MATCHED COMPLETELY";
-
-  const missingLive = itemDiffs.some(d => (d.Status || "").includes("Missing in LIVE"));
-  const missingDev  = itemDiffs.some(d => (d.Status || "").includes("Missing in DEV"));
-
-  if (missingLive && !missingDev) return "MISSING IN LIVE";
-  if (missingDev && !missingLive) return "MISSING IN DEV";
-  if (missingLive && missingDev) return "MISSING ON BOTH";
-
-  const orderMismatch = itemDiffs.some(d => (d.Status || "").includes("Order Mismatch"));
-  if (orderMismatch) return "MENU MATCHED (ORDER MISMATCH)";
-
-  const hierarchyMismatch = itemDiffs.some(d =>
-    ["submenuhref", "submenutext"].includes(d.WhichItem) &&
-    !["Href Match", "Text Match"].includes(d.Status)
-  );
-  if (hierarchyMismatch) return "MENU Items MATCHED (HIERARCHY MISMATCH)";
-
-  return "MENU MATCHED COMPLETELY";
-}
-
-
-// ============================================================================
-//  FULL, ORDER-TOLERANT, TWO-WAY MENU COMPARISON
-//  - Compares mainmenu items by normalized text (so DEV→LIVE and LIVE→DEV are both checked)
-//  - Compares headers, hrefs, and submenus recursively
-// ============================================================================
-function normalizeMenuStructure(menu = []) {
-  return menu.map(item => ({
-    ...item,
-    submenu: Array.isArray(item.submenu)
-      ? normalizeMenuStructure(item.submenu)
-      : []
-  }));
-}
-
 function compareMenuItems_FULL(liveMenu = [], devMenu = [], slug = "") {
   const diffs = [];
 
   // find headers
-  const L_header = (liveMenu.find(x => x.type === "header") || {});
-  const D_header = (devMenu.find(x => x.type === "header") || {});
-  if ((L_header.menutext || "") !== (D_header.menutext || "")) {
+  const L_headers = liveMenu.filter(x => x.type === "header") || [];
+  const D_headers = devMenu.filter(x => x.type === "header") || [];
+
+  for (let i = 0; i < Math.max(L_headers.length, D_headers.length); i++) {
+    const Lh = L_headers[i];
+    const Dh = D_headers[i];
     diffs.push({
       WhichMenu: slug,
       WhichItem: "header",
-      LiveValue: L_header?.menutext || "",
-      DevValue: D_header?.menutext || "",
-      Status: "Text Mismatch"
+      LiveValue: Lh?.menutext || "",
+      DevValue: Dh?.menutext || "",
+      Status: (Lh?.menutext || "") === (Dh?.menutext || "") ? "Text Match" : "Text Mismatch"
     });
   }
 
@@ -203,7 +221,7 @@ function compareMenuItems_FULL(liveMenu = [], devMenu = [], slug = "") {
   const L_main = (liveMenu.filter(x => x.type === "mainmenu") || []);
   const D_main = (devMenu.filter(x => x.type === "mainmenu") || []);
 
-  // Check order (optional): if you care about strict order, this flags it.
+  // Check order (optional)
   const Lorder = L_main.map(m => norm(m.menutext));
   const Dorder = D_main.map(m => norm(m.menutext));
   if (JSON.stringify(Lorder) !== JSON.stringify(Dorder)) {
@@ -226,73 +244,42 @@ function compareMenuItems_FULL(liveMenu = [], devMenu = [], slug = "") {
     const L = Lmap.get(key);
     const D = Dmap.get(key);
 
+    // Helper function to push submenu or mainmenu missing messages
+    function pushMissingItem(menuType, itemType, liveVal, devVal, status) {
+      diffs.push({
+        WhichMenu: slug,
+        WhichItem: itemType,
+        LiveValue: liveVal || "",
+        DevValue: devVal || "",
+        Status: status
+      });
+    }
+
     // Missing items (two-way)
     if (L && !D) {
-      diffs.push({
-        WhichMenu: slug,
-        WhichItem: "menutext",
-        LiveValue: L.menutext,
-        DevValue: "",
-        Status: "Missing in DEV"
-      });
-      diffs.push({
-        WhichMenu: slug,
-        WhichItem: "menuhref",
-        LiveValue: L.menuhref || "",
-        DevValue: "",
-        Status: "Missing in DEV"
-      });
+      // For missing in DEV
+      // Push menutext and menuhref
+      pushMissingItem("mainmenu", "menutext", L.menutext, "", "Missing in DEV");
+      pushMissingItem("mainmenu", "menuhref", L.menuhref || "", "", "Missing in DEV");
 
+      // Push submenu items as submenu
       (L.submenu || []).forEach(sub => {
-        diffs.push({
-          WhichMenu: slug,
-          WhichItem: "submenutext",
-          LiveValue: sub.submenutext,
-          DevValue: "",
-          Status: "Missing in DEV"
-        });
-        diffs.push({
-          WhichMenu: slug,
-          WhichItem: "submenuhref",
-          LiveValue: sub.submenuhref || "",
-          DevValue: "",
-          Status: "Missing in DEV"
-        });
+        pushMissingItem("submenu", "submenutext", sub.submenutext, "", "Missing in DEV");
+        pushMissingItem("submenu", "submenuhref", sub.submenuhref || "", "", "Missing in DEV");
       });
       continue;
     }
 
     if (!L && D) {
-      diffs.push({
-        WhichMenu: slug,
-        WhichItem: "menutext",
-        LiveValue: "",
-        DevValue: D.menutext,
-        Status: "Missing in LIVE"
-      });
-      diffs.push({
-        WhichMenu: slug,
-        WhichItem: "menuhref",
-        LiveValue: "",
-        DevValue: D.menuhref || "",
-        Status: "Missing in LIVE"
-      });
+      // For missing in LIVE
+      // Push menutext and menuhref
+      pushMissingItem("mainmenu", "menutext", "", D.menutext, "Missing in LIVE");
+      pushMissingItem("mainmenu", "menuhref", "", D.menuhref || "", "Missing in LIVE");
 
+      // Push submenu items as submenu
       (D.submenu || []).forEach(sub => {
-        diffs.push({
-          WhichMenu: slug,
-          WhichItem: "submenutext",
-          LiveValue: "",
-          DevValue: sub.submenutext,
-          Status: "Missing in LIVE"
-        });
-        diffs.push({
-          WhichMenu: slug,
-          WhichItem: "submenuhref",
-          LiveValue: "",
-          DevValue: sub.submenuhref || "",
-          Status: "Missing in LIVE"
-        });
+        pushMissingItem("submenu", "submenutext", "", sub.submenutext, "Missing in LIVE");
+        pushMissingItem("submenu", "submenuhref", "", sub.submenuhref || "", "Missing in LIVE");
       });
       continue;
     }
@@ -412,20 +399,25 @@ function compareSubMenus_FULL(Lsub = [], Dsub = [], slug = "", parentMenu = "") 
 //  EXCEL EXPORT (simple & stable - preserves your columns)
 // ============================================================================
 function exportToExcel(diffs, output) {
-  // Ensure consistent column order
   const rows = diffs.map(r => ({
     WhichMenu: r.WhichMenu || r.whichMenu || "",
-    WhichItem: r.WhichItem || r.WhichItem || r.Type || "",
+    WhichItem: r.WhichItem || r.Type || "",
     LiveValue: r.LiveValue ?? r.LIVE ?? "",
     DevValue: r.DevValue ?? r.DEV ?? "",
-    Status: r.Status || r.Details || ""
+    Status: r.Status || r.Details || "No Status"
   }));
 
-  const worksheet = XLSX.utils.json_to_sheet(rows, { header: ["WhichMenu", "WhichItem", "LiveValue", "DevValue", "Status"] });
+  const worksheet = XLSX.utils.json_to_sheet(rows, {
+    header: ["WhichMenu", "WhichItem", "LiveValue", "DevValue", "Status"]
+  });
+
   const workbook = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(workbook, worksheet, "Menu Comparison");
+
   XLSX.writeFile(workbook, output);
+  console.log(`📊 Excel exported: ${output}`);
 }
+
 
 
 // ============================================================================
@@ -435,9 +427,8 @@ function exportToExcel(diffs, output) {
 // ============================================================================
 
 async function collectMenus(envName, baseUrl, urls) {
-  const browser = await chromium.launch({ headless: false });
+  const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({ bypassCache: true });
-
   const page = await context.newPage();
   const results = [];
   let count = 0;
@@ -468,15 +459,14 @@ async function collectMenus(envName, baseUrl, urls) {
       }
 
       if (envName === "DEV") {
-        const ok = await hasDevMenu(page);
-        if (!ok) {
-          console.log("❌ DEV: No valid menu — skipping scrape");
-          menuStatus = "INVALID OR NO MENU";
-          menuData = [];
-        } else {
-          console.log("✅ DEV: Menu found — scraping...");
+        const isDevMenuValid = await hasDevMenu(page);  // Using the updated hasDevMenu logic
+
+        if (isDevMenuValid) {
           menuStatus = "VALID MENU";
           menuData = await scrapeDevMenu(page, baseUrl);
+        } else {
+          menuStatus = "INVALID MENU";  // If the menu is invalid on DEV
+          menuData = [];
         }
       }
 
@@ -484,7 +474,7 @@ async function collectMenus(envName, baseUrl, urls) {
         CPT: cpt,
         slug: cleanSlug,
         url: fullUrl,
-        menuStatus,
+        menuStatus,  // Updated to reflect the new status
         menu: menuData,
         status
       });
@@ -674,7 +664,6 @@ async function scrapeLiveMenuRecursive(page, baseUrl, fullUrl) {
   visited.add(fullUrl);
 
   try {
-    await safeGoto(page, fullUrl, { timeout: 90000 });
     await closeCookiePopup(page);
     await page.waitForTimeout(800);
 
@@ -838,31 +827,28 @@ async function hasDevMenu(page) {
   const current = page.url();
   console.log(`🌐 [DEV] Checking menu on: ${current}`);
 
-  const container = page.locator(".wp-block-group.subsiteNav");
-  const exists = await container.count();
-
-  if (!exists) {
-    console.log(`❌ DEV: subsiteNav NOT FOUND → ${current}`);
-    return false;
-  }
-
-  const realMenu = await container.locator(".wp-block-create-block-custom-menu-block").count();
-
-  if (realMenu > 0) {
-    console.log(`✅ DEV: REAL MENU FOUND → ${current}`);
+  // Check if there's a valid menu heading
+  const menuHeading = await page.locator("h2.subsite-menu-header").count();
+  if (menuHeading > 0) {
+    console.log(`✅ DEV: Menu heading found → Menu is valid`);
     return true;
   }
 
-  const rawText = await container.evaluate(el => el.textContent || "");
-  const cleaned = rawText.trim();
-
-  console.log(`📌 DEV subsiteNav Raw Text: ${JSON.stringify(cleaned)} → ${current}`);
-
-  if (cleaned.length > 0) {
-    console.log(`❌ DEV: INVALID MENU (text found) → ${current}`);
-    return false;
-  }
-
-  console.log(`❓ DEV: EMPTY MENU BLOCK → ${current}`);
+  // Check for subsiteNav and invalid message
+  const subsiteNav = await page.locator(".subsiteNav").count();
+  if (subsiteNav > 0) {
+    const invalidMessage = await page.locator("div.wp-block-group.subsiteNav p").textContent();
+if (invalidMessage && invalidMessage.trim().length > 0) {
+  console.log(`❌ DEV: subsiteNav found with invalid menu message → Message: "${invalidMessage.trim()}"`);
   return false;
 }
+
+    console.log(`✅ DEV: subsiteNav found, but no invalid menu message → Menu is valid`);
+    return true;
+  }
+
+  // If no subsiteNav class or invalid message, then the menu is not found
+  console.log(`❌ DEV: Heading or subsiteNav not found → Menu is not found on DEV`);
+  return false;  // No menu found on DEV
+}
+

@@ -1025,71 +1025,10 @@
   },
   {
     "CPT": "students/honor-societies",
-    "slug": "/students/honor-societies",
-    "url": "https://www.geneseo.edu/students/honor-societies",
-    "menuStatus": "VALID MENU",
-    "menu": [
-      {
-        "menutext": "Students",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
-      {
-        "menutext": "Bookstore",
-        "menuhref": "http://geneseo.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=87906&catalogId=10001&langId=-1",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Campus Map",
-        "menuhref": "https://www.geneseo.edu/about/campus-map",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Commencement",
-        "menuhref": "https://www.geneseo.edu/commencement",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Dining",
-        "menuhref": "http://www.geneseo.edu/cas",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "myGeneseo",
-        "menuhref": "https://my.geneseo.edu/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Multicultural Programs",
-        "menuhref": "https://www.geneseo.edu/multicultural",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Student Life",
-        "menuhref": "https://www.geneseo.edu/student_life",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Student Organizations",
-        "menuhref": "https://www.geneseo.edu/student_life/student-organization-directory",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "University Police",
-        "menuhref": "https://www.geneseo.edu/police",
-        "type": "mainmenu",
-        "submenu": []
-      }
-    ],
+    "slug": "/linguistics/faculty-staff",
+    "url": "https://www.geneseo.edu/linguistics/faculty-staff",
+    "menuStatus": "NO MENU",
+    "menu": [],
     "status": "OK"
   },
   {
