@@ -275,80 +275,6 @@
         "children": []
       },
       {
-        "title": "Dining & Catering",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/cas/dining-catering",
-        "text": "",
-        "children": [
-          {
-            "title": "Menus",
-            "href": "https://go.geneseo.edu/casmenus",
-            "text": "URL: https://go.geneseo.edu/casmenusStatus: EnabledPlugin ID: menu_link_content:dc6ebed7-032f-4d66-946d-e5b53a5b5045Parent Plugin: menu_link_content:9a00f6ad-466d-4090-911f-c44d3cb88ab0Menu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Mobile Ordering",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/mobile-ordering",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/mobile-orderingStatus: EnabledPlugin ID: menu_link_content:33b781f7-5632-4756-a38d-23b04e07f635Parent Plugin: menu_link_content:9a00f6ad-466d-4090-911f-c44d3cb88ab0Menu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Monthly Specials",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/monthly-dining-specials",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/monthly-dining-specialsStatus: EnabledPlugin ID: menu_link_content:357c2a76-4b92-4d1b-b35a-38a55bf915e9Parent Plugin: menu_link_content:9a00f6ad-466d-4090-911f-c44d3cb88ab0Menu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Nutrition & Wellness",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/nutrition-and-wellness",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/nutrition-and-wellnessStatus: EnabledPlugin ID: menu_link_content:f07ec86d-ab0f-4250-8807-2938a2bb727dParent Plugin: menu_link_content:9a00f6ad-466d-4090-911f-c44d3cb88ab0Menu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Food Allergies",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/food-allergies",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/food-allergiesStatus: EnabledPlugin ID: menu_link_content:cf636def-5b1a-4c1b-82d2-953189f4d43fParent Plugin: menu_link_content:9a00f6ad-466d-4090-911f-c44d3cb88ab0Menu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Kosher-Style Dining",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/kosher-dining",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/kosher-diningStatus: EnabledPlugin ID: menu_link_content:769587b1-6325-450c-9031-b68654d3fccdParent Plugin: menu_link_content:9a00f6ad-466d-4090-911f-c44d3cb88ab0Menu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Dining Operations Q&A",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/dining-operations-faq",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/dining-operations-faqStatus: EnabledPlugin ID: menu_link_content:891c64ed-c4b5-43a4-a317-2775087ef55dParent Plugin: menu_link_content:9a00f6ad-466d-4090-911f-c44d3cb88ab0Menu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Sushi Platters",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/sushi-platters",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/sushi-plattersStatus: EnabledPlugin ID: menu_link_content:2cc67f7f-c4e4-4361-a625-6c92de1cb0a6Parent Plugin: menu_link_content:9a00f6ad-466d-4090-911f-c44d3cb88ab0Menu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Campus Catering",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/catering",
-            "text": "",
-            "children": [
-              {
-                "title": "Catering Grants",
-                "href": "http://localhost/drupal-geneseo/list_menus.php/cas/cas-catering-grants",
-                "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/cas-catering-grantsStatus: EnabledPlugin ID: menu_link_content:86e569b8-72eb-4e1b-95ee-eeceabcd4ba7Parent Plugin: menu_link_content:acfd058e-45e7-42cc-9816-38170357489fMenu: employee-newsletter-0",
-                "children": []
-              }
-            ]
-          },
-          {
-            "title": "Vending",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/vending",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/vendingStatus: EnabledPlugin ID: menu_link_content:1b02a1e5-4cf3-482b-b583-464bcf57513dParent Plugin: menu_link_content:9a00f6ad-466d-4090-911f-c44d3cb88ab0Menu: employee-newsletter-0",
-            "children": []
-          }
-        ]
-      },
-      {
         "title": "ID Cards & Meal Plans",
         "href": "http://localhost/drupal-geneseo/list_menus.php/cas/id-cards-meal-plans",
         "text": "",
@@ -406,80 +332,6 @@
             "title": "Internships",
             "href": "http://localhost/drupal-geneseo/list_menus.php/cas/internship",
             "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/internshipStatus: EnabledPlugin ID: menu_link_content:e5521693-163c-4a70-b4e6-78611536b9caParent Plugin: menu_link_content:479f45c7-7b84-481a-a9e9-27571c4400e1Menu: employee-newsletter-0",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "Other Services",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/cas/services",
-        "text": "",
-        "children": [
-          {
-            "title": "Bookstore",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/bookstore",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/bookstoreStatus: EnabledPlugin ID: menu_link_content:58c0fe38-e629-4f18-861b-18f72c46da7dParent Plugin: menu_link_content:cdd8b652-afc5-4bb5-af77-8333391f93faMenu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Laundry",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/laundry",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/laundryStatus: EnabledPlugin ID: menu_link_content:c22065da-c0e8-4e60-8f56-5e9cc80618b7Parent Plugin: menu_link_content:cdd8b652-afc5-4bb5-af77-8333391f93faMenu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Refuse & Recycling",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/refuse-and-recycling",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/refuse-and-recyclingStatus: EnabledPlugin ID: menu_link_content:cbdaa426-115e-436c-b00f-73a554095fb9Parent Plugin: menu_link_content:cdd8b652-afc5-4bb5-af77-8333391f93faMenu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "MicroFridge Rentals",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/microfridge-rental",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/microfridge-rentalStatus: EnabledPlugin ID: menu_link_content:bad87ed8-14ae-4a52-85b8-e123cdd760faParent Plugin: menu_link_content:cdd8b652-afc5-4bb5-af77-8333391f93faMenu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Levison Award",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/levison-award",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/levison-awardStatus: EnabledPlugin ID: menu_link_content:c20725f3-2186-46a0-bb4f-56ef5df64086Parent Plugin: menu_link_content:cdd8b652-afc5-4bb5-af77-8333391f93faMenu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Textbook Grants",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/textbookgrants",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/textbookgrantsStatus: EnabledPlugin ID: menu_link_content:d2e096b0-9eb2-41a1-bb15-994aac5d1bfdParent Plugin: menu_link_content:cdd8b652-afc5-4bb5-af77-8333391f93faMenu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Bronze Bear Creative",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/bronze-bear-creative",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/bronze-bear-creativeStatus: EnabledPlugin ID: menu_link_content:6ac15243-3aa3-415a-a3ab-473455475068Parent Plugin: menu_link_content:cdd8b652-afc5-4bb5-af77-8333391f93faMenu: employee-newsletter-0",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "About Us",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/cas/about-us",
-        "text": "",
-        "children": [
-          {
-            "title": "Mission & Values",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/campus-auxiliary-services-mission-vision-and-values",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/campus-auxiliary-services-mission-vision-and-valuesStatus: EnabledPlugin ID: menu_link_content:578c9dfe-e141-4b71-89a7-7035379b7448Parent Plugin: menu_link_content:f6391522-d708-4273-907e-943814fb3e58Menu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Executive Team",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/executive-team",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/executive-teamStatus: EnabledPlugin ID: menu_link_content:3892dada-d4bf-4bca-b598-cbfd1debfd92Parent Plugin: menu_link_content:f6391522-d708-4273-907e-943814fb3e58Menu: employee-newsletter-0",
-            "children": []
-          },
-          {
-            "title": "Sustainability",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/cas/sustainability-cas",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/cas/sustainability-casStatus: EnabledPlugin ID: menu_link_content:02b0f2ab-b1e3-45dd-8d60-3e0463f51a13Parent Plugin: menu_link_content:f6391522-d708-4273-907e-943814fb3e58Menu: employee-newsletter-0",
             "children": []
           }
         ]
@@ -730,14 +582,7 @@
     "menuTitle": "Academic Programs menu                    [Menu ID: group-359-menu]",
     "menuId": "group-359-menu",
     "menuSlug": "academic-programs-menu-[menu-id:-group-359-menu]",
-    "items": [
-      {
-        "title": "Program Information",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/academic-program-finder/philosophy-politics-and-economics",
-        "text": "",
-        "children": []
-      }
-    ]
+    "items": []
   },
   {
     "menuTitle": "Individualized Studies Major menu                    [Menu ID: group-360-menu]",
@@ -838,37 +683,6 @@
     "menuSlug": "department-of-anthropology-[menu-id:-group-451-menu]",
     "items": [
       {
-        "title": "Programs of Study",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/department-anthropology/programs-study",
-        "text": "",
-        "children": [
-          {
-            "title": "Anthropology",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/department-anthropology/anthropology",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/department-anthropology/anthropologyStatus: EnabledPlugin ID: menu_link_content:1737fc0c-6bbf-48d0-be11-50a1e9d97702Parent Plugin: menu_link_content:5ea73231-16cd-4757-9949-9336e57ba2eeMenu: group-451-menu",
-            "children": []
-          },
-          {
-            "title": "Sociomedical Sciences",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/department-anthropology/sociomedical-sciences",
-            "text": "",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "Minors",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/department-anthropology/anthropology-minors",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "Microcredentials",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/department-anthropology/microcredentials-anthropology",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Commitment to Antiracism",
         "href": "http://localhost/drupal-geneseo/list_menus.php/department-anthropology/commitment-antiracism",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/department-anthropology/commitment-antiracismStatus: EnabledPlugin ID: menu_link_content:5e98b3ab-b8f6-4e03-91f7-44c5456d3a2fParent Plugin: rootMenu: group-451-menu",
@@ -902,12 +716,6 @@
         "title": "Field Schools and Study Abroad",
         "href": "http://localhost/drupal-geneseo/list_menus.php/department-anthropology/field-schools-and-study-abroad",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/department-anthropology/field-schools-and-study-abroadStatus: EnabledPlugin ID: menu_link_content:62bdd4d8-db0b-441f-96cd-31ff5e004c61Parent Plugin: rootMenu: group-451-menu",
-        "children": []
-      },
-      {
-        "title": "Student Resources",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/department-anthropology/student-resources",
-        "text": "",
         "children": []
       },
       {
@@ -1116,12 +924,6 @@
     "menuSlug": "construction-projects-menu-[menu-id:-group-467-menu]",
     "items": [
       {
-        "title": "Projects Home",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/construction-projects",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Finance and Administration Home",
         "href": "https://www.geneseo.edu/admin_finance",
         "text": "URL: https://www.geneseo.edu/admin_financeStatus: EnabledPlugin ID: menu_link_content:696da6cd-f27f-486e-bbfb-83d70b976975Parent Plugin: rootMenu: group-467-menu",
@@ -1225,12 +1027,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "title": "What is Army ROTC?",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/www.geneseo.edu/rotc",
-        "text": "",
-        "children": []
       }
     ]
   },
@@ -1243,12 +1039,6 @@
         "title": "Home",
         "href": "http://localhost/drupal-geneseo/list_menus.php/philosophy-politics-economics",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/philosophy-politics-economicsStatus: EnabledPlugin ID: menu_link_content:b4f439db-8e10-4ee2-bd4c-483154cad1e3Parent Plugin: rootMenu: group-472-menu",
-        "children": []
-      },
-      {
-        "title": "Academic Program",
-        "href": "https://www.geneseo.edu/themajor",
-        "text": "",
         "children": []
       },
       {
@@ -1306,78 +1096,13 @@
     "menuTitle": "Writing Program menu                    [Menu ID: group-475-menu]",
     "menuId": "group-475-menu",
     "menuSlug": "writing-program-menu-[menu-id:-group-475-menu]",
-    "items": [
-      {
-        "title": "Home",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/writing-program",
-        "text": "",
-        "children": [
-          {
-            "title": "WRTG 105: First-Year Writing Seminar",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/writing-program/wrtg-105-first-year-writing-seminar",
-            "text": "",
-            "children": [
-              {
-                "title": "Fall 2025 Sections",
-                "href": "http://localhost/drupal-geneseo/list_menus.php/writing-program/fall-2025-sections",
-                "text": "URL: http://localhost/drupal-geneseo/list_menus.php/writing-program/fall-2025-sectionsStatus: EnabledPlugin ID: menu_link_content:7a64edda-18f5-4487-8eac-69af98ffac06Parent Plugin: menu_link_content:4b4b2b23-dbb2-4a8c-b679-e296f5f0a339Menu: group-475-menu",
-                "children": []
-              },
-              {
-                "title": "Faculty Resources",
-                "href": "http://localhost/drupal-geneseo/list_menus.php/writing-program/faculty-resources",
-                "text": "URL: http://localhost/drupal-geneseo/list_menus.php/writing-program/faculty-resourcesStatus: EnabledPlugin ID: menu_link_content:d5a08177-c1d6-4ee1-872d-cf0a19e51ca1Parent Plugin: menu_link_content:4b4b2b23-dbb2-4a8c-b679-e296f5f0a339Menu: group-475-menu",
-                "children": []
-              }
-            ]
-          },
-          {
-            "title": "The Writing Center",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/writing-program/writing-center",
-            "text": "",
-            "children": [
-              {
-                "title": "Meet Our Writing Consultants",
-                "href": "http://localhost/drupal-geneseo/list_menus.php/writing-program/meet-our-writing-consultants",
-                "text": "URL: http://localhost/drupal-geneseo/list_menus.php/writing-program/meet-our-writing-consultantsStatus: EnabledPlugin ID: menu_link_content:8a713036-ee81-4e43-94e8-d3f5e0ead0e2Parent Plugin: menu_link_content:99dceeee-f691-4102-88ff-dfb6974bcfecMenu: group-475-menu",
-                "children": []
-              }
-            ]
-          },
-          {
-            "title": "Writing Committee",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/writing-program/writing-committee",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/writing-program/writing-committeeStatus: EnabledPlugin ID: menu_link_content:99937e30-9af9-4ed0-a64c-d7f457368307Parent Plugin: menu_link_content:8be1e09f-b92c-4ab1-a4fc-332509700f49Menu: group-475-menu",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "First-Year Writing Seminar",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/writing-program/wrtg105",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "Writing Learning Center",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/writing-program/writing_center",
-        "text": "",
-        "children": []
-      }
-    ]
+    "items": []
   },
   {
     "menuTitle": "Club Sports Association menu                    [Menu ID: group-476-menu]",
     "menuId": "group-476-menu",
     "menuSlug": "club-sports-association-menu-[menu-id:-group-476-menu]",
-    "items": [
-      {
-        "title": "Home",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/clubsportsassociation",
-        "text": "",
-        "children": []
-      }
-    ]
+    "items": []
   },
   {
     "menuTitle": "Office of Government and Community Relations menu                    [Menu ID: group-477-menu]",
@@ -2227,52 +1952,15 @@
         "children": []
       },
       {
-        "title": "Great Knight",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/alumni/great-knight",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Reunion",
         "href": "https://www.geneseo.edu/reunion",
         "text": "URL: https://www.geneseo.edu/reunionStatus: EnabledPlugin ID: menu_link_content:5953b082-5721-4424-a9c6-e43f8470e16eParent Plugin: rootMenu: group-menu-alumni",
         "children": []
       },
       {
-        "title": "SGAA",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/alumni/sgaa",
-        "text": "",
-        "children": [
-          {
-            "title": "SGAA Leadership",
-            "href": "https://www.geneseo.edu/alumni/SGAA/leadership",
-            "text": "URL: https://www.geneseo.edu/alumni/SGAA/leadershipStatus: EnabledPlugin ID: menu_link_content:b3a4096d-d3c2-49cb-8baf-c8bf298deee1Parent Plugin: menu_link_content:80b7c242-da97-45ba-b991-ed764c0d7107Menu: group-menu-alumni",
-            "children": []
-          },
-          {
-            "title": "Alumni Awards",
-            "href": "https://www.geneseo.edu/alumni/sgaa/awards",
-            "text": "URL: https://www.geneseo.edu/alumni/sgaa/awardsStatus: EnabledPlugin ID: menu_link_content:412e39c0-407f-409f-8a82-0f923762e7e0Parent Plugin: menu_link_content:80b7c242-da97-45ba-b991-ed764c0d7107Menu: group-menu-alumni",
-            "children": []
-          },
-          {
-            "title": "Alumni Chapters",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/alumni/alumni-chapters",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/alumni/alumni-chaptersStatus: EnabledPlugin ID: menu_link_content:7a213ea9-5e15-4f32-b37a-119ef6906e21Parent Plugin: menu_link_content:80b7c242-da97-45ba-b991-ed764c0d7107Menu: group-menu-alumni",
-            "children": []
-          }
-        ]
-      },
-      {
         "title": "U-Knight Community",
         "href": "http://uknight.geneseo.edu/s/1648/Alumni/index.aspx?sid=1648&gid=2&pgid=531",
         "text": "URL: http://uknight.geneseo.edu/s/1648/Alumni/index.aspx?sid=1648&gid=2&pgid=531Status: EnabledPlugin ID: menu_link_content:b1461359-9b09-40f5-b5c9-01cd0d41192eParent Plugin: rootMenu: group-menu-alumni",
-        "children": []
-      },
-      {
-        "title": "Alumni Travel Program",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/alumni/alumni-travel-program",
-        "text": "",
         "children": []
       },
       {
@@ -2485,12 +2173,6 @@
         "children": []
       },
       {
-        "title": "Program Information",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/node/4871",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "FAQs",
         "href": "http://localhost/drupal-geneseo/list_menus.php/aop/frequently-asked-questions",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/aop/frequently-asked-questionsStatus: EnabledPlugin ID: menu_link_content:56b5e8af-bb0d-4878-bea3-c9f6a394bd06Parent Plugin: rootMenu: group-menu-aop",
@@ -2546,19 +2228,6 @@
     "menuSlug": "art-history-[menu-id:-group-menu-art-history]",
     "items": [
       {
-        "title": "Home",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/art-history",
-        "text": "",
-        "children": [
-          {
-            "title": "About Us",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/art_history/about-us",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/art_history/about-usStatus: EnabledPlugin ID: menu_link_content:667764a8-e19c-4bfb-8728-96aca68bb755Parent Plugin: menu_link_content:8769d4b1-894c-415f-8ffd-58b1a22a512eMenu: group-menu-art-history",
-            "children": []
-          }
-        ]
-      },
-      {
         "title": "Programs of Study",
         "href": "http://localhost/drupal-geneseo/list_menus.php/art_history/program-information",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/art_history/program-informationStatus: EnabledPlugin ID: menu_link_content:636d2996-e185-44d4-b5dc-e36aaa75acfbParent Plugin: rootMenu: group-menu-art-history",
@@ -2588,12 +2257,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "title": "Faculty and Staff",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/art_history/faculty-staff",
-        "text": "",
-        "children": []
       },
       {
         "title": "News",
@@ -3145,12 +2808,6 @@
     "menuSlug": "residence-life-[menu-id:-group-menu-campus-living]",
     "items": [
       {
-        "title": "RA Selection",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/residence-life/ra-selection",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Core Purpose and Focus",
         "href": "http://localhost/drupal-geneseo/list_menus.php/residence-life/student-life-core-purpose-and-focus",
         "text": "",
@@ -3189,78 +2846,10 @@
         ]
       },
       {
-        "title": "Residence Hall COVID-19 Safety Guidelines",
-        "href": "https://www.geneseo.edu/residence-life/residence-hall-covid-19-safety-guidelines",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Accessibility in the Residence Halls",
         "href": "http://localhost/drupal-geneseo/list_menus.php/residence-life/accessibility-residence-halls",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/residence-life/accessibility-residence-hallsStatus: EnabledPlugin ID: menu_link_content:fb9ea2bb-602f-473a-9386-92dcb0455301Parent Plugin: rootMenu: group-menu-campus-living",
         "children": []
-      },
-      {
-        "title": "Living On Campus",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/residence-life/living-campus",
-        "text": "",
-        "children": [
-          {
-            "title": "Residence Hall Communities",
-            "href": "https://www.geneseo.edu/residence-life/residence-halls",
-            "text": "URL: https://www.geneseo.edu/residence-life/residence-hallsStatus: EnabledPlugin ID: menu_link_content:40692c6d-9583-428d-b9ea-e72c310809c7Parent Plugin: menu_link_content:c8525c6f-97f4-4ceb-bca9-613c54dd59d1Menu: group-menu-campus-living",
-            "children": []
-          },
-          {
-            "title": "Staff in the Halls",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/residence-life/all-gender-housing",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/residence-life/all-gender-housingStatus: EnabledPlugin ID: menu_link_content:365268b2-4125-40dc-a65b-c2dce9ff2cd1Parent Plugin: menu_link_content:c8525c6f-97f4-4ceb-bca9-613c54dd59d1Menu: group-menu-campus-living",
-            "children": []
-          },
-          {
-            "title": "Important Dates & Deadlines",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/residence-life/important-dates-deadlines",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/residence-life/important-dates-deadlinesStatus: EnabledPlugin ID: menu_link_content:1f5c7a2d-9f15-4679-a986-895409e2050cParent Plugin: menu_link_content:c8525c6f-97f4-4ceb-bca9-613c54dd59d1Menu: group-menu-campus-living",
-            "children": []
-          },
-          {
-            "title": "New Student Housing",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/residence-life/new-student-housing",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/residence-life/new-student-housingStatus: EnabledPlugin ID: menu_link_content:fc70e2bf-604f-4831-aeb6-b3ddddbeca2eParent Plugin: menu_link_content:c8525c6f-97f4-4ceb-bca9-613c54dd59d1Menu: group-menu-campus-living",
-            "children": []
-          },
-          {
-            "title": "Returning Student Housing Process",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/residence-life/housing-process",
-            "text": "",
-            "children": []
-          },
-          {
-            "title": "Summer Session Housing",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/residence-life/summer-session-housing",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/residence-life/summer-session-housingStatus: EnabledPlugin ID: menu_link_content:0873e0fa-db61-44ab-8cac-98f61bf1e59dParent Plugin: menu_link_content:c8525c6f-97f4-4ceb-bca9-613c54dd59d1Menu: group-menu-campus-living",
-            "children": []
-          },
-          {
-            "title": "Residential Concerns",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/residence-life/residence-hall-concerns",
-            "text": "",
-            "children": [
-              {
-                "title": "Residential Emergencies",
-                "href": "http://localhost/drupal-geneseo/list_menus.php/residence-life/residential-emergencies",
-                "text": "URL: http://localhost/drupal-geneseo/list_menus.php/residence-life/residential-emergenciesStatus: EnabledPlugin ID: menu_link_content:de0c5faa-deba-4c8b-813b-64cfdf2efe0cParent Plugin: menu_link_content:fa2fb0f7-8317-49f2-92d0-4a802020769aMenu: group-menu-campus-living",
-                "children": []
-              }
-            ]
-          },
-          {
-            "title": "Break Information",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/residence-life/break-information",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/residence-life/break-informationStatus: EnabledPlugin ID: menu_link_content:a6e770e9-a389-4c3b-aa7a-3c62ad6c6079Parent Plugin: menu_link_content:c8525c6f-97f4-4ceb-bca9-613c54dd59d1Menu: group-menu-campus-living",
-            "children": []
-          }
-        ]
       },
       {
         "title": "Move-In Information Spring 2026",
@@ -3341,12 +2930,6 @@
         "href": "http://localhost/drupal-geneseo/list_menus.php/residence-life/employment-opportunities",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/residence-life/employment-opportunitiesStatus: EnabledPlugin ID: menu_link_content:8467e1b6-6456-452c-8dcb-c0ac682c0c50Parent Plugin: rootMenu: group-menu-campus-living",
         "children": []
-      },
-      {
-        "title": "Residence Life Staff",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/residence-life/staff",
-        "text": "",
-        "children": []
       }
     ]
   },
@@ -3425,12 +3008,6 @@
         ]
       },
       {
-        "title": "Calendars",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/events_office/calendars",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Policies and Procedures",
         "href": "http://localhost/drupal-geneseo/list_menus.php/events_office/policies_procedures",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/events_office/policies_proceduresStatus: EnabledPlugin ID: menu_link_content:fe9f46a8-4f1b-44dc-9d06-ac79bf6f7958Parent Plugin: rootMenu: group-menu-campus-scheduling-spe",
@@ -3474,79 +3051,10 @@
         "children": []
       },
       {
-        "title": "Events",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/career-design/events/calendar",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Online Resources",
         "href": "http://localhost/drupal-geneseo/list_menus.php/career-design/online-resources",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/career-design/online-resourcesStatus: EnabledPlugin ID: menu_link_content:124b0036-16d3-4891-973a-1e431632ce42Parent Plugin: rootMenu: group-menu-career-development",
         "children": []
-      },
-      {
-        "title": "For Students",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/career-design/students",
-        "text": "",
-        "children": [
-          {
-            "title": "Interview Preparation",
-            "href": "https://www.geneseo.edu/career_development/mock-interviewing",
-            "text": "",
-            "children": []
-          },
-          {
-            "title": "Resources for Education Majors",
-            "href": "https://www.geneseo.edu/career_development/resources-education-majors",
-            "text": "URL: https://www.geneseo.edu/career_development/resources-education-majorsStatus: EnabledPlugin ID: menu_link_content:c8b454d9-364e-44a5-837c-4b5f9757e5a6Parent Plugin: menu_link_content:626107f2-89f9-410c-ae97-3ee7e30c6c9fMenu: group-menu-career-development",
-            "children": []
-          },
-          {
-            "title": "Resources for Pre-Health Track",
-            "href": "https://www.geneseo.edu/premed",
-            "text": "URL: https://www.geneseo.edu/premedStatus: EnabledPlugin ID: menu_link_content:282f4894-eb5f-43f7-a2a5-b823772b44efParent Plugin: menu_link_content:626107f2-89f9-410c-ae97-3ee7e30c6c9fMenu: group-menu-career-development",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "For Alumni",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/career-design/alumni",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "Internships and Applied Learning",
-        "href": "https://www.geneseo.edu/career-design/internship-information",
-        "text": "",
-        "children": [
-          {
-            "title": "Internship Information",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/career-design/internship-information",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/career-design/internship-informationStatus: EnabledPlugin ID: menu_link_content:9ae630d8-d364-44ed-819a-44366bf89e76Parent Plugin: menu_link_content:50cac5a5-b7f7-4464-a2e2-3288f848d758Menu: group-menu-career-development",
-            "children": []
-          },
-          {
-            "title": "Internship and Living Stipend Program",
-            "href": "https://www.geneseo.edu/career-design/suny-geneseo-internship-and-living-stipend-application",
-            "text": "",
-            "children": [
-              {
-                "title": "Student Teacher Living Stipend Program",
-                "href": "https://www.geneseo.edu/career-design/student-teacher-living-stipend-program",
-                "text": "URL: https://www.geneseo.edu/career-design/student-teacher-living-stipend-programStatus: EnabledPlugin ID: menu_link_content:84bd3360-7dd1-47e3-a722-1dcb03cbdad8Parent Plugin: menu_link_content:2d4813c5-56bf-4343-910b-1117e3c08b90Menu: group-menu-career-development",
-                "children": []
-              }
-            ]
-          },
-          {
-            "title": "Individualized Integrative and Applied Learning (IAL) Opportunities",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/career-design/individualized-integrative-and-applied-learning-ial-opportunities",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/career-design/individualized-integrative-and-applied-learning-ial-opportunitiesStatus: EnabledPlugin ID: menu_link_content:4bc56fc8-3ebe-46fc-a800-bb5f1ad3c508Parent Plugin: menu_link_content:50cac5a5-b7f7-4464-a2e2-3288f848d758Menu: group-menu-career-development",
-            "children": []
-          }
-        ]
       },
       {
         "title": "For Faculty & Staff",
@@ -3558,18 +3066,6 @@
         "title": "For Families & Supporters",
         "href": "http://localhost/drupal-geneseo/list_menus.php/career-design/families",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/career-design/familiesStatus: EnabledPlugin ID: menu_link_content:05cdc6c2-6787-4861-9697-d5df0ca5039cParent Plugin: rootMenu: group-menu-career-development",
-        "children": []
-      },
-      {
-        "title": "For Employers",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/career-design/employers",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "Emergency Information",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/emergencies",
-        "text": "",
         "children": []
       },
       {
@@ -3717,12 +3213,6 @@
         "children": []
       },
       {
-        "title": "Safety & Right to Know",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/chemstockroom/safety",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Safety Data Sheets (SDS)",
         "href": "https://www.geneseo.edu/chemstockroom/safety-data-sheets",
         "text": "",
@@ -3788,12 +3278,6 @@
         "href": "http://localhost/drupal-geneseo/list_menus.php/chemstockroom/faq",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/chemstockroom/faqStatus: EnabledPlugin ID: menu_link_content:4e9d29c4-ac80-467e-bc9e-2d8a07c2bcb5Parent Plugin: rootMenu: group-menu-chemistry-stockroom",
         "children": []
-      },
-      {
-        "title": "Staff",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/chemstockroom/staff",
-        "text": "",
-        "children": []
       }
     ]
   },
@@ -3851,12 +3335,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "title": "Individualized Studies Major",
-        "href": "https://www.geneseo.edu/cil/individualized-studies-major",
-        "text": "",
-        "children": []
       },
       {
         "title": "Integrative & Interdisciplinary Curriculum",
@@ -3943,12 +3421,6 @@
         "title": "Systems Status",
         "href": "https://status.geneseo.edu/",
         "text": "URL: https://status.geneseo.edu/Status: EnabledPlugin ID: menu_link_content:58f777eb-6037-4063-9708-d149d8741f94Parent Plugin: rootMenu: group-menu-cit",
-        "children": []
-      },
-      {
-        "title": "Training",
-        "href": "https://www.geneseo.edu/cit/services/training",
-        "text": "",
         "children": []
       },
       {
@@ -4177,18 +3649,6 @@
         "title": "Home",
         "href": "http://localhost/drupal-geneseo/list_menus.php/comm_mark",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/comm_markStatus: EnabledPlugin ID: menu_link_content:840116a7-bf39-40aa-8285-85d294a5bd7dParent Plugin: rootMenu: group-menu-communications-market",
-        "children": []
-      },
-      {
-        "title": "Style Guides",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/comm_mark/style-guides",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "Graphic Design",
-        "href": "https://www.geneseo.edu/comm_mark/graphic-design",
-        "text": "",
         "children": []
       },
       {
@@ -4703,12 +4163,6 @@
         "children": []
       },
       {
-        "title": "Diversity Summit",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/diversity/diversity-summit-2025",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Diversity at Geneseo",
         "href": "http://localhost/drupal-geneseo/list_menus.php/diversity",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/diversityStatus: EnabledPlugin ID: menu_link_content:7ed88d86-7547-4af9-b3f0-ba4970e99bf4Parent Plugin: rootMenu: group-menu-diversity-at-geneseo",
@@ -5042,71 +4496,10 @@
     "menuSlug": "english-[menu-id:-group-menu-english]",
     "items": [
       {
-        "title": "Alumni Stories - Careers in English",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/alumni-profile/english",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Home",
         "href": "https://www.geneseo.edu/english",
         "text": "URL: https://www.geneseo.edu/englishStatus: EnabledPlugin ID: menu_link_content:0b732628-a809-4f7b-9271-11a23dec5cc7Parent Plugin: rootMenu: group-menu-english",
         "children": []
-      },
-      {
-        "title": "Programs of Study",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/english/programs-english",
-        "text": "",
-        "children": [
-          {
-            "title": "Literature Track",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/english/programs-english#literature",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/english/programs-english#literatureStatus: EnabledPlugin ID: menu_link_content:068182d0-641a-4c46-aedd-688799b11698Parent Plugin: menu_link_content:9d3e6793-24f3-4bb3-a193-59b5c5b59db6Menu: group-menu-english",
-            "children": []
-          },
-          {
-            "title": "Creative Writing Track",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/english/programs-english#creative-writing",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/english/programs-english#creative-writingStatus: EnabledPlugin ID: menu_link_content:03dcf53a-0561-4193-b041-365e7b101d92Parent Plugin: menu_link_content:9d3e6793-24f3-4bb3-a193-59b5c5b59db6Menu: group-menu-english",
-            "children": []
-          },
-          {
-            "title": "Comparative Literature",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/english/programs-english#comparative-literature",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/english/programs-english#comparative-literatureStatus: EnabledPlugin ID: menu_link_content:f79c5e8d-cfd3-48d2-b2ab-27847d2cf80dParent Plugin: menu_link_content:9d3e6793-24f3-4bb3-a193-59b5c5b59db6Menu: group-menu-english",
-            "children": []
-          },
-          {
-            "title": "English Minor",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/english/programs-english#minor",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/english/programs-english#minorStatus: EnabledPlugin ID: menu_link_content:78e59fc3-e256-4e30-8cda-43c78e8cbbdfParent Plugin: menu_link_content:9d3e6793-24f3-4bb3-a193-59b5c5b59db6Menu: group-menu-english",
-            "children": []
-          },
-          {
-            "title": "English Concentration",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/english/programs-english#concentration",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/english/programs-english#concentrationStatus: EnabledPlugin ID: menu_link_content:0181d31c-6c1f-46ed-b0a4-6d2db84903f5Parent Plugin: menu_link_content:9d3e6793-24f3-4bb3-a193-59b5c5b59db6Menu: group-menu-english",
-            "children": []
-          },
-          {
-            "title": "Film Studies Minor",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/english/programs-english#film-studies",
-            "text": "",
-            "children": []
-          },
-          {
-            "title": "Integrative Curricular Microcredentials",
-            "href": "https://www.geneseo.edu/english/programs-english#integrative-curricular-microcredentials",
-            "text": "URL: https://www.geneseo.edu/english/programs-english#integrative-curricular-microcredentialsStatus: EnabledPlugin ID: menu_link_content:d2206102-3c06-4f07-8d46-e46fc5a1a840Parent Plugin: menu_link_content:9d3e6793-24f3-4bb3-a193-59b5c5b59db6Menu: group-menu-english",
-            "children": []
-          },
-          {
-            "title": "Related Interdisciplinary Programs",
-            "href": "https://www.geneseo.edu/english/programs-english#interdisciplinary-programs",
-            "text": "URL: https://www.geneseo.edu/english/programs-english#interdisciplinary-programsStatus: EnabledPlugin ID: menu_link_content:7590f534-08fc-4297-897d-76eb7a36a6e3Parent Plugin: menu_link_content:9d3e6793-24f3-4bb3-a193-59b5c5b59db6Menu: group-menu-english",
-            "children": []
-          }
-        ]
       },
       {
         "title": "Faculty and Staff",
@@ -5184,56 +4577,6 @@
             "title": "Awards and Scholarships",
             "href": "http://localhost/drupal-geneseo/list_menus.php/english/awards",
             "text": "URL: http://localhost/drupal-geneseo/list_menus.php/english/awardsStatus: EnabledPlugin ID: menu_link_content:d1c4792f-7dc1-4b58-82bf-32a11a9cc44cParent Plugin: menu_link_content:54a90de8-555a-4255-82dc-780117e0249eMenu: group-menu-english",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "Alumni Stories - Careers in English",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/english/alumni-stories",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "Student Resources",
-        "href": "https://geneseo.edu/english/student-resources",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "Department News",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/english/english-department-news",
-        "text": "",
-        "children": [
-          {
-            "title": "Events",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/english/english-department-events",
-            "text": "",
-            "children": [
-              {
-                "title": "Walter Harding Lecture",
-                "href": "http://localhost/drupal-geneseo/list_menus.php/english/english-department-events#walter-harding-lecture",
-                "text": "URL: http://localhost/drupal-geneseo/list_menus.php/english/english-department-events#walter-harding-lectureStatus: EnabledPlugin ID: menu_link_content:f51f272b-7088-4da6-b3b0-bb2dc5849bafParent Plugin: menu_link_content:aad72294-0204-4570-919c-af93acadb653Menu: group-menu-english",
-                "children": []
-              },
-              {
-                "title": "Genesee Valley Literary Forum",
-                "href": "https://www.geneseo.edu/english/english-department-events#geneseo-literary-forum",
-                "text": "URL: https://www.geneseo.edu/english/english-department-events#geneseo-literary-forumStatus: EnabledPlugin ID: menu_link_content:21010dd8-7651-43df-a7c1-10a917553a7fParent Plugin: menu_link_content:aad72294-0204-4570-919c-af93acadb653Menu: group-menu-english",
-                "children": []
-              }
-            ]
-          },
-          {
-            "title": "Professional Development for Teachers",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/english/professional-development-teachers",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/english/professional-development-teachersStatus: EnabledPlugin ID: menu_link_content:f2aecd47-f512-4e33-af46-5c25bc4ddc35Parent Plugin: menu_link_content:3becbd7c-ac19-4dbc-994d-2231d7b57313Menu: group-menu-english",
-            "children": []
-          },
-          {
-            "title": "Blogs and Projects",
-            "href": "http://sunygeneseoenglish.org/",
-            "text": "URL: http://sunygeneseoenglish.org/Status: EnabledPlugin ID: menu_link_content:6ec4820c-36a1-4ad3-90c4-8c62b97e8b39Parent Plugin: menu_link_content:3becbd7c-ac19-4dbc-994d-2231d7b57313Menu: group-menu-english",
             "children": []
           }
         ]
@@ -5334,12 +4677,6 @@
         "children": []
       },
       {
-        "title": "Building Maintenance: Core, Zones & Staff",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/facilities_services/core_trades",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Grounds & Garage",
         "href": "http://localhost/drupal-geneseo/list_menus.php/facilities_services/grounds-home",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/facilities_services/grounds-homeStatus: EnabledPlugin ID: menu_link_content:6c9069c4-2a49-4c65-b1c8-a2021608fe61Parent Plugin: rootMenu: group-menu-facilities-services",
@@ -5368,12 +4705,6 @@
         "title": "Planning & Construction Office",
         "href": "https://www.geneseo.edu/facilities_planning",
         "text": "URL: https://www.geneseo.edu/facilities_planningStatus: EnabledPlugin ID: menu_link_content:0079e8ba-2d61-4dd7-944e-7d8f828541c2Parent Plugin: rootMenu: group-menu-facilities-services",
-        "children": []
-      },
-      {
-        "title": "Grounds",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/facilities_services/grounds",
-        "text": "",
         "children": []
       },
       {
@@ -5989,43 +5320,6 @@
         "children": []
       },
       {
-        "title": "Programs of Study",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/geography/geography-sustainability-studies-mission-and-programs",
-        "text": "",
-        "children": [
-          {
-            "title": "B.A. and minor in Geography",
-            "href": "https://bulletin.geneseo.edu/preview_program.php?catoid=16&poid=1265&returnto=651",
-            "text": "URL: https://bulletin.geneseo.edu/preview_program.php?catoid=16&poid=1265&returnto=651Status: EnabledPlugin ID: menu_link_content:a795a1ca-6877-4671-a425-f9f6d55090f6Parent Plugin: menu_link_content:4e9cb62b-84d2-4273-b142-83aab2d630d8Menu: group-menu-geography",
-            "children": []
-          },
-          {
-            "title": "B.A. in Sustainability Studies",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/geography/sustainability-studies",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/geography/sustainability-studiesStatus: EnabledPlugin ID: menu_link_content:adb8c702-4f07-407d-a84c-a323a5c107f3Parent Plugin: menu_link_content:4e9cb62b-84d2-4273-b142-83aab2d630d8Menu: group-menu-geography",
-            "children": []
-          },
-          {
-            "title": "Minor in Urban Studies",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/geography/urban-studies",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/geography/urban-studiesStatus: EnabledPlugin ID: menu_link_content:e98327f1-7428-421d-adbc-d2d392f15dc1Parent Plugin: menu_link_content:4e9cb62b-84d2-4273-b142-83aab2d630d8Menu: group-menu-geography",
-            "children": []
-          },
-          {
-            "title": "Microcredential in Geographic Information Systems (GIS)",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/geography/microcredential-geographic-information-systems-gis",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/geography/microcredential-geographic-information-systems-gisStatus: EnabledPlugin ID: menu_link_content:a6a9bfd8-a318-45fe-93fb-7c59e3aebf49Parent Plugin: menu_link_content:4e9cb62b-84d2-4273-b142-83aab2d630d8Menu: group-menu-geography",
-            "children": []
-          },
-          {
-            "title": "Minor in Sustainability Studies",
-            "href": "https://bulletin.geneseo.edu/preview_program.php?catoid=16&poid=1321&hl=sustainability%20studies&returnto=search",
-            "text": "URL: https://bulletin.geneseo.edu/preview_program.php?catoid=16&poid=1321&hl=sustainability%20studies&returnto=searchStatus: EnabledPlugin ID: menu_link_content:9fc65e55-3339-49cf-a1da-8ea51fd06808Parent Plugin: menu_link_content:4e9cb62b-84d2-4273-b142-83aab2d630d8Menu: group-menu-geography",
-            "children": []
-          }
-        ]
-      },
-      {
         "title": "Faculty & Staff",
         "href": "http://localhost/drupal-geneseo/list_menus.php/geography/faculty-staff",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/geography/faculty-staffStatus: EnabledPlugin ID: menu_link_content:d395fab3-6d00-4b2a-8887-363334d45047Parent Plugin: rootMenu: group-menu-geography",
@@ -6238,12 +5532,6 @@
         "children": []
       },
       {
-        "title": "Alumni",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/geology/alumni",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Donate to Geology",
         "href": "http://localhost/drupal-geneseo/list_menus.php/geology/donations-geology-department",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/geology/donations-geology-departmentStatus: EnabledPlugin ID: menu_link_content:b46a5049-9eba-4bb6-84cb-08b79d1001f6Parent Plugin: rootMenu: group-menu-geological-sciences",
@@ -6256,12 +5544,6 @@
     "menuId": "group-menu-george-a-marcus",
     "menuSlug": "george-a-marcus-[menu-id:-group-menu-george-a-marcus]",
     "items": [
-      {
-        "title": "Fall Classes",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/",
-        "text": "",
-        "children": []
-      },
       {
         "title": "My Schedule",
         "href": "http://localhost/drupal-geneseo/list_menus.php/marcus/schedule-page",
@@ -6321,12 +5603,6 @@
         "title": "Building Leaders One Hour at a Time",
         "href": "https://www.geneseo.edu/gold/building-leaders",
         "text": "URL: https://www.geneseo.edu/gold/building-leadersStatus: EnabledPlugin ID: menu_link_content:29fb6d88-2038-4304-af5b-fbb570b4efa9Parent Plugin: rootMenu: group-menu-gold-program",
-        "children": []
-      },
-      {
-        "title": "Resources",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/gold/resources",
-        "text": "",
         "children": []
       }
     ]
@@ -6546,12 +5822,6 @@
         "href": "http://localhost/drupal-geneseo/list_menus.php/great_day/contact-us",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/great_day/contact-usStatus: EnabledPlugin ID: menu_link_content:a5d14cdb-2631-49fe-8ef8-ba0b88c12fbaParent Plugin: rootMenu: group-menu-great-day",
         "children": []
-      },
-      {
-        "title": "Virtual GREAT Day: How to Submit",
-        "href": "https://www.geneseo.edu/great_day/submit-virtual-great-days-2021",
-        "text": "",
-        "children": []
       }
     ]
   },
@@ -6752,31 +6022,6 @@
         "children": []
       },
       {
-        "title": "Health Services",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/health/health-services",
-        "text": "",
-        "children": [
-          {
-            "title": "Health Requirements - New Incoming Students",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/health/new-student",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/health/new-studentStatus: EnabledPlugin ID: menu_link_content:457f3a7f-2402-44ee-932a-bb08f4471b0eParent Plugin: menu_link_content:512eb912-c416-44b2-9a61-b204fcb5946aMenu: group-menu-health-counseling",
-            "children": []
-          },
-          {
-            "title": "Center for Sexual Health & Wellness",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/health/sexual-health",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/health/sexual-healthStatus: EnabledPlugin ID: menu_link_content:61aaf81b-a02a-4749-bd9f-6c7f94068735Parent Plugin: menu_link_content:512eb912-c416-44b2-9a61-b204fcb5946aMenu: group-menu-health-counseling",
-            "children": []
-          },
-          {
-            "title": "Medical Transportation",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/pts/medical-needs",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/pts/medical-needsStatus: EnabledPlugin ID: menu_link_content:c5c2c453-d565-4101-82e1-045b4add75b7Parent Plugin: menu_link_content:512eb912-c416-44b2-9a61-b204fcb5946aMenu: group-menu-health-counseling",
-            "children": []
-          }
-        ]
-      },
-      {
         "title": "Counseling Services",
         "href": "http://localhost/drupal-geneseo/list_menus.php/health/counseling",
         "text": "",
@@ -6827,31 +6072,6 @@
         ]
       },
       {
-        "title": "Health Promotion",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/health/health-promotion",
-        "text": "",
-        "children": [
-          {
-            "title": "Student Wellness Team",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/health/studentwellnessteam",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/health/studentwellnessteamStatus: EnabledPlugin ID: menu_link_content:58c7386c-5e89-4bbf-8a57-ba656e0e7fc8Parent Plugin: menu_link_content:890b1ed0-bde0-4d3a-9f8d-56d185f25ac7Menu: group-menu-health-counseling",
-            "children": []
-          },
-          {
-            "title": "Hot Topics!",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/health/hot-topics",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/health/hot-topicsStatus: EnabledPlugin ID: menu_link_content:b71b72fb-5385-4fd2-aa1b-e0bc01771621Parent Plugin: menu_link_content:890b1ed0-bde0-4d3a-9f8d-56d185f25ac7Menu: group-menu-health-counseling",
-            "children": []
-          },
-          {
-            "title": "Wellness in Nature",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/health/wellness-nature",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/health/wellness-natureStatus: EnabledPlugin ID: menu_link_content:bd6c09f2-362c-4f49-9425-f52d65d45a10Parent Plugin: menu_link_content:890b1ed0-bde0-4d3a-9f8d-56d185f25ac7Menu: group-menu-health-counseling",
-            "children": []
-          }
-        ]
-      },
-      {
         "title": "Contact Us",
         "href": "http://localhost/drupal-geneseo/list_menus.php/health/contact",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/health/contactStatus: EnabledPlugin ID: menu_link_content:aeb9142b-46f9-4cd9-a76b-2c7b9295a7b8Parent Plugin: rootMenu: group-menu-health-counseling",
@@ -6883,18 +6103,6 @@
         "children": []
       },
       {
-        "title": "2021 High Holidays",
-        "href": "https://docs.google.com/forms/d/e/1FAIpQLSdqcqpwHJnToVzF7SHSLdYuy7NocI06bd-DGLCGS4H7m60EAQ/viewform?usp=sf_link",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "High Holidays 2020",
-        "href": "https://conta.cc/3hDrV4R",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "About Us",
         "href": "http://localhost/drupal-geneseo/list_menus.php/hillel-/about-us",
         "text": "",
@@ -6906,18 +6114,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "title": "Events and Programs",
-        "href": "https://www.geneseo.edu/hillel-/Events-calendar",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "Opportunities",
-        "href": "https://www.geneseo.edu/hillel/opportunities",
-        "text": "",
-        "children": []
       },
       {
         "title": "Contact Us",
@@ -6938,19 +6134,6 @@
     "menuId": "group-menu-history",
     "menuSlug": "history-[menu-id:-group-menu-history]",
     "items": [
-      {
-        "title": "Home",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/history",
-        "text": "",
-        "children": [
-          {
-            "title": "History Teachers Day",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/history/history-teachers-day",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/history/history-teachers-dayStatus: EnabledPlugin ID: menu_link_content:b162a372-09fc-408b-aede-a95d7b499646Parent Plugin: menu_link_content:da6068ea-a301-4e97-9c3b-4d4886c52fd2Menu: group-menu-history",
-            "children": []
-          }
-        ]
-      },
       {
         "title": "Programs of Study",
         "href": "http://localhost/drupal-geneseo/list_menus.php/history/history-programs-study",
@@ -7063,19 +6246,6 @@
     "menuId": "group-menu-human-resources",
     "menuSlug": "human-resources-&-payroll-services-[menu-id:-group-menu-human-resources]",
     "items": [
-      {
-        "title": "About Us",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/hr/about-human-resources",
-        "text": "",
-        "children": [
-          {
-            "title": "Whom Do I Contact?",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/hr/whom-do-i-contact",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/hr/whom-do-i-contactStatus: EnabledPlugin ID: menu_link_content:c0f13cf3-6985-4877-8614-205538f747faParent Plugin: menu_link_content:890cf705-1cd3-47e8-ad8e-0bde6b6f9d7bMenu: group-menu-human-resources",
-            "children": []
-          }
-        ]
-      },
       {
         "title": "Awards & Recognition",
         "href": "https://www.geneseo.edu/hr/service_recognition",
@@ -7580,12 +6750,6 @@
         "children": []
       },
       {
-        "title": "Championship Pictures",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/intramurals/pictures",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Standings",
         "href": "http://localhost/drupal-geneseo/list_menus.php/intramurals/standings",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/intramurals/standingsStatus: EnabledPlugin ID: menu_link_content:1d63fae2-1348-4d4f-8bbf-e1ee3e1827a4Parent Plugin: rootMenu: group-menu-intramural-sports",
@@ -7661,18 +6825,6 @@
         "title": "Employee Handbook",
         "href": "http://localhost/drupal-geneseo/list_menus.php/intramurals/handbook",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/intramurals/handbookStatus: EnabledPlugin ID: menu_link_content:865f36f6-066c-4e1f-9d48-2018b9f6222aParent Plugin: rootMenu: group-menu-intramural-sports",
-        "children": []
-      },
-      {
-        "title": "Upstate Escapes",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/upstateescapes",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "Upstate Escapes",
-        "href": "https://www.geneseo.edu/intramurals/upstateescapes",
-        "text": "",
         "children": []
       },
       {
@@ -7758,43 +6910,6 @@
             "title": "FAQ",
             "href": "http://localhost/drupal-geneseo/list_menus.php/international/frequently-asked-questions",
             "text": "URL: http://localhost/drupal-geneseo/list_menus.php/international/frequently-asked-questionsStatus: EnabledPlugin ID: menu_link_content:4e0efee7-c750-4d00-b435-e4b20f1bd4d3Parent Plugin: menu_link_content:219b885b-e932-4105-b44f-6dd1c8d6e3f9Menu: group-menu-isss",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "Current International Students",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/international/currentstudents",
-        "text": "",
-        "children": [
-          {
-            "title": "Health Insurance for International Students",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/international/health-insurance-international-students",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/international/health-insurance-international-studentsStatus: EnabledPlugin ID: menu_link_content:8bec524b-9cb2-4ee5-9844-fd22577f147dParent Plugin: menu_link_content:a197299c-d481-4614-89af-ab788e46a6a4Menu: group-menu-isss",
-            "children": []
-          },
-          {
-            "title": "VISA and Immigration",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/international/visa-immigration-information",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/international/visa-immigration-informationStatus: EnabledPlugin ID: menu_link_content:0028a43c-c20e-430c-9a3f-6707d1b0ea6eParent Plugin: menu_link_content:a197299c-d481-4614-89af-ab788e46a6a4Menu: group-menu-isss",
-            "children": []
-          },
-          {
-            "title": "Employment",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/international/employment-international-student",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/international/employment-international-studentStatus: EnabledPlugin ID: menu_link_content:4ee7cab1-ac9d-4a16-b942-f865f78d5deeParent Plugin: menu_link_content:a197299c-d481-4614-89af-ab788e46a6a4Menu: group-menu-isss",
-            "children": []
-          },
-          {
-            "title": "Forms",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/international/forms-current-international-students",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/international/forms-current-international-studentsStatus: EnabledPlugin ID: menu_link_content:a5c2f75a-8ce8-4ef1-8b5d-7078104ab611Parent Plugin: menu_link_content:a197299c-d481-4614-89af-ab788e46a6a4Menu: group-menu-isss",
-            "children": []
-          },
-          {
-            "title": "Upcoming Workshops and Events",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/international/upcoming-workshops-and-events",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/international/upcoming-workshops-and-eventsStatus: EnabledPlugin ID: menu_link_content:079132c5-d9f8-4896-a514-347847033c43Parent Plugin: menu_link_content:a197299c-d481-4614-89af-ab788e46a6a4Menu: group-menu-isss",
             "children": []
           }
         ]
@@ -8048,76 +7163,9 @@
         "children": []
       },
       {
-        "title": "Student Resources",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/languages_literatures/student_resources",
-        "text": "",
-        "children": [
-          {
-            "title": "Directed Study Policy",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/languages_literatures/directed_study_policy",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/languages_literatures/directed_study_policyStatus: EnabledPlugin ID: menu_link_content:e686de11-e471-41a0-a92b-ac94438703c8Parent Plugin: menu_link_content:d6e0ad0f-57bd-487c-9e76-602b1a5839c2Menu: group-menu-languages-literatures",
-            "children": []
-          },
-          {
-            "title": "Study Abroad",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/languages_literatures/study-abroad",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/languages_literatures/study-abroadStatus: EnabledPlugin ID: menu_link_content:c9fb8d58-ce76-4956-ac0f-35305b799c57Parent Plugin: menu_link_content:d6e0ad0f-57bd-487c-9e76-602b1a5839c2Menu: group-menu-languages-literatures",
-            "children": []
-          },
-          {
-            "title": "Ambassadorships and Scholarships",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/languages_literatures/scholarships",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/languages_literatures/scholarshipsStatus: EnabledPlugin ID: menu_link_content:fec9bc36-4358-40ac-9b69-e8f2100b5616Parent Plugin: menu_link_content:d6e0ad0f-57bd-487c-9e76-602b1a5839c2Menu: group-menu-languages-literatures",
-            "children": []
-          },
-          {
-            "title": "Policy on 300- or 400-level Transfer Credit",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/global-languages-cultures/policy-300-or-400-level-transfer-credit",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/global-languages-cultures/policy-300-or-400-level-transfer-creditStatus: EnabledPlugin ID: menu_link_content:4403750f-9728-4d8b-8a2c-747faeaf380aParent Plugin: menu_link_content:d6e0ad0f-57bd-487c-9e76-602b1a5839c2Menu: group-menu-languages-literatures",
-            "children": []
-          },
-          {
-            "title": "Center For Languages & Cultures",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/languages_literatures/center-languages-cultures",
-            "text": "",
-            "children": []
-          },
-          {
-            "title": "Tutoring",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/languages_literatures/tutoring",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/languages_literatures/tutoringStatus: EnabledPlugin ID: menu_link_content:240cef0a-4e78-4910-916d-86e60cdd3372Parent Plugin: menu_link_content:d6e0ad0f-57bd-487c-9e76-602b1a5839c2Menu: group-menu-languages-literatures",
-            "children": []
-          },
-          {
-            "title": "Clubs, Organizations and Honor Societies",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/languages_literatures/clubs_organizations",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/languages_literatures/clubs_organizationsStatus: EnabledPlugin ID: menu_link_content:359901a3-c24a-46d3-b3ce-faf032e6e34fParent Plugin: menu_link_content:d6e0ad0f-57bd-487c-9e76-602b1a5839c2Menu: group-menu-languages-literatures",
-            "children": []
-          },
-          {
-            "title": "Career Opportunities",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/languages_literatures/career_opps",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/languages_literatures/career_oppsStatus: EnabledPlugin ID: menu_link_content:9b897f65-50ba-4fdb-af79-7df3c221702eParent Plugin: menu_link_content:d6e0ad0f-57bd-487c-9e76-602b1a5839c2Menu: group-menu-languages-literatures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "News and events",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/languages_literatures/newsletters",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Department News",
         "href": "http://localhost/drupal-geneseo/list_menus.php/global-languages-cultures/news",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/global-languages-cultures/newsStatus: EnabledPlugin ID: menu_link_content:7d1942df-6741-47e2-9419-f97b12e7f977Parent Plugin: rootMenu: group-menu-languages-literatures",
-        "children": []
-      },
-      {
-        "title": "Alumni Connections",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/languages_literatures/alumni_resources",
-        "text": "",
         "children": []
       },
       {
@@ -8224,18 +7272,6 @@
         "title": "Contact Us",
         "href": "http://localhost/drupal-geneseo/list_menus.php/lgbtq/contact",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/lgbtq/contactStatus: EnabledPlugin ID: menu_link_content:4a557c5d-fb0c-4d99-856a-efa5dce6b9afParent Plugin: rootMenu: group-menu-lgbtq",
-        "children": []
-      },
-      {
-        "title": "Campus Resources",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/lgbtq/campus-resources",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "Office of LGBTQ+ Life",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/lgbtq/lgbtq-life",
-        "text": "",
         "children": []
       },
       {
@@ -8486,180 +7522,9 @@
         ]
       },
       {
-        "title": "Programs of Study",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/math/programs",
-        "text": "",
-        "children": [
-          {
-            "title": "Bachelor of Science in Mathematics",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/bs_math",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/bs_mathStatus: EnabledPlugin ID: menu_link_content:553a6241-1482-4740-a92d-b75e4bca3627Parent Plugin: menu_link_content:7c3b5696-1030-467e-b285-3fb7e507a69aMenu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Bachelor of Science in Applied Mathematics",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/bs_applied",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/bs_appliedStatus: EnabledPlugin ID: menu_link_content:f8f227b2-5717-4e5f-b249-e4edfb064fe8Parent Plugin: menu_link_content:7c3b5696-1030-467e-b285-3fb7e507a69aMenu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Bachelor of Arts in Mathematics",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/ba_in_math",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/ba_in_mathStatus: EnabledPlugin ID: menu_link_content:6e6f2ac6-4b94-4f47-91df-46f8b017e3acParent Plugin: menu_link_content:7c3b5696-1030-467e-b285-3fb7e507a69aMenu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Bachelor of Arts with Adolescent Certification (Secondary Education)",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/ba_with_adolescent",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/ba_with_adolescentStatus: EnabledPlugin ID: menu_link_content:5d8dee40-46a1-46f3-a2b9-bc3738108ad3Parent Plugin: menu_link_content:7c3b5696-1030-467e-b285-3fb7e507a69aMenu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Minor in Mathematics",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/minor_in_math",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/minor_in_mathStatus: EnabledPlugin ID: menu_link_content:3ed5ba31-c313-4449-bc95-72694a3517d0Parent Plugin: menu_link_content:7c3b5696-1030-467e-b285-3fb7e507a69aMenu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Concentration in Mathematics (Elementary Education)",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/math_concentration",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/math_concentrationStatus: EnabledPlugin ID: menu_link_content:cebb1652-7ae9-43cc-8d6f-6df885327ff2Parent Plugin: menu_link_content:7c3b5696-1030-467e-b285-3fb7e507a69aMenu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Actuarial Sciences",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/actuarial_sciences",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/actuarial_sciencesStatus: EnabledPlugin ID: menu_link_content:e20bd5ea-fba6-42f1-80b7-8d0794a69618Parent Plugin: menu_link_content:7c3b5696-1030-467e-b285-3fb7e507a69aMenu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Honors in Mathematics",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/honors_in_math",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/honors_in_mathStatus: EnabledPlugin ID: menu_link_content:62bbcfe9-410f-4d38-810c-2a71f2cd3879Parent Plugin: menu_link_content:7c3b5696-1030-467e-b285-3fb7e507a69aMenu: group-menu-mathematics",
-            "children": []
-          }
-        ]
-      },
-      {
         "title": "Faculty & Staff",
         "href": "http://localhost/drupal-geneseo/list_menus.php/math/faculty-staff",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/faculty-staffStatus: EnabledPlugin ID: menu_link_content:afbdacb8-2d13-4c22-9fd7-2efc8e66d01bParent Plugin: rootMenu: group-menu-mathematics",
-        "children": []
-      },
-      {
-        "title": "Student Resources",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/math/student_resources",
-        "text": "",
-        "children": [
-          {
-            "title": "Prospective Students",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/information-prospective-mathematics-students",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/information-prospective-mathematics-studentsStatus: EnabledPlugin ID: menu_link_content:e499e543-1ba7-4f63-88b9-1451fb764df7Parent Plugin: menu_link_content:dcf9caf1-cd7e-4733-a6ed-e0b19fb1c6c9Menu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Why Major in Math?",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/careers",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/careersStatus: EnabledPlugin ID: menu_link_content:a8989d7b-9aa1-425c-b4f6-7740e46cccd0Parent Plugin: menu_link_content:dcf9caf1-cd7e-4733-a6ed-e0b19fb1c6c9Menu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Course Advisement",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/advisement",
-            "text": "",
-            "children": []
-          },
-          {
-            "title": "Course Learning Outcomes",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/learningoutcomes",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/learningoutcomesStatus: EnabledPlugin ID: menu_link_content:cd1c2069-173b-4d73-84d9-79e18d69e2baParent Plugin: menu_link_content:dcf9caf1-cd7e-4733-a6ed-e0b19fb1c6c9Menu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Program Goals",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/program-goals-and-learning-outcomes",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/program-goals-and-learning-outcomesStatus: EnabledPlugin ID: menu_link_content:14f83831-34ad-49b1-bbc9-016a778e8afdParent Plugin: menu_link_content:dcf9caf1-cd7e-4733-a6ed-e0b19fb1c6c9Menu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Course Rotation",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/course_rotation",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/course_rotationStatus: EnabledPlugin ID: menu_link_content:9d29aa8e-61be-4203-9524-b110681b3f93Parent Plugin: menu_link_content:dcf9caf1-cd7e-4733-a6ed-e0b19fb1c6c9Menu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Research Weekend",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/research-weekend",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/research-weekendStatus: EnabledPlugin ID: menu_link_content:cbe27b5a-8ade-4197-8b58-dafdb266bd73Parent Plugin: menu_link_content:dcf9caf1-cd7e-4733-a6ed-e0b19fb1c6c9Menu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Internship Opportunities",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/intern",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/internStatus: EnabledPlugin ID: menu_link_content:a055dccf-03cc-4b50-a7c4-3e539f54ff2eParent Plugin: menu_link_content:dcf9caf1-cd7e-4733-a6ed-e0b19fb1c6c9Menu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Scholarships/Awards",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/scholarships",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/scholarshipsStatus: EnabledPlugin ID: menu_link_content:8e5bbc6b-eb56-47a8-8f2d-8d56be5fc0ddParent Plugin: menu_link_content:dcf9caf1-cd7e-4733-a6ed-e0b19fb1c6c9Menu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Pi Mu Epsilon",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/honorary_society",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/honorary_societyStatus: EnabledPlugin ID: menu_link_content:d26dbf38-007c-46fc-8c07-7866d2966691Parent Plugin: menu_link_content:dcf9caf1-cd7e-4733-a6ed-e0b19fb1c6c9Menu: group-menu-mathematics",
-            "children": []
-          },
-          {
-            "title": "Student Organizations",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/student-organizations",
-            "text": "",
-            "children": [
-              {
-                "title": "PRISM",
-                "href": "http://localhost/drupal-geneseo/list_menus.php/prism",
-                "text": "URL: http://localhost/drupal-geneseo/list_menus.php/prismStatus: EnabledPlugin ID: menu_link_content:66e5104c-5e8d-40d4-957b-58b33e95b3f4Parent Plugin: menu_link_content:25e9eaef-c0dd-46ea-b59c-59418f5d7994Menu: group-menu-mathematics",
-                "children": []
-              },
-              {
-                "title": "AWM",
-                "href": "http://localhost/drupal-geneseo/list_menus.php/math/awm",
-                "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/awmStatus: EnabledPlugin ID: menu_link_content:fe4cad4c-022e-4f93-a665-1064bbd9b87aParent Plugin: menu_link_content:25e9eaef-c0dd-46ea-b59c-59418f5d7994Menu: group-menu-mathematics",
-                "children": []
-              },
-              {
-                "title": "Actuary",
-                "href": "https://www.geneseo.edu/actuarial",
-                "text": "URL: https://www.geneseo.edu/actuarialStatus: EnabledPlugin ID: menu_link_content:fbcc5832-fea3-48a3-ba0f-92874a3c2290Parent Plugin: menu_link_content:25e9eaef-c0dd-46ea-b59c-59418f5d7994Menu: group-menu-mathematics",
-                "children": []
-              },
-              {
-                "title": "SIAM",
-                "href": "http://localhost/drupal-geneseo/list_menus.php/math/society-industrial-and-applied-mathematics",
-                "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/society-industrial-and-applied-mathematicsStatus: EnabledPlugin ID: menu_link_content:fb732551-8010-4b23-b2ab-1086cefb3bb0Parent Plugin: menu_link_content:25e9eaef-c0dd-46ea-b59c-59418f5d7994Menu: group-menu-mathematics",
-                "children": []
-              }
-            ]
-          },
-          {
-            "title": "ALEKS PPL",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/math/aleks-ppl",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/math/aleks-pplStatus: EnabledPlugin ID: menu_link_content:03df68f4-2e65-42e3-8717-ba965d8d6877Parent Plugin: menu_link_content:dcf9caf1-cd7e-4733-a6ed-e0b19fb1c6c9Menu: group-menu-mathematics",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "Faculty Resources",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/math/for_faculty",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "Department News",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/math/math-department-news-and-notes",
-        "text": "",
         "children": []
       }
     ]
@@ -9225,24 +8090,6 @@
         "children": []
       },
       {
-        "title": "For Students",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/off_campus/students",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "For Parents",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/off_campus/parents",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "For Landlords",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/off_campus/landlords",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "For Community Members",
         "href": "http://localhost/drupal-geneseo/list_menus.php/off_campus/community-members",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/off_campus/community-membersStatus: EnabledPlugin ID: menu_link_content:6c7ee758-f944-42ca-8a95-08f6240c0bf2Parent Plugin: rootMenu: group-menu-off-campus-living",
@@ -9347,25 +8194,6 @@
         "children": []
       },
       {
-        "title": "Mary C. Toale, Officer in Charge",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/president/biographyvita",
-        "text": "",
-        "children": [
-          {
-            "title": "Speeches",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/president/addresses",
-            "text": "",
-            "children": []
-          },
-          {
-            "title": "Statements",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/president/presidential-statements",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/president/presidential-statementsStatus: EnabledPlugin ID: menu_link_content:5692fc87-2abe-4971-a759-cbb93cfa25f1Parent Plugin: menu_link_content:060d2ce4-aa8f-4025-8473-1a892d70e225Menu: group-menu-office-of-the-preside",
-            "children": []
-          }
-        ]
-      },
-      {
         "title": "President's Cabinet",
         "href": "http://localhost/drupal-geneseo/list_menus.php/president/cabinet",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/president/cabinetStatus: EnabledPlugin ID: menu_link_content:65a74850-931f-42a1-a322-ed9ac49112e4Parent Plugin: rootMenu: group-menu-office-of-the-preside",
@@ -9423,37 +8251,6 @@
         "title": "College Officers",
         "href": "http://localhost/drupal-geneseo/list_menus.php/president/college-officers",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/president/college-officersStatus: EnabledPlugin ID: menu_link_content:9b2a63e6-7801-479b-9a71-a6fd16e34fbaParent Plugin: rootMenu: group-menu-office-of-the-preside",
-        "children": []
-      },
-      {
-        "title": "College Handbook and Policies",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/president/college-handbook",
-        "text": "",
-        "children": [
-          {
-            "title": "Policy Library",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/policy/policy-library",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/policy/policy-libraryStatus: EnabledPlugin ID: menu_link_content:9dc01659-20ad-4d03-9a21-f51ca99498eaParent Plugin: menu_link_content:d4b9ea9c-1651-49f5-8301-a72d70225444Menu: group-menu-office-of-the-preside",
-            "children": []
-          },
-          {
-            "title": "Policy Procedures",
-            "href": "https://www.geneseo.edu/president/requesting-new-or-revised-policy",
-            "text": "URL: https://www.geneseo.edu/president/requesting-new-or-revised-policyStatus: EnabledPlugin ID: menu_link_content:e2d2f9da-5163-4ae7-b90b-1fcc28ca337bParent Plugin: menu_link_content:d4b9ea9c-1651-49f5-8301-a72d70225444Menu: group-menu-office-of-the-preside",
-            "children": []
-          },
-          {
-            "title": "Departmental Policies and Procedures",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/president/departmental-policies-procedures",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/president/departmental-policies-proceduresStatus: EnabledPlugin ID: menu_link_content:55f60176-b08d-4868-ba7a-1475534b44c4Parent Plugin: menu_link_content:d4b9ea9c-1651-49f5-8301-a72d70225444Menu: group-menu-office-of-the-preside",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "Departmental Policies",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/president/departmental-policies-procedures",
-        "text": "",
         "children": []
       },
       {
@@ -9964,49 +8761,6 @@
         ]
       },
       {
-        "title": "Programs of Study",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/philosophy/general_info",
-        "text": "",
-        "children": [
-          {
-            "title": "Major and Minor (Beginning Fall 2025)",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/philosophy/major-and-minor-beginning-fall-2025",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/philosophy/major-and-minor-beginning-fall-2025Status: EnabledPlugin ID: menu_link_content:777f2d10-716e-4fce-8d00-400d0297467cParent Plugin: menu_link_content:4e1836f5-13b4-451d-8b04-8c38ff4e3949Menu: group-menu-philosophy",
-            "children": []
-          },
-          {
-            "title": "Prerequisites (Effective Fall 2025)",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/philosophy/prerequisites",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/philosophy/prerequisitesStatus: EnabledPlugin ID: menu_link_content:0c24b56f-17a0-44a7-95eb-309b9c35e58cParent Plugin: menu_link_content:4e1836f5-13b4-451d-8b04-8c38ff4e3949Menu: group-menu-philosophy",
-            "children": []
-          },
-          {
-            "title": "Course Descriptions",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/philosophy/course_descriptions",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/philosophy/course_descriptionsStatus: EnabledPlugin ID: menu_link_content:b2bb1e83-3e48-4432-b74b-c6489ef505f1Parent Plugin: menu_link_content:4e1836f5-13b4-451d-8b04-8c38ff4e3949Menu: group-menu-philosophy",
-            "children": []
-          },
-          {
-            "title": "Major in Philosophy, Politics, & Economics (New 2024)",
-            "href": "https://www.geneseo.edu/philosophy-politics-economics",
-            "text": "URL: https://www.geneseo.edu/philosophy-politics-economicsStatus: EnabledPlugin ID: menu_link_content:2ba2f480-4fa8-4947-b681-34d942664e28Parent Plugin: menu_link_content:4e1836f5-13b4-451d-8b04-8c38ff4e3949Menu: group-menu-philosophy",
-            "children": []
-          },
-          {
-            "title": "Minor in Ethics & Values in Society",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/philosophy/minor-ethics-values-society",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/philosophy/minor-ethics-values-societyStatus: EnabledPlugin ID: menu_link_content:e3e2a222-4dc0-4dd7-8d73-57578cbe7588Parent Plugin: menu_link_content:4e1836f5-13b4-451d-8b04-8c38ff4e3949Menu: group-menu-philosophy",
-            "children": []
-          },
-          {
-            "title": "Microcredentials",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/philosophy/microcredentials",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/philosophy/microcredentialsStatus: EnabledPlugin ID: menu_link_content:ab19af39-78a7-4251-a93b-40b312b8df39Parent Plugin: menu_link_content:4e1836f5-13b4-451d-8b04-8c38ff4e3949Menu: group-menu-philosophy",
-            "children": []
-          }
-        ]
-      },
-      {
         "title": "Faculty & Staff",
         "href": "http://localhost/drupal-geneseo/list_menus.php/philosophy/faculty-staff",
         "text": "",
@@ -10354,108 +9108,10 @@
         "children": []
       },
       {
-        "title": "Programs of Study",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/academic_programs_menu",
-        "text": "",
-        "children": [
-          {
-            "title": "Political Science Major",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/program",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/political_science/programStatus: EnabledPlugin ID: menu_link_content:c79ab453-1946-4b17-bfc6-9c23ab160d56Parent Plugin: menu_link_content:09bfb800-a0e9-473c-84cc-695d0156f5c5Menu: group-menu-political-science",
-            "children": []
-          },
-          {
-            "title": "International Relations Major",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/international_relations/program",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/international_relations/programStatus: EnabledPlugin ID: menu_link_content:d337122a-1cce-4580-9884-4cb426839358Parent Plugin: menu_link_content:09bfb800-a0e9-473c-84cc-695d0156f5c5Menu: group-menu-political-science",
-            "children": []
-          },
-          {
-            "title": "Conflict Studies Minor",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/conflict-studies-minor",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/political_science/conflict-studies-minorStatus: EnabledPlugin ID: menu_link_content:c1a4e4d1-bfae-426c-b11a-b46542f044eaParent Plugin: menu_link_content:09bfb800-a0e9-473c-84cc-695d0156f5c5Menu: group-menu-political-science",
-            "children": []
-          },
-          {
-            "title": "International Relations Minor",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/political-science/minor-international-relations",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/political-science/minor-international-relationsStatus: EnabledPlugin ID: menu_link_content:2916e3bb-239f-41b2-a0c3-480a67271962Parent Plugin: menu_link_content:09bfb800-a0e9-473c-84cc-695d0156f5c5Menu: group-menu-political-science",
-            "children": []
-          },
-          {
-            "title": "Legal Studies Minor",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/legal-studies-minor",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/political_science/legal-studies-minorStatus: EnabledPlugin ID: menu_link_content:f97b3737-d6e3-4189-9abe-a613e4b545c8Parent Plugin: menu_link_content:09bfb800-a0e9-473c-84cc-695d0156f5c5Menu: group-menu-political-science",
-            "children": []
-          },
-          {
-            "title": "Political Science Minor",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/minor-political-science",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/political_science/minor-political-scienceStatus: EnabledPlugin ID: menu_link_content:e40dadaa-e4e8-42ab-95c6-9b9419cea430Parent Plugin: menu_link_content:09bfb800-a0e9-473c-84cc-695d0156f5c5Menu: group-menu-political-science",
-            "children": []
-          },
-          {
-            "title": "Public Administration Minor",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/public-administration-minor",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/political_science/public-administration-minorStatus: EnabledPlugin ID: menu_link_content:789bf5cf-d7f1-4292-ad0c-fd56f051da6fParent Plugin: menu_link_content:09bfb800-a0e9-473c-84cc-695d0156f5c5Menu: group-menu-political-science",
-            "children": []
-          }
-        ]
-      },
-      {
         "title": "Faculty and Staff",
         "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/faculty-staff",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/political_science/faculty-staffStatus: EnabledPlugin ID: menu_link_content:d801993b-4b8f-4c8f-93db-2c82a0c816d4Parent Plugin: rootMenu: group-menu-political-science",
         "children": []
-      },
-      {
-        "title": "Student Resources",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/student_resources",
-        "text": "",
-        "children": [
-          {
-            "title": "FAQs",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/faqs",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/political_science/faqsStatus: EnabledPlugin ID: menu_link_content:161543a7-7acc-47c1-abd0-c0034a60a0b8Parent Plugin: menu_link_content:bf45735a-b7dc-4bd3-a279-54eb667ebcb8Menu: group-menu-political-science",
-            "children": []
-          },
-          {
-            "title": "Study Abroad",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/study_abroad",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/political_science/study_abroadStatus: EnabledPlugin ID: menu_link_content:d4a2963d-3ed9-4564-a874-23dba8a40d5aParent Plugin: menu_link_content:bf45735a-b7dc-4bd3-a279-54eb667ebcb8Menu: group-menu-political-science",
-            "children": []
-          },
-          {
-            "title": "Careers",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/careers",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/political_science/careersStatus: EnabledPlugin ID: menu_link_content:54106b3f-48f7-4eb2-bf86-22adbfd41f5fParent Plugin: menu_link_content:bf45735a-b7dc-4bd3-a279-54eb667ebcb8Menu: group-menu-political-science",
-            "children": []
-          },
-          {
-            "title": "Clubs",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/political-science-clubs",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/political_science/political-science-clubsStatus: EnabledPlugin ID: menu_link_content:dfd1544f-b382-4266-b811-fc3921f74f7dParent Plugin: menu_link_content:bf45735a-b7dc-4bd3-a279-54eb667ebcb8Menu: group-menu-political-science",
-            "children": []
-          },
-          {
-            "title": "Honors",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/honors",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/political_science/honorsStatus: EnabledPlugin ID: menu_link_content:a46fc159-f6d9-4f8b-8962-03f91bbed268Parent Plugin: menu_link_content:bf45735a-b7dc-4bd3-a279-54eb667ebcb8Menu: group-menu-political-science",
-            "children": []
-          },
-          {
-            "title": "Internships",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/intern",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/political_science/internStatus: EnabledPlugin ID: menu_link_content:f5c83554-ff84-4624-b6d0-4ff7d8a3d14eParent Plugin: menu_link_content:bf45735a-b7dc-4bd3-a279-54eb667ebcb8Menu: group-menu-political-science",
-            "children": []
-          },
-          {
-            "title": "Scholarships & Awards",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/political_science/scholarships",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/political_science/scholarshipsStatus: EnabledPlugin ID: menu_link_content:dfa055a7-05da-4e24-9978-1ed47e3ee5ceParent Plugin: menu_link_content:bf45735a-b7dc-4bd3-a279-54eb667ebcb8Menu: group-menu-political-science",
-            "children": []
-          }
-        ]
       },
       {
         "title": "Department News",
@@ -11219,12 +9875,6 @@
         "children": []
       },
       {
-        "title": "For Businesses",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/purchasing/for_businesses",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Duplicating Center",
         "href": "http://duplicating.geneseo.edu/",
         "text": "",
@@ -11766,12 +10416,6 @@
         "children": []
       },
       {
-        "title": "Current Students",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/business/student-activities",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Prospective Students",
         "href": "https://www.geneseo.edu/business/prospective-students",
         "text": "URL: https://www.geneseo.edu/business/prospective-studentsStatus: EnabledPlugin ID: menu_link_content:29b316fc-77aa-44e0-be11-c070e64fa80eParent Plugin: rootMenu: group-menu-school-of-business",
@@ -11833,31 +10477,6 @@
     "menuSlug": "school-of-education-[menu-id:-group-menu-school-of-education]",
     "items": [
       {
-        "title": "About Us",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/education/about_us",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "Accreditation",
-        "href": "https://www.geneseo.edu/education/accreditation",
-        "text": "",
-        "children": [
-          {
-            "title": "Candidate’s Statement of Commitment",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/candidates-statement-commitment-regarding-dispositions",
-            "text": "",
-            "children": []
-          },
-          {
-            "title": "Accreditation Process",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/accreditation-process",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/accreditation-processStatus: EnabledPlugin ID: menu_link_content:529153c7-4681-4578-9566-4a8feb4a283dParent Plugin: menu_link_content:88e588e0-ce2a-4010-9e20-3100a146ffe0Menu: group-menu-school-of-education",
-            "children": []
-          }
-        ]
-      },
-      {
         "title": "Admission",
         "href": "http://localhost/drupal-geneseo/list_menus.php/education/admissions",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/admissionsStatus: EnabledPlugin ID: menu_link_content:66018fea-a52d-4a08-817e-d24992059365Parent Plugin: rootMenu: group-menu-school-of-education",
@@ -11896,148 +10515,6 @@
             "title": "Graduate Program",
             "href": "http://localhost/drupal-geneseo/list_menus.php/education/graduate-programs-education",
             "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/graduate-programs-educationStatus: EnabledPlugin ID: menu_link_content:c10777cc-5a7e-49da-8af2-dd3bf01f890fParent Plugin: menu_link_content:33298010-ff35-4d98-a12b-40c66116d1f7Menu: group-menu-school-of-education",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "Office of Field Experiences",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/education/office-field-experiences",
-        "text": "",
-        "children": [
-          {
-            "title": "Field Placements",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/field-placementpractica",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/field-placementpracticaStatus: EnabledPlugin ID: menu_link_content:f549b557-2ac6-491d-813f-a716e8c25b50Parent Plugin: menu_link_content:917dc22e-475a-4c1b-90e0-f2d8fcf20159Menu: group-menu-school-of-education",
-            "children": []
-          },
-          {
-            "title": "Student Teaching",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/student-teaching-official-page",
-            "text": "",
-            "children": []
-          },
-          {
-            "title": "Forms for Student Teaching",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/forms_student_teaching",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/forms_student_teachingStatus: EnabledPlugin ID: menu_link_content:c15900a8-97de-484c-baef-d9e2dfa6c270Parent Plugin: menu_link_content:917dc22e-475a-4c1b-90e0-f2d8fcf20159Menu: group-menu-school-of-education",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "Teacher Certification",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/education/teacher-certification",
-        "text": "",
-        "children": [
-          {
-            "title": "TEACH Walkthrough",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/teach-walkthrough",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/teach-walkthroughStatus: EnabledPlugin ID: menu_link_content:ca2c9487-57e8-4c61-b066-df3c3fd059eaParent Plugin: menu_link_content:3f2b5c5b-cf00-4c8d-9c00-e6763ffdc0deMenu: group-menu-school-of-education",
-            "children": []
-          },
-          {
-            "title": "TEACH Certification Application Fields",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/teach-certification-application-help",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/teach-certification-application-helpStatus: EnabledPlugin ID: menu_link_content:1791cc31-b9b1-436a-9a77-c49000797201Parent Plugin: menu_link_content:3f2b5c5b-cf00-4c8d-9c00-e6763ffdc0deMenu: group-menu-school-of-education",
-            "children": []
-          },
-          {
-            "title": "Previous Program Codes",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/previous-program-codes-state-certification",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/previous-program-codes-state-certificationStatus: EnabledPlugin ID: menu_link_content:74ea1d1a-c6f5-4372-8a17-10c25c48777fParent Plugin: menu_link_content:3f2b5c5b-cf00-4c8d-9c00-e6763ffdc0deMenu: group-menu-school-of-education",
-            "children": []
-          },
-          {
-            "title": "Current NYSED Program Codes",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/current-nysed-program-codes",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/current-nysed-program-codesStatus: EnabledPlugin ID: menu_link_content:0702a7e6-609e-4d86-9951-01c1c739da65Parent Plugin: menu_link_content:3f2b5c5b-cf00-4c8d-9c00-e6763ffdc0deMenu: group-menu-school-of-education",
-            "children": []
-          },
-          {
-            "title": "Exams",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/nysed-exams",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/nysed-examsStatus: EnabledPlugin ID: menu_link_content:ab743fbc-bdfc-407b-b8b9-55abedd89c79Parent Plugin: menu_link_content:3f2b5c5b-cf00-4c8d-9c00-e6763ffdc0deMenu: group-menu-school-of-education",
-            "children": []
-          },
-          {
-            "title": "Fingerprinting",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/fingerprinting-requirement-new-york-state-teaching-certification",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/fingerprinting-requirement-new-york-state-teaching-certificationStatus: EnabledPlugin ID: menu_link_content:0eaee5ee-7db1-4fd9-88dc-632754c54c1dParent Plugin: menu_link_content:3f2b5c5b-cf00-4c8d-9c00-e6763ffdc0deMenu: group-menu-school-of-education",
-            "children": []
-          },
-          {
-            "title": "Certification FAQs",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/certification-faqs",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/certification-faqsStatus: EnabledPlugin ID: menu_link_content:cba72b88-e761-4c1c-974a-fc418583e4d3Parent Plugin: menu_link_content:3f2b5c5b-cf00-4c8d-9c00-e6763ffdc0deMenu: group-menu-school-of-education",
-            "children": []
-          },
-          {
-            "title": "Certification Notices",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/certification-notices",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/certification-noticesStatus: EnabledPlugin ID: menu_link_content:b5213550-930c-4b4e-af46-32b5b6cdeb8aParent Plugin: menu_link_content:3f2b5c5b-cf00-4c8d-9c00-e6763ffdc0deMenu: group-menu-school-of-education",
-            "children": []
-          },
-          {
-            "title": "Extensions & Additional Certifications",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/extensions-additional-certifications",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/extensions-additional-certificationsStatus: EnabledPlugin ID: menu_link_content:33400798-0c4e-4c47-969b-55e31ab56aa4Parent Plugin: menu_link_content:3f2b5c5b-cf00-4c8d-9c00-e6763ffdc0deMenu: group-menu-school-of-education",
-            "children": []
-          },
-          {
-            "title": "September 2025 Child Abuse Identification Training",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/september-2025-child-abuse-identification-training",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/september-2025-child-abuse-identification-trainingStatus: EnabledPlugin ID: menu_link_content:4a7607c4-eeac-4650-8b19-b03a189b73c5Parent Plugin: menu_link_content:3f2b5c5b-cf00-4c8d-9c00-e6763ffdc0deMenu: group-menu-school-of-education",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "Resources",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/education/student_resources",
-        "text": "",
-        "children": [
-          {
-            "title": "Dispositions",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/dispositions",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/dispositionsStatus: EnabledPlugin ID: menu_link_content:26b078af-8958-4c66-82cc-525aed529d74Parent Plugin: menu_link_content:d1a875d2-ddfc-424b-b20c-1c7068191defMenu: group-menu-school-of-education",
-            "children": []
-          },
-          {
-            "title": "Community Outreach Programs",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/related_programs",
-            "text": "",
-            "children": []
-          },
-          {
-            "title": "Organizations for Candidates",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/orgs",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/orgsStatus: EnabledPlugin ID: menu_link_content:edcf66d6-f1f3-421e-a9d9-4d4b6f51429fParent Plugin: menu_link_content:d1a875d2-ddfc-424b-b20c-1c7068191defMenu: group-menu-school-of-education",
-            "children": []
-          },
-          {
-            "title": "FAQs",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/faqs",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/faqsStatus: EnabledPlugin ID: menu_link_content:855cbfeb-7fa8-4473-8896-0f29e3c86c20Parent Plugin: menu_link_content:d1a875d2-ddfc-424b-b20c-1c7068191defMenu: group-menu-school-of-education",
-            "children": []
-          },
-          {
-            "title": "Fulbright Opportunities",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/fulbright-opportunities",
-            "text": "",
-            "children": [
-              {
-                "title": "Alumna Laura Low Discusses Her Time as a Fulbright Scholar",
-                "href": "http://localhost/drupal-geneseo/list_menus.php/education/alumna-laura-low-discusses-her-time-fulbright-scholar",
-                "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/alumna-laura-low-discusses-her-time-fulbright-scholarStatus: EnabledPlugin ID: menu_link_content:65d41bb8-f8c5-4555-a971-5708b6327ab8Parent Plugin: menu_link_content:ed87879c-b9b3-4645-8f92-4c7eb4e9efe5Menu: group-menu-school-of-education",
-                "children": []
-              }
-            ]
-          },
-          {
-            "title": "SOE Newsletter",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/education/school-education-newsletter",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/education/school-education-newsletterStatus: EnabledPlugin ID: menu_link_content:d091c00e-d1e0-42cf-946d-c035ed99bb2cParent Plugin: menu_link_content:d1a875d2-ddfc-424b-b20c-1c7068191defMenu: group-menu-school-of-education",
             "children": []
           }
         ]
@@ -12141,12 +10618,6 @@
         "children": []
       },
       {
-        "title": "SEFA Charities",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/sefa/charities",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Why Support SEFA?",
         "href": "http://localhost/drupal-geneseo/list_menus.php/sefa/why-support-sefa",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sefa/why-support-sefaStatus: EnabledPlugin ID: menu_link_content:003e6d4c-0830-4507-bf2d-e4db2a1ad6c8Parent Plugin: rootMenu: group-menu-sefa",
@@ -12200,25 +10671,6 @@
         "title": "News and Updates",
         "href": "http://localhost/drupal-geneseo/list_menus.php/sprg/news-and-updates-0",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sprg/news-and-updates-0Status: EnabledPlugin ID: menu_link_content:6b810595-1b07-47fc-8618-2f8fd99b1b5cParent Plugin: rootMenu: group-menu-sibling-peer-research",
-        "children": []
-      },
-      {
-        "title": "Photo Gallery",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/sprg/photogallery",
-        "text": "",
-        "children": [
-          {
-            "title": "Lab and Gathering Photos",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sprg/labgatheringphotos",
-            "text": "",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "About Participating",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/sprg/aboutparticipating",
-        "text": "",
         "children": []
       },
       {
@@ -12445,12 +10897,6 @@
         "title": "Meet Our Alumni",
         "href": "http://localhost/drupal-geneseo/list_menus.php/sociology/sociology-alumni",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sociology/sociology-alumniStatus: EnabledPlugin ID: menu_link_content:7ef2d00b-1104-4d17-a6ea-e21fb2a11831Parent Plugin: rootMenu: group-menu-sociology",
-        "children": []
-      },
-      {
-        "title": "Student Resources",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/sociology",
-        "text": "",
         "children": []
       }
     ]
@@ -12797,225 +11243,10 @@
     "menuSlug": "student-association-[menu-id:-group-menu-student-association]",
     "items": [
       {
-        "title": "About Student Association",
-        "href": "https://www.geneseo.edu/sa/about-us",
-        "text": "",
-        "children": [
-          {
-            "title": "Home",
-            "href": "https://www.geneseo.edu/sa/about-us",
-            "text": "URL: https://www.geneseo.edu/sa/about-usStatus: EnabledPlugin ID: menu_link_content:3ba8cd85-f336-4807-8b59-c5f84a294642Parent Plugin: menu_link_content:7d5e4f7b-9fab-4cc1-a7d4-4cbe40a1b235Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Executive Committee",
-            "href": "https://www.geneseo.edu/sa/about-us/people/ec",
-            "text": "URL: https://www.geneseo.edu/sa/about-us/people/ecStatus: EnabledPlugin ID: menu_link_content:383d4a90-7a4c-4f4a-b118-73b1f1e9feb3Parent Plugin: menu_link_content:7d5e4f7b-9fab-4cc1-a7d4-4cbe40a1b235Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Professional Staff",
-            "href": "https://www.geneseo.edu/sa/about-us/people/professional-staff",
-            "text": "URL: https://www.geneseo.edu/sa/about-us/people/professional-staffStatus: EnabledPlugin ID: menu_link_content:f2169415-5ca7-4b7a-8151-481459d081e8Parent Plugin: menu_link_content:7d5e4f7b-9fab-4cc1-a7d4-4cbe40a1b235Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Schedule a Meeting",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sa/schedule-meeting",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sa/schedule-meetingStatus: EnabledPlugin ID: menu_link_content:e62db3ec-1807-4c0e-ba70-e4bf8b47060aParent Plugin: menu_link_content:7d5e4f7b-9fab-4cc1-a7d4-4cbe40a1b235Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Budget",
-            "href": "https://www.geneseo.edu/sa/budget",
-            "text": "URL: https://www.geneseo.edu/sa/budgetStatus: EnabledPlugin ID: menu_link_content:12b49bc0-1695-47da-86af-bb0be6509169Parent Plugin: menu_link_content:7d5e4f7b-9fab-4cc1-a7d4-4cbe40a1b235Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Funded Organizations and Services",
-            "href": "https://www.geneseo.edu/sa/involved/organizations",
-            "text": "URL: https://www.geneseo.edu/sa/involved/organizationsStatus: EnabledPlugin ID: menu_link_content:6380d880-4dec-4279-8269-a9ace0e00335Parent Plugin: menu_link_content:7d5e4f7b-9fab-4cc1-a7d4-4cbe40a1b235Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Referendum",
-            "href": "https://geneseo.edu/sa/referendum",
-            "text": "URL: https://geneseo.edu/sa/referendumStatus: EnabledPlugin ID: menu_link_content:55f650e5-4565-41e1-b35e-242e1c33fbe4Parent Plugin: menu_link_content:7d5e4f7b-9fab-4cc1-a7d4-4cbe40a1b235Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "SA Newsletter",
-            "href": "https://www.geneseo.edu/sa/sa-newsletter",
-            "text": "URL: https://www.geneseo.edu/sa/sa-newsletterStatus: EnabledPlugin ID: menu_link_content:de77dd8b-880f-4b12-91b7-986303506c5cParent Plugin: menu_link_content:7d5e4f7b-9fab-4cc1-a7d4-4cbe40a1b235Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Contact Us",
-            "href": "https://www.geneseo.edu/sa/contact",
-            "text": "URL: https://www.geneseo.edu/sa/contactStatus: EnabledPlugin ID: menu_link_content:e9311674-7a48-4132-a035-ec296a9c5fc6Parent Plugin: menu_link_content:7d5e4f7b-9fab-4cc1-a7d4-4cbe40a1b235Menu: group-menu-student-association",
-            "children": []
-          }
-        ]
-      },
-      {
         "title": "Get Educated Resources",
         "href": "https://www.geneseo.edu/sa/get-educated-resources",
         "text": "URL: https://www.geneseo.edu/sa/get-educated-resourcesStatus: EnabledPlugin ID: menu_link_content:98991dfa-ce7a-4377-bafa-9726f9cf1f95Parent Plugin: rootMenu: group-menu-student-association",
         "children": []
-      },
-      {
-        "title": "Get Involved",
-        "href": "https://www.geneseo.edu/sa/involved/events",
-        "text": "",
-        "children": [
-          {
-            "title": "Standing and Sub Committees",
-            "href": "https://www.geneseo.edu/sa/involved/committees",
-            "text": "",
-            "children": [
-              {
-                "title": "Academic Affairs Committee",
-                "href": "https://www.geneseo.edu/aac",
-                "text": "URL: https://www.geneseo.edu/aacStatus: EnabledPlugin ID: menu_link_content:3389476b-0601-4155-ae41-e56051ab0f92Parent Plugin: menu_link_content:64fa7c0b-fa99-49e8-b2fa-a4f16334d609Menu: group-menu-student-association",
-                "children": []
-              },
-              {
-                "title": "Alliance for Community Enrichment",
-                "href": "https://www.geneseo.edu/ace",
-                "text": "URL: https://www.geneseo.edu/aceStatus: EnabledPlugin ID: menu_link_content:247da179-e102-426c-9256-6a3633488dbfParent Plugin: menu_link_content:64fa7c0b-fa99-49e8-b2fa-a4f16334d609Menu: group-menu-student-association",
-                "children": []
-              },
-              {
-                "title": "Geneseo Campus Activities Board",
-                "href": "https://sadsp6.wixsite.com/geneseocab",
-                "text": "URL: https://sadsp6.wixsite.com/geneseocabStatus: EnabledPlugin ID: menu_link_content:c58b9752-9003-467a-a41a-f89d30f22803Parent Plugin: menu_link_content:64fa7c0b-fa99-49e8-b2fa-a4f16334d609Menu: group-menu-student-association",
-                "children": []
-              },
-              {
-                "title": "Inter-Residence Council",
-                "href": "https://www.geneseo.edu/irc",
-                "text": "URL: https://www.geneseo.edu/ircStatus: EnabledPlugin ID: menu_link_content:184aeacf-310e-4ea3-916f-1bb74a8e01f0Parent Plugin: menu_link_content:64fa7c0b-fa99-49e8-b2fa-a4f16334d609Menu: group-menu-student-association",
-                "children": []
-              },
-              {
-                "title": "Undergraduate Student Association Elections Committee",
-                "href": "https://www.geneseo.edu/~usaec/",
-                "text": "URL: https://www.geneseo.edu/~usaec/Status: EnabledPlugin ID: menu_link_content:18781d44-2afc-4c04-8263-486b7e723fa0Parent Plugin: menu_link_content:64fa7c0b-fa99-49e8-b2fa-a4f16334d609Menu: group-menu-student-association",
-                "children": []
-              },
-              {
-                "title": "Undergraduate Student Senate",
-                "href": "https://www.geneseo.edu/sa/student-senate",
-                "text": "URL: https://www.geneseo.edu/sa/student-senateStatus: EnabledPlugin ID: menu_link_content:a04f489f-aed0-40c9-822e-cf9a472f1d8aParent Plugin: menu_link_content:64fa7c0b-fa99-49e8-b2fa-a4f16334d609Menu: group-menu-student-association",
-                "children": []
-              },
-              {
-                "title": "Student Affairs Committee",
-                "href": "https://www.geneseo.edu/sa/sac",
-                "text": "URL: https://www.geneseo.edu/sa/sacStatus: EnabledPlugin ID: menu_link_content:9a7f0b7b-e88c-4b73-b51a-9dea9c159eb0Parent Plugin: menu_link_content:64fa7c0b-fa99-49e8-b2fa-a4f16334d609Menu: group-menu-student-association",
-                "children": []
-              },
-              {
-                "title": "Standing and Special Committees",
-                "href": "https://www.geneseo.edu/sa/involved/committees",
-                "text": "",
-                "children": [
-                  {
-                    "title": "Standing and Special Committees",
-                    "href": "https://www.geneseo.edu/sa/involved/committees",
-                    "text": "URL: https://www.geneseo.edu/sa/involved/committeesStatus: EnabledPlugin ID: menu_link_content:93d3244e-474b-4e42-abc2-1b177941bb15Parent Plugin: menu_link_content:a6a2720e-19e3-4f85-9bd4-e3496df54803Menu: group-menu-student-association",
-                    "children": []
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "title": "Event Promotion Form",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sa/event-promotion",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sa/event-promotionStatus: EnabledPlugin ID: menu_link_content:90e6587d-42e3-45fa-a4f6-d4d37cbe358bParent Plugin: menu_link_content:1a06567d-52ca-46aa-ac48-ddfceb7407eaMenu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Opportunities",
-            "href": "https://www.geneseo.edu/sa/involved/opportunities",
-            "text": "URL: https://www.geneseo.edu/sa/involved/opportunitiesStatus: EnabledPlugin ID: menu_link_content:24d2c542-45b3-41f9-ad99-d9daae9f6e9dParent Plugin: menu_link_content:1a06567d-52ca-46aa-ac48-ddfceb7407eaMenu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Student Court",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sa/court",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sa/courtStatus: EnabledPlugin ID: menu_link_content:6e5077fb-daaa-43cd-9397-907649b14687Parent Plugin: menu_link_content:1a06567d-52ca-46aa-ac48-ddfceb7407eaMenu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Weekly Meetings",
-            "href": "https://www.geneseo.edu/sa/involved/meetings",
-            "text": "URL: https://www.geneseo.edu/sa/involved/meetingsStatus: EnabledPlugin ID: menu_link_content:5820b065-4102-4b41-9a86-225506f223fcParent Plugin: menu_link_content:1a06567d-52ca-46aa-ac48-ddfceb7407eaMenu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Student Association Student Court",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sa/court",
-            "text": "",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "SA Ticket Office",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/sa/ticketoffice",
-        "text": "",
-        "children": [
-          {
-            "title": "Home",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sa/ticketoffice",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sa/ticketofficeStatus: EnabledPlugin ID: menu_link_content:6afaa2a6-5d34-4a4a-a73e-e3d1a0f9f726Parent Plugin: menu_link_content:478e0901-1abf-42bb-8ec6-60222f9ba0f2Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "SA Break Shuttle Schedule",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sa/sa-break-shuttle",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sa/sa-break-shuttleStatus: EnabledPlugin ID: menu_link_content:c673987a-6885-4f0b-88f0-ad749abe39bfParent Plugin: menu_link_content:478e0901-1abf-42bb-8ec6-60222f9ba0f2Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Cash Boxes and Square Rental",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sa/cashbox",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sa/cashboxStatus: EnabledPlugin ID: menu_link_content:cd9fa026-7eef-43b0-8e39-040fee678b94Parent Plugin: menu_link_content:478e0901-1abf-42bb-8ec6-60222f9ba0f2Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Seating Charts",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sa/seatingcharts",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sa/seatingchartsStatus: EnabledPlugin ID: menu_link_content:e58e98ca-723c-4f34-b7f3-795725dc1668Parent Plugin: menu_link_content:478e0901-1abf-42bb-8ec6-60222f9ba0f2Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Policies & Procedures",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sa/policies",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sa/policiesStatus: EnabledPlugin ID: menu_link_content:aeef364d-204f-4bea-8205-2654e2ad6d07Parent Plugin: menu_link_content:478e0901-1abf-42bb-8ec6-60222f9ba0f2Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Helpful Links",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sa/links",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sa/linksStatus: EnabledPlugin ID: menu_link_content:a34ac37b-e589-4b82-ae5b-986c081ff2b3Parent Plugin: menu_link_content:478e0901-1abf-42bb-8ec6-60222f9ba0f2Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Ticket Office Staff",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sa/staff",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sa/staffStatus: EnabledPlugin ID: menu_link_content:4c558355-6ff1-40ea-b57c-f4fe55e84e34Parent Plugin: menu_link_content:478e0901-1abf-42bb-8ec6-60222f9ba0f2Menu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Contact Us",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sa/ticketofficecontactus",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sa/ticketofficecontactusStatus: EnabledPlugin ID: menu_link_content:327f181a-bfbb-41f3-a2f7-a393f33c97b4Parent Plugin: menu_link_content:478e0901-1abf-42bb-8ec6-60222f9ba0f2Menu: group-menu-student-association",
-            "children": []
-          }
-        ]
       },
       {
         "title": "SA Tech",
@@ -13059,61 +11290,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "title": "Resources",
-        "href": "https://www.geneseo.edu/sa/resources",
-        "text": "",
-        "children": [
-          {
-            "title": "Request a Purchase Order",
-            "href": "https://docs.google.com/a/geneseo.edu/forms/d/e/1FAIpQLSd8KuWOL0K4hrmpa3VtqBHB1-iU5PEFnidoYwD0_8ZBVBPapQ/viewform?embedded=true",
-            "text": "URL: https://docs.google.com/a/geneseo.edu/forms/d/e/1FAIpQLSd8KuWOL0K4hrmpa3VtqBHB1-iU5PEFnidoYwD0_8ZBVBPapQ/viewform?embedded=trueStatus: EnabledPlugin ID: menu_link_content:7f31ff85-5f6a-4edc-b3ed-8f60cad19babParent Plugin: menu_link_content:d260e5de-89bf-477e-9d86-39610b1a980fMenu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Student Tenant Resources",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sa/student-tenant-resources",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sa/student-tenant-resourcesStatus: EnabledPlugin ID: menu_link_content:0f9e444c-6eb6-4a97-b980-5519dccc1b70Parent Plugin: menu_link_content:d260e5de-89bf-477e-9d86-39610b1a980fMenu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Forms & Documents",
-            "href": "https://www.geneseo.edu/sa/resources/forms",
-            "text": "URL: https://www.geneseo.edu/sa/resources/formsStatus: EnabledPlugin ID: menu_link_content:c136143b-e5cb-4cfa-9783-0983c665ddd8Parent Plugin: menu_link_content:d260e5de-89bf-477e-9d86-39610b1a980fMenu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Yearbook",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/sayearbook",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/sayearbookStatus: EnabledPlugin ID: menu_link_content:631ba822-db6f-45b8-a26b-ddd3cc68d92cParent Plugin: menu_link_content:d260e5de-89bf-477e-9d86-39610b1a980fMenu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Agendas, Bi-weekly Reports and Minutes",
-            "href": "https://www.geneseo.edu/sa/resources/minutes",
-            "text": "URL: https://www.geneseo.edu/sa/resources/minutesStatus: EnabledPlugin ID: menu_link_content:8d786529-ab6b-482f-9c50-4bc08d0f8e4cParent Plugin: menu_link_content:d260e5de-89bf-477e-9d86-39610b1a980fMenu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "FAQ",
-            "href": "https://www.geneseo.edu/sa/resources/faq",
-            "text": "URL: https://www.geneseo.edu/sa/resources/faqStatus: EnabledPlugin ID: menu_link_content:17630b9c-4538-4841-8d81-7dffe57277a1Parent Plugin: menu_link_content:d260e5de-89bf-477e-9d86-39610b1a980fMenu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Logos",
-            "href": "https://www.geneseo.edu/sa/resources/logos",
-            "text": "URL: https://www.geneseo.edu/sa/resources/logosStatus: EnabledPlugin ID: menu_link_content:10b80315-56cb-4bb4-a5d9-b3cf9f7ac1caParent Plugin: menu_link_content:d260e5de-89bf-477e-9d86-39610b1a980fMenu: group-menu-student-association",
-            "children": []
-          },
-          {
-            "title": "Constitution",
-            "href": "https://www.geneseo.edu/sa/resources/constitution",
-            "text": "",
-            "children": []
-          }
-        ]
       }
     ]
   },
@@ -13145,31 +11321,6 @@
         "href": "http://localhost/drupal-geneseo/list_menus.php/conduct/title-ix-conduct-board-documents",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/conduct/title-ix-conduct-board-documentsStatus: EnabledPlugin ID: menu_link_content:ff56db56-7554-4287-b0cc-ac523df9c0a6Parent Plugin: rootMenu: group-menu-student-conduct-commu",
         "children": []
-      },
-      {
-        "title": "Campus Resources",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/conduct/campus_resources",
-        "text": "",
-        "children": [
-          {
-            "title": "Health and Counseling",
-            "href": "http://health.geneseo.edu/",
-            "text": "URL: http://health.geneseo.eduStatus: EnabledPlugin ID: menu_link_content:4cac152f-897a-435d-9320-aeba387d525fParent Plugin: menu_link_content:0cb5c1f6-593b-41ac-8f0d-bcac3dbeff6bMenu: group-menu-student-conduct-commu",
-            "children": []
-          },
-          {
-            "title": "Student and Campus Life",
-            "href": "http://stulife.geneseo.edu/",
-            "text": "URL: http://stulife.geneseo.eduStatus: EnabledPlugin ID: menu_link_content:b6f3c091-91fa-44ab-abb9-4933bacd2bb9Parent Plugin: menu_link_content:0cb5c1f6-593b-41ac-8f0d-bcac3dbeff6bMenu: group-menu-student-conduct-commu",
-            "children": []
-          },
-          {
-            "title": "Undergraduate Bulletin",
-            "href": "http://bulletin.geneseo.edu/",
-            "text": "URL: http://bulletin.geneseo.eduStatus: EnabledPlugin ID: menu_link_content:1d821ddf-e894-4e31-8169-8af89c8655bbParent Plugin: menu_link_content:0cb5c1f6-593b-41ac-8f0d-bcac3dbeff6bMenu: group-menu-student-conduct-commu",
-            "children": []
-          }
-        ]
       },
       {
         "title": "Staff",
@@ -13283,12 +11434,6 @@
         "children": []
       },
       {
-        "title": "Appendices",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/handbook/appendices",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "What Faculty Should Know about FERPA",
         "href": "https://www.geneseo.edu/sites/default/files/sites/community/FERPA_facultystaff_2014.pdf",
         "text": "URL: https://www.geneseo.edu/sites/default/files/sites/community/FERPA_facultystaff_2014.pdfStatus: EnabledPlugin ID: menu_link_content:095533c8-72a9-4a2e-8179-c4dfa45697f4Parent Plugin: rootMenu: group-menu-student-handbook",
@@ -13369,18 +11514,6 @@
         ]
       },
       {
-        "title": "Social Justice Experience",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/student_life/social-justice-experience",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "Adirondack Leadership (XLRN 288)",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/student_life/summer-experience-programs/adirondack-leadership",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Educational Initiatives Plan",
         "href": "http://localhost/drupal-geneseo/list_menus.php/student_life/educational-initiatives",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/student_life/educational-initiativesStatus: EnabledPlugin ID: menu_link_content:3a8306c1-1052-4409-a760-30263bfd90c4Parent Plugin: rootMenu: group-menu-student-life",
@@ -13423,61 +11556,6 @@
         "children": []
       },
       {
-        "title": "Student Organizations",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/student_life/student_organizations",
-        "text": "",
-        "children": [
-          {
-            "title": "Start a New Student Organization",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/student_life/start-new-student-organization",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/student_life/start-new-student-organizationStatus: EnabledPlugin ID: menu_link_content:b61c6283-e797-4c6d-919a-a710aebcb89bParent Plugin: menu_link_content:455891bd-a178-47e6-9711-4230294743a7Menu: group-menu-student-life",
-            "children": []
-          },
-          {
-            "title": "Student Organization Expo",
-            "href": "https://www.geneseo.edu/student_life/student-organization-expo",
-            "text": "URL: https://www.geneseo.edu/student_life/student-organization-expoStatus: EnabledPlugin ID: menu_link_content:eeca3151-1ae5-4093-a406-126b60ec6006Parent Plugin: menu_link_content:455891bd-a178-47e6-9711-4230294743a7Menu: group-menu-student-life",
-            "children": []
-          },
-          {
-            "title": "Student Organization Resources",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/student_life/organization-resources",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/student_life/organization-resourcesStatus: EnabledPlugin ID: menu_link_content:4194aef4-2063-465f-ba94-f9703161cee1Parent Plugin: menu_link_content:455891bd-a178-47e6-9711-4230294743a7Menu: group-menu-student-life",
-            "children": []
-          },
-          {
-            "title": "Advisor Resources",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/student_life/advisor-resources",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/student_life/advisor-resourcesStatus: EnabledPlugin ID: menu_link_content:65a063dc-04e7-40f5-ae8b-6d80bcd310c2Parent Plugin: menu_link_content:455891bd-a178-47e6-9711-4230294743a7Menu: group-menu-student-life",
-            "children": []
-          },
-          {
-            "title": "Fundraising",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/student_life/fundraising",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/student_life/fundraisingStatus: EnabledPlugin ID: menu_link_content:8eda3eb7-25d4-4aff-b5c9-cf1bbbda59a0Parent Plugin: menu_link_content:455891bd-a178-47e6-9711-4230294743a7Menu: group-menu-student-life",
-            "children": []
-          },
-          {
-            "title": "Event Publicity",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/student_life/event-publicity",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/student_life/event-publicityStatus: EnabledPlugin ID: menu_link_content:d731f82b-ac52-4d7a-b897-853f08757b20Parent Plugin: menu_link_content:455891bd-a178-47e6-9711-4230294743a7Menu: group-menu-student-life",
-            "children": []
-          },
-          {
-            "title": "Contact Us",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/student_life/student_organizations/contact",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/student_life/student_organizations/contactStatus: EnabledPlugin ID: menu_link_content:8dec79a9-e038-410f-82f5-d2b5274f5914Parent Plugin: menu_link_content:455891bd-a178-47e6-9711-4230294743a7Menu: group-menu-student-life",
-            "children": []
-          }
-        ]
-      },
-      {
-        "title": "Adirondack Experience",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/student_life/summer-experience-programs/adirondack",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Upstate Escapes",
         "href": "https://www.geneseo.edu/student_life/escapes",
         "text": "URL: https://www.geneseo.edu/student_life/escapesStatus: EnabledPlugin ID: menu_link_content:60495d05-e3f7-4a18-b611-e7cf02b4ca31Parent Plugin: rootMenu: group-menu-student-life",
@@ -13503,67 +11581,6 @@
         "children": []
       },
       {
-        "title": "Get Started!",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/study_abroad/get-started",
-        "text": "",
-        "children": [
-          {
-            "title": "About",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/study_abroad/about",
-            "text": "",
-            "children": []
-          },
-          {
-            "title": "Program Types/Options",
-            "href": "https://www.geneseo.edu/study_abroad/program-typesoptions",
-            "text": "URL: https://www.geneseo.edu/study_abroad/program-typesoptionsStatus: EnabledPlugin ID: menu_link_content:41550472-e11c-49cf-ab48-ee2512ab3f04Parent Plugin: menu_link_content:b0bfc878-9972-41c1-b0de-f4355c23f2c2Menu: group-menu-study-abroad",
-            "children": []
-          },
-          {
-            "title": "Search Programs",
-            "href": "https://suny-geneseo-horizons.symplicity.com/?s=programs",
-            "text": "URL: https://suny-geneseo-horizons.symplicity.com/?s=programsStatus: EnabledPlugin ID: menu_link_content:02093768-635d-4310-9881-f09de7bd4612Parent Plugin: menu_link_content:b0bfc878-9972-41c1-b0de-f4355c23f2c2Menu: group-menu-study-abroad",
-            "children": []
-          },
-          {
-            "title": "Study Abroad Course Articulation Database",
-            "href": "https://www.geneseo.edu/study-abroad-course-articulation-database",
-            "text": "URL: https://www.geneseo.edu/study-abroad-course-articulation-databaseStatus: EnabledPlugin ID: menu_link_content:5cf88265-3ea0-43b5-a68e-15e4f45ed4c5Parent Plugin: menu_link_content:b0bfc878-9972-41c1-b0de-f4355c23f2c2Menu: group-menu-study-abroad",
-            "children": []
-          },
-          {
-            "title": "Integrative and Applied Learning",
-            "href": "https://www.geneseo.edu/study_abroad/integrative-and-applied-learning",
-            "text": "URL: https://www.geneseo.edu/study_abroad/integrative-and-applied-learningStatus: EnabledPlugin ID: menu_link_content:ecc414b5-5014-40e4-b8cc-d0b40a90817cParent Plugin: menu_link_content:b0bfc878-9972-41c1-b0de-f4355c23f2c2Menu: group-menu-study-abroad",
-            "children": []
-          },
-          {
-            "title": "Speak with a Peer",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/study_abroad/study-abroad-interns",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/study_abroad/study-abroad-internsStatus: EnabledPlugin ID: menu_link_content:bed6bd79-5c5e-496d-aea7-8267e06bfc93Parent Plugin: menu_link_content:b0bfc878-9972-41c1-b0de-f4355c23f2c2Menu: group-menu-study-abroad",
-            "children": []
-          },
-          {
-            "title": "Frequently Asked Questions",
-            "href": "https://www.geneseo.edu/study_abroad/prospective-student-faqs#How%20much%20does%20study%20abroad%20cost?",
-            "text": "URL: https://www.geneseo.edu/study_abroad/prospective-student-faqs#How%20much%20does%20study%20abroad%20cost?Status: EnabledPlugin ID: menu_link_content:6d04166e-407f-49d9-885b-283b0975f3e2Parent Plugin: menu_link_content:b0bfc878-9972-41c1-b0de-f4355c23f2c2Menu: group-menu-study-abroad",
-            "children": []
-          },
-          {
-            "title": "Cost Sheets",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/study_abroad/cost-sheets",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/study_abroad/cost-sheetsStatus: EnabledPlugin ID: menu_link_content:5fb6c412-4589-422b-949f-8f086ca11facParent Plugin: menu_link_content:b0bfc878-9972-41c1-b0de-f4355c23f2c2Menu: group-menu-study-abroad",
-            "children": []
-          },
-          {
-            "title": "Virtual Global Education Experiences",
-            "href": "https://www.geneseo.edu/virtual-global-educational-experiences",
-            "text": "URL: https://www.geneseo.edu/virtual-global-educational-experiencesStatus: EnabledPlugin ID: menu_link_content:f38298f9-1fb2-4508-bcea-91db1ed07c36Parent Plugin: menu_link_content:b0bfc878-9972-41c1-b0de-f4355c23f2c2Menu: group-menu-study-abroad",
-            "children": []
-          }
-        ]
-      },
-      {
         "title": "Apply",
         "href": "http://localhost/drupal-geneseo/list_menus.php/study_abroad/apply",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/study_abroad/applyStatus: EnabledPlugin ID: menu_link_content:1efd06b9-8550-43d6-9a7d-2a89355412c7Parent Plugin: rootMenu: group-menu-study-abroad",
@@ -13586,31 +11603,6 @@
         "href": "http://localhost/drupal-geneseo/list_menus.php/study_abroad/identity-resources",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/study_abroad/identity-resourcesStatus: EnabledPlugin ID: menu_link_content:6ce024b9-b492-413d-a949-d54b795966a4Parent Plugin: rootMenu: group-menu-study-abroad",
         "children": []
-      },
-      {
-        "title": "Accepted Students",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/study_abroad/accepted-student-resources",
-        "text": "",
-        "children": [
-          {
-            "title": "Health & Safety Abroad",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/study_abroad/health-safety-abroad",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/study_abroad/health-safety-abroadStatus: EnabledPlugin ID: menu_link_content:763b91d0-0483-4970-b345-9fcc38756632Parent Plugin: menu_link_content:406070b2-fb2b-4d1e-abf1-c87773dfde5eMenu: group-menu-study-abroad",
-            "children": []
-          },
-          {
-            "title": "Passports & Visas",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/study_abroad/passports-visas",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/study_abroad/passports-visasStatus: EnabledPlugin ID: menu_link_content:5dea4a9f-5463-4371-bf20-bf0810e0db64Parent Plugin: menu_link_content:406070b2-fb2b-4d1e-abf1-c87773dfde5eMenu: group-menu-study-abroad",
-            "children": []
-          },
-          {
-            "title": "Study Abroad Course Approval and Credit Transfer",
-            "href": "https://www.geneseo.edu/study_abroad/study-abroad-course-approval-and-credit-transfer",
-            "text": "",
-            "children": []
-          }
-        ]
       },
       {
         "title": "Office of International Programs",
@@ -13859,12 +11851,6 @@
         "children": []
       },
       {
-        "title": "Sustainability As a Core Value",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/sustainability/about-sustainability-geneseo",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Sustainability News",
         "href": "https://www.geneseo.edu/sustainability-news",
         "text": "",
@@ -13946,27 +11932,9 @@
         ]
       },
       {
-        "title": "Projects and Initiatives",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/sustainability/projects-and-initiatives",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "President's Commission on Sustainability",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/sustainability/about-the-commission",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Sustainability Studies major",
         "href": "https://www.geneseo.edu/geography/sustainability-studies",
         "text": "URL: https://www.geneseo.edu/geography/sustainability-studiesStatus: EnabledPlugin ID: menu_link_content:a576c3e8-6f9a-463b-8fee-6f2bdc6bbaecParent Plugin: rootMenu: group-menu-sustainability",
-        "children": []
-      },
-      {
-        "title": "Sustainability Events",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/sustainability/sustainability-month",
-        "text": "",
         "children": []
       },
       {
@@ -14016,12 +11984,6 @@
         "title": "New Faculty Institute",
         "href": "https://www.geneseo.edu/tlc/new-faculty-institute",
         "text": "URL: https://www.geneseo.edu/tlc/new-faculty-instituteStatus: EnabledPlugin ID: menu_link_content:ab3177ba-b014-4350-a9d9-d55bd5165d07Parent Plugin: rootMenu: group-menu-teaching-and-learning",
-        "children": []
-      },
-      {
-        "title": "TLC Innovation Grant Program",
-        "href": "https://www.geneseo.edu/tlc/tlc-innovation-grant-program",
-        "text": "",
         "children": []
       },
       {
@@ -14142,18 +12104,6 @@
         "children": []
       },
       {
-        "title": "Requirements and Applications",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/lives/program_requirements",
-        "text": "",
-        "children": []
-      },
-      {
-        "title": "Collaborative Partners",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/lives/collaborative_partners",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "The LIVES Student Experience",
         "href": "http://localhost/drupal-geneseo/list_menus.php/lives/lives-student-experience",
         "text": "",
@@ -14220,109 +12170,6 @@
         "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/officers",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/officersStatus: EnabledPlugin ID: menu_link_content:4fff0f66-5959-469f-9649-6cfac02323eeParent Plugin: rootMenu: group-menu-the-national-honor-so",
         "children": []
-      },
-      {
-        "title": "Research Opportunities",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/research",
-        "text": "",
-        "children": [
-          {
-            "title": "Jim Allen",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/allen",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/allenStatus: EnabledPlugin ID: menu_link_content:a2a39aaf-5111-47fe-a8f9-dccceddb4682Parent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Terry Bazzett",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/bazzett",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/bazzettStatus: EnabledPlugin ID: menu_link_content:fa88d770-ea59-455b-8b57-102a2575e293Parent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Allison Bechard",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/bechard",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/bechardStatus: EnabledPlugin ID: menu_link_content:12444f74-4aed-4322-9529-bebc3e9744eaParent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Whitney Brown",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/brown",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/brownStatus: EnabledPlugin ID: menu_link_content:714e8f09-48ca-44e0-a6d0-fdb5aca72761Parent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Ganie DeHart",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/dehart",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/dehartStatus: EnabledPlugin ID: menu_link_content:c31c390a-18a8-4b5b-a556-8c9d2873923dParent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Claire Gravelin",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/gravelin",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/gravelinStatus: EnabledPlugin ID: menu_link_content:4369ad8a-57a0-4ef7-8b66-24f2102f8e25Parent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Steven Kirsh",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/kirsh",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/kirshStatus: EnabledPlugin ID: menu_link_content:9fc03ff8-aabf-44a6-a309-f7d581740eceParent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Michael Lynch",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/lynch",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/lynchStatus: EnabledPlugin ID: menu_link_content:ba446e77-e4f6-4cc6-9518-365a03b40d61Parent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Vincent Markowski",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/markowski",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/markowskiStatus: EnabledPlugin ID: menu_link_content:27ef7c37-44f6-4840-853e-4f403b7fe583Parent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Christine Merrilees",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/christine-merrilees",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/christine-merrileesStatus: EnabledPlugin ID: menu_link_content:54bf211d-acfe-436e-b5db-ea6277459ae0Parent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Karen Mooney",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi-chi/mooney",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi-chi/mooneyStatus: EnabledPlugin ID: menu_link_content:5a490171-f3bf-4e7f-bcd2-15571d6e0da1Parent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Jeff Mounts",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/mounts",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/mountsStatus: EnabledPlugin ID: menu_link_content:6f2a905d-a469-4333-b15d-8a55cdb8d859Parent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Jason Ozubko",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/kallio",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/kallioStatus: EnabledPlugin ID: menu_link_content:85b93f2b-574e-43d9-b89b-7e137f8aebb4Parent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Monica Schneider",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/monica_schneider",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/monica_schneiderStatus: EnabledPlugin ID: menu_link_content:7062de39-3561-4c8c-a5cf-76fa5b1b56feParent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Anjoo Sikka",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/sikka",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/sikkaStatus: EnabledPlugin ID: menu_link_content:ece67f63-04fc-4a28-a9f3-6b788df23d3eParent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          },
-          {
-            "title": "Bradley Taber-Thomas",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/psi_chi/taber-thomas",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/psi_chi/taber-thomasStatus: EnabledPlugin ID: menu_link_content:71507ed2-c1cf-4b41-abfc-b319a79be121Parent Plugin: menu_link_content:bbe68ea4-5a88-4c34-858c-4b559da5cb9fMenu: group-menu-the-national-honor-so",
-            "children": []
-          }
-        ]
       },
       {
         "title": "Psychology Day",
@@ -14507,12 +12354,6 @@
         "children": []
       },
       {
-        "title": "SUNY Discrimination Complaint Procedure",
-        "href": "https://www.suny.edu/sunypp/documents.cfm?doc_id=451",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Internship Opportunities",
         "href": "http://localhost/drupal-geneseo/list_menus.php/titleixintern",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/titleixinternStatus: EnabledPlugin ID: menu_link_content:e47cd92a-39a8-4a0d-aa7d-8782cd9fd6f9Parent Plugin: rootMenu: group-menu-title-ix",
@@ -14642,12 +12483,6 @@
     "menuSlug": "undergraduate-alumni-association-[menu-id:-group-menu-undergraduate-alumni-]",
     "items": [
       {
-        "title": "About UAA",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/uaa/about",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "150th Anniversary (1871-2021)",
         "href": "http://localhost/drupal-geneseo/list_menus.php/uaa/150th-anniversary-1871-2021-survey-results",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/uaa/150th-anniversary-1871-2021-survey-resultsStatus: EnabledPlugin ID: menu_link_content:73b1a0ff-0c7a-4848-a37a-9b0f8cd6b568Parent Plugin: rootMenu: group-menu-undergraduate-alumni-",
@@ -14720,43 +12555,6 @@
         "href": "http://localhost/drupal-geneseo/list_menus.php/undergraduate_research/undergraduate-research-opportunities",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/undergraduate_research/undergraduate-research-opportunitiesStatus: EnabledPlugin ID: menu_link_content:343c79ba-5d0c-4fba-be67-9c14ba41f30fParent Plugin: rootMenu: group-menu-undergraduate-researc",
         "children": []
-      },
-      {
-        "title": "Research Funding",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/undergraduate_research/campus-based-research-funding",
-        "text": "",
-        "children": [
-          {
-            "title": "Undergraduate TRAC Grants",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/undergraduate_research/TRACgrants",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/undergraduate_research/TRACgrantsStatus: EnabledPlugin ID: menu_link_content:e60581b7-3e83-454f-a443-b2b5aaf1466cParent Plugin: menu_link_content:30d788f8-6b85-43a7-88be-5e7d98dc37d3Menu: group-menu-undergraduate-researc",
-            "children": []
-          },
-          {
-            "title": "Student Research Assistantships",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/undergraduate_research/student-research-assistantships",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/undergraduate_research/student-research-assistantshipsStatus: EnabledPlugin ID: menu_link_content:12895b67-94c6-4c2a-afcc-115d14f65856Parent Plugin: menu_link_content:30d788f8-6b85-43a7-88be-5e7d98dc37d3Menu: group-menu-undergraduate-researc",
-            "children": []
-          },
-          {
-            "title": "Kyrwood Summer Research Fellowship",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/undergraduate_research/kyrwood-fellowship",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/undergraduate_research/kyrwood-fellowshipStatus: EnabledPlugin ID: menu_link_content:0c626775-572c-454e-bb1c-b9c38c408c91Parent Plugin: menu_link_content:30d788f8-6b85-43a7-88be-5e7d98dc37d3Menu: group-menu-undergraduate-researc",
-            "children": []
-          },
-          {
-            "title": "Geneseo Foundation Undergraduate Summer Research Fellowships",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/undergraduate_research/summer-fellowships",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/undergraduate_research/summer-fellowshipsStatus: EnabledPlugin ID: menu_link_content:ba3c633d-8153-4f12-b36d-5e317e881851Parent Plugin: menu_link_content:30d788f8-6b85-43a7-88be-5e7d98dc37d3Menu: group-menu-undergraduate-researc",
-            "children": []
-          },
-          {
-            "title": "Chesin Award",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/undergraduate_research/chesin-award",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/undergraduate_research/chesin-awardStatus: EnabledPlugin ID: menu_link_content:31ac05f4-115c-440b-b18d-7f65546159d1Parent Plugin: menu_link_content:30d788f8-6b85-43a7-88be-5e7d98dc37d3Menu: group-menu-undergraduate-researc",
-            "children": []
-          }
-        ]
       },
       {
         "title": "Research Conferences",
@@ -15270,19 +13068,6 @@
         "children": []
       },
       {
-        "title": "Program Information",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/wgst/major-and-minor",
-        "text": "",
-        "children": [
-          {
-            "title": "Senior Capstone Information",
-            "href": "http://localhost/drupal-geneseo/list_menus.php/wgst/senior-capstone-information",
-            "text": "URL: http://localhost/drupal-geneseo/list_menus.php/wgst/senior-capstone-informationStatus: EnabledPlugin ID: menu_link_content:28349ba1-4687-4ccf-bdd1-f470b57e3fbaParent Plugin: menu_link_content:57f5117b-7202-462c-b6f9-d32f5cfc0e0cMenu: group-menu-women-s-studies",
-            "children": []
-          }
-        ]
-      },
-      {
         "title": "Who We Are",
         "href": "http://localhost/drupal-geneseo/list_menus.php/wgst/who_we_are",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/wgst/who_we_areStatus: EnabledPlugin ID: menu_link_content:29afaefc-8887-4a6c-a57d-60ef528c6ee2Parent Plugin: rootMenu: group-menu-women-s-studies",
@@ -15621,12 +13406,6 @@
         ]
       },
       {
-        "title": "Faculty Mentoring",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/mcnair/mcnair-faculty-mentors",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Meet the Scholars",
         "href": "http://localhost/drupal-geneseo/list_menus.php/mcnair/meet-the-scholars-2017",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/mcnair/meet-the-scholars-2017Status: EnabledPlugin ID: menu_link_content:ff1b6d33-dbfe-417e-9630-1876a75574f1Parent Plugin: rootMenu: mcnair",
@@ -15885,12 +13664,6 @@
         "title": "Assistive Technology",
         "href": "https://www.geneseo.edu/accessibility-office/assistive-technology",
         "text": "URL: https://www.geneseo.edu/accessibility-office/assistive-technologyStatus: EnabledPlugin ID: menu_link_content:14aebc1d-e4ab-4e98-941a-252ad447e671Parent Plugin: rootMenu: office-of-accessibility",
-        "children": []
-      },
-      {
-        "title": "Policies and Forms",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/accessibility-office/oas-policies-and-forms",
-        "text": "",
         "children": []
       },
       {
@@ -16282,12 +14055,6 @@
         "children": []
       },
       {
-        "title": "Meet the Mentors",
-        "href": "https://www.geneseo.edu/sarc/meet-student-athlete-mentors",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "FAQs",
         "href": "https://www.geneseo.edu/sarc/faq",
         "text": "URL: https://www.geneseo.edu/sarc/faqStatus: EnabledPlugin ID: menu_link_content:7d1c0514-5e52-4503-ab3d-c3aeb64c5bb6Parent Plugin: rootMenu: student-athlete-resource-ce",
@@ -16380,12 +14147,6 @@
         "children": []
       },
       {
-        "title": "Program Schedule",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/wgsu/schedule",
-        "text": "",
-        "children": []
-      },
-      {
         "title": "Contact WGSU",
         "href": "http://localhost/drupal-geneseo/list_menus.php/wgsu/contact",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/wgsu/contactStatus: EnabledPlugin ID: menu_link_content:f8adeed4-84ee-430a-93a2-748149408e11Parent Plugin: rootMenu: wgsu",
@@ -16401,12 +14162,6 @@
         "title": "Meet the Staff",
         "href": "http://localhost/drupal-geneseo/list_menus.php/wgsu/staff",
         "text": "URL: http://localhost/drupal-geneseo/list_menus.php/wgsu/staffStatus: EnabledPlugin ID: menu_link_content:64564b0c-efeb-4aa2-8320-3d93d56f4fbeParent Plugin: rootMenu: wgsu",
-        "children": []
-      },
-      {
-        "title": "Music on WGSU",
-        "href": "http://localhost/drupal-geneseo/list_menus.php/wgsu/music",
-        "text": "",
         "children": []
       },
       {

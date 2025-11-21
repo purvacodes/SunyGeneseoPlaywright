@@ -1,471 +1,88 @@
 [
   {
-    "CPT": "/steinhauer/",
-    "slug": "/steinhauer/",
-    "url": "https://dev-suny-geneseo.pantheonsite.io/steinhauer/",
-    "menuStatus": "VALID MENU",
-    "menu": [
-      {
-        "menutext": "Aaron J Steinhauer",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
-      {
-        "menutext": "Research",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/steinhauer/research/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Reference Letter Form (PDF)",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/wp-content/uploads/2025/11/ReferenceLetterForm.pdf",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "FERPA Release Form (PDF)",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/wp-content/uploads/2025/11/Reference_Request_and_Ferpa_Release.pdf",
-        "type": "mainmenu",
-        "submenu": []
-      }
-    ],
+    "CPT": "Basic Page",
+    "slug": "/chang/publications",
+    "url": "https://dev-suny-geneseo.pantheonsite.io/chang/publications",
+    "menuStatus": "INVALID MENU",
+    "menu": [],
     "status": "OK"
   },
   {
-    "CPT": "/rotc/",
-    "slug": "/rotc/",
-    "url": "https://dev-suny-geneseo.pantheonsite.io/rotc/",
-    "menuStatus": "VALID MENU",
-    "menu": [
-      {
-        "menutext": "Army Rotc",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
-      {
-        "menutext": "ROTC",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/rotc/",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "A Day in the Life of an ROTC Cadet",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/army-rotc/day-life-rotc-cadet/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Army ROTC Scholarships",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/army-rotc/army-rotc-scholarships/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Our Cadets In Action",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/army-rotc/our-cadets-action/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Contact Us",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/army-rotc/contact-us/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Meet Our Cadets",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/army-rotc/meet-our-cadets/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Links",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/army-rotc/army-rotc-links/",
-            "type": "submenu",
-            "submenu": []
-          }
-        ]
-      },
-      {
-        "menutext": "What is Army ROTC?",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/rotc",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "What is Army ROTC?",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/rotc",
-            "type": "submenu",
-            "submenu": []
-          }
-        ]
-      }
-    ],
+    "CPT": "Personal Page",
+    "slug": "/anthropology/kintz",
+    "url": "https://dev-suny-geneseo.pantheonsite.io/anthropology/kintz",
+    "menuStatus": "INVALID MENU",
+    "menu": [],
     "status": "OK"
   },
   {
-    "CPT": "biochemistry",
-    "slug": "/biochemistry",
-    "url": "https://dev-suny-geneseo.pantheonsite.io/biochemistry",
+    "CPT": "Personal Page",
+    "slug": "/english/chris_anderson",
+    "url": "https://dev-suny-geneseo.pantheonsite.io/english/chris_anderson",
     "menuStatus": "VALID MENU",
     "menu": [
       {
-        "menutext": "Biochemistry Program",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
-      {
-        "menutext": "About the Program",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biochemistry/program/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Facilities and Equipment",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biochemistry/facilities/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Research Opportunities",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biochemistry/research-opportunities/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Student Awards",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biochemistry/student-awards/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Student Success",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biochemistry/student-success/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Contact Us",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biochemistry/contact/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Biology Department",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/biology/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Chemistry & Biochemistry Department",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/chemistry/",
-        "type": "mainmenu",
-        "submenu": []
-      }
-    ],
-    "status": "OK"
-  },
-  {
-    "CPT": "/cit/",
-    "slug": "/cit/",
-    "url": "https://dev-suny-geneseo.pantheonsite.io/cit/",
-    "menuStatus": "VALID MENU",
-    "menu": [
-      {
-        "menutext": "Cit",
+        "menutext": "Department Of English And Creative Writing",
         "menuhref": "",
         "type": "header",
         "submenu": []
       },
       {
         "menutext": "Home",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/cit/",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/english/",
         "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "System Status",
-        "menuhref": "https://status.geneseo.edu/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "CIT Self Help",
-        "menuhref": "https://geneseo.atlassian.net/wiki/spaces/HELP/overview?homepageId=76775434",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Staff",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/cit/faculty-staff/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "CIT KnightNet (employees & students)",
-        "menuhref": "https://sunygeneseo.sharepoint.com/sites/CITKnightNet",
-        "type": "mainmenu",
-        "submenu": []
-      }
-    ],
-    "status": "OK"
-  },
-  {
-    "CPT": "/education/undergraduate_to_take_graduate_course",
-    "slug": "/education/undergraduate_to_take_graduate_course",
-    "url": "https://dev-suny-geneseo.pantheonsite.io/education/undergraduate_to_take_graduate_course",
-    "menuStatus": "VALID MENU",
-    "menu": [
-      {
-        "menutext": "School Of Education",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
-      {
-        "menutext": "About Us",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/about_us/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Admission",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/admissions/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Academic Programs",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/academic_programs/",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "Adolescence Education",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/adolescence-education/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Early Childhood/Childhood Education",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/early-childhood-and-childhood-education/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Childhood with Special Education (Grades 1-6)",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/childhood-special-education-grades-1-6/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Teaching Students with Disabilities (All Grades) with Childhood Education (Grades 1-6)",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/teaching-students-disabilities-all-grades-childhood-education-grades-1-6/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Graduate Program",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/graduate-programs-education/",
-            "type": "submenu",
-            "submenu": []
-          }
-        ]
-      },
-      {
-        "menutext": "Office of Field Experiences",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/office-field-experiences/",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "Field Placements",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/field-placementpractica/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Student Teaching",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/student-teaching-official-page/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Forms for Student Teaching",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/forms_student_teaching/",
-            "type": "submenu",
-            "submenu": []
-          }
-        ]
-      },
-      {
-        "menutext": "Teacher Certification",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/teacher-certification/",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "TEACH Walkthrough",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/teach-walkthrough/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "TEACH Certification Application Fields",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/teach-certification-application-help/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Previous Program Codes",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/previous-program-codes-state-certification/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Current NYSED Program Codes",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/current-nysed-program-codes/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Exams",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/nysed-exams/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Fingerprinting",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/fingerprinting-requirement-new-york-state-teaching-certification/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Certification FAQs",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/certification-faqs/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Certification Notices",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/certification-notices/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Extensions & Additional Certifications",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/extensions-additional-certifications/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "September 2025 Child Abuse Identification Training",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/september-2025-child-abuse-identification-training/",
-            "type": "submenu",
-            "submenu": []
-          }
-        ]
-      },
-      {
-        "menutext": "Resources",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/student_resources/",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "Dispositions",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/dispositions/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Community Outreach Programs",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/related_programs/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Organizations for Candidates",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/orgs/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "SOE Newsletter",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/school-education-newsletter/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "FAQs",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/faqs/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Fulbright Opportunities",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/fulbright-opportunities/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Alumna Laura Low Discusses Her Time as a Fulbright Scholar",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/alumna-laura-low-discusses-her-time-fulbright-scholar/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "SOE Newsletter",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/school-education-newsletter/",
-            "type": "submenu",
-            "submenu": []
-          }
-        ]
-      },
-      {
-        "menutext": "Education Faculty & Staff",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/faculty-staff/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Recent News",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/school-education-news/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Contact Us",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/contact/",
-        "type": "mainmenu",
-        "submenu": []
-      }
-    ],
-    "status": "OK"
-  },
-  {
-    "CPT": "/geology/mission_statement/",
-    "slug": "/geology/mission_statement/",
-    "url": "https://dev-suny-geneseo.pantheonsite.io/geology/mission_statement/",
-    "menuStatus": "VALID MENU",
-    "menu": [
-      {
-        "menutext": "Geological Environmental And Planetary Sciences",
-        "menuhref": "",
-        "type": "header",
         "submenu": []
       },
       {
         "menutext": "Programs of Study",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/program-information/",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/english/programs-english/",
         "type": "mainmenu",
         "submenu": [
           {
-            "submenutext": "Course Offerings",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/course-offerings/",
+            "submenutext": "Literature Track",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/programs-english#literature",
             "type": "submenu",
             "submenu": []
           },
           {
-            "submenutext": "January Field Trips",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/january-field-trips/",
+            "submenutext": "Creative Writing Track",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/programs-english#creative-writing",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Comparative Literature",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/programs-english#comparative-literature",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "English Minor",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/programs-english#minor",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "English Concentration",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/programs-english#concentration",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Film Studies Minor",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/programs-english#film-studies",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Integrative Curricular Microcredentials",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/programs-english#integrative-curricular-microcredentials",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Related Interdisciplinary Programs",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/programs-english#interdisciplinary-programs",
             "type": "submenu",
             "submenu": []
           }
@@ -473,72 +90,78 @@
       },
       {
         "menutext": "Faculty and Staff",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/faculty-staff/",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/english/faculty-staff/",
         "type": "mainmenu",
         "submenu": []
       },
       {
         "menutext": "Student Resources",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/current_students/",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/english/resources-english-and-creative-writing-students/",
         "type": "mainmenu",
         "submenu": [
           {
-            "submenutext": "Why Study Geology?",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/prospective_students/",
+            "submenutext": "Transferring to Geneseo",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/transferring-geneseo/",
             "type": "submenu",
             "submenu": []
           },
           {
-            "submenutext": "Mission Statement",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/mission_statement/",
+            "submenutext": "Student Organizations",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/student-organizations-english-students/",
             "type": "submenu",
             "submenu": []
           },
           {
-            "submenutext": "Career Options",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/careers/",
+            "submenutext": "What Can I Do with My Degree?",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/careers-and-grad-school/",
             "type": "submenu",
             "submenu": []
           },
           {
-            "submenutext": "Career Information",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/career_information/",
+            "submenutext": "Leadership & Hands-On Learning",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/leadership-and-hands-learning/",
             "type": "submenu",
             "submenu": []
           },
           {
-            "submenutext": "Earth Science Links",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/teaching_resource/",
+            "submenutext": "TA Opportunities",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/leadership-and-hands-learning#opportunities-to-serve-as-a-teaching-assistant",
             "type": "submenu",
             "submenu": []
           },
           {
-            "submenutext": "Geneseo Resources",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/resources/",
+            "submenutext": "Gandy Dancer",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/leadership-and-hands-learning#gandy-dancer",
             "type": "submenu",
             "submenu": []
           },
           {
-            "submenutext": "Research Opportunities",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/how-apply-research/",
+            "submenutext": "Internships",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/leadership-and-hands-learning#internships",
             "type": "submenu",
             "submenu": []
           },
           {
-            "submenutext": "Graduate School",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/grad_school/",
+            "submenutext": "Sigma Tau Delta",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/leadership-and-hands-learning#sigma-tau-delta",
             "type": "submenu",
             "submenu": []
           },
           {
-            "submenutext": "Internships & Volunteering",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/intern/",
+            "submenutext": "Writing Contest",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/leadership-and-hands-learning#writing-contest",
             "type": "submenu",
             "submenu": []
           },
           {
-            "submenutext": "Scholarships & Awards",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/scholarships/",
+            "submenutext": "Writing Learning Center",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/leadership-and-hands-learning#writing-learning-center",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Awards and Scholarships",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/awards/",
             "type": "submenu",
             "submenu": []
           }
@@ -546,518 +169,42 @@
       },
       {
         "menutext": "Department News",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/geological-environmental-and-planetary-sciences-department-news/",
+        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/english/english-department-news/",
         "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Alumni",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/alumni/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Donate to Geology",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/donations-geology-department/",
-        "type": "mainmenu",
-        "submenu": []
+        "submenu": [
+          {
+            "submenutext": "Events",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/english-department-events/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Walter Harding Lecture",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/english-department-events#walter-harding-lecture",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Genesee Valley Literary Forum",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/english-department-events#geneseo-literary-forum",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Professional Development for Teachers",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/english/professional-development-teachers/",
+            "type": "submenu",
+            "submenu": []
+          },
+          {
+            "submenutext": "Blogs and Projects",
+            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/",
+            "type": "submenu",
+            "submenu": []
+          }
+        ]
       }
     ],
-    "status": "OK"
-  },
-  {
-    "CPT": "/geology/prospective_students/",
-    "slug": "/geology/prospective_students/",
-    "url": "https://dev-suny-geneseo.pantheonsite.io/geology/prospective_students/",
-    "menuStatus": "VALID MENU",
-    "menu": [
-      {
-        "menutext": "Geological Environmental And Planetary Sciences",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
-      {
-        "menutext": "Programs of Study",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/program-information/",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "Course Offerings",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/course-offerings/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "January Field Trips",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/january-field-trips/",
-            "type": "submenu",
-            "submenu": []
-          }
-        ]
-      },
-      {
-        "menutext": "Faculty and Staff",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/faculty-staff/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Student Resources",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/current_students/",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "Why Study Geology?",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/prospective_students/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Mission Statement",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/mission_statement/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Career Options",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/careers/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Career Information",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/career_information/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Earth Science Links",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/teaching_resource/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Geneseo Resources",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/resources/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Research Opportunities",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/how-apply-research/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Graduate School",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/grad_school/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Internships & Volunteering",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/intern/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Scholarships & Awards",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/scholarships/",
-            "type": "submenu",
-            "submenu": []
-          }
-        ]
-      },
-      {
-        "menutext": "Department News",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/geological-environmental-and-planetary-sciences-department-news/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Alumni",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/alumni/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Donate to Geology",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/donations-geology-department/",
-        "type": "mainmenu",
-        "submenu": []
-      }
-    ],
-    "status": "OK"
-  },
-  {
-    "CPT": "/education/admissions",
-    "slug": "/education/admissions",
-    "url": "https://dev-suny-geneseo.pantheonsite.io/education/admissions",
-    "menuStatus": "VALID MENU",
-    "menu": [
-      {
-        "menutext": "School Of Education",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
-      {
-        "menutext": "About Us",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/about_us/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Admission",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/admissions/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Academic Programs",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/academic_programs/",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "Adolescence Education",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/adolescence-education/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Early Childhood/Childhood Education",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/early-childhood-and-childhood-education/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Childhood with Special Education (Grades 1-6)",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/childhood-special-education-grades-1-6/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Teaching Students with Disabilities (All Grades) with Childhood Education (Grades 1-6)",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/teaching-students-disabilities-all-grades-childhood-education-grades-1-6/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Graduate Program",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/graduate-programs-education/",
-            "type": "submenu",
-            "submenu": []
-          }
-        ]
-      },
-      {
-        "menutext": "Office of Field Experiences",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/office-field-experiences/",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "Field Placements",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/field-placementpractica/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Student Teaching",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/student-teaching-official-page/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Forms for Student Teaching",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/forms_student_teaching/",
-            "type": "submenu",
-            "submenu": []
-          }
-        ]
-      },
-      {
-        "menutext": "Teacher Certification",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/teacher-certification/",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "TEACH Walkthrough",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/teach-walkthrough/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "TEACH Certification Application Fields",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/teach-certification-application-help/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Previous Program Codes",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/previous-program-codes-state-certification/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Current NYSED Program Codes",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/current-nysed-program-codes/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Exams",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/nysed-exams/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Fingerprinting",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/fingerprinting-requirement-new-york-state-teaching-certification/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Certification FAQs",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/certification-faqs/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Certification Notices",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/certification-notices/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Extensions & Additional Certifications",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/extensions-additional-certifications/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "September 2025 Child Abuse Identification Training",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/september-2025-child-abuse-identification-training/",
-            "type": "submenu",
-            "submenu": []
-          }
-        ]
-      },
-      {
-        "menutext": "Resources",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/student_resources/",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "Dispositions",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/dispositions/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Community Outreach Programs",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/related_programs/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Organizations for Candidates",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/orgs/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "SOE Newsletter",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/school-education-newsletter/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "FAQs",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/faqs/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Fulbright Opportunities",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/fulbright-opportunities/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Alumna Laura Low Discusses Her Time as a Fulbright Scholar",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/alumna-laura-low-discusses-her-time-fulbright-scholar/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "SOE Newsletter",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/education/school-education-newsletter/",
-            "type": "submenu",
-            "submenu": []
-          }
-        ]
-      },
-      {
-        "menutext": "Education Faculty & Staff",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/faculty-staff/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Recent News",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/school-education-news/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Contact Us",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/education/contact/",
-        "type": "mainmenu",
-        "submenu": []
-      }
-    ],
-    "status": "OK"
-  },
-  {
-    "CPT": "/geology/faculty-staff",
-    "slug": "/geology/faculty-staff",
-    "url": "https://dev-suny-geneseo.pantheonsite.io/geology/faculty-staff",
-    "menuStatus": "VALID MENU",
-    "menu": [
-      {
-        "menutext": "Geological Environmental And Planetary Sciences",
-        "menuhref": "",
-        "type": "header",
-        "submenu": []
-      },
-      {
-        "menutext": "Programs of Study",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/program-information/",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "Course Offerings",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/course-offerings/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "January Field Trips",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/january-field-trips/",
-            "type": "submenu",
-            "submenu": []
-          }
-        ]
-      },
-      {
-        "menutext": "Faculty and Staff",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/faculty-staff/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Student Resources",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/current_students/",
-        "type": "mainmenu",
-        "submenu": [
-          {
-            "submenutext": "Why Study Geology?",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/prospective_students/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Mission Statement",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/mission_statement/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Career Options",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/careers/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Career Information",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/career_information/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Earth Science Links",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/teaching_resource/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Geneseo Resources",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/resources/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Research Opportunities",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/how-apply-research/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Graduate School",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/grad_school/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Internships & Volunteering",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/intern/",
-            "type": "submenu",
-            "submenu": []
-          },
-          {
-            "submenutext": "Scholarships & Awards",
-            "submenuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/scholarships/",
-            "type": "submenu",
-            "submenu": []
-          }
-        ]
-      },
-      {
-        "menutext": "Department News",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/geological-environmental-and-planetary-sciences-department-news/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Alumni",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/alumni/",
-        "type": "mainmenu",
-        "submenu": []
-      },
-      {
-        "menutext": "Donate to Geology",
-        "menuhref": "https://dev-suny-geneseo.pantheonsite.io/geology/donations-geology-department/",
-        "type": "mainmenu",
-        "submenu": []
-      }
-    ],
-    "status": "OK"
-  },
-  {
-    "CPT": "students/honor-societies",
-    "slug": "/linguistics/faculty-staff",
-    "url": "https://dev-suny-geneseo.pantheonsite.io/linguistics/faculty-staff",
-    "menuStatus": "INVALID MENU",
-    "menu": [],
-    "status": "OK"
-  },
-  {
-    "CPT": "news",
-    "slug": "/news",
-    "url": "https://dev-suny-geneseo.pantheonsite.io/news",
-    "menuStatus": "INVALID MENU",
-    "menu": [],
     "status": "OK"
   }
 ]

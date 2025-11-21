@@ -6,8 +6,8 @@ import { createObjects } from "../../pages/ObjectFactory.js";
 const finalFactory = createObjects();
 
 // ================= CONFIG =================
-const BASE_URL ="https://dev-suny-geneseo.pantheonsite.io/news";
-const EXCEL_INPUT = "Inventory.xlsx";
+const BASE_URL ="https://dev-suny-geneseo.pantheonsite.io";
+const EXCEL_INPUT = "basic_page.xlsx";
 const OUTPUT_DIR = "url-reports";
 
 test.setTimeout(15 * 60 * 60 * 1000); // 15 hours

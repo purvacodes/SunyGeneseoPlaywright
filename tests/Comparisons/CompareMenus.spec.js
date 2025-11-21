@@ -4,10 +4,10 @@ import { createObjects } from "../../pages/ObjectFactory.js";
 import fs from "fs";
 import XLSX from "xlsx";
 
-test.setTimeout(20 * 60 * 60 * 1000); // 15 hours
+test.setTimeout(24 * 60 * 60 * 1000);
 
 test("📊 Scrape & Compare Menus from LIVE and DEV + Export Excel", async () => {
-    visited.clear();
+  visited.clear();
   const liveBase = "https://www.geneseo.edu/";
   const devBase = "https://dev-suny-geneseo.pantheonsite.io/";
   const excelInput = "basic_page.xlsx";
@@ -25,26 +25,26 @@ test("📊 Scrape & Compare Menus from LIVE and DEV + Export Excel", async () =>
   // const liveResults = await collectMenus("LIVE", liveBase, extractedUrls);
   // fs.writeFileSync(liveOutput, JSON.stringify(liveResults, null, 2));
 
-  // // -------- DEV SCRAPE (kept intact but commented here as in your original)
-  // console.log("🖥️ Scraping DEV site...");
-  // const devResults = await collectMenus("DEV", devBase, extractedUrls);
-  // fs.writeFileSync(devOutput, JSON.stringify(devResults, null, 2));
+  // -------- DEV SCRAPE (kept intact but commented here as in your original)
+  console.log("🖥️ Scraping DEV site...");
+  const devResults = await collectMenus("DEV", devBase, extractedUrls);
+  fs.writeFileSync(devOutput, JSON.stringify(devResults, null, 2));
 
   console.log("✅ JSON saved!");
 
   // -------- COMPARE --------
   console.log("📥 Reloading JSON files for comparison...");
 
-  const liveJson = JSON.parse(fs.readFileSync(liveOutput, "utf8"));
-  const devJson = JSON.parse(fs.readFileSync(devOutput, "utf8"));
+  // const liveJson = JSON.parse(fs.readFileSync(liveOutput, "utf8"));
+  // const devJson = JSON.parse(fs.readFileSync(devOutput, "utf8"));
 
-  console.log("🔍 Comparing LIVE vs DEV using JSON files...");
+  // console.log("🔍 Comparing LIVE vs DEV using JSON files...");
 
-  const diffs = compareAll_JSON(liveJson, devJson);
+  // const diffs = compareAll_JSON(liveJson, devJson);
 
-  // -------- EXCEL EXPORT --------
-  exportToExcel(diffs, excelOutput);
-  console.log(`📊 Excel saved: ${excelOutput}`);
+  // // -------- EXCEL EXPORT --------
+  // exportToExcel(diffs, excelOutput);
+  // console.log(`📊 Excel saved: ${excelOutput}`);
 });
 
 
@@ -99,7 +99,7 @@ function determineSummary(itemDiffs) {
     return "MENU MATCHED COMPLETELY";  // No diffs, so menus are completely matched
 
   const missingLive = itemDiffs.some(d => (d.Status || "").includes("Missing in LIVE"));
-  const missingDev  = itemDiffs.some(d => (d.Status || "").includes("Missing in DEV"));
+  const missingDev = itemDiffs.some(d => (d.Status || "").includes("Missing in DEV"));
   const orderMismatch = itemDiffs.some(d => (d.Status || "").includes("Order Mismatch"));
   const hierarchyMismatch = itemDiffs.some(d =>
     ["submenuhref", "submenutext"].includes(d.WhichItem) &&
@@ -427,8 +427,16 @@ function exportToExcel(diffs, output) {
 // ============================================================================
 
 async function collectMenus(envName, baseUrl, urls) {
-  const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext({ bypassCache: true });
+  const browser = await chromium.launch({
+    headless: false,
+    args: ["--start-maximized"]   // opens browser window maximized
+  });
+
+  const context = await browser.newContext({
+    viewport: null,
+    deviceScaleFactor: undefined,             // forces context to use full window size
+    bypassCache: true
+  });
   const page = await context.newPage();
   const results = [];
   let count = 0;
@@ -507,6 +515,10 @@ async function scrapeDevMenu(page, baseUrl) {
   const menuData = [];
   const visitedSubmenuHrefs = new Set();
 
+  // Scroll to the bottom to ensure all dynamic content is loaded
+  await scrollToBottom(page);
+
+  // Get the global heading (if any)
   const devGlobalHeading = await page.locator("div.menu-header h2.subsite-menu-header span").innerText().catch(() => "");
   const devGlobalHeadingTrim = devGlobalHeading ? devGlobalHeading.trim() : "";
 
@@ -520,6 +532,7 @@ async function scrapeDevMenu(page, baseUrl) {
     console.log(`📌 DEV Heading Found: ${devGlobalHeadingTrim}`);
   }
 
+  // Find all menu headers
   const headers = page.locator("h2.subsite-menu-header");
   const headerCount = await headers.count().catch(() => 0);
 
@@ -531,6 +544,7 @@ async function scrapeDevMenu(page, baseUrl) {
     const headerText = headerTextRaw ? headerTextRaw.trim() : "—";
     console.log(`📂 Header: ${headerText}`);
 
+    // Skip global heading if it matches
     if (devGlobalHeadingTrim && headerText === devGlobalHeadingTrim) {
       console.log(`   ↳ Skipping header because it duplicates the global heading: ${headerText}`);
     } else {
@@ -542,6 +556,7 @@ async function scrapeDevMenu(page, baseUrl) {
       }
     }
 
+    // Get all top-level menu items
     let items = headerEl.locator("xpath=following-sibling::ul[1]//li[contains(@class,'menu-item')]//a[contains(@class,'menu-link')]");
     let itemCount = await items.count().catch(() => 0);
 
@@ -556,6 +571,7 @@ async function scrapeDevMenu(page, baseUrl) {
       const item = items.nth(j);
       const parentLi = item.locator("..").locator("..");
 
+      // Check if the item is inside a submenu
       const isInsideSubmenu = (await item.locator("xpath=ancestor::ul[contains(@class,'sub-menu')]").count()) > 0;
       if (isInsideSubmenu) continue;
 
@@ -567,6 +583,7 @@ async function scrapeDevMenu(page, baseUrl) {
       const menutextTrim = menutext ? menutext.trim() : "—";
       console.log(`   🔹 Menu: ${menutextTrim}  →  ${menuhref}`);
 
+      // Check if the menu item has a dropdown (arrow)
       const arrow = parentLi.locator("span.dropdown-arrow");
       const arrowCount = await arrow.count().catch(() => 0);
 
@@ -583,7 +600,8 @@ async function scrapeDevMenu(page, baseUrl) {
           if (!isDirectArrow) continue;
 
           if (await thisArrow.isVisible()) {
-            await thisArrow.scrollIntoViewIfNeeded();
+            // Open the dropdown menu
+            await scrollToElement(page, thisArrow);
             await thisArrow.click({ force: true });
             await page.waitForTimeout(300);
 
@@ -617,6 +635,7 @@ async function scrapeDevMenu(page, baseUrl) {
         }
       }
 
+      // Avoid duplicate menu items
       const lastMenu = menuData.length ? menuData[menuData.length - 1] : null;
       if (!(lastMenu && lastMenu.menutext === menutextTrim && lastMenu.menuhref === menuhref && lastMenu.type === "mainmenu")) {
         menuData.push({ menutext: menutextTrim, menuhref, type: "mainmenu", submenu });
@@ -626,6 +645,7 @@ async function scrapeDevMenu(page, baseUrl) {
     }
   }
 
+  // Fallback if no headers were found
   if (menuData.length === 0) {
     console.log("⚠️ No headers found on DEV page; trying fallback top-level selector.");
     const fallbackItems = page.locator("li.menu-item > a");
@@ -640,14 +660,39 @@ async function scrapeDevMenu(page, baseUrl) {
     }
   }
 
-  // const filteredMenu = menuData.filter(item => !visitedSubmenuHrefs.has(item.menuhref));
-
   console.log(`\n✅ DEV scraping complete.`);
- // console.log(`📊 Final menu count: ${filteredMenu.length}`);
 
-  
   return menuData;
 }
+
+// Helper function to scroll to the bottom of the page
+async function scrollToBottom(page) {
+  let lastHeight;
+  while (true) {
+    // Get current scroll height
+    const newHeight = await page.evaluate('document.body.scrollHeight');
+
+    if (newHeight === lastHeight) break;
+
+    // Scroll to the bottom of the page
+    await page.evaluate('window.scrollTo(0, document.body.scrollHeight)');
+
+    // Wait for new content to load
+    await page.waitForTimeout(1000);
+
+    lastHeight = newHeight;
+  }
+}
+
+// Scroll to an element using manual scrolling
+async function scrollToElement(page, elementLocator) {
+  const elementHandle = await elementLocator.elementHandle();
+  await page.evaluate(el => {
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, elementHandle);
+  await page.waitForTimeout(300); // Wait for the element to come into view
+}
+
 
 
 // ---------------- LIVE SCRAPER (kept as you had it)
@@ -827,28 +872,51 @@ async function hasDevMenu(page) {
   const current = page.url();
   console.log(`🌐 [DEV] Checking menu on: ${current}`);
 
-  // Check if there's a valid menu heading
+  // 1. Check heading-based menu first
   const menuHeading = await page.locator("h2.subsite-menu-header").count();
   if (menuHeading > 0) {
     console.log(`✅ DEV: Menu heading found → Menu is valid`);
     return true;
   }
 
-  // Check for subsiteNav and invalid message
+  // 2. Check if subsiteNav exists
   const subsiteNav = await page.locator(".subsiteNav").count();
-  if (subsiteNav > 0) {
-    const invalidMessage = await page.locator("div.wp-block-group.subsiteNav p").textContent();
-if (invalidMessage && invalidMessage.trim().length > 0) {
-  console.log(`❌ DEV: subsiteNav found with invalid menu message → Message: "${invalidMessage.trim()}"`);
-  return false;
-}
-
-    console.log(`✅ DEV: subsiteNav found, but no invalid menu message → Menu is valid`);
-    return true;
+  if (subsiteNav === 0) {
+    console.log(`❌ DEV: Heading or subsiteNav not found → Menu not found`);
+    return false;
   }
 
-  // If no subsiteNav class or invalid message, then the menu is not found
-  console.log(`❌ DEV: Heading or subsiteNav not found → Menu is not found on DEV`);
-  return false;  // No menu found on DEV
-}
+  // 3. Try to read <p> text (SAFE version — never hangs)
+  let pText = null;
+  try {
+    pText = await page
+      .locator("div.wp-block-group.subsiteNav p")
+      .first()
+      .textContent({ timeout: 500 });
+  } catch {}
 
+  if (pText && pText.trim().length > 0) {
+    console.log(`❌ DEV: Invalid menu message (from <p>) → "${pText.trim()}"`);
+    return false;
+  }
+
+  console.log("ℹ️ DEV: No <p> tag found or no message, checking direct div text…");
+
+  // 4. Try to read direct text from subsiteNav div (SAFE version)
+  let directText = null;
+  try {
+    directText = await page
+      .locator("div.wp-block-group.subsiteNav")
+      .first()
+      .innerText({ timeout: 500 });
+  } catch {}
+
+  if (directText && directText.trim().length > 0) {
+    console.log(`❌ DEV: Invalid menu message (from div text) → "${directText.trim()}"`);
+    return false;
+  }
+
+  // 5. If BOTH are empty → menu is valid
+  console.log(`✅ DEV: subsiteNav found & no invalid message → Menu is valid`);
+  return true;
+}
