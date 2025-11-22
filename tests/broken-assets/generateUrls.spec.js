@@ -1,13 +1,14 @@
 import fs from "fs";
-import * as XLSX from "xlsx";
+import XLSX from 'xlsx';
+
 import { test, chromium, firefox, webkit } from "@playwright/test";
 
 // ====== CONFIG ======
 const inputExcel = "basic_page.xlsx";       // Input with slugs
 const generatedExcel = "generatedUrls.xlsx"; // Output with URLs
 const browserChoice = "chromium";           // chromium | firefox | webkit
-const startIndex = 71;                       // Starting row (1-based)
-const endIndex = 80;                        // Ending row (inclusive)
+const startIndex = 31;                       // Starting row (1-based)
+const endIndex = 45;                        // Ending row (inclusive)
 
 test.setTimeout(15 * 60 * 60 * 1000); // 6 hours
 test("Generate and Open Live + Dev URLs in one browser (alternate tabs)", async () => {
