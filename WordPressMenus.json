@@ -121,12 +121,6 @@
         "children": []
       },
       {
-        "title": "Office of Diversity and Equity",
-        "href": "https://dev-suny-geneseo.pantheonsite.io/diversity-equity/",
-        "text": "URL: https://dev-suny-geneseo.pantheonsite.io/diversity-equity/Type: PageItem ID: 58001Object ID: 45180",
-        "children": []
-      },
-      {
         "title": "Our Commitment to Diversity, Equity and Inclusion",
         "href": "https://dev-suny-geneseo.pantheonsite.io/diversity-equity/our-commitment-diversity-equity-and-inclusion/",
         "text": "URL: https://dev-suny-geneseo.pantheonsite.io/diversity-equity/our-commitment-diversity-equity-and-inclusion/Type: PageItem ID: 52342Object ID: 45771",
@@ -168,12 +162,6 @@
         "text": "",
         "children": [
           {
-            "title": "Pregnant and Parenting Students’ Accommodations",
-            "href": "https://dev-suny-geneseo.pantheonsite.io/titleix/pregnant-and-parenting-students-accommodations/",
-            "text": "URL: https://dev-suny-geneseo.pantheonsite.io/titleix/pregnant-and-parenting-students-accommodations/Type: PageItem ID: 50988Object ID: 3079",
-            "children": []
-          },
-          {
             "title": "Diversity and Equity Policies",
             "href": "https://dev-suny-geneseo.pantheonsite.io/diversity-equity/diversity-equity-policies/",
             "text": "URL: https://dev-suny-geneseo.pantheonsite.io/diversity-equity/diversity-equity-policies/Type: PageItem ID: 50985Object ID: 44705",
@@ -200,7 +188,7 @@
           {
             "title": "Pregnant and Parenting Students’ Accommodations",
             "href": "https://dev-suny-geneseo.pantheonsite.io/titleix/pregnant-and-parenting-students-accommodations/",
-            "text": "URL: https://dev-suny-geneseo.pantheonsite.io/titleix/pregnant-and-parenting-students-accommodations/Type: PageItem ID: 57774Object ID: 3079",
+            "text": "URL: https://dev-suny-geneseo.pantheonsite.io/titleix/pregnant-and-parenting-students-accommodations/Type: PageItem ID: 50988Object ID: 3079",
             "children": []
           },
           {
@@ -216,12 +204,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "title": "Diversity and Equity Policies",
-        "href": "https://dev-suny-geneseo.pantheonsite.io/diversity-equity/diversity-equity-policies/",
-        "text": "URL: https://dev-suny-geneseo.pantheonsite.io/diversity-equity/diversity-equity-policies/Type: PageItem ID: 58002Object ID: 44705",
-        "children": []
       }
     ]
   },
@@ -2469,6 +2451,12 @@
         ]
       },
       {
+        "title": "U-Knight Community",
+        "href": "http://uknight.geneseo.edu/s/1648/Alumni/index.aspx?sid=1648&gid=2&pgid=531",
+        "text": "URL: http://uknight.geneseo.edu/s/1648/Alumni/index.aspx?sid=1648&gid=2&pgid=531Type: Custom LinkItem ID: 71729Object ID: 71729",
+        "children": []
+      },
+      {
         "title": "Alumni Travel Program",
         "href": "https://dev-suny-geneseo.pantheonsite.io/alumni/alumni-travel-program/",
         "text": "URL: https://dev-suny-geneseo.pantheonsite.io/alumni/alumni-travel-program/Type: PageItem ID: 52101Object ID: 44610",
@@ -4585,6 +4573,12 @@
             "href": "https://dev-suny-geneseo.pantheonsite.io/curriculum/integrative-and-applied-learning-requirement/",
             "text": "URL: https://dev-suny-geneseo.pantheonsite.io/curriculum/integrative-and-applied-learning-requirement/Type: PageItem ID: 51291Object ID: 46619",
             "children": []
+          },
+          {
+            "title": "SUNY Gen Ed Site",
+            "href": "https://system.suny.edu/academic-affairs/acaproplan/general-education/suny-ge/",
+            "text": "URL: https://system.suny.edu/academic-affairs/acaproplan/general-education/suny-ge/Type: Custom LinkItem ID: 57913Object ID: 57913",
+            "children": []
           }
         ]
       },
@@ -4616,12 +4610,6 @@
         "title": "Summer Sessions",
         "href": "https://dev-suny-geneseo.pantheonsite.io/summer-sessions/",
         "text": "URL: https://dev-suny-geneseo.pantheonsite.io/summer-sessions/Type: MediaItem ID: 57912Object ID: 20874",
-        "children": []
-      },
-      {
-        "title": "SUNY Gen Ed Site",
-        "href": "https://system.suny.edu/academic-affairs/acaproplan/general-education/suny-ge/",
-        "text": "URL: https://system.suny.edu/academic-affairs/acaproplan/general-education/suny-ge/Type: Custom LinkItem ID: 57913Object ID: 57913",
         "children": []
       }
     ]
@@ -8057,6 +8045,12 @@
             "href": "https://dev-suny-geneseo.pantheonsite.io/latin_american_caribbean_studies/study-abroad-opportunities/",
             "text": "URL: https://dev-suny-geneseo.pantheonsite.io/latin_american_caribbean_studies/study-abroad-opportunities/Type: PageItem ID: 51260Object ID: 44278",
             "children": []
+          },
+          {
+            "title": "Latin American Studies at SUNY Geneseo: Facebook",
+            "href": "https://www.facebook.com/latinamericanstudiesgeneseo?ref=hl",
+            "text": "URL: https://www.facebook.com/latinamericanstudiesgeneseo?ref=hlType: Custom LinkItem ID: 70621Object ID: 70621",
+            "children": []
           }
         ]
       },
@@ -8076,12 +8070,6 @@
         "title": "Upcoming Course Offerings",
         "href": "https://dev-suny-geneseo.pantheonsite.io/latin_american_caribbean_studies/upcoming-latin-american-caribbean-studies-course-offerings/",
         "text": "URL: https://dev-suny-geneseo.pantheonsite.io/latin_american_caribbean_studies/upcoming-latin-american-caribbean-studies-course-offerings/Type: PageItem ID: 51914Object ID: 44275",
-        "children": []
-      },
-      {
-        "title": "Latin American Studies at SUNY Geneseo: Facebook",
-        "href": "https://www.facebook.com/latinamericanstudiesgeneseo?ref=hl",
-        "text": "URL: https://www.facebook.com/latinamericanstudiesgeneseo?ref=hlType: Custom LinkItem ID: 70621Object ID: 70621",
         "children": []
       }
     ]
@@ -8217,6 +8205,12 @@
         "title": "Contact Us",
         "href": "https://dev-suny-geneseo.pantheonsite.io/linguistics/contact-us/",
         "text": "URL: https://dev-suny-geneseo.pantheonsite.io/linguistics/contact-us/Type: PageItem ID: 52071Object ID: 44735",
+        "children": []
+      },
+      {
+        "title": "Linguistics Minor",
+        "href": "https://dev-suny-geneseo.pantheonsite.io/linguistics",
+        "text": "URL: https://dev-suny-geneseo.pantheonsite.io/linguisticsType: Custom LinkItem ID: 71731Object ID: 71731",
         "children": []
       }
     ]
@@ -11187,6 +11181,12 @@
         "children": []
       },
       {
+        "title": "Menus",
+        "href": "https://dev-suny-geneseo.pantheonsite.io/reunion/reunion-menus2023/",
+        "text": "URL: https://dev-suny-geneseo.pantheonsite.io/reunion/reunion-menus2023/Type: PageItem ID: 71733Object ID: 44870",
+        "children": []
+      },
+      {
         "title": "Transportation & Parking",
         "href": "https://dev-suny-geneseo.pantheonsite.io/reunion/transportation/",
         "text": "URL: https://dev-suny-geneseo.pantheonsite.io/reunion/transportation/Type: PageItem ID: 52130Object ID: 44846",
@@ -11381,13 +11381,13 @@
     "menuSlug": "group-menu-savi-iyer-[term-id:-1680]",
     "items": [
       {
-        "title": "SUNY Geneseo Physics & Astronomy Colloquium",
+        "title": "Physics Colloquium",
         "href": "https://dev-suny-geneseo.pantheonsite.io/physics/physics-colloquium/",
         "text": "URL: https://dev-suny-geneseo.pantheonsite.io/physics/physics-colloquium/Type: PageItem ID: 70759Object ID: 45240",
         "children": []
       },
       {
-        "title": "Dr. Iyer’s Weekly Schedule",
+        "title": "My Weekly Schedule",
         "href": "https://dev-suny-geneseo.pantheonsite.io/iyer/weeklyschedule/",
         "text": "URL: https://dev-suny-geneseo.pantheonsite.io/iyer/weeklyschedule/Type: PageItem ID: 70758Object ID: 45243",
         "children": []
@@ -11486,7 +11486,7 @@
         "children": []
       },
       {
-        "title": "Professional Development Certificate",
+        "title": "Professional Development Program",
         "href": "https://dev-suny-geneseo.pantheonsite.io/gold/professional-development-certificate-pdc/",
         "text": "URL: https://dev-suny-geneseo.pantheonsite.io/gold/professional-development-certificate-pdc/Type: PageItem ID: 70763Object ID: 45214",
         "children": []
@@ -12887,7 +12887,7 @@
         "children": []
       },
       {
-        "title": "Department of Student Life",
+        "title": "Student Life",
         "href": "https://dev-suny-geneseo.pantheonsite.io/student_life/",
         "text": "URL: https://dev-suny-geneseo.pantheonsite.io/student_life/Type: PageItem ID: 71130Object ID: 44616",
         "children": []
@@ -12969,12 +12969,6 @@
         "title": "Student Handbook",
         "href": "https://dev-suny-geneseo.pantheonsite.io/handbook/g/",
         "text": "URL: https://dev-suny-geneseo.pantheonsite.io/handbook/g/Type: PageItem ID: 71138Object ID: 43255",
-        "children": []
-      },
-      {
-        "title": "Student Handbook",
-        "href": "https://dev-suny-geneseo.pantheonsite.io/handbook",
-        "text": "URL: https://dev-suny-geneseo.pantheonsite.io/handbookType: Custom LinkItem ID: 71141Object ID: 71141",
         "children": []
       }
     ]
@@ -13400,13 +13394,13 @@
             "children": []
           },
           {
-            "title": "Sponsor a Legacy Tree and Grow with Us",
+            "title": "Sponsor a Legacy Tree",
             "href": "https://dev-suny-geneseo.pantheonsite.io/support/sponsoratree/",
             "text": "URL: https://dev-suny-geneseo.pantheonsite.io/support/sponsoratree/Type: PageItem ID: 71044Object ID: 46621",
             "children": []
           },
           {
-            "title": "Crowdfunding Campaigns at Geneseo",
+            "title": "Crowdfunding Campaigns",
             "href": "https://dev-suny-geneseo.pantheonsite.io/support/crowdfunding-campaigns-geneseo/",
             "text": "URL: https://dev-suny-geneseo.pantheonsite.io/support/crowdfunding-campaigns-geneseo/Type: PageItem ID: 71046Object ID: 45749",
             "children": []
@@ -13436,7 +13430,7 @@
             "children": []
           },
           {
-            "title": "Naming Opportunities: Milne Library",
+            "title": "Milne Library Naming Opportunities",
             "href": "https://dev-suny-geneseo.pantheonsite.io/support/naming-opportunities-milne-library/",
             "text": "URL: https://dev-suny-geneseo.pantheonsite.io/support/naming-opportunities-milne-library/Type: PageItem ID: 71051Object ID: 46673",
             "children": []
@@ -14080,7 +14074,7 @@
         "children": []
       },
       {
-        "title": "SUNY Sexual Violence Prevalence Survey",
+        "title": "SUNY Geneseo Sexual Violence Response Policy",
         "href": "https://dev-suny-geneseo.pantheonsite.io/titleix/suny-sexual-violence-prevalence-campus-climate-survey/",
         "text": "URL: https://dev-suny-geneseo.pantheonsite.io/titleix/suny-sexual-violence-prevalence-campus-climate-survey/Type: PageItem ID: 52168Object ID: 44965",
         "children": []
@@ -14132,6 +14126,12 @@
         "title": "SUNY Sexual Assault & Violence Response Resource (SAVR)",
         "href": "https://www.suny.edu/violence-response/",
         "text": "URL: https://www.suny.edu/violence-response/Type: Custom LinkItem ID: 52160Object ID: 52160",
+        "children": []
+      },
+      {
+        "title": "SUNY Sexual Violence Prevalence Survey",
+        "href": "https://dev-suny-geneseo.pantheonsite.io/titleix/suny-sexual-violence-prevalence-campus-climate-survey/",
+        "text": "URL: https://dev-suny-geneseo.pantheonsite.io/titleix/suny-sexual-violence-prevalence-campus-climate-survey/Type: PageItem ID: 71734Object ID: 44965",
         "children": []
       },
       {
@@ -15899,7 +15899,7 @@
         "children": []
       },
       {
-        "title": "Give to Geneseo",
+        "title": "Give",
         "href": "https://dev-suny-geneseo.pantheonsite.io/support",
         "text": "URL: https://dev-suny-geneseo.pantheonsite.io/supportType: Custom LinkItem ID: 70921Object ID: 70921",
         "children": []

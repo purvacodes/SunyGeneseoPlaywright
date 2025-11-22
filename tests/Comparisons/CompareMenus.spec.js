@@ -26,25 +26,26 @@ test("📊 Scrape & Compare Menus from LIVE and DEV + Export Excel", async () =>
   // fs.writeFileSync(liveOutput, JSON.stringify(liveResults, null, 2));
 
   // -------- DEV SCRAPE (kept intact but commented here as in your original)
-  console.log("🖥️ Scraping DEV site...");
-  const devResults = await collectMenus("DEV", devBase, extractedUrls);
-  fs.writeFileSync(devOutput, JSON.stringify(devResults, null, 2));
+  //console.log("🖥️ Scraping DEV site...");
+  //const devResults = await collectMenus("DEV", devBase, extractedUrls);
+  //fs.writeFileSync(devOutput, JSON.stringify(devResults, null, 2));
 
-  console.log("✅ JSON saved!");
+
+  //console.log("✅ JSON saved!");
 
   // -------- COMPARE --------
   console.log("📥 Reloading JSON files for comparison...");
 
-  // const liveJson = JSON.parse(fs.readFileSync(liveOutput, "utf8"));
-  // const devJson = JSON.parse(fs.readFileSync(devOutput, "utf8"));
+  const liveJson = JSON.parse(fs.readFileSync(liveOutput, "utf8"));
+  const devJson = JSON.parse(fs.readFileSync(devOutput, "utf8"));
 
-  // console.log("🔍 Comparing LIVE vs DEV using JSON files...");
+  console.log("🔍 Comparing LIVE vs DEV using JSON files...");
 
-  // const diffs = compareAll_JSON(liveJson, devJson);
+  const diffs = compareAll_JSON(liveJson, devJson);
 
   // // -------- EXCEL EXPORT --------
-  // exportToExcel(diffs, excelOutput);
-  // console.log(`📊 Excel saved: ${excelOutput}`);
+  exportToExcel(diffs, excelOutput);
+  console.log(`📊 Excel saved: ${excelOutput}`);
 });
 
 

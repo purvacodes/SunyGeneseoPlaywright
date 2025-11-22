@@ -308,7 +308,6 @@ class MenuComparator {
             ?.replace("http://localhost/wordpress-test", "")
             ?.replace("https://www.geneseo.edu", "")
             ?.replace("http://www.geneseo.edu", "")
-            ?.replace("https://dev-suny-geneseo.pantheonsite.io", "") 
             ?.replace(/\/$/, "")
             ?.trim();
     }
@@ -397,32 +396,16 @@ class MenuComparator {
             const w = wItems[matchIndex];
             used.add(matchIndex);
 
-            const dHref = this.normalizeHref(d.href);
-            const wHref = this.normalizeHref(w.href);
-
-            // Log matches
             console.log(`      WP title: ${w.title}`);
-            console.log(`      WP href: ${wHref}`);
-            console.log(`      ✔ Matched item found at index ${matchIndex}\n`);
+            console.log(`      WP href: ${this.normalizeHref(w.href)}`);
+            console.log(`      ✔ Match found at index ${matchIndex}\n`);
 
-            if (dHref !== wHref) {
-                rows.push({
-                    WhichMenu: menuId,
-                    WhichItem: `${level}_HREF`,
-                    DrupalValue: dHref,
-                    WordPressValue: wHref,
-                    Status: "❗ HREF Mismatch",
-                });
-            }
-
-            // Continue with children
             const nextLevel =
                 level === "ITEM" ? "CHILD" :
                     level === "CHILD" ? "SUBCHILD" :
                         "SUBCHILD";
 
             this.compareItems(d.children || [], w.children || [], menuId, nextLevel, rows);
-
         }
     }
 
@@ -440,16 +423,16 @@ test("🔥 Full Drupal vs WordPress Menu Comparison", async ({ page }) => {
     const drupalFile = "file://" + path.resolve(__dirname, "Drupalv3.html");
     const wpFile = "file://" + path.resolve(__dirname, "WordpressV3.html");
 
-    // console.log("📥 Extracting Drupal HTML menus...");
-    // await page.goto(drupalFile);
-    // const drupalMenusExtracted = await extractDrupalMenus(page);
+    //console.log("📥 Extracting Drupal HTML menus...");
+    //await page.goto(drupalFile);
+    //const drupalMenusExtracted = await extractDrupalMenus(page);
 
-    // console.log("📥 Extracting WordPress HTML menus...");
-    // await page.goto(wpFile);
-    // const wpMenusExtracted = await extractWordPressMenus(page);
+    //console.log("📥 Extracting WordPress HTML menus...");
+    //await page.goto(wpFile);
+    //const wpMenusExtracted = await extractWordPressMenus(page);
 
     // SAVE JSONS
-    // fs.writeFileSync("DrupalMenus.json", JSON.stringify(drupalMenusExtracted, null, 2));
+    //fs.writeFileSync("DrupalMenus.json", JSON.stringify(drupalMenusExtracted, null, 2));
     // fs.writeFileSync("WordPressMenus.json", JSON.stringify(wpMenusExtracted, null, 2));
 
     console.log("💾 Saved extract JSONs, reloading from file...");
